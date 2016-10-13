@@ -1,0 +1,368 @@
+<!-- module-account-details START -->
+      
+<script type="text/javascript" src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script>
+    $(function () {
+        $(".user-account-detail-page").tabs();
+    });
+</script>
+
+<section class="column-section">
+    <header class="column-header">
+        <h1 class="page-title">
+            Dados de Conta</h1>
+    </header>
+    <div class="user-account-detail-page">
+        <!-- User Tabs -->
+        <ul class="gm-tabs-list">
+            <li>
+                <a id="tab1" href="#userAccountTab1"><span class="gm-box-corner-left"></span><span class="gm-link-txt">
+                Dados de Registo<span class="gm-box-corner-right"></span></span>
+                </a>
+            </li>
+            <li>
+               <a href="#userAccountTab2" id="tab2"><span class="gm-box-corner-left"></span><span class="gm-link-txt">
+                Dados de Contacto<span class="gm-box-corner-right"></span></span>
+                </a>
+            </li>
+        </ul>
+        <!-- End User Tabs -->
+
+        <section id="userAccountTab1" class="ui-tabs-panel">
+            <div id="UserAccount" class="column-body">
+
+                <div class="val-summary success" style="display: none;">
+                    <span class="close"></span>
+                    <div class="val-summary-title">
+                        Sucesso
+                    </div>
+                    <div class="val-summary-message">
+                        <p>O pedido de alteração de utilizador foi submetido com sucesso. </p>
+                        <p>As alterações pedidas podem demorar até 24 horas a surtirem efeito.</p>
+                    </div>
+                </div>
+
+                <div class="form form-theme-default">
+                    <fieldset>
+                        <legend>
+                            <span class="form-legend">
+                                Dados de Registo</span>
+                        </legend>
+                        <div class="form-input-wrapper accountDataView visualization-mode">
+                            <label>
+                                <span class="form-pre-filled">
+                                    <strong>
+                                        Nome:</strong>
+                                    Gonçalo João da Costa Bernardo
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper accountDataEdit editable-mode">
+                            <label for="dnn_ctr1759_View_ctl01_txtContactName">
+                                <span class="form-label">
+                                    Nome de contacto:</span>
+                                <span class="form-input custom-tooltip">
+                                    <input name="dnn$ctr1759$View$ctl01$txtContactName" type="text" class="Validator">
+                                    <span class="tooltip-icon tooltipstered"></span>
+                                    <span class="tooltip-message">
+                                        <span id="dnn_ctr1759_View_ctl01_reqContactNameEdit">Campo obrigatório</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper accountDataView visualization-mode">
+                            <label>
+                                <span class="form-pre-filled">
+                                    <strong>
+                                        Email:</strong>
+                                    goncalo.bernardo@brisa.pt
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper accountDataEdit editable-mode">
+                            <label for="dnn_ctr1759_View_ctl01_txtEmail">
+                                <span class="form-label">Email:</span>
+                                <span class="form-input custom-tooltip">
+                                    <input name="dnn$ctr1759$View$ctl01$txtEmail" type="text" value="goncalo.bernardo@brisa.pt" class="Validator">
+                                    <span class="tooltip-icon tooltipstered"></span>
+                                    <span class="tooltip-message">
+                                        <span>Campo obrigatório</span>
+                                        <span>Email introduzido não é válido</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-button clearFloats accountDataEdit editable-mode">
+                            <div class="button-wrapper">
+                                <button class="button button-border button-small" id="BtnChangeCancelEmail" type="button">
+                                    <span class="button-txt">
+                                        Cancelar
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="button-wrapper">
+                                <span class="form-loader" style="float: right"></span>
+                                <button class="button btNext save-user-ok button-small" id="btnSaveEmail" type="button">
+                                    <span class="button-txt">
+                                        Guardar Alterações
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <hr class="form-hr">
+
+                    <fieldset>
+                        <legend>
+                            <span class="form-legend">
+                                Palavra-passe</span>
+                        </legend>
+                        <div class="pwd-visualization-mode pwView">
+                            <div class="form-input-wrapper visualization-mode">
+                                <label>
+                                    <span class="form-pre-filled"><strong>
+                                        Palavra-passe:</strong> 
+                                         <a href="#" class="change-pwd" id="btnChangePw">Alterar</a>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-input-wrapper pwEdit pwd-editable-mode">
+                            <div class="form-input-wrapper">
+                                <label for="dnn_ctr1759_View_ctl01_txtPassword">
+                                    <span class="form-label">
+                                        Palavra-passe atual:</span>
+                                    <span class="form-input custom-tooltip">
+                                        <input name="dnn$ctr1759$View$ctl01$txtPassword" type="password" id="dnn_ctr1759_View_ctl01_txtPassword" class="Validator txt-password">
+                                        <span class="tooltip-icon tooltipstered"></span>
+                                        <span class="tooltip-message">
+                                            <span id="dnn_ctr1759_View_ctl01_reqActualPassword">Campo obrigatório</span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-input-wrapper">
+                                <label for="dnn_ctr1759_View_ctl01_txtNewPassword">
+                                    <span class="form-label">
+                                        Nova palavra-passe</span>
+                                    <span class="form-input custom-tooltip">
+                                        <input name="dnn$ctr1759$View$ctl01$txtNewPassword" type="password" id="dnn_ctr1759_View_ctl01_txtNewPassword" class="Validator">
+                                        <span class="tooltip-icon tooltipstered"></span>
+                                        <span class="tooltip-message">
+                                            <span id="dnn_ctr1759_View_ctl01_ruleNewPassword">A palavra-passe deve ter entre 7 a 10 caracteres alfanuméricos</span>
+                                            <span id="dnn_ctr1759_View_ctl01_reqNewPassword">Campo obrigatório</span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-input-wrapper">
+                                <label for="dnn_ctr1759_View_ctl01_txtRepeatPassword">
+                                    <span class="form-label">
+                                        Repetir nova palavra-passe</span>
+                                    <span class="form-input custom-tooltip">
+                                        <input name="dnn$ctr1759$View$ctl01$txtRepeatPassword" type="password" id="dnn_ctr1759_View_ctl01_txtRepeatPassword" class="Validator">
+                                        <span class="tooltip-icon tooltipstered"></span>
+                                        <span class="tooltip-message">
+                                            <span id="dnn_ctr1759_View_ctl01_ruleRepeatNewPassword">A palavra-passe deve ter entre 7 a 10 caracteres alfanuméricos</span>
+                                            <span id="dnn_ctr1759_View_ctl01_reqRepeatNewPassword">Campo obrigatório</span>
+                                            <span id="dnn_ctr1759_View_ctl01_comparePasswords">As palavras-passe não coincidem.</span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-button clearFloats">
+                            <div class="button-wrapper pwEdit editable-mode">
+                                <button class="button button-border button-small" id="BtnChangeCancelPw" type="button">
+                                    <span class="button-txt">
+                                        Cancelar</span>
+                                </button>
+                            </div>
+                            <div class="button-wrapper pwEdit editable-mode">
+                                <span class="form-loader" style="float: right"></span>
+                                <button class="button btNext save-user-ok button-small" id="btnSavePw" type="button">
+                                    <span class="button-txt">
+                                        Guardar Alterações</span>
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <section id="userAccountTab2" class="ui-tabs-panel">
+            <div class="column-body">
+                <div id="valSummaryContainerCommercialInfo" class="val-summary success" style="display: none;">
+                    <span class="close"></span>
+                    <div class="val-summary-title">
+                        Sucesso
+                    </div>
+                    <div class="val-summary-message">
+                        <p>O pedido de alteração de utilizador foi submetido com sucesso. </p>
+                        <p>As alterações pedidas podem demorar até 24 horas a surtirem efeito.</p>
+                    </div>
+                </div>
+
+                <div class="form form-theme-default">
+                    <fieldset>
+                        <legend>
+                            <span class="form-legend">
+                                Dados de Contacto</span>
+                        </legend>
+
+                        <div class="form-input-wrapper CommercialView visualization-mode">
+                            <label>
+                                <span class="form-pre-filled"><strong>
+                                    Nome de contacto:</strong>
+                                    GONÇALO JOAO COSTA BERNARDO</span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper CommercialEdit editable-mode">
+                            <label for="dnn_ctr1759_View_ctl01_txtCommercialName">
+                                <span class="form-label">
+                                    Nome de contacto:</span>
+                                <span class="form-input custom-tooltip">
+                                    <input name="dnn$ctr1759$View$ctl01$txtCommercialName" type="text" class="Validator">
+                                    <span class="tooltip-icon tooltipstered"></span>
+                                    <span class="tooltip-message">
+                                        <span id="dnn_ctr1759_View_ctl01_reqCommercialNameEdit"></span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper CommercialView visualization-mode">
+                            <label>
+                                <span class="form-pre-filled"><strong>
+                                    Email de contacto:</strong>
+                                    goncalo.c.bernardo@gmail.com</span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper CommercialEdit editable-mode">
+                            <label for="dnn_ctr1759_View_ctl01_txtContactEmail">
+                                <span class="form-label">
+                                    Email de contacto:</span>
+                                <span class="form-input custom-tooltip">
+                                    <input name="dnn$ctr1759$View$ctl01$txtContactEmail" type="text" value="goncalo.c.bernardo@gmail.com" id="dnn_ctr1759_View_ctl01_txtContactEmail" class="Validator">
+                                    <span class="tooltip-icon tooltipstered"></span>
+                                    <span class="tooltip-message">
+                                        <span id="dnn_ctr1759_View_ctl01_reqContactEmailEdit">Campo obrigatório</span>
+                                        <span id="dnn_ctr1759_View_ctl01_revContactEmail">Email introduzido não é válido</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-input-wrapper CommercialView visualization-mode">
+                            <label>
+                                <span class="form-pre-filled"><strong>
+                                    Contacto telefónico:</strong>
+                                    962031827</span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper CommercialEdit editable-mode">
+                            <label for="dnn_ctr1759_View_ctl01_txtContactPhone">
+                                <span class="form-label">
+                                    Contacto telefónico:</span>
+                                <span class="form-input custom-tooltip">
+                                    <input name="dnn$ctr1759$View$ctl01$txtContactPhone" type="text" value="962031827" maxlength="9" id="dnn_ctr1759_View_ctl01_txtContactPhone" class="Validator">
+                                    <span class="tooltip-icon tooltipstered"></span>
+                                    <span class="tooltip-message">
+                                        <span id="dnn_ctr1759_View_ctl01_rfvContactPhone" style="display:none;">Campo obrigatório</span>
+                                        <span id="dnn_ctr1759_View_ctl01_revPhoneNumber" style="display:none;">Contacto telefónico inválido</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-input-wrapper CommercialView visualization-mode">
+                            <label>
+                                <span class="form-pre-filled"><strong>
+                                    Morada:</strong>
+                                    RUA DOS DIAMANTES N 113 - 1 DTO</span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper CommercialEdit editable-mode">
+                            <label for="dnn_ctr1759_View_ctl01_txtAddress">
+                                <span class="form-label">
+                                    Morada:</span>
+                                <span class="form-input custom-tooltip">
+                                    <input name="dnn$ctr1759$View$ctl01$txtAddress" type="text" value="RUA DOS DIAMANTES N 113 - 1 DTO" maxlength="60" id="dnn_ctr1759_View_ctl01_txtAddress" class="Validator">
+                                    <span class="tooltip-icon tooltipstered"></span>
+                                    <span class="tooltip-message">
+                                        <span id="dnn_ctr1759_View_ctl01_reqAddressEdit" style="display:none;">Campo obrigatório</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper CommercialView visualization-mode">
+                            <label>
+                                <span class="form-pre-filled"><strong>
+                                    Código postal:</strong>
+                                    2785-817</span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper CommercialEdit editable-mode">
+                            <label for="txtPostalCode">
+                                <span class="form-label">
+                                    Código postal:</span>
+                                <span class="form-input custom-tooltip">
+                                    <input name="dnn$ctr1759$View$ctl01$txtPostalCode" type="text" value="2785-817" id="txtPostalCode" class="Validator">
+                                    <span class="tooltip-icon tooltipstered"></span>
+                                    <span class="tooltip-message">
+                                        <span id="dnn_ctr1759_View_ctl01_reqPostalCodeEdit" style="display:none;">Campo obrigatório</span>
+                                        <span id="dnn_ctr1759_View_ctl01_ctvPostalCode" style="display:none;">Código postal inválido</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper CommercialView visualization-mode">
+                            <label>
+                                <span class="form-pre-filled"><strong>
+                                    Localidade:</strong>
+                                    Arneiro</span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper CommercialEdit editable-mode">
+                            <label for="txtCity">
+                                <span class="form-label">
+                                    Localidade:</span>
+                                <span class="form-input custom-tooltip">
+                                    <input name="dnn$ctr1759$View$ctl01$txtCity" type="text" value="Arneiro" id="txtCity" class="Validator">
+                                    <span class="tooltip-icon tooltipstered"></span>
+                                    <span class="tooltip-message">
+                                        <span id="dnn_ctr1759_View_ctl01_reqCityEdit" style="display:none;">Campo obrigatório</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-button clearFloats">
+                            <div class="button-wrapper CommercialView visualization-mode">
+                                <button class="button button-small" id="BtnChangeCommercialData" type="button">
+                                    <span class="button-txt">
+                                        Alterar Dados</span>
+                                </button>
+                            </div>
+                            <div class="button-wrapper CommercialEdit editable-mode">
+                                <button class="button button-border button-small" id="BtnChangeCancelCommercialData" type="button">
+                                    <span class="button-txt">
+                                        Cancelar</span>
+                                </button>
+                            </div>
+                            <div class="button-wrapper CommercialEdit editable-mode">
+                                <span class="form-loader" style="float: right"></span>
+                                <button class="button btNext save-user-ok button-small" id="btnSaveCommercialData" type="button">
+                                    <span class="button-txt">
+                                        Guardar Alterações</span>
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<!-- module-account-details END -->

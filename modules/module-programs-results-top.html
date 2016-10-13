@@ -1,0 +1,24 @@
+<script>
+    $(function() {          
+        $("select").selectric({            
+            disableOnMobile: false          
+        }).on('change', function() {            
+            getProcessState();          
+        });        
+    });
+</script>
+<article class="lists-top">
+        <span class="results"> 5 resultados</span>
+        <div class="form-select-wrapper order">
+            <span class="form-select custom-tooltip">
+            <select id="DDLMarca">
+                <option >Primeiro mais barato</option>
+                <option >Data de expiração ascendente</option>
+                <option >Data de expiração descendente</option>
+                <option >Primeiro Mais Caro</option>
+            </select>
+            <span class="tooltip-icon"></span>
+            <span class="tooltip-message">Campo obrigatório!</span>
+            </span>
+        </div>
+</article>

@@ -1,0 +1,218 @@
+<!-- module-adesao-dados-viatura-detalhe.html START -->
+
+<div class="form-group form-group-3">
+    <div class="form-group-wrapper">
+        <div class="form-input-wrapper">
+            <label for="form-registration">
+                <span class="form-label">Matrícula</span>
+                <span class="form-input custom-tooltip">
+                    <input id="form-registration" type="text" value="" class="Validator" placeholder="00-XX-00 (separado por hifens)">
+                    <span class="tooltip-icon"></span>
+                    <span class="tooltip-message">Campo obrigatório!</span>
+                </span>
+            </label>
+        </div>
+
+        <div class="form-checkbox-wrapper">
+            <label for="international-registration" class="form-checkbox-group-wrapper custom-tooltip tooltip-info">
+                <div class="form-checkbox-group">
+                    <span class="form-checkbox">
+                        <input id="international-registration" type="checkbox" value="">
+                        <span class="form-checkbox-style"></span>
+                    </span>
+                    <span class="form-label">
+                        <strong>Matricula estrangeira</strong>
+                    </span>
+                </div>
+                <span class="tooltip-icon"></span>
+                <span class="tooltip-message">Veículo registado fora do território nacional...</span>
+            </label>
+        </div>
+    </div>
+
+    <div id="pnlActiveLicensePlate1" class="block-exclamation">
+        <div class="block-exclamation-title">
+            Matrícula já associada a um contrato Via Verde
+        </div>
+        <div class="block-exclamation-message">
+            <p>Por favor confirme que os dados inseridos correspondem aos que constam no Documento Único Automóvel (DUA). Deverá submeter o DUA através do botão “upload” indicado abaixo, para prosseguir com a adesão para a matrícula inserida. <p><p>Ao submeter o DUA, estará a autorizar que a emissão do identificador tem em consideração os dados que nele constam.</p>
+        </div>
+
+    </div>
+
+    <div class="form-group-wrapper">
+        <div class="form-input-wrapper chassi-number">
+            <label for="form-chassi-number">
+                <span class="form-label">Nº de quadro (últimos 5 dígitos)</span>
+                <span class="form-input custom-tooltip">
+                    <input id="form-chassi-number" type="text" value="" class="Validator" placeholder="00000">
+                    <span class="tooltip-icon"></span>
+                    <span class="tooltip-message">Campo obrigatório!</span>
+                </span>
+            </label>
+        </div>
+    </div>
+
+    <span class="group-label">Marca e modelo da viatura</span>
+    <div class="form-group-wrapper">
+
+        <div class="form-select-wrapper">
+            <span class="form-select custom-tooltip">
+                <select id="DDLMarca2">
+                    <option value="0">Seleccionar Marca</option>
+                    <option value="1">Peugeot</option>
+                    <option value="2">...</option>
+                </select>
+                <span class="tooltip-icon"></span>
+                <span class="tooltip-message">Campo obrigatório!</span>
+            </span>
+        </div>
+
+        <div class="form-select-wrapper">
+            <span class="form-select custom-tooltip">
+                <select id="DDLModelo2" disabled>
+                    <option value="0">Seleccionar Modelo</option>
+                    <option value="1">206</option>
+                    <option value="2">...</option>
+                </select>
+                <span class="tooltip-icon"></span>
+                <span class="tooltip-message">Campo obrigatório!</span>
+            </span>
+        </div>
+
+        <div class="form-vehicle-wrapper">
+            <div class="vehicle-type classe2">Classe 2</div>
+            <div class="form-checkbox-wrapper">
+                <label for="chkMonovolume">
+                    <span class="form-checkbox">
+                        <input id="chkMonovolume" type="checkbox" value="">
+                        <span class="form-checkbox-style"></span>
+                    </span>
+                    <span class="form-label">
+                        <strong>É um monovolume?</strong>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div id="pnlIsMonovolume1" class="block-exclamation">
+        <div class="block-exclamation-title">
+            Monovolumes
+        </div>
+        <div class="block-exclamation-message">
+            <p>Deverá submeter o Documento Único Automóvel (DUA), através do botão “upload” abaixo indicado, para posterior verificação do número de homologação do seu monovolume e classificação como Classe 1.</p><p>Caso esse número de homologação não esteja incluído na lista publicada pelo Instituto da Mobilidade e dos Transportes, ou sendo a informação submetida incompleta ou incorreta, estará desde já a autorizar que seja emitido um identificador Classe 2.</p>
+        </div>
+    </div>
+
+    <div id="uploadDocument1" class="form-group form-group-3">
+        <div class="block-exclamation-upload">
+            <div class="file-upload-controls">
+                <div class="form-radiobox-wrapper">
+                    <label for="rbStep3UploadDU1">
+                        <span class="form-radiobox">
+                            <input id="rbStep3UploadDU1" type="radio" value="upload" name="rbStep3DU1" rel="PanelE1" checked="checked">
+                            <span class="form-radiobox-style"></span>
+                        </span>
+                        <span class="form-label">
+                            <strong>
+                                Enviar documento</strong>
+                        </span>
+                    </label>
+                </div>
+                <div class="form-radiobox-wrapper">
+                    <label for="rbStep3DeliverDU1">
+                        <span class="form-radiobox">
+                            <input id="rbStep3DeliverDU1" type="radio" value="deliver" name="rbStep3DU1" rel="PanelF1">
+                            <span class="form-radiobox-style"></span>
+                        </span>
+                        <span class="form-label">
+                            <strong>
+                                Entregar documento numa loja</strong>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div id="PanelE1" class="block-exclamation-panel">
+            <div class="fileUpload">
+                <span class="fileUpload-header custom-tooltip tooltip-inquiry">
+                    <span class="fileUpload-header-title">
+                        Anexar cópia do DUA</span>
+                    <span class="tooltip-icon"></span>
+                    <span class="tooltip-message">
+                        Igualmente designado como livrete ou certificado de matrícula.</span>
+                </span>
+                <div class="fileUpload-body">
+                    <div class="fileUpload-control">
+                        <div class="fileUpload-wrapper">
+                            <div class="toUpload">
+                                <span class="custom-tooltip">
+                                    <input type="hidden" id="fileStep3LicensePlateFileId1" value="" />
+                                    <div class="fileUpload-control-wrapper">
+                                        <input type="file" name="datafile" id="fileStep3LicensePlateFile1" />
+                                        <button class="button button-border" type="submit">
+                                            <span class="button-txt">
+                                                Upload</span>
+                                        </button>
+                                    </div>
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">
+                                        <span id="rfvStep3LicensePlateFileId1">Campo obrigatório</span>
+                                    </span>
+                                    <span class="max-size">
+                                        5MB máx</span>
+                                </span>
+                            </div>
+                            <div id="fileStep3LicensePlateFileList1" class="uploaded">
+                                <span id="fileStep3LicensePlateFileDescription1" class="name"></span>
+                                <span id="fileStep3LicensePlateFileLoading1" class="document-loading"></span>
+                            </div>
+                        </div>
+                        <a id="btnStep3RemoveLicensePlateFile1" href="#" class="link-remove">
+                            Remover ficheiro</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="PanelF1" class="block-exclamation-panel">
+            <div class="block-exclamation-collaps cleanStyle">
+                <p>A sua adesão está guardada até este passo. Se optar por entregar uma cópia do documento numa loja, pode repreender a adesão actuar da viatura.</p><p>Poderá ir a qualquer das lojas Via Verde</p><ul><li>Almada</li><li>Almodôvar</li><li>Aveiro</li><li>Braga</li><li>Carregado</li><li>...</li></ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        /* CUSTOM SELECT */
+        /* Ver mais em: https://select2.github.io/ */
+        $('#DDLMarca2').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.wizard-step-3 .form-theme-default'
+        }).on('change', function () {
+            var valueLang = $(this).attr('value');
+
+            //Enable ddlmodelo
+            if (valueLang == 0) {
+                $('#DDLModelo2').prop("disabled", true);
+            }
+            else {
+                $('#DDLModelo2').prop("disabled", false);
+            }
+
+
+        });
+
+        $('#DDLModelo2').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.wizard-step-3 .form-theme-default'
+        }).on('change', function () {
+            var valueLang = $(this).attr('value');
+
+        });
+    });
+</script>
+
+<!-- module-adesao-dados-viatura-detalhe.html END -->

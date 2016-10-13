@@ -1,0 +1,136 @@
+<!-- module-big-banner.html START -->
+
+<div class="wrapper back-button-wrapper">
+    <div class="back-button">
+        <a href="#1" class="link"><span class="link-txt">Voltar</span></a>
+    </div>
+    
+    <!-- BIG BANNER START -->
+    <section class="big-banner">
+        <!-- all tags example -->
+        <div class="tag-wrapper">
+           <!-- Dentro do tag-wrapper, só o gm-box-sold-out é que é preciso. Os outros não precisam de classes, mas podem deixar se vos der jeito :) -->
+            <div class="mark-wrapper">
+                <mark>Novidade</mark>
+            </div>
+            <div class="mark-wrapper">
+                <mark class="gm-box-sold-out">Últimos Dias</mark>
+            </div>
+            <!--
+            <mark class="gm-box-new">Novidade</mark>
+            <mark class="gm-box-last-day">Últimos Dias</mark>
+            <mark class="gm-box-sold-out">Esgotado</mark>
+            -->
+        </div>
+
+
+        <div class="slider-fixed-top-content">
+            <span class="ic-gastronomy-wine">Gastronomia e Vinho</span>
+            <span class="ic-romance">Romance</span>
+            <span class="ic-history">História</span>
+          
+            <!-- All icons example -->
+            <!--
+            <span class="ic-surf">Surf</span>
+            <span class="ic-golf">Golf</span>
+            <span class="ic-welfare">Bem-estar</span>
+            <span class="ic-fairs-events">Festivais e eventos</span>
+            <span class="ic-family">Família</span>
+            <span class="ic-nature">Natureza</span>
+            <span class="ic-sun-beach">Praia</span>
+            -->
+        </div>
+       
+        <div class="slider-fixed-content">
+            <div class="offer-location ic-location">Alto Alentejo</div>
+            <div class="offer-title">Fim de Semana Vinícola em Évora</div>
+            <!-- slider pagination container -->
+            <div class="js-slider-pagination"></div>
+        </div>
+    
+        <!-- slider start -->
+        <div class="js-slider">
+            <!-- SLIDER 01 START -->
+            <div class="slider-item">
+                <a class="venobox" data-gall="Gallery1" data-autoplay="true" data-type="youtube" href="https://www.youtube.com/embed/eZc4yruVy48" title="Title vídeo">
+                        <div class="video-ratio" style="background-image: url('https://i.ytimg.com/vi/eZc4yruVy48/maxresdefault.jpg');">
+                        </div>
+                        <button class="play-btn">Ver Vídeo</button>
+                    </a>
+            </div>
+            <!-- SLIDER 01 END -->
+
+            <!-- SLIDER 02 START -->
+            <div class="slider-item">
+                <a class="venobox" href="cms-images/banner-app-viaverde.jpg" data-gall="myGallery" title="My Description">
+                    <img data-src-base="cms-images/banner-app-viaverde.jpg" data-src="<768:?w=768, <1024:?w=1024, >1024:?w=1400" alt="">
+                </a>
+            </div>
+            <!-- SLIDER 02 END -->
+
+            <!-- SLIDER 03 START -->
+            <div class="slider-item">
+                <a class="venobox" href="cms-images/banner-aderir-viaverde02.jpg" data-gall="myGallery" title="My Description">
+                    <img data-src-base="cms-images/banner-aderir-viaverde02.jpg" data-src="<768:?w=768, <1024:?w=1024, >1024:?w=1400" alt="">
+                </a>
+            </div>
+            <!-- SLIDER 03 END -->
+        </div>
+        <!-- slider end -->
+    </section>
+    <!-- BIG BANNER END -->
+</div>
+
+<script type="text/javascript" src="script/slick.min.js"></script>
+<script type="text/javascript" src="script/venobox.min.js"></script>
+<script type="text/javascript">
+
+    function initSlider(_elem) {
+
+        var pagination = $('.js-slider-pagination'),
+        paginationElem = _elem.parents('.big-banner').find('.js-slider-pagination');
+       
+        _elem.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            infinite: true,
+            fade: true,
+            adaptiveHeight: true,
+            //speed:2000,
+            //autoplay: true,
+            cssEase: 'linear',
+            }).on('reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                var i = (currentSlide ? currentSlide : 0) + 1,
+                    slideTitle = $('.slick-current').children('a').attr('title');
+                paginationElem.html(i + '/' + slick.slideCount + ' ' + slideTitle);
+        });
+    }
+
+    (function($){
+
+        $(document).ready(function() {
+            // slick START
+            //get first slide number
+            $('.js-slider').on('init', function (event, slick, currentSlide, nextSlide) {
+                var paginationElem = $('.js-slider').parents('.big-banner').find('.js-slider-pagination'),
+                    i = (currentSlide ? currentSlide : 0) + 1,
+                    slideTitle = $('.slick-current').children('a').attr('title');
+                paginationElem.html(i + '/' + slick.slideCount + ' ' + slideTitle);
+            });
+
+            //init Slider
+            initSlider($('.js-slider'));
+
+            //get slide images to open in fullscreen modal
+            $('.venobox').venobox({
+                numeratio: true
+            });
+        });
+    })(jQuery);
+</script>
+
+
+
+<!-- END Banners ONLY for Homepage -->

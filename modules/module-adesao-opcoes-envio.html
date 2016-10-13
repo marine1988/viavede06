@@ -1,0 +1,346 @@
+<!-- module-adesao-opcoes-envio.html START -->
+
+<div class="accession-data-send">
+    <fieldset class="data-send">
+        <legend class="clearFloats">
+            <span class="form-legend">Opções de envio</span>
+        </legend>
+
+        <div class="data-send-wrapper">
+            <div class="data-send-body">
+
+                <script type="text/javascript">
+                    $(function () {
+                        //Check for cheked input at load and go to the current div
+                        var firtPanelShow = $('.data-send-controls .form-radiobox-wrapper input[type="radio"]:checked').attr("rel");
+                        $("#" + firtPanelShow).show();
+
+                        //Register events for change divs
+                        $('.data-send-controls .form-radiobox-wrapper input[type="radio"]').change(function () {
+                            if (this.checked) {
+                                var panelShow = $(this).attr("rel");
+
+                                $('#' + panelShow).show();
+
+                                $('#' + panelShow).prevAll(".data-send-panel").hide();
+                                $('#' + panelShow).nextAll(".data-send-panel").hide();
+                            }
+                        });
+
+
+                        $('#DDLAddressTypes').select2({
+                            minimumResultsForSearch: Infinity,
+                            dropdownParent: '.wizard-step-2 .form-theme-default'
+                        }).on('change', function () {
+                            var value = $(this).attr('value');
+                            console.log(value);
+
+                            if (value == 1) {
+                                $("#AnotherAddress").show();
+                                $("#SameAddress").hide();
+                            }
+                            else {
+                                $("#SameAddress").show();
+                                $("#AnotherAddress").hide();
+                            }
+
+                        });
+
+
+                        $('#Select5').select2({
+                            minimumResultsForSearch: Infinity,
+                            dropdownParent: '.wizard-step-2 .form-theme-default'
+                        }).on('change', function () {
+                            var valueLang = $(this).attr('value');
+
+                        });
+
+
+                    });
+                </script>
+                <div class="accession-data-send-wrapper">
+                    <div class="data-send-controls">
+                        <div class="form-group-wrapper custom-tooltip">
+                            <div class="form-radiobox-wrapper">
+                                <label for="form-send-by-email">
+                                    <span class="form-radiobox">
+                                        <input id="form-send-by-email" type="radio" value="" name="sendData" rel="PanelA" checked>
+                                        <span class="form-radiobox-style"></span>
+                                    </span>
+                                    <span class="form-label">
+                                        <strong>Recolha em rede pick-up<br></strong>
+                                        <span>Gratuito 24h-48h</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-radiobox-wrapper">
+                                <label for="form-get-store">
+                                    <span class="form-radiobox">
+                                        <input id="form-get-store" type="radio" value="" name="sendData" rel="PanelB">
+                                        <span class="form-radiobox-style"></span>
+                                    </span>
+                                    <span class="form-label">
+                                        <strong>Envio para uma morada<br></strong>
+                                        <span>Standard ou urgente</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="PanelA" class="data-send-panel">
+
+                    <div class="accession-data-send-wrapper">
+                        <div class="data-send-text cleanStyle">
+                            <p>A recolha é gratuita na rede de lojas pickup.<br>
+                                O identificador estará disponível na loja pickup no dia seguinte a ser expedido pela Via Verde. Ficará disponível para levantamento durante 10 dias.
+                            </p>
+
+                            <p>Será informado por SMS e email, quando a sua encomenda estiver disponível para recolha na loja pickup.</p>
+                        </div>
+                    </div>
+
+                    <div class="accession-data-send-wrapper data-send-destination bg-grey">
+                        <div class="form-group form-group-1x1-button">
+
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <label for="form-destinatario">
+                                        <span class="form-label">Encontrar uma loja pickup</span>
+                                        <span class="form-input custom-tooltip">
+                                            <input id="form-destinatario" type="text" value="" placeholder="Inserir Código postal ou localidade" class="Validator">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="form-button">
+                                    <button class="button button-small" id="search-map" type="button">
+                                        <span class="button-txt">Procurar</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--#include file="module-adesao-chronopost.html" -->
+
+                    <div id="data-send-destination" class="accession-data-send-wrapper">
+                        <div class="data-send-destination-text clearFloats" style="display: none;">
+                            <p><strong>Loja pickup selecionada:</strong></p>
+
+                            <div class="chronopost-content">
+                                <strong class="data-send-destination-title">Tabacaria nova</strong>
+                                <div class="data-send-destination-address">LG CRISTOVAO AIRES, 6A/6B 1700-126 LISBOA</div>
+                            </div>
+
+                            <div class="chronopost-content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3">Horários</th>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <th>Manhã</th>
+                                            <th>Tarde</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Seg</th>
+                                            <td>01:00-8:00</td>
+                                            <td>01:00-8:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Ter</th>
+                                            <td>01:00-8:00</td>
+                                            <td>01:00-8:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Qua</th>
+                                            <td>01:00-8:00</td>
+                                            <td>01:00-8:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Qui</th>
+                                            <td>01:00-8:00</td>
+                                            <td>01:00-8:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sex</th>
+                                            <td>01:00-8:00</td>
+                                            <td>01:00-8:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sáb</th>
+                                            <td>01:00-8:00</td>
+                                            <td>01:00-8:00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="PanelB" class="data-send-panel">
+                    <div class="accession-data-send-wrapper">
+                        <div class="data-send-text cleanStyle">
+                            <p><strong>Envio standard</strong><br>
+                                Entregue através dos CTT,  num prazo máximo de 10 dias úteis após a expedição.
+                            </p>
+                            <p><strong>Envio urgente</strong><br>
+                                Entregue em 24h, nos dias úteis, após a expedição.<br>
+                                Envio de SMS e email:<br>
+                                - No momento da expedição, informando sobre a entrega em 24h;<br>
+                                - No dia da distribuição, informando sobre os horários de entrega.
+                            </p>
+                        </div>
+
+                        <div class="accession-data-send-checkbox">
+                            <div class="form-checkbox-wrapper">
+                                <label for="form-urgent-shipment">
+                                    <span class="form-checkbox" disabled>
+                                        <input id="form-urgent-shipment" type="checkbox" disabled value="">
+                                        <span class="form-checkbox-style"></span>
+                                    </span>
+                                    <span class="form-label">Envío Urgente (+5€)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-group-wrapper">
+                                <div class="form-select-wrapper">
+                                    <label for="DDLAddressTypes">
+                                        <span class="form-label">Escolha morada</span>
+                                        <span class="form-select">
+                                            <select id="DDLAddressTypes">
+                                                <option value="0">Mesma que a morada de Faturação</option>
+                                                <option value="1">Morada Diferente</option>
+                                            </select>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="SameAddress">
+                            <div class="data-send-address cleanStyle">
+                                <p><strong>Nome Completo:</strong> Tiago Gomes<br>
+                                    <strong>Morada:</strong> Praça de Alvalade 6, 2670-123, Lisboa<br>
+                                    <strong>Código Postal:</strong> 1700-036<br>
+                                    <strong>Localidade:</strong> Lisboa<br>
+                                    <strong>País:</strong> Portugal
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="AnotherAddress">
+
+                            <div class="form-input-wrapper">
+                                <label for="form-destinatario">
+                                    <span class="form-label">Destinatário</span>
+                                    <span class="form-input custom-tooltip">
+                                        <input id="form-destinatario" type="text" value="" class="Validator">
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-input-wrapper">
+                                <label for="Text1">
+                                    <span class="form-label">Morada</span>
+                                    <span class="form-input custom-tooltip">
+                                        <input id="Text1" type="text" value="" class="Validator">
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-group form-group-3">
+                                <div class="form-group-wrapper">
+
+                                    <div class="form-input-wrapper">
+                                        <label for="txtPostalCode1">
+                                            <span class="form-label">Código Postal</span>
+                                            <span class="zipCodeWrapper custom-tooltip">
+                                                <span class="zipCode">
+                                                    <span class="form-input zipCodeLeft">
+                                                        <input type="text" id="txtPostalCode1" value="" class="Validator">
+                                                    </span>
+                                                    <span class="zipCodeSplitter">-</span>
+                                                    <span class="form-input zipCodeRight">
+                                                        <input type="text" id="txtPostalCode2" value="" class="Validator">
+                                                    </span>
+                                                </span>
+                                                <span class="tooltip-icon tooltipstered"></span>
+                                                <span class="tooltip-message">
+                                                    <span id="rfvStep1ContractPostalCode">Campo obrigatório</span>
+                                                    <span id="cvStep1PostalCode">Campo invádo</span>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-input-wrapper">
+                                        <label for="Text3">
+                                            <span class="form-label">Localidade</span>
+                                            <span class="form-input custom-tooltip">
+                                                <input id="Text3" type="text" value="" class="Validator">
+                                                <span class="tooltip-icon"></span>
+                                                <span class="tooltip-message">Campo obrigatório!</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-group-wrapper">
+
+                                    <div class="form-select-wrapper">
+                                        <label for="Select5">
+                                            <span class="form-label">País</span>
+                                            <span class="form-select custom-tooltip tooltip-error">
+                                                <select id="Select5">
+                                                    <option value="0">Portugal</option>
+                                                    <option value="1">Espanha</option>
+                                                    <option value="2">...</option>
+                                                </select>
+                                                <span class="tooltip-icon"></span>
+                                                <span class="tooltip-message">Campo obrigatório!</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-input-wrapper">
+                                        <label for="Span2">
+                                            <span id="Span5" class="form-pre-filled-data"><small>(15€, prazo até 10 dias úteis)</small></span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+<!-- module-adesao-opcoes-envio.html END -->

@@ -1,0 +1,584 @@
+
+<section class="accession-wrapper">
+    <header class="accession-header">
+        <h1 class="page-title">Adicionar novo identificador</h1>
+    </header>
+    <div class="accession-panel">
+        <script type="text/javascript">
+
+            function gotoStep(step) {
+
+                startLoading($('.accession-panel'));
+
+                var currentNavItem = $(".accession-panel .wizardSteps a[rel='" + step + "']");
+
+                //Nav
+                currentNavItem.parent().removeClass().addClass("current");
+                currentNavItem.parent().prevAll("li").removeClass().addClass("completed");
+                currentNavItem.parent().nextAll().removeClass().addClass("disabled");
+
+                //Panels
+                $(".accession-panel .wizardStep").hide();
+                $(".accession-panel ." + step).show();
+
+                // Stop Loading after 1 second
+                setTimeout(function () {
+                    stopLoading($('.accession-panel'));
+                }, 500);
+
+                window.scrollTo(0, 0);
+            }
+
+            $(function () {
+
+                //Wizard Nav click
+                $(".wizardSteps a").click(function (e) {
+                    e.preventDefault();
+
+                    if (!$(this).parent().hasClass("disabled") && !$(this).parent().hasClass("current")) {
+                        gotoStep($(this).attr("rel"));
+                    }
+                });
+
+                //Wizard First step
+                gotoStep("wizard-step-1");
+
+
+                /* Tooltipster */
+                /* 
+                Parametros:
+                - Selector
+                - É Modal
+                */
+                initTooltipster($('.accession-panel .custom-tooltip .tooltip-icon'), false);
+            });
+        </script>
+
+        <div class="accession-main">
+            <nav class="wizardSteps two-steps">
+                <ul>
+                    <li><a href="#" rel="wizard-step-1">01. Passo 1</a></li>
+                    <li><a href="#" rel="wizard-step-2">02. Passo 2</a></li>
+                </ul>
+            </nav>
+
+            <!--wizard-step-1-->
+            <div class="wizardStep wizard-step-1">
+                <div class="form form-theme-default">
+                    <script type="text/javascript">
+                        $(function () {
+                            $('.accession-main .wizard-step-1 .Validator').blur(function () {
+                                /* 
+                                Parametros:
+                                - Selector do controlo
+                                - Nome do grupo de validação
+                                - Nome na class a colocar no pai em caso de erro
+                                - Selector da mensagem generica de erro a mostrar
+                                */
+                                SingleValidator($(this).attr("id"), 'WizardStep1', 'tooltip-error', null);
+
+
+                                /* Update Single Tooltipster Message */
+                                updateSingleTooltipster($(this));
+                            });
+
+                            /* CUSTOM SELECT */
+                            /* Ver mais em: https://select2.github.io/ */
+                            $('#Select1234').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-1 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+
+
+                            $('#DDLMarca').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-1 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                                //Enable ddlmodelo
+                                if (valueLang == 0) {
+                                    $('#DDLModelo').prop("disabled", true);
+                                }
+                                else {
+                                    $('#DDLModelo').prop("disabled", false);
+                                }
+
+                            });
+
+                            $('#DDLModelo').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-1 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+
+
+                            $('#DDLMarca2').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-1 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                                //Enable ddlmodelo
+                                if (valueLang == 0) {
+                                    $('#DDLModelo2').prop("disabled", true);
+                                }
+                                else {
+                                    $('#DDLModelo2').prop("disabled", false);
+                                }
+
+
+                            });
+
+                            $('#DDLModelo2').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-1 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+
+                            $('#BtnStep2').click(function (e) {
+                                e.preventDefault();
+
+                                /* Validar Step 3 */
+                                //var pageIsValid = PageValidate(...);
+
+                                /* Ir para o passo 4 */
+                                gotoStep("wizard-step-2");
+                            });
+                        });
+                    </script>
+                
+                    <fieldset class="InfoContractIdentifier">
+                        <legend class="clearFloats">
+                            <span class="form-legend">Contrato</span>
+                        </legend>
+
+                        <div class="form-description">
+                            <p>Reveja os dados e verifique se estão corretos. Pode mudar a informação carregando no botão</p>
+                        </div>
+
+                        <div class="form-input-wrapper">
+                            <label for="Text10">
+                                <span class="form-label">Nº de serie do identificador</span>
+                                <span class="form-input custom-tooltip">
+                                    <input id="Text10" type="text" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-group-wrapper">
+                                <div class="form-select-wrapper">
+                                    <span class="form-select custom-tooltip">
+                                        <script type="text/javascript">
+                                            function initPersonalCombo(selector) {
+                                                //Get First Element
+                                                var firstElement = selector.find("dd ul li .selectable.selected");
+                                                if(!firstElement.length)
+                                                {
+                                                    firstElement = selector.find("dd ul li:first-child .selectable");
+                                                }
+
+                                                selector.find("dd ul li .selectable").removeClass("selected");
+                                                firstElement.addClass("selected");
+                                                selector.find("dt .selectable").html(firstElement.html());
+                                                selector.find("dt .selectable").attr("value", firstElement.attr("value"));
+
+                                                //Click Event for Label
+                                                selector.find("dt .selectable").click(function() {
+                                                    selector.toggleClass("open");
+                                                    selector.find("dd ul").toggle();
+                                                });
+
+                                                //Click Event for Options
+                                                selector.find("dd ul li .selectable").click(function() {
+                                                    selector.find("dd ul li .selectable").removeClass("selected");
+                                                    $(this).addClass("selected");
+
+                                                    var text = $(this).html();
+                                                    var value = $(this).attr("value");
+
+                                                    selector.find("dt .selectable").html(text);
+                                                    selector.find("dt .selectable").attr("value", firstElement.attr("value"));
+                                                    selector.find("dd ul").hide();
+                                                });
+                                            }
+
+                                            function getSelectedValue(selector) {
+                                                return selector.find("dt .selectable").attr("value");
+                                            }
+
+                                            function setSelectedValue(selector, newValue) {
+                                                var elementToSelect = selector.find("dd ul li .selectable[value='" + newValue + "']");
+
+                                                if (elementToSelect.length)
+                                                {
+                                                    selector.find("dd ul li .selectable").removeClass("selected");
+                                                    elementToSelect.addClass("selected");
+
+                                                    selector.find("dt .selectable").html(elementToSelect.html());
+                                                    selector.find("dt .selectable").attr("value", elementToSelect.attr("value"));
+                                                }
+                                            }
+
+                                            $(function(){
+                                                initPersonalCombo($(".personalCombo"));
+
+                                                $(document).click(function(e) {
+                                                    var $clicked = $(e.target);
+                                                    if (!$clicked.parents().hasClass("personalCombo"))
+                                                    {
+                                                        $(".personalCombo dd ul").hide();
+                                                    }
+                                                });
+                                            })
+                                        </script>
+                                        <dl id="personalCombo" class="personalCombo">
+                                          <dt><div class="selectable"></div></dt>
+                                          <dd>
+                                            <ul>
+                                              <li><div class="selectable" value="0">Escolha o seu contrato!</div></li>
+                                              <li>
+                                                  <div class="selectable" value="1">
+                                                    <div class="contract"><strong>Contrato</strong>127682477</div>
+                                                    <div class="address"><strong>Morada</strong><span>Av. Miguel Bombarda n, 63, 50 DTO. 1050-162 Lisboa</span></div>
+                                                  </div>
+                                              </li>
+                                              <li>
+                                                  <div class="selectable" value="2">
+                                                    <div class="contract"><strong>Contrato</strong>127682477</div>
+                                                    <div class="address"><strong>Morada</strong><span>Av. Miguel Bombarda n, 63, 50 DTO. 1050-162 Lisboa</span></div>
+                                                  </div>
+                                              </li>
+                                              <li>
+                                                  <div class="selectable" value="3">
+                                                    <div class="contract"><strong>Contrato</strong>127682477</div>
+                                                    <div class="address"><strong>Morada</strong><span>Av. Miguel Bombarda n, 63, 50 DTO. 1050-162 Lisboa</span></div>
+                                                  </div>
+                                              </li>
+                                            </ul>
+                                          </dd>
+                                        </dl>
+
+
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlStep1Contract" Display="Dynamic" ValidationGroup="WizardStep1"></asp:RequiredFieldValidator>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <!-- Visulization Mode -->
+                        <div class="visualization-mode">
+                            <div class="form-group">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <label for="Span2">
+                                        <span id="Span25" class="form-pre-filled"><strong>Nome completo:</strong> Henrique Carvalho</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span26" class="form-pre-filled"><strong>Número fiscal:</strong> 872372345</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span27" class="form-pre-filled"><strong>Morada de faturação:</strong> Avenida Nome, 8, 4ºB</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span28" class="form-pre-filled"><strong>Código Postal:</strong> 2600-897</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span29" class="form-pre-filled"><strong>E-mail:</strong> mailcontrato1@mail.com</span>
+                                    </label>
+                                </div>
+                                <div class="form-input-wrapper">
+                                    <label for="Span2">
+                                        <span id="Span31" class="form-pre-filled"><strong>Extrato:</strong> Mensal, Eletrónico - via e-mail (CSV)</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span32" class="form-pre-filled"><strong>País:</strong> Portugal</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span33" class="form-pre-filled"><strong>Cidade:</strong> Lisboa</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span34" class="form-pre-filled"><strong>Contato telefónico:</strong> 951 098 743</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Visulization Mode -->
+                        <div class="editable-mode new-contract">
+
+                            <script type="text/javascript">
+                                $(function () {
+
+                                    /* CUSTOM SELECT */
+                                    /* Ver mais em: https://select2.github.io/ */
+                                    $('#NC1').select2({
+                                        minimumResultsForSearch: Infinity,
+                                        dropdownParent: '#InfoContractIdentifier .new-contract'
+                                    }).on('change', function () {
+                                        var valueLang = $(this).attr('value');
+
+                                    });
+
+                                    $('#NC2').select2({
+                                        minimumResultsForSearch: Infinity,
+                                        dropdownParent: '#InfoContractIdentifier .new-contract'
+                                    }).on('change', function () {
+                                        var valueLang = $(this).attr('value');
+
+                                    });
+
+                                    $('#NC3').select2({
+                                        minimumResultsForSearch: Infinity,
+                                        dropdownParent: '#InfoContractIdentifier .new-contract'
+                                    }).on('change', function () {
+                                        var valueLang = $(this).attr('value');
+
+                                    });
+                                });
+                            </script>
+
+
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <label for="form-compleate-name">
+                                        <span class="form-label">Nome completo</span>
+                                        <span id="form-compleate-name" class="form-pre-filled"><strong>Gonçalo Gonçalves Azevedo Carvalho</strong></span>
+                                    </label>
+                                </div>
+                            </div>
+            
+                            <div class="form-group form-group">
+
+                                <div class="form-group-wrapper">
+            
+                                    <div class="form-input-wrapper">
+                                        <label for="form-nif">
+                                            <span class="form-label">Número fiscal (NIF)</span>
+                                            <span id="form-nif" class="form-pre-filled"><strong>876587986</strong></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-input-wrapper">
+                                        <label for="form-contry">
+                                            <span class="form-label">País</span>
+                                            <span id="form-contry" class="form-pre-filled"><strong>Portugal</strong></span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+ 
+                            <div class="form-input-wrapper">
+                                <label for="txt-address">
+                                    <span class="form-label">Morada de faturação</span>
+                                    <span class="form-input custom-tooltip tooltip-error">
+                                        <input id="txt-address" type="text" value="" class="Validator">
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-group-wrapper">
+                                    <div class="form-input-wrapper">
+                                        <label for="txt-codpost">
+                                            <span class="form-label">Código Postal</span>
+                                            <span class="form-input custom-tooltip">
+                                                <input id="txt-codpost" type="text" value="" class="Validator">
+                                                <span class="tooltip-icon"></span>
+                                                <span class="tooltip-message">Campo obrigatório!</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-input-wrapper">
+                                        <label for="txt-local">
+                                            <span class="form-label">Localidade</span>
+                                            <span class="form-input custom-tooltip">
+                                                <input id="txt-local" type="text" value="" class="Validator">
+                                                <span class="tooltip-icon"></span>
+                                                <span class="tooltip-message">Campo obrigatório!</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-group-wrapper">
+                                    <div class="form-select-wrapper">
+                                        <label for="NC1">
+                                            <span class="form-label">País</span>
+                                            <select id="NC1">
+                                                <option value="0">Portugal</option>
+                                                <option value="1">Espanha</option>
+                                                <option value="2">...</option>
+                                            </select>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group-wrapper">
+                                    
+
+                                    <div class="form-input-wrapper">
+                                        <label for="txt-mail">
+                                            <span class="form-label">E-mail</span>
+                                            <span class="form-input custom-tooltip">
+                                                <input id="txt-mail" type="email" value="" class="Validator">
+                                                <span class="tooltip-icon"></span>
+                                                <span class="tooltip-message">Campo obrigatório!</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-input-wrapper">
+                                        <label for="txt-telefone">
+                                            <span class="form-label">Contato telefónico</span>
+                                            <span class="form-input custom-tooltip">
+                                                <input id="txt-telefone" type="text" value="" class="Validator">
+                                                <span class="tooltip-icon"></span>
+                                                <span class="tooltip-message">Campo obrigatório!</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-select-wrapper">
+                                <label for="NC2">
+                                    <span class="form-label">Tipo de Extrato</span>
+                                    <select id="NC2">
+                                        <option value="0">Extracto Electrónico - Consulta no Portal</option>
+                                        <option value="1">Extracto Electrónico - Via e-mail (CSV)</option>
+                                        <option value="2">Extracto Electrónico - Via e-mail (XML)</option>
+                                        <option value="3">Extracto em papel - Factura/Recibo e Detalhe Contínuo</option>
+                                        <option value="4">Extracto em papel - Factura/Recibo Resumo</option>
+                                        <option value="5">Sem Extracto</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-select-wrapper">
+                                <label for="NC3">
+                                    <span class="form-label">Períodicidade</span>
+                                    <select id="NC3">
+                                        <option value="0">Mensal</option>
+                                        <option value="1">Trimestral</option>
+                                        <option value="2">Semanal</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="identifier-data-config">
+                        <legend class="clearFloats">
+                            <span class="form-legend">Dados da viatura</span>
+                            <span class="mandatory-fields">Todos os campos são obrigatórios</span>
+                        </legend>
+
+                        <!--#include file="module-adesao-dados-viatura.html" -->
+
+                    </fieldset>
+         
+                    <!--#include file="module-adesao-2viatura.html" -->
+
+                    <div class="form-button clearFloats">
+                        <button class="button button-border btPrev" id="BtnStep6" type="submit">
+                            <span class="button-txt">Cancelar</span>
+                        </button>
+
+                        <button class="button btNext" id="BtnStep2" type="submit">
+                            <span class="button-txt">Seguinte</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--wizard-step-2-->
+            <div class="wizardStep wizard-step-2">
+
+                <div class="form form-theme-default identifier-data-conclusion">
+                
+                    <fieldset>
+                        <!--Só mostra em mobile-->
+                        <table class="article-block-table">
+                            <caption>Resumo</caption>
+                            <tbody>
+                                <tr>
+                                    <th>Id. compra online</th>
+                                    <td>€20.00</td>
+                                </tr>
+                                <tr>
+                                    <th>Id. compra online</th>
+                                    <td>€20.00</td>
+                                </tr>
+                                <tr>
+                                    <th>Id. compra online</th>
+                                    <td>€20.00</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total</th>
+                                    <td>€60.00</td>
+                                </tr>
+                            
+                            </tfoot>
+                        </table>
+
+                        <!--#include file="module-adesao-opcoes-envio.html" -->
+
+                        <!--#include file="module-adesao-metodo-pagamento.html" -->
+
+                    </fieldset>
+
+                
+                </div>
+
+            </div>
+        </div>
+        <aside class="accession-aside">
+            <div class="wizardStep wizard-step-1">
+
+                <!--#include file="module-adesao-informacao-relacionada.html" -->
+
+                <!--#include file="module-adesao-perguntas-frequentes.html" -->
+
+            </div>
+
+            <div class="wizardStep wizard-step-2">
+
+                <!--#include file="module-adesao-resumo-adesao.html" -->
+
+            </div>
+        </aside>
+    
+    
+        <div class="loading"><span>A carregar...</span></div>
+    </div>
+</section>

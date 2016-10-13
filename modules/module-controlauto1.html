@@ -1,0 +1,172 @@
+<script type="text/javascript">
+    $(function () {
+        /* Autocomplete */
+        var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"];
+
+        $("#licence-ctrlauto").autocomplete({
+            source: availableTags,
+            appendTo: ".autocomplete-container",
+        });
+
+        $('#district').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.district-container'
+        });
+
+        $('#centre').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.centre-container'
+        });
+
+        $('#type').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.type-container'
+        });
+
+        $('#date').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.date-container'
+        });
+
+        $("#inspection-date").datepicker({
+            dateFormat: "dd/mm/yy",
+            firstDay: 1,
+            minDate: "-6m",
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function (selectedDate) {
+                $("#inspection-date").datepicker("option", "minDate", selectedDate);
+            }
+        });
+    });
+</script>
+
+<section class="column-section ctrlauto-book">
+    <header class="column-header">
+       <h1 class="page-title">Inspeção Controlauto</h1>
+    </header>
+
+    <div class="column-body">
+        <div class="subheader">
+            <mark class="gm-box-mark">1/2</mark>
+            <h2>Marcar Inspeção</h2>
+
+            <!-- para alterar o ícone do veículo é só alterar a classe do div. class1, class2, class3, etc. -->
+            <div class="ctrlauto-vehicle-info class1">
+                <p>Inspeção para a viatura:</p>
+                <p class="model">BMW Serie 3</p>
+                <span class="licence">87-TM-98</span>
+            </div>
+        </div>
+        <section class="inspection-centre">
+            <h2>Centro de inspeção</h2>
+
+            <div class="form form-theme-default">
+                <div class="form-select-wrapper district-container">
+                    <label>
+                        <select id="district">
+                            <option value="-1" disabled="disabled" selected="selected">Distrito</option>
+                            <option value="1">Lorem ipsum</option>
+                            <option value="2">Dolor sit amet</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-select-wrapper centre-container">
+                    <label>
+                        <select id="centre">
+                            <option value="-1" disabled="disabled" selected="selected">Centro</option>
+                            <option value="1">Lorem ipsum</option>
+                            <option value="2">Dolor sit amet</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-select-wrapper type-container">
+                    <label>
+                        <select id="type">
+                            <option value="-1" disabled="disabled" selected="selected">Tipo de inspeção</option>
+                            <option value="1">Lorem ipsum</option>
+                            <option value="2">Dolor sit amet</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-select-wrapper date-container">
+                    <label>
+                        <select id="date">
+                            <option value="-1" disabled="disabled" selected="selected">Data pretendida</option>
+                            <option value="1">Lorem ipsum</option>
+                            <option value="2">Dolor sit amet</option>
+                        </select>
+                    </label>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="inspection-date">
+            <h2>Data e Hora</h2>
+
+            <div class="form form-theme-default">
+				<div class="form-group">
+                    <div class="form-group-wrapper">
+                        <div class="form-datepicker-wrapper">
+						    <label>
+                                <span class="form-label">Data:</span>
+							    <span class="form-datepicker custom-tooltip">
+								    <input id="inspection-date" type="text" value="" class="datepicker Validator">
+								    <span class="datepicker-icon"></span>
+								    <span class="tooltip-icon"></span>
+								    <span class="tooltip-message">Campo obrigatório!</span>
+							    </span>
+						    </label>
+                        </div>
+
+                        <div class="form-input-wrapper">
+                            <label>
+                                <span class="form-label">Hora:</span>
+                                <span class="form-time custom-tooltip">
+                                    <input type="text" class="Validator" placeholder="hh" maxlength="2" />
+                                    <input type="text" value="" class="Validator" placeholder="mm" maxlength="2" />
+
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+				        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+     	<div class="btn-wrapper">
+            <button class="button button-border button-small" type="button">
+				<span class="button-txt">Cancelar</span>
+			</button>
+			<button class="button button-small" type="submit">
+				<span class="button-txt">Continuar</span>
+			</button>
+		</div>
+    </div>
+</section>
+

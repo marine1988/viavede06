@@ -1,0 +1,239 @@
+<script type="text/javascript">
+    $(function () {
+        /* Autocomplete */
+        var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"];
+
+        $("#licence-hdp2-filter").autocomplete({
+            source: availableTags,
+            appendTo: ".autocomplete-container",
+        });
+        /* jQuery UI Tabs call */
+        $('.hdp2-tabs').tabs();
+
+        /* Tooltips */
+        initTooltipster($('body .hdp2-table .custom-tooltip .tooltip-icon'), false);
+    });
+</script>
+
+<section class="column-section hdp2">
+     <!-- BACK BUTTON -->
+    <div class="back-button">
+	    <a href="#1" class="link">
+            <span class="link-txt">Voltar</span>
+	    </a>
+    </div>
+    <!-- END BACK BUTTON -->
+
+    <header class="column-header">
+        <h1 class="page-title">Pedido desconto pesados #1226</h1>
+    </header>
+
+    <div class="hdp2-tabs">
+        <!-- hdp2 Tabs -->
+        <ul class="gm-tabs-list">
+            <li><a href="#hdp2-tab1"><span class="gm-box-corner"></span><span class="gm-link-txt">Detalhes</span></a></li>
+            <li><a href="#hdp2-tab2"><span class="gm-box-corner"></span><span class="gm-link-txt">Documentos Pessoais</span></a></li>
+            <li><a href="#hdp2-tab3"><span class="gm-box-corner"></span><span class="gm-link-txt">Documentos Viaturas</span></a></li>
+        </ul>
+        <!-- End hdp2 Tabs -->
+
+        <!-- TAB 1-->
+        <section id="hdp2-tab1" class="hdp2-tab1">
+            <div class="list-docs-wrapper">
+                <div class="docs-content">
+
+                    <ul class="detail-row-wrapper">
+                        <li class="detail-row">
+                            <span><strong>Data:</strong></span>
+                            <span>31/05/2015</span>
+                        </li>
+                        <li class="detail-row">
+                            <span><strong>NIF:</strong></span>
+                            <span>506707911</span>
+                        </li>
+                        <li class="detail-row">
+                            <span><strong>Origem:</strong></span>
+                            <span>DirectiMedia</span>
+                        </li>
+                        <li class="detail-row">
+                            <span><strong>Estado:</strong></span>
+                            <span>Processado</span>
+                        </li>
+                        <li class="detail-row">
+                            <span><strong>Criado Por / Em:</strong></span>
+                            <span>dex_op_dm/02-06-2015</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Tab 1 -->
+
+        <!-- TAB 2 -->
+        <section id="hdp2-tab2" class="hdp2-tab2">
+            <div class="list-docs-wrapper">
+                <article class="docs-article">
+                    <div class="docs-title">
+                        Declaração da Segurança Social
+                    </div>
+                    <div class="docs-content">
+                        <ul class="detail-row-wrapper">
+                            <li class="detail-row">
+                                <span><strong>Estado:</strong></span>
+                                <span>Fora da Validade</span>
+                            </li>
+                            <li class="detail-row">
+                                <span><strong>Data:</strong></span>
+                                <span>12/09/2012</span>
+                            </li>
+                            <li class="detail-row">
+                                <span><strong>Validade:</strong></span>
+                                <span>12/01/2013</span>
+                            </li>
+                            <li class="detail-row">
+                                <span><strong>Autenticado:</strong></span>
+                                <span class="delivered-ok"></span>
+                            </li>
+                            <li class="detail-row">
+                                <span><strong>Entregue:</strong></span>
+                                <span class="delivered-ok"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="docs-article">
+                    <div class="docs-title">
+                        Declaração das Finanças
+                    </div>
+                    <div class="docs-content">
+                        <ul class="detail-row-wrapper">
+                            <li class="detail-row">
+                                <span><strong>Estado:</strong></span>
+                                <span>Válido</span>
+                            </li>
+                            <li class="detail-row">
+                                <span><strong>Data:</strong></span>
+                                <span>05/09/2012</span>
+                            </li>
+                            <li class="detail-row">
+                                <span><strong>Validade:</strong></span>
+                                <span>05/03/2013</span>
+                            </li>
+                            <li class="detail-row">
+                                <span><strong>Autenticado:</strong></span>
+                                <span class="delivered-ok"></span>
+                            </li>
+                            <li class="detail-row">
+                                <span><strong>Entregue:</strong></span>
+                                <span class="delivered-ok"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- End Tab 2 -->
+
+        <!-- TAB 3 -->
+        <section id="hdp2-tab3" class="hdp2-tab3">
+
+            <div class="form form-theme-default hdp2-form">
+                <fieldset>
+		            <legend>
+                        <span class="form-legend">Filtrar por:</span>
+		            </legend>
+                    <div class="form-group form-group-3">
+                        <div class="form-group-wrapper">
+                            <div class="form-input-wrapper autocomplete-container">
+			                    <label for="licence-hdp2-filter">
+				                    <span class="form-label">Matrícula</span>
+				                    <span class="form-input custom-tooltip">
+					                    <input id="licence-hdp2-filter" type="text" value="" class="Validator">
+					                    <span class="tooltip-icon"></span>
+					                    <span class="tooltip-message">Campo obrigatório!</span>
+				                    </span>
+			                    </label>
+		                    </div>
+                            <div class="form-button">
+                                <button class="button hdp2-btn" id="Button1" type="submit">
+			                        <span class="button-txt">FILTRAR</span>
+		                        </button>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <table class="theme-default-table hdp2-table">
+                <thead>
+                    <tr>
+                        <th>Matrícula</th>
+                        <th class="column480">Identificador</th>
+                        <th>Desconto</th>
+                        <th>Expiração</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#1">45-LH-32</a></td>
+                        <td class="column480">234324345345</td>
+                        <td>Válido</td>
+                        <td>12/34/2015</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#1">12-AB-12</a></td>
+                        <td class="column480">234324345345</td>
+                        <td>Válido</td>
+                        <td>12/34/2015</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#1">34-CD-34</a></td>
+                        <td class="column480">234324345345</td>
+                        <td>
+                            <span class="form-label custom-tooltip tooltip-info">
+                                Não atribuido
+                                <span class="tooltip-icon"></span>
+                                <span class="tooltip-message">
+                                    Licença de Transporte de Mercadorias: FORA DE VALIDADE<br />
+                                    Comprovativo de emissões: DOCUMENTAÇÃO NÃO ENTREGUE
+                                </span>
+                            </span>
+                        </td>
+                        <td>12/34/2015</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#1">56-EF-56</a></td>
+                        <td class="column480">234324345345</td>
+                        <td>Válido</td>
+                        <td>12/34/2015</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <!-- End Tab 3 -->
+    </div>
+</section>

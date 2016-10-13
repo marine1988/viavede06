@@ -1,0 +1,69 @@
+<!-- module-adesao-2viatura.html START -->
+
+<fieldset>
+    <div id="injectCars" class="additional-cars">
+        <div class="additional-car">
+            <legend class="clearFloats">
+                <span class="form-legend">2ª viatura</span>
+                <a href="#" class="link-remove">Remover identificador</a>
+            </legend>
+
+            <div class="form-input-wrapper">
+                <span id="identificador" class="form-pre-filled">Modalidade do Identificador:</span>
+                <ul class="identifier-controls">
+                    <li>
+                        <label>
+                            <input id="aluguerRadio" type="radio" value="" name="SecondCar" checked="">
+                            <span class="form-label-wrapper">
+                                <span class="labelWrapper">
+                                    <strong class="title">Leve | 0,7<sup>€</sup><small>/mês</small></strong>
+                                    <span class="lead">Pague só nos meses que utiliza</span>
+                                </span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input id="compraCar" type="radio" value="" name="SecondCar">
+                            <span class="form-label-wrapper">
+                                <span class="labelWrapper">
+                                    <strong class="title">Aluguer | <span class="oldValue">6<sup>€</sup></span>&nbsp; 6<sup>€</sup><small>/ano</small></strong>
+                                    <span class="lead">1º ano gratuito e poupança de 25% nas atividades seguintes</span>
+                                </span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input id="reativacao" type="radio" value="" name="SecondCar">
+                            <span class="form-label-wrapper">
+                                <span class="labelWrapper">
+                                    <strong class="title">Compra | 22<sup>€</sup></strong>
+                                </span>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="block-error">
+                <div class="block-error-message">
+                    <p>Para beneficiar deste desconto, deverá selecionar a opção Extrato electóronico.</p>
+                </div>
+            </div>
+
+            <!--#include file="module-adesao-dados-2viatura-detalhe.html" -->
+
+        </div>
+
+    </div>
+
+</fieldset>
+
+<div class="additional-car">
+    <div class="form-button clearFloats">
+        <a href="#" class="link-add">Pedir novo identificador</a>
+    </div>
+</div>
+
+<!-- module-adesao-2viatura.html END -->

@@ -1,0 +1,1152 @@
+<!-- module-modals.html START -->
+<div class="modal hidden" hidden aria-hidden="true">
+    <!-- to work it needs the class="modal-modules modal-" the class related to the content -->
+    <div class="wrapper">
+        <span class="button close"><span class="txt hidden" hidden aria-hidden="false">Fechar Modal</span></span>
+        <div class="modal-content">
+            <div id="dnn_ModalPane" class="modalPane">
+                <!--CDF(Javascript|/DesktopModules/BenefitsCustomizableLink/Js/Module.js?cdv=9086)-->
+
+                <div id="benefits-custom-modalContent" class="form form-theme-default form-confirmation-modal">
+                    <div id="benefits-custom-dialog">
+                        <div class="contextual-modal">
+                            <fieldset>
+                                <legend>
+                                    <span class="form-legend">
+                                        Viagens & Vantagens
+                                    </span>
+                                </legend>
+                                <div class="form-description">
+                                    Esta vantagem é exclusiva para clientes particulares aderentes ao Viagens & Vantagens.
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="form-button contextual-modal-button">
+                            <button class="button btNext benefits-custom-link-submit-ok" type="submit">
+                                <span class="button-txt">
+                                    Ok
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skin Object UserLogin -->
+                <!--CDF(Javascript|/DesktopModules/UserLogin/Js/Module.js?cdv=9086)-->
+                <!--CDF(Javascript|/WingmanControls/Js/Common.js?cdv=9086)-->
+                <div class="form form-theme-default form-login">
+                    <div id="pnlLogin" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnLogin&#39;)">
+
+                        <div class="form-login-wrapper">
+                            <!-- Login Tabs -->
+                            <div class="login-tabs">
+                                <strong class="form-legend">A Minha Via Verde</strong>
+                                <ul class="gm-tabs-list">
+                                    <li class="ui-tabs-active"><a href="#"><span class="gm-box-corner-left"></span><span class="gm-link-txt">Login</span><span class="gm-box-corner-right"></span></a></li>
+                                    <li><a id="hlLoginShowRegisterVV" href="#"><span class="gm-box-corner-left"></span><span class="gm-link-txt">Registo</span><span class="gm-box-corner-right"></span></a></li>
+                                </ul>
+                                <div class="gm-tab-content gm-tabs-panel-selected">
+                                    <fieldset>
+                                        <legend><span class="form-legend">Login</span></legend>
+                                        <div class="form-description">
+                                            <p>Aceda à sua área pessoal com os dados do seu registo online.</p>
+                                        </div>
+                                        <div class="form-input-wrapper">
+                                            <label for="txtUsername">
+                                                <span class="form-label">Email</span>
+                                                <span class="form-input custom-tooltip">
+                                                    <input name="dnn$UserLogin$txtUsername" type="email" id="txtUsername" class="Validator" />
+                                                    <span class="tooltip-icon"></span>
+                                                    <span class="tooltip-message">
+                                                        <span id="dnn_UserLogin_rfvUsername" style="display:none;">Campo obrigatório</span>
+                                                        <span id="dnn_UserLogin_revEmail" style="display:none;">Email inválido</span>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-input-wrapper">
+                                            <label for="txtPassword">
+                                                <span class="form-label">Palavra-passe</span>
+                                                <span class="form-input custom-tooltip">
+                                                    <input name="dnn$UserLogin$txtPassword" type="password" id="txtPassword" class="Validator" />
+                                                    <span class="tooltip-icon"></span>
+                                                    <span class="tooltip-message">
+                                                        <span id="dnn_UserLogin_rfvPassword" style="display:none;">Campo obrigatório</span>
+                                                    </span>
+                                                </span>
+                                                <span class="form-label-bottom">
+                                                    Perdeu a palavra-passe? <a id="hlRecoverPassword" href="#" class="link">Recuperar palavra-passe</a>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <div class="form-button">
+                                        <div class="form-checkbox-wrapper">
+                                            <label for="chkRememberMe">
+                                                <span class="form-checkbox">
+                                                    <input id="chkRememberMe" type="checkbox" name="dnn$UserLogin$chkRememberMe" checked="checked" />
+                                                    <span class="form-checkbox-style"></span>
+                                                </span>
+                                                <span class="form-label">
+                                                    Memorizar Login
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <button type="submit" name="dnn$UserLogin$btnLogin" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;dnn$UserLogin$btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnLogin" class="button btNext">
+                                            <span class="button-txt">Login</span>
+                                        </button>
+                                    </div>
+                                    <div class="form-flash">
+                                        <span class="form-flash-corner">
+                                            <span class="form-flash-corner-left"></span>
+                                            <span class="form-flash-corner-right"></span>
+                                        </span>
+                                        <p>Ainda não é cliente Via Verde ? <a id="hlLoginShowNewAccount" href="#" class="link"><span class="link-txt">Adira já</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="loginStatusError" class="status-message error" style="display: none">
+                            <span class="status-message-title">Login</span>
+                            <div class="status-message-description"></div>
+                            <p><a id="hlLoginShowLogin" href="#" class="link">Voltar</a></p>
+                        </div>
+
+                    </div>
+                    <!-- Recover Password -->
+                    <div id="pnlRecover" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnRecoverPassword&#39;)">
+
+                        <div class="form-recover-wrapper">
+                            <fieldset>
+                                <legend><span class="form-legend">Recuperar a Palavra-Passe</span></legend>
+                                <div class="form-description">
+                                    <p>Introduza o seu email para alterar o seu acesso à área pessoal.</p>
+                                </div>
+                                <div class="form-input-wrapper">
+                                    <label for="txtRecoverEmail">
+                                        <span class="form-label">Email</span>
+                                        <span class="form-input custom-tooltip">
+                                            <input name="dnn$UserLogin$txtRecoverEmail" type="email" id="txtRecoverEmail" class="Validator" />
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">
+                                                <span id="dnn_UserLogin_rfvRecoverEmail" style="display:none;">Campo obrigatório</span>
+                                                <span id="dnn_UserLogin_revRecoverEmail" style="display:none;">Email inválido</span>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="form-button">
+                                <button type="submit" name="dnn$UserLogin$btnRecoverPassword" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;dnn$UserLogin$btnRecoverPassword&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnRecoverPassword" class="button btNext">
+                                    <span class="button-txt">Continuar</span>
+                                </button>
+                            </div>
+                            <div class="form-flash">
+                                <span class="form-flash-corner">
+                                    <span class="form-flash-corner-left"></span>
+                                    <span class="form-flash-corner-right"></span>
+                                </span>
+                                <p>Ainda não é cliente Via Verde ? <a id="hlRecoverShowNewAccount" class="link"><span class="link-txt">Adira já</span></a></p>
+                            </div>
+                        </div>
+                        <div id="recoverStatusSuccess" class="status-message" style="display: none">
+                            <span class="status-message-title">Recuperar a Palavra-Passe</span>
+                            <div class="status-message-description">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div id="recoverStatusError" class="status-message error" style="display: none">
+                            <span class="status-message-title">Recuperar a Palavra-Passe</span>
+                            <div class="status-message-description">
+                                <p></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var loginSettings = {
+                        ApiUrl: '/DesktopModules/UserLogin/Api.ashx',
+                        KeepUrl: false,
+                        RedirectUrl: null,
+
+                        Language: 'pt-PT',
+                        LoginErrorMessage: '<p>Email ou palavra-passe inválidos.</p><p>Por favor verifique os seus dados de acesso.</p>',
+                        RecoverPasswordMessage: '<p>Por favor verifique a sua caixa de email.</p><p>Enviámos-lhe instruções para alterar o seu acesso.</p>',
+                        UnknownErrorMessage: '<p>Não é possível satisfazer o seu pedido neste momento.</p><p>Por favor tente mais tarde.</p>',
+                    };
+                </script>
+                <!--CDF(Javascript|/DesktopModules/UserRegistration/Js/Module.js?cdv=9086)-->
+                <!--CDF(Javascript|/WingmanControls/Js/Common.js?cdv=9086)-->
+                <div id="pnlNewAccount" class="form form-theme-default form-new-account" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnNewAccount&#39;)">
+
+                    <div id="form-new-account">
+                        <fieldset>
+                            <legend><span class="form-legend">Aderir à Via Verde</span></legend>
+                            <div class="form-description">
+                                <p>Se ainda não é cliente Via Verde, adira aqui.</p>
+                            </div>
+                            <div class="form-input-wrapper">
+                                <label for="txtNewAccountEmail">
+                                    <span class="form-label">Email</span>
+                                    <span class="form-input custom-tooltip">
+                                        <input name="dnn$UserRegistration$txtNewAccountEmail" type="email" id="txtNewAccountEmail" class="Validator" />
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">
+                                            <span id="dnn_UserRegistration_rfvNewAccountEmail" style="display:none;">Campo obrigatório</span>
+                                            <span id="dnn_UserRegistration_revNewAccountEmail" style="display:none;">Email Inválido</span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-input-wrapper">
+                                <label for="txtNewAccountFiscalNumber">
+                                    <span class="form-label">NIF (Número de Identificação Fiscal)</span>
+                                    <span class="form-input custom-tooltip">
+                                        <input name="dnn$UserRegistration$txtNewAccountFiscalNumber" type="text" id="txtNewAccountFiscalNumber" class="Validator" />
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">
+                                            <span id="dnn_UserRegistration_rfvNewAccountFiscalNumber" style="display:none;">Campo obrigatório</span>
+                                            <span id="cvNewAccountFiscalNumber" style="display:none;">NIF Inválido</span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div id="pnlNewAccountForeignFiscalNumber" class="form-checkbox-wrapper" style="display:none;">
+                                <label for="chkNewAccountForeignFiscalNumber">
+                                    <span class="form-checkbox">
+                                        <input id="chkNewAccountForeignFiscalNumber" type="checkbox" name="dnn$UserRegistration$chkNewAccountForeignFiscalNumber" />
+                                        <span class="form-checkbox-style"></span>
+                                    </span>
+                                    <span class="form-label">
+                                        NIF estrangeiro
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <div class="form-button">
+                            <button type="submit" name="dnn$UserRegistration$btnNewAccount" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;dnn$UserRegistration$btnNewAccount&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnNewAccount" class="button btNext">
+                                <span class="button-txt">Iniciar Adesão</span>
+                            </button>
+                        </div>
+                        <div class="form-flash">
+                            <span class="form-flash-corner">
+                                <span class="form-flash-corner-left"></span>
+                                <span class="form-flash-corner-right"></span>
+                            </span>
+                            <p>Já é cliente Via Verde ? <a id="hlNewAccountShowRegisterVV" href="#" class="link"><span class="link-txt">Registe-se Online</span></a></p>
+                        </div>
+                    </div>
+                    <div id="newAccountStatusError" class="status-message error" style="display: none">
+                        <span class="status-message-title">Adesão à Via Verde</span>
+                        <div class="status-message-description"></div>
+                        <a id="hlShowNewAccount" href="#" class="link"><span class="link-txt">Voltar</span></a>
+                    </div>
+                    <div id="newAccountStatusSuccess" class="status-message success" style="display: none">
+                        <span class="status-message-title">Adesão à Via Verde</span>
+                        <div class="status-message-description"></div>
+                    </div>
+                </div>
+                <div id="pnlRegisterVV" class="form form-theme-default form-register-vv" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnRequestVVToken&#39;)">
+
+                    <div id="form-register-vv">
+                        <div class="login-tabs">
+                            <strong class="form-legend">A Minha Via Verde</strong>
+                            <ul class="gm-tabs-list">
+                                <li><a id="hlRegisterShowLogin" href="#"><span class="gm-box-corner-left"></span><span class="gm-link-txt">Login</span><span class="gm-box-corner-right"></span></a></li>
+                                <li class="ui-tabs-active"><a href="#"><span class="gm-box-corner-left"></span><span class="gm-link-txt">Registo</span><span class="gm-box-corner-right"></span></a></li>
+                            </ul>
+                            <div class="gm-tab-content gm-tabs-panel-selected">
+                                <fieldset>
+                                    <legend><span class="form-legend">Registo Online</span></legend>
+                                    <div class="form-description">
+                                        <p>Se já é cliente Via Verde mas ainda não tem acesso online, registe-se agora.</p>
+                                    </div>
+                                    <div class="form-input-wrapper">
+                                        <label for="txtRegisterVVFiscalNumber">
+                                            <span class="form-label">NIF (Número de Identificação Fiscal) do titular do contrato</span>
+                                            <span class="form-input custom-tooltip">
+                                                <input name="dnn$UserRegistration$txtRegisterVVFiscalNumber" type="text" id="txtRegisterVVFiscalNumber" class="Validator" />
+                                                <span class="tooltip-icon"></span>
+                                                <span class="tooltip-message">
+                                                    <span id="dnn_UserRegistration_rfvRegisterVVFiscalNumber" style="display:none;">Campo obrigatório</span>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+                                <div class="form-button">
+                                    <button type="submit" name="dnn$UserRegistration$btnRequestVVToken" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;dnn$UserRegistration$btnRequestVVToken&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnRequestVVToken" class="button btNext">
+                                        <span class="button-txt">Iniciar Registo</span>
+                                    </button>
+                                </div>
+                                <div class="form-flash">
+                                    <span class="form-flash-corner">
+                                        <span class="form-flash-corner-left"></span>
+                                        <span class="form-flash-corner-right"></span>
+                                    </span>
+                                    <p>Ainda não é cliente Via Verde ? <a id="hlRegisterShowNewAccount" href="#" class="link"><span class="link-txt">Adira Já</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="registerVVStatusError" class="status-message error" style="display: none">
+                        <span class="status-message-title">Registo Via Verde Online</span>
+                        <div class="status-message-description"></div>
+                        <a id="hlShowRegisterVV" href="#" class="link"><span class="link-txt">Voltar</span></a>
+                    </div>
+                </div>
+                <div id="pnlAlreadyVVO" class="form form-theme-default form-already-vvo">
+
+                    <fieldset>
+                        <legend><span id="lblAlreadyVVOTitle" class="form-legend"></span></legend>
+                        <input id="already-vvo-origin" type="hidden" value="" />
+                        <div class="form-description link-centered">
+                            <p id="lblAlreadyVVO" class="align-left"></p>
+                            <a href="#" id="hlAlreadyVVOGoTo"></a>
+                        </div>
+                        <div class="channel-columns no-contact clearFloats">
+                            <div class="channel-column left">
+                                <span class="label">Linha de Apoio</span>
+                                <div class="control">
+                                    <a href="#" class="call-center-number">707 500 900</a>
+                                </div>
+                            </div>
+                            <div class="channel-column right">
+                                <span class="label">Lojas Via Verde</span>
+                                <div class="control">
+                                    <a href="DesktopModules/UserRegistration/#" id="dnn_UserRegistration_btnAlreadyVVOLocator" class="link-location">Localizador</a>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="pnlRegisterConfirmation" class="form form-theme-default form-register-confirmation" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnRegisterVVConfirmation&#39;)">
+
+                    <div id="form-register-confirmation">
+                        <fieldset id="RegisterConfirmationContact">
+                            <legend><span class="form-legend">Registo Online</span></legend>
+                            <div class="form-description">
+                                <p id="RegisterVVConfirmationPhoneOrEmail"></p>
+                            </div>
+                            <div class="form-input-wrapper">
+                                <label for="form-register-confirmation-tel">
+                                    <span id="form-register-confirmation-tel" class="form-pre-filled"></span>
+                                </label>
+                            </div>
+                            <div class="form-description" id="RegisterVVConfirmationNextStep">
+                                <p>Por favor verifique a sua caixa de mensagens.</p>
+                            </div>
+                        </fieldset>
+                        <a id="btnOk" onclick="closeModal(); return true;"></a>
+                        <div id="RegisterConfirmationContactButton" class="form-button">
+                            <button type="submit" name="dnn$UserRegistration$btnRegisterVVConfirmation" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;dnn$UserRegistration$btnRegisterVVConfirmation&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnRegisterVVConfirmation" class="button btNext">
+                                <span class="button-txt">Inserir Código</span>
+                            </button>
+                        </div>
+                        <div class="register-legacy form-flash">
+                            <span class="form-flash-corner">
+                                <span class="form-flash-corner-left"></span>
+                                <span class="form-flash-corner-right"></span>
+                            </span>
+                            <div class="channel-columns clearFloats">
+                                <div class="channel-column left">
+                                    <span class="label"></span>
+                                    <div class="control">
+                                        <a id="dnn_UserRegistration_lnkHelpCenter" href="http://www.viaverde.pt/apoio-ao-cliente">Necessita de Apoio?</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="pnlRegisterVVO" class="form form-theme-default form-register-vvo" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnRegisterVVO&#39;)">
+
+                    <div id="form-register-vvo">
+                        <fieldset>
+                            <legend><span class="form-legend">Registo Online</span></legend>
+                            <div class="form-description">
+                                <p>Defina o email de registo e introduza o código recebido.</p>
+                            </div>
+                            <div class="form-input-wrapper">
+                                <label for="vvo-fiscalnumber">
+                                    <span class="form-label">NIF</span>
+                                    <span id="vvo-fiscalnumber" class="form-pre-filled"></span>
+                                </label>
+                            </div>
+                            <div class="form-input-wrapper">
+                                <label for="txtRegisterVVOEmail">
+                                    <span class="form-label">Email</span>
+                                    <span class="form-input custom-tooltip">
+                                        <input name="dnn$UserRegistration$txtRegisterVVOEmail" type="email" id="txtRegisterVVOEmail" class="Validator" />
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">
+                                            <span id="dnn_UserRegistration_rfvRegisterVVOEmail" style="display:none;">Campo obrigatório</span>
+                                            <span id="dnn_UserRegistration_revRegisterVVOEmail" style="display:none;">Email Inválido</span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-input-wrapper">
+                                <label for="txtRegisterVVOCode">
+                                    <span class="form-label">Código de registo</span>
+                                    <span class="form-input custom-tooltip">
+                                        <input name="dnn$UserRegistration$txtRegisterVVOCode" type="text" id="txtRegisterVVOCode" class="Validator" />
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">
+                                            <span id="dnn_UserRegistration_rfvRegisterVVOCode" style="display:none;">Campo obrigatório</span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <div class="form-button">
+                            <button type="submit" name="dnn$UserRegistration$btnRegisterVVO" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;dnn$UserRegistration$btnRegisterVVO&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnRegisterVVO" class="button">
+                                <span class="button-txt">Concluir Registo</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="registerVVOStatusError" class="status-message error" style="display:none;">
+                        <span class="status-message-title">Registo Online</span>
+                        <div class="status-message-description"></div>
+                        <a id="hlShowRegisterVVO" href="#" class="link"><span class="link-txt">Voltar</span></a>
+                    </div>
+                    <div id="registerVVOStatusSuccess" class="status-message success" style="display:none;">
+                        <span class="status-message-title">Registo Online</span>
+                        <div class="status-message-description"></div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var registrationSettings = {
+                        ApiUrl: '/DesktopModules/UserRegistration/Api.ashx',
+                        StoreLocatorUrl: '',
+
+                        Language: 'pt-PT',
+                        FiscalNumberNotFoundMessage: '<p>O NIF não está associado a nenhum contrato.</p><p>Por favor verifique o número.</p>',
+                        FiscalNumberExistsMessage: 'O NIF já está associado a um registo online.',
+                        EmailOrFiscalNumberExistsMessage: 'Os dados inseridos já estão associados a uma conta Via Verde.',
+                        AlreadyVVOGoToLoginMessage: 'Ir para o Login',
+                        AlreadyVVOGoToNewAccount: 'Ir para o Login',
+                        NewAccountTitle: 'Aderir à Via Verde',
+                        RegisterVVTitle: 'Registo Online',
+                        RegisterVVOPhone: 'Vai receber um código de registo no seu telemóvel',
+                        RegisterVVOEmail: 'Vai receber um código de registo no seu email.',
+                        RegisterVVONoContactsMessage: '<p>Atualmente não existe nenhuma forma de contato associada ao NIF introduzido.</p><p>Para efetuar o registo, por favor use os canais alternativos:</p>',
+                        RegisterVVOEmailExistsMessage: 'O email ou nif indicados já estão registados como cliente.',
+                        RegisterVVOInvalidCodeMessage: 'O código de registo é inválido.',
+                        RegisterVVOSuccessMessage: '<p>Verifique o seu e-mail de registo.</p><p>Enviámos-lhe as instruções para aceder à sua área pessoal.</p>',
+                        NewAccountMessage: 'Verifique a sua caixa de correio de mail. Enviámos-lhe instruções para configurar a sua conta.',
+                        UnknownErrorMessage: 'Neste momento não é possível satisfazer o pedido. Por favor tente mais tarde.',
+                    };
+                </script>
+                <!--CDF(Javascript|/DesktopModules/UserRegistration/Js/Onboarding.js?cdv=9086)-->
+                <!--CDF(Javascript|/Portals/_default/Skins/ViaVerde/script/jquery.multiple.select.js?cdv=9086)-->
+                <div id="pnlFormBoardData" class="form form-theme-default form-board-data" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnBoardDataSubmit&#39;)">
+
+                    <input type="hidden" name="dnn$Onboarding$hdfDashBoardPage" id="hdfDashBoardPage" value="http://www.viaverde.pt/minha-via-verde/inicio" />
+                    <div class="form-board-header">
+                        <div class="logo-solo">
+                            Adira a uma nova <span>Via Verde</span>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Para além dos atuais serviços, aceda a um conjunto de vantagens adicionais oferecidos pela Via Verde Serviços.<br /><br />Para aderir, indique os seus dados preferenciais para contacto.<br />Esta informação não altera os dados contratuais existentes.
+                            </p>
+                        </div>
+                    </div>
+                    <fieldset>
+                        <legend>
+                            <span class="form-board-legend">
+                            </span>
+                        </legend>
+                        <div class="form-input-wrapper">
+                            <label for="txtBoardDataName">
+                                <span class="form-label">
+                                    Nome completo
+                                </span>
+                                <span class="form-input custom-tooltip">
+                                    <input name="dnn$Onboarding$txtBoardDataName" type="text" id="txtBoardDataName" class="Validator" />
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">
+                                        <span id="dnn_Onboarding_rfvBoardDataName" style="display:none;">Campo obrigatório</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <label for="txtBoardDataEmail">
+                                        <span class="form-label">
+                                            Email de contacto
+                                        </span>
+                                        <span class="form-input custom-tooltip">
+                                            <input name="dnn$Onboarding$txtBoardDataEmail" type="email" id="txtBoardDataEmail" class="Validator" />
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">
+                                                <span id="dnn_Onboarding_rfvBoardDataEmail" style="display:none;">Campo obrigatório</span>
+                                                <span id="dnn_Onboarding_revBoardDataEmail" style="display:none;">E-mail inválido</span>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="form-input-wrapper">
+                                    <label for="txtBoardDataContact">
+                                        <span class="form-label">
+                                            Contacto telefónico
+                                        </span>
+                                        <span class="form-input custom-tooltip">
+                                            <input name="dnn$Onboarding$txtBoardDataContact" type="text" maxlength="9" id="txtBoardDataContact" class="Validator" />
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">
+                                                <span id="dnn_Onboarding_rfvBoardDataContact" style="display:none;">Campo obrigatório</span>
+                                                <span id="dnn_Onboarding_revBoardDataContact" style="display:none;">Contacto telefónico inválido</span>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-input-wrapper">
+                            <label for="txtBoardDataAddress">
+                                <span class="form-label">
+                                    Morada
+                                </span>
+                                <span class="form-input custom-tooltip">
+                                    <input name="dnn$Onboarding$txtBoardDataAddress" type="text" maxlength="60" id="txtBoardDataAddress" class="Validator" />
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">
+                                        <span id="dnn_Onboarding_rfvBoardDataAddress" style="display:none;">Campo obrigatório</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <label for="txtBoardDataPostalCode">
+                                        <span class="form-label">
+                                            Código postal
+                                        </span>
+                                        <span class="form-input custom-tooltip">
+                                            <input name="dnn$Onboarding$txtBoardDataPostalCode" type="text" id="txtBoardDataPostalCode" class="Validator" />
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">
+                                                <span id="dnn_Onboarding_rfvBoardDataPostalCode" style="display:none;">Campo obrigatório</span>
+                                                <span id="dnn_Onboarding_ctvBoardDataPostalCode" style="display:none;">Campo inválido</span>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="form-input-wrapper">
+                                    <label for="txtBoardDataPlace">
+                                        <span class="form-label">
+                                            Localidade
+                                        </span>
+                                        <span class="form-input custom-tooltip">
+                                            <input name="dnn$Onboarding$txtBoardDataPlace" type="text" id="txtBoardDataPlace" class="Validator" />
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">
+                                                <span id="dnn_Onboarding_rfvBoardDataPlace" style="display:none;">Campo obrigatório</span>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// On v2, use Contracts-->
+                        <div class="form-checkbox-wrapper" style="display: none">
+                            <label for="chkBoardDataApplyData" class="custom-tooltip">
+                                <span class="form-checkbox">
+                                    <input id="chkBoardDataApplyData" type="checkbox" name="dnn$Onboarding$chkBoardDataApplyData" />
+                                    <span class="form-checkbox-style"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-multiselect-wrapper" style="display: none">
+                            <div class="form-select custom-tooltip tooltip-error">
+                                <select size="4" name="dnn$Onboarding$ddlBoardDataContracts" multiple="multiple" id="ddlBoardDataContracts"></select>
+                                <span class="tooltip-icon"></span>
+                                <span class="tooltip-message">
+                                    <span id="dnn_Onboarding_rfvBoardDataContracts" style="display:none;">Campo obrigatório</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-button">
+                            <div id="pnlBoardDataAcceptTerms" class="form-checkbox-wrapper" style="display: none;">
+                                <span id="ltlBoardDataMyContracts" class="form-label">Ao clicar em ADERIR estou a aceitar os <a href="http://www.viaverde.pt/termos-condicoes" target="_blank"><span class="link-txt">termos e condições</span></a> de adesão à Via Verde Serviços e a <a href="http://www.viaverde.pt/politica-privacidade" target="_blank"><span class="link-txt">politica de privacidade</span></a></span>
+                                <div class="form-checkbox-wrapper">
+                                    <label for="chkBoardDataDisallowMarketing">
+                                        <span class="form-checkbox">
+                                            <input id="chkBoardDataDisallowMarketing" type="checkbox" value="">
+                                            <span class="form-checkbox-style"></span>
+                                        </span>
+                                        <span class="form-label">Não pretendo receber comunicações de marketing</span>
+                                    </label>
+                                </div>
+                                <div class="form-checkbox-wrapper custom-tooltip">
+                                    <label for="chkBoardDataDisallowDataTransmission">
+                                        <span class="form-checkbox">
+                                            <input id="chkBoardDataDisallowDataTransmission" type="checkbox" name="dnn$Onboarding$chkBoardDataDisallowDataTransmission" />
+                                            <span class="form-checkbox-style"></span>
+                                        </span>
+                                        <span class="form-label">Não autorizo a interconexão dos meus dados entre empresas do grupo Brisa no âmbito dos serviços que prestam. Ao assinalar esta opção deixa de ser possível operacionalizar o acesso ao serviço integrado de apoio ao cliente e ao programa Viagens & Vantagens</span>
+                                    </label>
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">
+                                        <span id="ctvBoardDataDisallowDataTransmission" style="display:none;">Campo Exclusivo</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <button type="submit" name="dnn$Onboarding$btnBoardDataSubmit" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;dnn$Onboarding$btnBoardDataSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnBoardDataSubmit" class="button">
+                                <span class="button-txt">Aderir</span>
+                            </button>
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="pnlBoardSegments" class="form form-theme-default form-board-segments" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnBoardSegmentsSubmit&#39;)">
+
+                    <fieldset>
+                        <legend>
+                            <span class="form-legend">
+                                Viagens & Vantagens
+                            </span>
+                        </legend>
+                        <div class="form-description">
+                            <p>Agora, vai ganhar pontos com a Via Verde e descobrir Portugal com os nossos parceiros.</p><p>O Viagens & Vantagens dá-lhe experiências de turismo e lazer, vantagens nas áreas de serviço e setor automóvel, e muitos prémios.</p>
+                            <p>Escolha abaixo os seus interesses &#8212; deverá selecionar 4 áreas.<br />Poderá modificá-las mais tarde, em <span style="text-decoration: underline;">A minha Via Verde > Pontos e Programas</span></p>
+                        </div>
+                        <div class="interests-list">
+                            <!--CDF(Javascript|/WingmanControls/Js/SelectSegments.js?cdv=9086)-->
+                            <ul>
+
+                                <li class="ic-welfare-bg ">
+                                    <label for="chkSelectSegment-3">
+                                        <span class="ic ic-welfare">Bem-Estar</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Spas, termas e terapias
+                                                        para relaxar e cuidar de si.
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id='chkSelectSegment-3' type="checkbox" value="3">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">
+                                                            Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="ic-family-bg ">
+                                    <label for="chkSelectSegment-5">
+                                        <span class="ic ic-family">Família</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Parques temáticos, zoos e atividades para pais e filhos.
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id='chkSelectSegment-5' type="checkbox" value="5">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">
+                                                            Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="ic-fairs-events-bg ">
+                                    <label for="chkSelectSegment-13">
+                                        <span class="ic ic-fairs-events">Festivais e Eventos</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Música, sabores e tradições para apontar no calendário.
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id='chkSelectSegment-13' type="checkbox" value="13">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">
+                                                            Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="ic-gastronomy-wine-bg ">
+                                    <label for="chkSelectSegment-6">
+                                        <span class="ic ic-gastronomy-wine">Gastronomia e Vinhos</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Rotas gastronómicas e néctares dos deuses, só para bons vivants.
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id='chkSelectSegment-6' type="checkbox" value="6">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">
+                                                            Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="ic-golf-bg ">
+                                    <label for="chkSelectSegment-7">
+                                        <span class="ic ic-golf">Golfe</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Os melhores campos, eventos corporativos e estadias temáticas.
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id='chkSelectSegment-7' type="checkbox" value="7">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">
+                                                            Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="ic-history-bg ">
+                                    <label for="chkSelectSegment-8">
+                                        <span class="ic ic-history">História e Cultura</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Museus, monumentos e rotas para apaixonados pela nossa identidade.
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id='chkSelectSegment-8' type="checkbox" value="8">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">
+                                                            Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="ic-nature-bg ">
+                                    <label for="chkSelectSegment-9">
+                                        <span class="ic ic-nature">Natureza e Ar Livre</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Caminhadas ou birdwatching? Saia de casa e aventure-se com o ar puro.
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id='chkSelectSegment-9' type="checkbox" value="9">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">
+                                                            Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="ic-romance-bg ">
+                                    <label for="chkSelectSegment-10">
+                                        <span class="ic ic-romance">Romance</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Lugares de sonho e ideias inspiradoras para programas a dois.
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id='chkSelectSegment-10' type="checkbox" value="10">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">
+                                                            Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="ic-sun-beach-bg ">
+                                    <label for="chkSelectSegment-11">
+                                        <span class="ic ic-sun-beach">Sol e Praia</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        S&oacute; est&aacute; bem a apanhar sol? H&aacute; praias e parques aqu&aacute;ticos que tem de conhecer.
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id='chkSelectSegment-11' type="checkbox" value="11">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">
+                                                            Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="ic-surf-bg ">
+                                    <label for="chkSelectSegment-12">
+                                        <span class="ic ic-surf">Surf</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Das ondas perfeitas aos spots com tradição. Agarre na prancha e venha por aqui.
+
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id='chkSelectSegment-12' type="checkbox" value="12">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">
+                                                            Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </fieldset>
+                    <div class="form-board-segments-bottom">
+                        <div class="form-checkbox-wrapper">
+                            <span class="form-label">
+                                Ao clicar em "ADERIR" estou a aceitar o <a href="http://www.viaverde.pt/termos-condicoes" target="_blank">regulamento</a> que li e que pressupõe a interconexão dos meus dados entre empresas do grupo Brisa no âmbito do programa Viagens & Vantagens
+                            </span>
+                        </div>
+                        <div class="form-button">
+                            <button id="btnBoardSegmentsLater" class="button button-border" type="submit">
+                                <span class="button-txt">Aderir Mais Tarde</span>
+                            </button>
+                            <button type="submit" name="dnn$Onboarding$btnBoardSegmentsSubmit" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;dnn$Onboarding$btnBoardSegmentsSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnBoardSegmentsSubmit" class="button">
+                                <span class="button-txt">
+                                    Aderir
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="pnlVVPontosWelcome" class="form form-theme-default js-wellcome" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnVVPontosWelcome&#39;)">
+
+                    <div id="fsrPanel">
+                        <div class="contextual-modal">
+                            <div class="contextual-modal-header">
+                                <div class="header-icon success"></div>
+                                <div class="header-info">
+                                    <span class="action">
+                                        Bem-vindo ao Viagens & Vantagens!
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-description">
+                                <p>
+                                    Por ter aderido, recebemo-lo com uma oferta especial:
+                                </p>
+                            </div>
+                            <div class="wellcome-modal">
+                                <strong id="lblVVPontosWelcomePackage" class="wellcome-modal-tit"></strong>
+                            </div>
+                            <div class="form-description">
+                                <p>Para começar a usar os pontos, veja os nossos <a href="http://www.viaverde.pt/viagens-vantagens/programas-de-lazer">Programas de Lazer</a>.</p>
+                                <p>Com base no seu uso habitual da Via Verde, começa as suas Viagens & Vantagens como:</p>
+                            </div>
+                            <div class="wellcome-modal">
+                                <strong id="lblVVPontosWelcomeTier" class="wellcome-modal-tit"></strong>
+                            </div>
+                            <div class="form-description">
+                                <p>Conheça os seus benefícios nas áreas de serviço e setor automóvel em <a href="http://www.viaverde.pt/viagens-vantagens/vantagens-auto">Vantagens Auto</a>.</p>
+                            </div>
+                        </div>
+                        <div class="form-button wellcome-modal-button">
+                            <button type="submit" name="dnn$Onboarding$btnVVPontosWelcome" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;dnn$Onboarding$btnVVPontosWelcome&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnVVPontosWelcome" class="button">
+                                <span class="button-txt">
+                                    Ok, entendi
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="pnlTierChange" class="form form-theme-default js-new-tier" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnVVPontosTierChange&#39;)">
+
+                    <div id="fsrPanel2">
+                        <div class="contextual-modal">
+                            <div class="contextual-modal-header">
+                                <div class="header-icon success"></div>
+                                <div class="header-info">
+                                    <span class="action">O seu estatuto melhorou!</span>
+                                </div>
+                            </div>
+                            <div class="form-description">
+                                <p>O pouco uso da Via Verde nos �ltimos meses tem feito com que o se estatuto piorasse, agora �:</p>
+                            </div>
+                            <div class="wellcome-modal">
+                                <strong class="wellcome-modal-tit">Estatuto: <span>SILVER</span></strong>
+                            </div>
+                            <div class="form-description">
+                                <p>As vantagens �s que t�m acesso melhoraram, e os descontos agora s�o maiores. Pode v�-los em <a href="">Vantagens Auto</a>.</p>
+                            </div>
+                        </div>
+                        <div class="form-button wellcome-modal-button">
+                            <button type="submit" name="dnn$Onboarding$btnVVPontosTierChange" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;dnn$Onboarding$btnVVPontosTierChange&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnVVPontosTierChange" class="button">
+                                <span class="button-txt">
+                                    Parabéns!
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var onboardingSettings = {
+                        ApiUrl: '/DesktopModules/UserRegistration/Api.ashx',
+                        OnboardingRedirectUrl: 'http://www.viaverde.pt/minha-via-verde/inicio',
+                        Language: 'pt-PT',
+                        PostalCodeValidation: '/DesktopModules/UserRegistration/Handlers/ValidatePostalCode.ashx',
+                        MultipleContractsMessage: 'Aplicar estes dados aos meus contratos',
+                        SingleContractMessage: 'Aplicar estes dados ao meu contrato',
+                        ChooseContractMessage: 'Escolher qual contrato',
+                        ContractXofYMessage: '# de % contratos',
+                        AllContractsMessage: 'Todos os contratos',
+                        MustAcceptTermsMessage: 'Para avançar tem de aceitar os Termos e Condições.',
+                        MaxSelectedSegments: 4,
+                        VVPontosWelcomePackageMessage: 'Oferta de boas-vindas: <span>{0} pontos</span>',
+                        VVPontosWelcomeTierMessage: 'Estatuto: <span>{0}</span>',
+                        SegmentCountErrorMessage: 'Tem de selecionar 4 interesses.',
+                        UnknownErrorMessage: 'Não é possível satisfazer o seu pedido, tente novamente mais tarde.',
+                    };
+                </script>
+                <!-- Generic Modal Status Message -->
+                <div class="form form-theme-default form-generic-message">
+                    <div class="status-message">
+
+                        <span class="status-message-title"></span>
+                        <div class="status-message-description"></div>
+                    </div>
+                </div>
+
+                <!-- PL 6.2.5 HDP2 MODAL -->
+                <div class="form form-theme-default form-vehicle-docs">
+                    <script type="text/javascript">
+                        $(function () {
+                            $("#fsrPanelCancel").click(function (e) {
+                                e.preventDefault();
+
+                                closeModal();
+                            });
+
+                            $("#fsrPanelOK").click(function (e) {
+                                e.preventDefault();
+
+                                startLoading(_Modal);
+                                $("#fsrPanel").hide();
+
+                                $("#fsrStatus-Message").show();
+
+
+                                // Stop Loading after 1 second
+                                setTimeout(function () {
+                                    stopLoading(_Modal);
+                                }, 500);
+
+                            });
+                        });
+                    </script>
+                    <div id="fsrPanel">
+                        <div class="contextual-modal">
+                            <div class="contextual-modal-header">
+                                <div class="header-icon classe3"></div>
+                                <div class="header-info">
+                                    <span class="alias">Viatura (87-TM-98)</span>
+                                    <span class="action">Documentos da Viatura</span>
+                                </div>
+                            </div>
+                            <div class="form-description">
+                                <div class="list-docs-wrapper">
+                                    <article class="docs-article">
+                                        <div class="docs-title">
+                                            Licença de Transporte de Mercadorias
+                                        </div>
+                                        <div class="docs-content">
+                                            <ul class="detail-row-wrapper">
+                                                <li class="detail-row">
+                                                    <span><strong>Estado:</strong></span>
+                                                    <span>Válido</span>
+                                                </li>
+                                                <li class="detail-row">
+                                                    <span><strong>Data:</strong></span>
+                                                    <span>19/12/2008</span>
+                                                </li>
+                                                <li class="detail-row">
+                                                    <span><strong>Validade:</strong></span>
+                                                    <span>05/12/2013</span>
+                                                </li>
+                                                <li class="detail-row">
+                                                    <span><strong>Autenticado:</strong></span>
+                                                    <span class="delivered-ok"></span>
+                                                </li>
+                                                <li class="detail-row">
+                                                    <span><strong>Entregue:</strong></span>
+                                                    <span class="delivered-ok"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                    <article class="docs-article">
+                                        <div class="docs-title">
+                                            Comprovativo de Emissões
+                                        </div>
+                                        <div class="docs-content">
+                                            <ul class="detail-row-wrapper">
+                                                <li class="detail-row">
+                                                    <span><strong>Estado:</strong></span>
+                                                    <span>Válido</span>
+                                                </li>
+                                                <li class="detail-row">
+                                                    <span><strong>Autenticado:</strong></span>
+                                                    <span class="delivered-no"></span>
+                                                </li>
+                                                <li class="detail-row">
+                                                    <span><strong>Entregue:</strong></span>
+                                                    <span class="delivered-ok"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button id="fsrPanelCancel" class="button" type="button">
+                                    <span class="button-txt">Fechar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PL 6.2.5 HDP2 MODAL -->
+				
+				<!-- PL 6.6 Modal -->
+				<div class="form form-theme-default form-suppress-registration ctrlauto-modal">
+					<script type="text/javascript">
+						$(function () {
+							$("#fsrPanelCancel").click(function (e) {
+								e.preventDefault();
+
+								closeModal();
+							});
+
+							$("#fsrPanelOK").click(function (e) {
+								e.preventDefault();
+
+								startLoading(_Modal);
+								$("#fsrPanel").hide();
+
+								$("#fsrStatus-Message").show();
+
+
+								// Stop Loading after 1 second
+								setTimeout(function () {
+									stopLoading(_Modal);
+								}, 500);
+
+							});
+						});
+					</script>
+					
+					<div id="fsrPanel">
+						<div class="contextual-modal">
+							<div class="contextual-modal-header">
+								<div class="header-icon classe1"></div>
+								<div class="header-info">
+									<span class="alias">Opel do Tiago (87-TM-98)</span>
+									<span class="action">Desmarcar inspeção</span>
+								</div>
+							</div>
+							<div class="form-description">
+								<p><strong>Se optou por pagar com o seu identificador, não se preocupe, o pagamento será?</strong></p>
+								<p>Tem a certeza que quer desmarcar a inspeção?</p>
+							</div>
+						</div>
+						<div class="form-button contextual-modal-button">
+							<button class="button button-small" id="fsrPanelOK" type="submit">
+								<span class="button-txt">Desmarcar inspeção</span>
+							</button>
+							<button class="button button-border button-small" id="fsrPanelCancel" type="submit">
+								<span class="button-txt">Cancelar</span>
+							</button>
+						</div>
+					</div>
+					<div id="fsrStatus-Message" class="status-message" style="display: none">
+						<!--tambem se pode user error ou success-->
+						<span class="status-message-title">Titulo a definir</span>
+						<div class="status-message-description">
+							<p>Mensagem a definir. Clique neste <a href="#" class="link" title="Continuar processo de adesão...">link</a> para voltar....</p>
+						</div>
+					</div>
+				</div>
+				<!-- END PL 6.6 Modal -->
+
+
+
+            </div>
+
+        </div>
+        <div class="loading"><span>A carregar...</span></div>
+    </div>
+</div>
+<!-- module-modals.html END -->

@@ -1,0 +1,111 @@
+<section class="theme-detail">
+	<div class="theme-detail-accordion">
+		<div class="menu-top-selection">
+            <div class="theme-select search">
+                <a href="#">
+                    <cite></cite>
+                    <span>Resultados da pesquisa para "movimentos"</span>
+                </a>
+                <span class="ic-arrow"></span>
+                <div class="nav-menu-sub">
+                    <ul>
+                        <li><a href="">Adesão à Via Verde</a></li>
+                        <li><a href="">Identificadores</a></li>
+                        <li><a href="">Pagamentos e Extratos</a></li>
+                        <li><a href="">Outros Serviços Via Verde</a></li>
+                        <li><a href="">Viagens e Vantagens</a></li>
+                        <li><a href="">Notificações</a></li>
+                        <li><a href="">Inspecção Automóvel Controlauto</a></li>
+                        <li><a href="">Descontos Monovolumes de Pesados</a></li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+		<div class="perguntas-frequentes">
+			<h3>Perguntas frequentes</h3>
+			<div class="accordion" id="accordion-perguntas">
+				<article>
+                    <h4>É obrigatório colar o identificador no interior do para-brisas da viatura?</h4>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h4>O seu desconto de mercadorias não está a ser aplicado?</h4>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h4>Não está a ser aplicado o desconto de Monovolume?</h4>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h4>Posso aceder aos meus <span class="search-word">movimentos</span> e extratos online?</h4>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h4>Foi-lhe cobrado uma taxa de portagem que não corresponde à classe do seu veiculo?</h4>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </article>
+			</div>
+		</div>
+        <!--#include file="module-support-situacoes.html" -->
+	</div>
+    <aside class="support-theme-detail-video">
+        <h3>Vídeos</h3>
+        <ul>
+            <li>
+                <!-- É necessário substituir o ID do video no href ===
+                === https://www.youtube.com/embed/VIDEO_ID ===
+                e substituir o titulo do video -->
+                <a class="venobox" data-autoplay="true" data-type="youtube" href="https://www.youtube.com/embed/gXWLvUIrFrI" title="Title vídeo">
+                    <!-- É necessário substituir o ID do video http://img.youtube.com/vi/VIDEO_ID/default.jpg -->
+                    <div class="video-img">
+                        <img src="http://img.youtube.com/vi/gXWLvUIrFrI/default.jpg">
+                        <button class="play-btn">Ver Vídeo</button>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-name">Apareceu a luz amarela ao passar na portagem. O que faço?</span>
+                        <span class="video-time">10:34 min.</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </aside>
+</section>
+
+
+<script type="text/javascript" src="script/venobox.min.js"></script>
+<script type="text/javascript">
+$(function () {
+
+    /* jQuery UI Accordion call */
+    //Centro de Apoio Situação
+    $("#accordion-perguntas").accordion({
+        header: "h4",
+        heightStyle: "content",
+        active: false,
+        collapsible: true
+    });
+
+    //get video to open in fullscreen modal
+    $('.venobox').venobox();
+})
+</script>

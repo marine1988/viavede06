@@ -1,0 +1,81 @@
+<!-- module-adesao-resumo-adesao.html START -->
+
+<table class="article-block-table js-sticky-result">
+    <caption>Resumo</caption>
+    <tbody>
+        <tr>
+            <th>1 x COMPRA</th>
+            <td>€20.00</td>
+        </tr>
+        <tr>
+            <th>2 x ALUGUER</th>
+            <td>€20.00</td>
+        </tr>
+        <tr>
+            <th>Id. compra online</th>
+            <td>€20.00</td>
+        </tr>
+        <tr>
+            <th>Extrato em papel - Fatura/Recibo e detalhe dividido</th>
+            <td>€20.00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Total</th>
+            <td>€&nbsp;60.00</td>
+        </tr>
+            
+    </tfoot>
+</table>
+
+<script>
+var _getHeight = 0;
+function totalElemHeight(parent, elem) {
+    _getHeight = 0;
+
+    $(parent).find(elem).each(function() {
+        _getHeight += $(this).outerHeight();
+    });
+}
+
+function stickyResult(elem) {
+    var _menuHeight = _Header.height();
+
+    $(elem).css('top', _menuHeight);
+}
+
+$(function() {
+    var _headerPageHeight = $('.accession-header').outerHeight();
+    var _menuHeight = _Header.height();
+    var _stickyResultHeight =  _headerPageHeight + _menuHeight;
+    var _articleBlockHeight = $('.article-block').outerHeight();
+
+    stickyResult('.js-sticky-result');
+
+    $(window).scroll(function () {
+        if ($('.js-sticky-result').prev('.article-block')) {
+            if ($(this).scrollTop() > (_stickyResultHeight + _getHeight)) {
+                $('.js-sticky-result').addClass('sticky');
+            } else {
+                $('.js-sticky-result').removeClass('sticky');
+            }
+        } else {
+            if ($(this).scrollTop() > _stickyResultHeight) {
+                $('.js-sticky-result').addClass('sticky');
+            } else {
+                $('.js-sticky-result').removeClass('sticky');
+            }
+        }
+
+        stickyResult('.js-sticky-result');
+    });
+});
+
+$(window).on('resize', function () {
+    stickyResult('.js-sticky-result'); 
+});
+</script>
+
+
+<!-- module-adesao-resumo-adesao.html END -->

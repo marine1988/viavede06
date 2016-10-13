@@ -1,0 +1,821 @@
+/*helpers*/
+
+/*---------------------------------*/
+/*----------- 10 SEARCH -----------*/
+/*---------------------------------*/
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+
+/* start commented backslash hack \*/
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+
+/* close commented backslash hack */
+
+
+/*module code*/
+
+.search-module.desktop{
+    max-width: 358px;
+}
+
+.offers-list aside{
+    width: 320px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    z-index: 1;
+}
+
+.offers-list div.offers-content{
+    width: calc(100% - 350px);
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    clear: none;
+}
+.offers-list div.offers-content.offers-fixed{
+    margin-left: 340px;
+}
+
+.offers-list .wrapper,.search-module-suggestions .wrapper{margin-top: 0;}
+.search-module .list-segments.top {
+    height: 50px;
+    background: #dadada url(images/arrow-green-up.png) no-repeat 90% 20px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.search-module .list-segments.top:focus {
+    background-color: transparent;
+}
+
+.search-module .list-segments.top.closed {
+    background-image: url(images/arrow-green-down.png);
+}
+
+.search-module .list-segments.top span {
+    padding-left: 18px;
+    color: #02b245;
+    font: 18px/50px 'PrometoRegular', Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+.search-module .list-segments.middle {
+    background: #dadada;
+    padding-top: 20px;
+    margin-bottom: 2px;
+}
+.search-module.search-module-suggestions .list-segments.middle {
+    padding-top: 5px;
+}
+.search-module.search-module-suggestions .list-segments.middle{
+    margin-bottom: 0;
+}
+.search-module .list-segments.middle .title-list-segment{
+    padding-left: 18px;
+    color: #02b245;
+    font: 18px/50px 'PrometoRegular', Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+.search-module.search-module-offers .list-segments.middle .title-list-segment{
+    display: none;
+}
+
+.search-module .list-segments.middle.hide {
+    display: none;
+}
+
+.search-module .list-segments.middle ul {
+    list-style: none;
+    padding: 0 0 0 18px;
+    margin: 0;
+}
+
+.search-module .list-segments.middle li {
+    width: 45%;
+    padding: 0 12px 0 0;
+    float: left;
+    font: 14px 'PrometoRegular', Arial, Helvetica, sans-serif;
+    margin-bottom: 18px;
+    height: 44px;
+    transform-style: preserve-3d;
+}
+
+.search-module .list-segments.middle li span {
+    cursor: pointer;
+    display: block;
+}
+
+.search-module.search-module-offers .list-segments.middle li span{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.search-module .list-segments.middle li cite {
+    display: block;
+    background-size: 100%;
+    margin-right: 5%;
+    cursor: pointer;
+    float: left;
+    max-width: 44px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.search-module .list-segments.middle li cite img {
+    width: 100%;
+}
+
+.search-module .list-segments cite.ic-welfare {
+    background: url(images/icons-search-off.png) 0 -44px;
+}
+.search-module .list-segments .ic-welfare:hover cite{
+    background-image: url(images/icons-search-on.png);
+}
+.search-module .list-segments .ic-welfare.active cite {
+    background-image: url(images/icons-search-active.png);
+}
+
+.search-module .list-segments cite.ic-family {
+    background: url(images/icons-search-off.png) 0 -264px;
+}
+.search-module .list-segments .ic-family:hover cite{
+    background-image: url(images/icons-search-on.png);
+}
+.search-module .list-segments .ic-family.active cite {
+    background-image: url(images/icons-search-active.png);
+}
+
+.search-module .list-segments cite.ic-fairs-events {
+    background: url(images/icons-search-off.png) 0 -88px;
+}
+.search-module .list-segments .ic-fairs-events:hover cite{
+    background-image: url(images/icons-search-on.png);
+}
+.search-module .list-segments .ic-fairs-events.active cite {
+    background-image: url(images/icons-search-active.png);
+}
+
+.search-module .list-segments cite.ic-gastronomy-wine {
+    background: url(images/icons-search-off.png) 0 -132px;
+}
+.search-module .list-segments .ic-gastronomy-wine:hover cite{
+    background-image: url(images/icons-search-on.png);
+}
+.search-module .list-segments .ic-gastronomy-wine.active cite {
+    background-image: url(images/icons-search-active.png);
+}
+
+.search-module .list-segments cite.ic-golf {
+    background: url(images/icons-search-off.png) 0 -220px;
+}
+.search-module .list-segments .ic-golf:hover cite{
+    background-image: url(images/icons-search-on.png);
+}
+.search-module .list-segments .ic-golf.active cite {
+    background-image: url(images/icons-search-active.png);
+}
+
+.search-module .list-segments cite.ic-history {
+    background: url(images/icons-search-off.png) 0 -176px;
+}
+.search-module .list-segments .ic-history:hover cite{
+    background-image: url(images/icons-search-on.png);
+}
+.search-module .list-segments .ic-history.active cite {
+    background-image: url(images/icons-search-active.png);
+}
+
+.search-module .list-segments cite.ic-nature {
+    background: url(images/icons-search-off.png) 0 -352px;
+}
+.search-module .list-segments .ic-nature:hover cite{
+    background-image: url(images/icons-search-on.png);
+}
+.search-module .list-segments .ic-nature.active cite {
+    background-image: url(images/icons-search-active.png);
+}
+
+.search-module .list-segments cite.ic-romance {
+    background: url(images/icons-search-off.png) 0 0;
+}
+.search-module .list-segments .ic-romance:hover cite{
+    background-image: url(images/icons-search-on.png);
+}
+.search-module .list-segments .ic-romance.active cite {
+    background-image: url(images/icons-search-active.png);
+}
+
+.search-module .list-segments cite.ic-sun-beach {
+    background: url(images/icons-search-off.png) 0 -308px;
+}
+.search-module .list-segments .ic-sun-beach:hover cite{
+    background-image: url(images/icons-search-on.png);
+}
+.search-module .list-segments .ic-sun-beach.active cite {
+    background-image: url(images/icons-search-active.png);
+}
+
+.search-module .list-segments cite.ic-surf {
+    background: url(images/icons-search-off.png) 0 -396px;
+}
+.search-module .list-segments .ic-surf:hover cite{
+    background-image: url(images/icons-search-on.png);
+}
+.search-module .list-segments .ic-surf.active cite {
+    background-image: url(images/icons-search-active.png);
+}
+
+.search-module .list-segments.bottom {
+    background: #dadada;
+    padding: 18px;
+}
+
+.search-module .list-segments.bottom .clean {
+    display: block;
+    color: #495264;
+    margin: auto;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 12px;
+    clear: both;
+    cursor: pointer;
+}
+
+.search-module .list-segments.bottom .tit {
+    color: #02b245;
+    font: 18px 'PrometoRegular', Arial, Helvetica, sans-serif;
+}
+
+.search-module .list-segments.bottom .filter {
+    padding: 0 0 20px 0;
+}
+
+.search-module .list-segments.bottom .filter .values {
+    font: 16px 'PrometoRegular', Arial, Helvetica, sans-serif;
+    color: #495264;
+}
+
+.search-module .list-segments.bottom .filter .values::after {
+    content: ' €';
+}
+
+.search-module .list-segments.bottom .filter .values.rgt {
+    float: right;
+}
+
+.search-module .list-segments.bottom .filter .slider {
+    margin: 15px 0;
+}
+
+.search-module .list-segments.bottom .search.list-filter-wrapper {
+    background-color: transparent;
+    position: relative;
+}
+
+.search-module .list-segments.bottom .search.list-filter-wrapper .tagit {
+    background: #FFF;
+    border-radius: 4px;
+}
+
+.search-module .list-segments.bottom .search input[type=text] {
+    height: 62px;
+    border: 0;
+    border-radius: 4px;
+    width: 100%;
+    padding: 0 8px;
+    font: 16px 'PrometoRegular', Arial, Helvetica, sans-serif;
+}
+
+.search-module .list-segments.bottom .button {width: 100%;}
+.search-module .list-segments.bottom .button .button-txt cite {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    text-transform: none;
+}
+.search-module.search-module-suggestions .list-segments.bottom .button .button-txt cite {
+    font-size: 12px;
+    display: block;
+}
+.search-module .list-button{
+    padding-top: 0;   
+}
+
+/* CSS related offers list */
+.search-module.search-module-suggestions{
+    margin-bottom: 20px;
+}
+
+.search-module.search-module-suggestions .list-segments.top{
+    display: none;
+}
+
+.search-module.search-module-suggestions .list-segments.middle ul{
+    padding: 0 18px;
+}
+.search-module.search-module-suggestions .list-segments.middle li{
+    text-align: center;
+    height: auto;
+    width: 10%;
+    padding: 0;
+    min-height: 85px;
+    display: inline-block;
+    vertical-align: top;
+}
+.search-module.search-module-suggestions .list-segments.middle li cite{
+    width: 100%;
+    margin: 0 0 10px 0;
+    display: inline-block;
+    float: none;
+}
+.search-module.search-module-suggestions .list-segments.middle li span{
+    width: 90%;
+    margin: 0 auto;
+}
+.search-module.search-module-suggestions .list-segments.bottom  .list-filter-wrapper ul{
+    width: 84%;
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
+    margin-right: 1%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.search-module.search-module-suggestions .list-segments.bottom .list-filter-wrapper .list-button{
+    width: 15%;
+    display: inline-block;
+}
+.search-module.search-module-offers .list-segments.bottom .list-filter-wrapper .list-button{
+    width: 100%;
+    display: inline-block;
+    float: none;
+}
+
+
+/**/
+
+/* === BUTTON DISABLED ON SEARCH BAR ====*/
+.search-module .list-button .button-disabled cite,
+.search-module.search-module-suggestions .list-button .button-disabled cite{
+    display: block;
+}
+.search-module .list-button .button-disabled cite:nth-last-child(2),
+.search-module.search-module-suggestions .list-button .button-disabled cite:nth-last-child(2){
+    font-size: 12px !important;
+    font-size: 1.2rem !important;
+    margin-top: 3px;
+}
+/*button remove after integration*/
+
+
+/*range picker*/
+
+
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+
+
+/* Values;
+ *
+ */
+
+.noUi-target {
+    position: relative;
+    direction: ltr;
+}
+
+.noUi-base {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    /* Fix 401 */
+}
+
+.noUi-origin {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.noUi-handle {
+    position: relative;
+    z-index: 1;
+}
+
+.noUi-stacking .noUi-handle {
+    /* This class is applied to the lower origin when
+   its values is > 50%. */
+    z-index: 10;
+}
+
+.noUi-state-tap .noUi-origin {
+    -webkit-transition: left 0.3s, top 0.3s;
+    transition: left 0.3s, top 0.3s;
+}
+
+.noUi-state-drag * {
+    cursor: inherit !important;
+}
+
+
+/* Painting and performance;
+ * Browsers can paint handles in their own layer.
+ */
+
+.noUi-base,
+.noUi-handle {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* Slider size and handle placement;
+ */
+
+.noUi-horizontal {
+    height: 10px;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 28px;
+    height: 28px;
+    left: -17px;
+    top: -10px;
+}
+
+.noUi-vertical {
+    width: 18px;
+}
+
+.noUi-vertical .noUi-handle {
+    width: 28px;
+    height: 34px;
+    left: -6px;
+    top: -17px;
+}
+
+
+/* Styling;
+ */
+
+.noUi-background {
+    background: #FAFAFA;
+    box-shadow: inset 0 1px 1px #f0f0f0;
+}
+
+.noUi-connect {
+    background: #02b245;
+    box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
+    -webkit-transition: background 450ms;
+    transition: background 450ms;
+}
+
+.noUi-origin {
+    border-radius: 2px;
+}
+
+.noUi-target {
+    border-radius: 4px;
+    border: 1px solid #D3D3D3;
+    box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+}
+
+.noUi-target.noUi-connect {
+    box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45), 0 3px 6px -5px #BBB;
+}
+
+
+/* Handles and cursors;
+ */
+
+.noUi-draggable {
+    cursor: w-resize;
+}
+
+.noUi-vertical .noUi-draggable {
+    cursor: n-resize;
+}
+
+.noUi-handle {
+    border: 1px solid #D9D9D9;
+    border-radius: 14px;
+    background: #FFF;
+    cursor: default;
+    box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+}
+
+.noUi-active {
+    box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+}
+
+
+/* Disabled state;
+ */
+
+[disabled].noUi-connect,
+[disabled] .noUi-connect {
+    background: #B8B8B8;
+}
+
+[disabled].noUi-origin,
+[disabled] .noUi-handle {
+    cursor: not-allowed;
+}
+
+
+/*media query's*/
+
+@media screen and (max-width: 1023px) {
+    .offers-list aside{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .offers-list div.offers-content{
+        width: 100%;
+        margin-left: 0;
+    }
+    .search-module.search-module-suggestions .list-segments.top{
+        display: block;
+    }
+    .search-module.search-module-suggestions .list-segments.bottom .search.list-filter-wrapper{
+        width: 100%;
+    }
+    .search-module .list-segments.middle .title-list-segment{
+        display: none;
+    }
+    .search-module.search-module-suggestions .list-segments.middle{
+        padding-top: 20px;
+        margin-bottom: 2px;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .search-module .list-segments.middle{
+        padding-top: 20px;
+    }
+    .search-module .list-segments.middle li {
+        text-align: center;
+        height: auto;
+        width: 16%;
+        padding: 0;
+        min-height: 85px;
+        display: inline-block;
+        vertical-align: top;
+        float: none;
+        margin-right: 3%;
+    }
+    .search-module .list-segments.middle li cite {
+        width: 100%;
+        margin: 0 0 10px 0;
+        display: inline-block;
+        float: none;
+    }
+    .search-module .list-segments.bottom .filter {
+        width: 37%;
+        float: left;
+        margin-right: 3%;
+    }
+    .search-module .list-segments.bottom .search.list-filter-wrapper {
+        width: 60%;
+    }
+    .search-module .list-button{
+        clear: none;
+    }
+    .search-module .list-segments.bottom .button {
+        width: 35%;
+        float: left;
+    }
+    .search-module .list-segments.bottom .search.list-filter-wrapper .tagit {
+        width: 68%;
+        float: left;
+        margin-right: 2%;
+        padding: 0 1%;
+    }
+    .search-module.search-module-suggestions .list-segments.bottom .list-filter-wrapper .list-button{
+        width: 27%;
+        float: left;
+    }
+    .search-module.search-module-suggestions .list-segments.bottom .list-filter-wrapper .list-button .button{
+        width: 100%;
+    }
+    .search-module .list-segments.bottom .button .button-txt {
+        font-size: 14px;
+        padding: 20px 5px;
+        min-width: auto;
+    }
+    .search-module .list-segments.bottom .button .button-txt cite {
+        font-size: 12px;
+        display: block;
+    }
+
+    .button.button-loading .button-txt cite{
+        display: none !important;
+    }
+
+    .search-module .list-segments.middle li cite {
+        max-width: 48px;
+    }
+    .search-module .list-segments cite.ic-welfare {
+        background: url(images/icons-search-off.png) 0 -48px;
+    }
+
+    .search-module .list-segments cite.ic-family {
+        background: url(images/icons-search-off.png) 0 -288px;
+    }
+
+    .search-module .list-segments cite.ic-fairs-events {
+        background: url(images/icons-search-off.png) 0 -96px;
+    }
+
+    .search-module .list-segments cite.ic-gastronomy-wine {
+        background: url(images/icons-search-off.png) 0 -144px;
+    }
+
+    .search-module .list-segments cite.ic-golf {
+        background: url(images/icons-search-off.png) 0 -240px;
+    }
+
+    .search-module .list-segments cite.ic-history {
+        background: url(images/icons-search-off.png) 0 -192px;
+    }
+
+    .search-module .list-segments cite.ic-nature {
+        background: url(images/icons-search-off.png) 0 -384px;
+    }
+    
+    .search-module .list-segments cite.ic-romance {
+        background: url(images/icons-search-off.png) 0 0;
+    }
+
+    .search-module .list-segments cite.ic-sun-beach {
+        background: url(images/icons-search-off.png) 0 -336px;
+    }
+
+    .search-module .list-segments cite.ic-surf {
+        background: url(images/icons-search-off.png) 0 -432px;
+    }
+    
+    .search-module .list-segments.bottom .clean {
+        margin-top: 80px;
+    }
+    .search-module.search-module-suggestions .list-segments.middle li{
+        width: 16%;
+        margin-right: 3%;
+    }
+    .search-module.search-module-offers .list-segments.middle li span{
+        top: 0 !important;
+        transform: translateY(0%);
+        display: block;
+    }
+    .search-module.search-module-offers .list-segments.bottom .list-filter-wrapper .list-button{
+        width: 27%;
+        display: inline-block;
+        float: left;
+    }
+    .search-module.search-module-offers .list-segments.bottom .list-filter-wrapper .list-button .button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    /* CSS related offers list */
+    .search-module.search-module-suggestions .list-segments.top{
+        display: block;
+    }
+    .search-module.search-module-suggestions .list-segments.middle ul{
+        padding: 0 0 0 5%;
+    }
+    .search-module.search-module-suggestions .list-segments.middle li{
+        text-align: left;
+        height: 44px;
+        width: 45%;
+        padding: 0 5% 0 0;
+        min-height: 0;
+        display: block;
+        vertical-align: middle;
+    }
+    .search-module.search-module-suggestions .list-segments.middle li cite{
+        margin: 0 10px 0 0;
+        display: block;
+        float: left;
+    }
+    .search-module.search-module-suggestions .list-segments.middle li span{
+        width: 100%;
+        margin: 0;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .search-module.search-module-suggestions .list-segments.bottom  .list-filter-wrapper ul{
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+    .search-module.search-module-suggestions .list-segments.bottom .list-filter-wrapper .list-button{
+        width: 100%;
+        float: none;
+    }
+    .search-module.search-module-suggestions .list-segments.bottom .list-filter-wrapper .list-button,
+    .search-module.search-module-offers .list-segments.bottom .list-filter-wrapper .list-button{
+        white-space: normal;
+    }
+    .search-module.search-module-suggestions .list-segments.bottom .list-filter-wrapper .list-button .button{
+        width: 100%;
+    }
+    .search-module.search-module-suggestions .list-segments.bottom .button .button-txt cite {
+        display: inline-block;
+    }
+
+
+    .search-module.search-module-suggestions .list-segments.bottom .list-filter-wrapper a cite{
+        display: inline-block;
+        margin-left: 6px;
+    }
+
+    .button.button-loading .button-txt cite{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .search-module .list-segments.middle li cite {
+        max-width: 40px;
+    }
+    .search-module .list-segments.middle li cite img {
+        width: 100%;
+    }
+    .search-module .list-segments cite.ic-welfare {
+        background: url(images/icons-search-off.png) 0 -40px;
+    }
+    .search-module .list-segments cite.ic-family {
+        background: url(images/icons-search-off.png) 0 -240px;
+    }
+    .search-module .list-segments cite.ic-fairs-events {
+        background: url(images/icons-search-off.png) 0 -80px;
+    }
+    .search-module .list-segments cite.ic-gastronomy-wine {
+        background: url(images/icons-search-off.png) 0 -120px;
+    }
+    .search-module .list-segments cite.ic-golf {
+        background: url(images/icons-search-off.png) 0 -200px;
+    }
+    .search-module .list-segments cite.ic-history {
+        background: url(images/icons-search-off.png) 0 -160px;
+    }
+    .search-module .list-segments cite.ic-nature {
+        background: url(images/icons-search-off.png) 0 -360px;
+    }
+    .search-module .list-segments cite.ic-romance {
+        background: url(images/icons-search-off.png) 0 0;
+    }
+    .search-module .list-segments cite.ic-sun-beach {
+        background: url(images/icons-search-off.png) 0 -280px;
+    }
+    .search-module .list-segments cite.ic-surf {
+        background: url(images/icons-search-off.png) 0 -360px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .search-module .list-segments.middle li {
+        font: 12.5px 'PrometoRegular', Arial, Helvetica, sans-serif;
+    }
+}

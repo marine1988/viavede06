@@ -1,0 +1,756 @@
+
+
+<section class="column-section discount-wizzard">
+    <header class="column-header">
+       <h1 class="page-title">Pedido de Desconto para Pesados</h1>
+       <h2 class="page-title">Novo Pedido</h2>
+    </header>
+    <div class="column-body cleanBody">
+        <section class="accession-wrapper">
+            <div class="accession-panel">
+                <script type="text/javascript">
+
+                    function gotoStep(step) {
+
+                        startLoading($('.accession-panel'));
+
+
+
+                        var currentNavItem = $(".accession-panel .wizardSteps a[rel='" + step + "']");
+
+                        //Nav
+                        currentNavItem.parent().removeClass().addClass("current");
+                        currentNavItem.parent().prevAll("li").removeClass().addClass("completed");
+                        currentNavItem.parent().nextAll().removeClass().addClass("disabled");
+
+                        //Panels
+                        $(".accession-panel .wizardStep").hide();
+                        $(".accession-panel ." + step).show();
+
+                        // Stop Loading after 1 second
+                        setTimeout(function () {
+                            stopLoading($('.accession-panel'));
+                        }, 500);
+
+                        window.scrollTo(0, 0);
+                    }
+
+                    $(function () {
+
+                        //Wizard Nav click
+                        $(".wizardSteps a").click(function (e) {
+                            e.preventDefault();
+
+                            if (!$(this).parent().hasClass("disabled") && !$(this).parent().hasClass("current")) {
+                                gotoStep($(this).attr("rel"));
+                            }
+                        });
+
+                        //Wizard First step
+                        gotoStep("wizard-step-1");
+
+
+
+                        /* Tooltipster */
+                        /* 
+                        Parametros:
+                        - Selector
+                        - É Modal
+                        */
+                        initTooltipster($('.accession-panel .custom-tooltip .tooltip-icon'), false);
+                    });
+                </script>
+
+                <div class="accession-main">
+                    <nav class="wizardSteps">
+                        <ul>
+                            <li><a href="#" rel="wizard-step-1"><span><span>01. Termos e Condições</span><span></a></li>
+                            <li><a href="#" rel="wizard-step-2"><span><span>02. Email e Viaturas</span></span></a></li>
+                            <li><a href="#" rel="wizard-step-3"><span><span>03. Documentação Precisa</span></span></a></li>
+                            <li><a href="#" rel="wizard-step-4"><span><span>04. Confirmar Informação</span></span></a></li>
+                        </ul>
+                    </nav>
+
+                    <!--wizard-step-1-->
+                    <div class="wizardStep wizard-step-1">
+
+
+                        <script type="text/ecmascript">
+                            $(function () {
+                                $('#BtnStep2').click(function (e) {
+                                    e.preventDefault();
+
+                                    /* Validar Step 1 */
+                                    //var pageIsValid = PageValidate(...);
+
+                                    /* Ir para o passo 2 */
+                                    gotoStep("wizard-step-2");
+                                });
+                            });
+                        </script>
+
+                        <div class="form form-theme-default">
+                            <div class="cleanStyle">
+                                <h3>Introdução</h3>
+                                <p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.</p>
+                                <h3>Ambito de Aplicação</h3>
+                                <p>1. Veiculos classe 2, 3 e 4, bla bla bla...</p>
+                                
+                                <p>2. Válido apenas nas seguintes condições...</p>
+                                <ul>
+                                    <li>Costa de Prata</li>
+                                    <li>Grande Porto</li>
+                                    <li>Norte Litoral</li>
+                                    <li>...</li>
+                                </ul>
+                                <h3>Descontos a Aplicar</h3>
+                                <p>1. Válido apenas nas seguintes condições...</p>
+                                <ul>
+                                    <li>Costa de Prata</li>
+                                    <li>Grande Porto</li>
+                                    <li>Norte Litoral</li>
+                                    <li>...</li>
+                                </ul>
+                                <p>...</p>
+                            </div>
+
+
+                            <div class="form-checkbox-wrapper">
+			                    <label for="form-terms-conditions">
+				                    <span class="form-checkbox">
+					                    <input id="form-terms-conditions" type="checkbox" value="">
+					                    <span class="form-checkbox-style"></span>
+				                    </span>
+				                    <span class="form-label">
+                                        <strong>Li e aceito os <a href="#">termos e condições</a></strong>
+				                    </span>
+			                    </label>
+		                    </div>
+
+
+                            <div class="form-button clearFloats">
+                                <button class="button  button-border btPrev" id="BtnStep1" type="submit">
+			                        <span class="button-txt">Cancelar</span>
+		                        </button>
+
+		                        <button class="button btNext" id="BtnStep2" type="submit">
+			                        <span class="button-txt">Seguinte</span>
+		                        </button>
+	                        </div>
+                        </div>
+                    </div>
+                    <!--wizard-step-2-->
+                    <div class="wizardStep wizard-step-2 noLateralPadding">
+
+                        <script type="text/ecmascript">
+                            $(function () {
+                                $('#Button3').click(function (e) {
+                                    e.preventDefault();
+
+                                    /* Validar Step 1 */
+                                    //var pageIsValid = PageValidate(...);
+
+                                    /* Ir para o passo 2 */
+                                    gotoStep("wizard-step-1");
+                                });
+
+                                $('#Button4').click(function (e) {
+                                    e.preventDefault();
+
+                                    /* Validar Step 1 */
+                                    //var pageIsValid = PageValidate(...);
+
+                                    /* Ir para o passo 2 */
+                                    gotoStep("wizard-step-3");
+                                });
+                            });
+                        </script>
+
+                        <div class="form form-theme-default">
+                            <fieldset class="lateralPadding">
+                                <legend><span class="form-legend">Email de contato</span></legend>
+                                <div class="form-description">Todas as comunicações da Via Verde Portugal referentes ao presente pedido de habitação, serão remetidas para:</div>
+                                
+                                <div class="form-group">
+                                    <div class="form-filter-group-wrapper">
+                                        <div class="form-input-wrapper">
+			                                <label for="txt-new-pwd">
+				                                <span class="form-label">Email</span>
+				                                <span class="form-input custom-tooltip">
+					                                <input id="txt-new-pwd" type="text" value="" class="Validator" placeholder="email-registo@gmail.com">
+                                                    <span class="tooltip-icon"></span>
+                                                    <span class="tooltip-message">Campo obrigatório!</span>
+				                                </span>
+			                                </label>
+		                                </div>
+                                        <div class="form-button-wrapper">
+                                            <div class="form-button">
+                                                <button class="button" id="btnAlterar" type="submit">
+			                                        <span class="button-txt">Alterar</span>
+		                                        </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="discount-list-filter lateralPadding">
+		                        <legend>
+                                        <span class="form-legend">Viaturas para o pedido de desconto:</span>
+		                        </legend>
+                                <div class="form-description">Escolha as viaturas para as quais quer efetuar o pedido de desconto:</div>
+                                
+                                <div class="form-group">
+                                    <div class="form-filter-group-wrapper">
+                                        <div class="form-input-wrapper">
+			                                <label for="txt-new-pwd">
+				                                <span class="form-label">Filtrar por:</span>
+				                                <span class="form-input custom-tooltip">
+					                                <input id="Text1" type="text" value="" class="Validator" placeholder="Matrícula, Identificador">
+                                                    <span class="tooltip-icon"></span>
+                                                    <span class="tooltip-message">Campo obrigatório!</span>
+				                                </span>
+			                                </label>
+		                                </div>
+                                        <div class="form-button-wrapper">
+                                            <div class="form-button">
+                                                <button class="button" id="Button1" type="submit">
+			                                        <span class="button-txt">Filter</span>
+		                                        </button>
+
+                                                <button class="button button-border" id="Button2" type="submit">
+			                                        <span class="button-txt">Limpar</span>
+		                                        </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+
+                            </fieldset>
+
+                            <div class="discount-list-wrapper">
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $(".discount-list-table thead a").click(function (e) {
+                                            e.preventDefault();
+                                            $(this).toggleClass("active");
+
+                                            //Efectuar o filtro...
+                                        });
+
+                                        $("#BtnLoadMore").click(function (e) {
+                                            e.preventDefault();
+
+                                            var currentButton = $(this);
+
+                                            showButtonLoader(currentButton);
+
+                                            // Stop Loading after 1 second
+                                            setTimeout(function () {
+                                                hideButtonLoader(currentButton);
+                                            }, 500);
+
+                                        });
+
+                                    });
+                                </script>
+                                <div class="discount-filter-results clearFloats lateralPadding">
+                                    <span class="total-rows">34 viaturas encontradas</span>
+                                    <span class="total-selected-rows"><a href="#">2 viaturas selecionadas</a></span>
+                                </div>
+                                <fieldset>
+
+                                    <table class="theme-default-table discount-list-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="alignLeft">&nbsp;</th>
+                                                <th scope="col">Matrícula</th>
+                                                <th scope="col" class="column480">Identificador</th>
+                                                <th scope="col" class="column640">Contrato</th>
+                                                <th scope="col">&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">Alias do Carro 1</th>
+                                                <td>12-AB-12</td>
+                                                <td class="column480">32165498789</td>
+                                                <td class="column640">123156423</td>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="ckeckbox1" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">Alias do Carro 1</th>
+                                                <td>12-AB-12</td>
+                                                <td class="column480">32165498789</td>
+                                                <td class="column640">123156423</td>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox1" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">Alias do Carro 1</th>
+                                                <td>12-AB-12</td>
+                                                <td class="column480">32165498789</td>
+                                                <td class="column640">123156423</td>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox2" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">Alias do Carro 1</th>
+                                                <td>12-AB-12</td>
+                                                <td class="column480">32165498789</td>
+                                                <td class="column640">123156423</td>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox3" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">Alias do Carro 1</th>
+                                                <td>12-AB-12</td>
+                                                <td class="column480">32165498789</td>
+                                                <td class="column640">123156423</td>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox4" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                            </tr>
+                                        
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="5" class="alignLeft">25/121 viaturas</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5">
+                                                    <button class="button button-border" id="BtnLoadMore" type="submit">
+			                                            <span class="button-txt">Carregar mais</span>
+		                                            </button>
+                                                    <div class="button-loader"></div>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                            
+                                </fieldset>
+                            </div>
+                           
+                                 
+                            <div class="form-button clearFloats lateralPadding">
+                                <button class="button  button-border btPrev" id="Button3" type="submit">
+			                        <span class="button-txt">Anterior</span>
+		                        </button>
+		                        <button class="button btNext" id="Button4" type="submit">
+			                        <span class="button-txt">Seguinte</span>
+		                        </button>
+                                <span class="total-selected-rows">(2 Viaturas Selecionadas)</span>
+	                        </div>
+                        </div>
+                    </div>
+                    <!--wizard-step-3-->
+                    <div class="wizardStep wizard-step-3 noLateralPadding">
+                        <script type="text/javascript">
+                            $(function () {
+                                $('#Button5').click(function (e) {
+                                    e.preventDefault();
+
+                                    /* Validar Step 1 */
+                                    //var pageIsValid = PageValidate(...);
+
+                                    /* Ir para o passo 2 */
+                                    gotoStep("wizard-step-2");
+                                });
+
+                                $('#Button6').click(function (e) {
+                                    e.preventDefault();
+
+                                    /* Validar Step 1 */
+                                    //var pageIsValid = PageValidate(...);
+
+                                    /* Ir para o passo 2 */
+                                    gotoStep("wizard-step-4");
+                                });
+                            });
+                        </script>
+
+                        <div class="form form-theme-default">
+                            
+                            <fieldset class="lateralPadding">
+                                <legend><span class="form-legend">Documentação pessoal:</span></legend>
+                                <div class="form-description">
+                                    <p>Documentação que precisa remeter à Via Verde (originais ou copias certificadas):</p>
+                                </div>
+
+                                <div class="fake-checked-list">
+                                    <label>
+				                        <span class="form-pre-filled">Declaração de Inexistência de dívida à Segurança Social<span class="checked"></span></span>
+			                        </label>
+                                    <label>
+				                        <span class="form-pre-filled">Declaração de Inexistência de dívida às Finanças<span class="checked"></span></span>
+			                        </label>
+                                    
+                                </div>
+
+                            </fieldset>
+
+                            <div class="discount-list-wrapper">
+                                <script type="text/javascript">
+                                    $(function () {
+                                        //$(".discount-list-table thead a").click(function (e) {
+                                        //    e.preventDefault();
+                                        //    $(this).toggleClass("active");
+
+                                        //    //Efectuar o filtro...
+                                        //});
+
+                                        //$("#BtnLoadMore").click(function (e) {
+                                        //    e.preventDefault();
+
+                                        //    var currentButton = $(this);
+
+                                        //    showButtonLoader(currentButton);
+
+                                        //    // Stop Loading after 1 second
+                                        //    setTimeout(function () {
+                                        //        hideButtonLoader(currentButton);
+                                        //    }, 500);
+
+                                        //});
+
+                                    });
+                                </script>
+                                <fieldset>
+                                    <div class="lateralPadding">
+                                        <legend><span class="form-legend">Documentação pessoal:</span></legend>
+                                        <div class="form-description">
+                                            <p>Documentação que precisa remeter à Via Verde (originais ou copias certificadas):</p>
+                                        </div>
+                                    </div>
+                                
+                                    <table class="theme-default-table discount-list-table-type">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="alignLeft">Matrícula</th>
+                                                <th scope="col">Licença de Transportes de Mercadorias</th>
+                                                <th scope="col">Comprovativo de Emissão / DUA</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">34-CD-34</th>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox10" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox11" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">34-CD-34</th>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox5" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox6" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">34-CD-34</th>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox7" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox8" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">34-CD-34</th>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox9" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-checkbox-wrapper">
+			                                            <label>
+                                                            <span class="form-checkbox">
+					                                            <input id="Checkbox12" type="checkbox" value="">
+					                                            <span class="form-checkbox-style"></span>
+				                                            </span>
+			                                            </label>
+		                                            </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="3" class="alignLeft">3 viaturas</td>
+                                            </tr>
+                                            <!--<tr>
+                                                <td colspan="3">
+                                                    <button class="button button-border" id="Button9" type="submit">
+			                                            <span class="button-txt">Carregar mais</span>
+		                                            </button>
+                                                    <div class="button-loader"></div>
+                                                </td>
+                                            </tr>-->
+                                        </tfoot>
+                                    </table>
+                            
+                                </fieldset>
+                            </div>
+
+                            <div class="form-button clearFloats lateralPadding">
+                                <button class="button  button-border btPrev" id="Button5" type="submit">
+			                        <span class="button-txt">Anterior</span>
+		                        </button>
+		                        <button class="button btNext" id="Button6" type="submit">
+			                        <span class="button-txt">Seguinte</span>
+		                        </button>
+	                        </div>
+                        </div>
+                    </div>
+
+                    <div class="wizardStep wizard-step-4 noLateralPadding">
+                        <script type="text/ecmascript">
+                            $(function () {
+                                $('#Button7').click(function (e) {
+                                    e.preventDefault();
+
+                                    /* Validar Step 1 */
+                                    //var pageIsValid = PageValidate(...);
+
+                                    /* Ir para o passo 2 */
+                                    gotoStep("wizard-step-3");
+                                });
+
+                                $('#Button8').click(function (e) {
+                                    e.preventDefault();
+
+                                    /* Validar Step 1 */
+                                    //var pageIsValid = PageValidate(...);
+
+                                });
+                            });
+                        </script>
+
+                       <div class="form form-theme-default">
+                           
+                           
+                            <fieldset class="lateralPadding">
+                                <legend><span class="form-legend">Confirmar informação e documentação pessoal:</span></legend>
+                                <div class="fake-checked-list">
+                                    <label>
+				                        <span class="form-pre-filled"><strong>Contacto:</strong> email.preenchimento@anteriri.pt</span>
+			                        </label>
+                                    <label>
+				                        <span class="form-pre-filled">Declaração de Inexistência de dívida à Segurança Social<span class="checked"></span></span>
+			                        </label>
+                                    <label>
+				                        <span class="form-pre-filled">Declaração de Inexistência de dívida às Finanças<span class="checked"></span></span>
+			                        </label>
+                                    
+                                </div>
+
+                            </fieldset>
+
+                            <div class="discount-list-wrapper">
+                                <script type="text/javascript">
+                                    $(function () {
+                                        //$(".discount-list-table thead a").click(function (e) {
+                                        //    e.preventDefault();
+                                        //    $(this).toggleClass("active");
+
+                                        //    //Efectuar o filtro...
+                                        //});
+
+                                        //$("#BtnLoadMore").click(function (e) {
+                                        //    e.preventDefault();
+
+                                        //    var currentButton = $(this);
+
+                                        //    showButtonLoader(currentButton);
+
+                                        //    // Stop Loading after 1 second
+                                        //    setTimeout(function () {
+                                        //        hideButtonLoader(currentButton);
+                                        //    }, 500);
+
+                                        //});
+                                    });
+                                </script>
+                                <fieldset>
+                                    <div class="lateralPadding">
+                                        <legend><span class="form-legend">Confirmar documentação de viaturas:</span></legend>
+                                    </div>
+                                
+                                    <table class="theme-default-table discount-list-table-type">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="alignLeft">Matrícula</th>
+                                                <th scope="col">Licença de Transportes de Mercadorias</th>
+                                                <th scope="col">Comprovativo de Emissão / DUA</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">34-CD-34</th>
+                                                <td>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <span class="checked"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">34-CD-34</th>
+                                                <td>
+                                                    <span class="checked"></span>
+                                                </td>
+                                                <td>
+                                                    <span class="checked"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">34-CD-34</th>
+                                                <td>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <span class="checked"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="alignLeft">34-CD-34</th>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <span class="checked"></span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="3" class="alignLeft">3 viaturas</td>
+                                            </tr>
+                                            <!--<tr>
+                                                <td colspan="3">
+                                                    <button class="button button-border" id="Button9" type="submit">
+			                                            <span class="button-txt">Carregar mais</span>
+		                                            </button>
+                                                    <div class="button-loader"></div>
+                                                </td>
+                                            </tr>-->
+                                        </tfoot>
+                                    </table>
+                            
+                                </fieldset>
+                            </div>
+
+
+                           <div class="form-button clearFloats lateralPadding">
+                                <button class="button  button-border btPrev" id="Button7" type="submit">
+			                        <span class="button-txt">Anterior</span>
+		                        </button>
+
+		                        <button class="button btNext" id="Button8" type="submit">
+			                        <span class="button-txt">Confirmar e Submeter</span>
+		                        </button>
+	                        </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="loading"><span>A carregar...</span></div>
+            </div>
+        </section>
+
+    </div>
+</section>

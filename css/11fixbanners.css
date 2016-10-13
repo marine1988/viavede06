@@ -1,0 +1,29 @@
+/*fix general banners*/
+
+@media (min-width: 1024px) {
+    .fix-gm-img.gm-banner {
+        position: relative;
+    }
+    .fix-gm-img .gm-banner-img {
+        position: absolute;
+    }
+    .fix-gm-img.gm-banner.left-banner .gm-banner-img {
+        right: 0;
+    }
+    .fix-gm-img.gm-banner.right-banner .gm-banner-img {
+        left: 0;
+    }
+    .fix-gm-img .gm-banner-img img {
+        right: 0;
+        height: 100%;
+        position: absolute;
+    }
+    .fix-gm-img .gm-banner-img:before {
+        max-height: none;
+        background-size: auto 100%;
+    }
+    .fix-gm-img.gm-banner.small-banner .gm-banner-img:before {
+        max-height: none;
+        background-size: auto 100%;
+    }
+}

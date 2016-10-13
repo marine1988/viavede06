@@ -1,0 +1,250 @@
+<!-- MODULE-SEARCH START -->
+
+<section class="search-module search-module-offers clearfix">
+    <div class="wrapper">
+        <div class="list-segments top">
+            <span>Interesses</span>
+        </div>
+        <div class="list-segments middle">
+            <ul class="clearfix">
+                <li class="ic-welfare active">
+                    <cite class="ic-welfare"><img src="images/fake-icon.png"></cite>
+                    <span>Bem-estar</span>
+                </li>
+                <li class="ic-family">
+                    <cite class="ic-family"><img src="images/fake-icon.png"></cite>
+                    <span>Família</span>
+                </li>
+                <li class="ic-fairs-events">
+                    <cite class="ic-fairs-events"><img src="images/fake-icon.png"></cite>
+                    <span>Feiras e Eventos</span>
+                </li>
+                <li class="ic-gastronomy-wine">
+                    <cite class="ic-gastronomy-wine"><img src="images/fake-icon.png"></cite>
+                    <span>Gastronomia e Vinho</span>
+                </li>
+                <li class="ic-golf">
+                    <cite class="ic-golf"><img src="images/fake-icon.png"></cite>
+                    <span>Golf</span>
+                </li>
+                <li class="ic-history">
+                    <cite class="ic-history"><img src="images/fake-icon.png"></cite>
+                    <span>História e Cultura</span>
+                </li>
+                <li class="ic-nature">
+                    <cite class="ic-nature"><img src="images/fake-icon.png"></cite>
+                    <span>Natureza e Ar Livre</span>
+                </li>
+                <li class="ic-romance">
+                    <cite class="ic-romance"><img src="images/fake-icon.png"></cite>
+                    <span>Romance</span>
+                </li>
+                <li class="ic-sun-beach">
+                    <cite class="ic-sun-beach"><img src="images/fake-icon.png"></cite>
+                    <span>Sol e Praia</span>
+                </li>
+                <li class="ic-surf">
+                    <cite class="ic-surf"><img src="images/fake-icon.png"></cite>
+                    <span>Surf</span>
+                </li>
+            </ul>
+        </div>
+        <div class="list-segments bottom list-filter">
+            <div class="filter">
+                <span class="tit">Filtrar</span>
+                <div id="slider" class="slider"></div>
+                <span class="values lft" id="value-min"></span>
+                <span class="values rgt" id="value-max"></span>
+            </div>
+            <div class="search list-filter-wrapper">
+                <fieldset class="fieldset-list-filter">
+                    <legend><span class="form-legend hidden" hidden aria-hidden="false">Encontre as nossas ofertas.</span></legend>
+
+                    <label for="form-list-search" class="hidden" hidden aria-hidden="true">Pesquisar</label>
+                </fieldset>
+                <input id="form-list-search" class="form-list-search" type="search" placeholder="ex: Alentejo, Spa..." value="">
+
+                <!--<div class="results-list">
+                    <span class="title-list">Palavras chave:</span>
+                    <div class="results-autocomplete"></div>
+                </div>-->
+                
+                <div class="list-button">
+                    <!-- Adicionar a classe button-disabled quando não exitem resultados 
+                    ==== Adicionar a classe button-loading para ver o loading do botão -->
+                    <a class="button next-page button-disabled">
+                        <span class="button-txt">
+                        <cite>0 programas.</cite>
+                        <cite>Reduza os critérios de filtragem.</cite>
+                            <div id="btn-loading" class="loader">Loading</div>
+                        </span>
+                    </a>
+                    <a href="#" class="clean">Limpar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="script/tag-it.min.js" type="text/javascript"></script>
+<!--<script src="../script/range_picker.js" type="text/javascript"></script>-->
+<script src="script/nouislider.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="script/jquery.sticky-kit.min.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+
+        /*show hide interests */
+        $(".list-segments.top ").click(function() {
+            $(this).toggleClass("closed");
+            $(".list-segments.middle").toggleClass("hide");
+        });
+
+        /*range slider */
+        var snapSlider = document.getElementById('slider');
+
+        noUiSlider.create(snapSlider, {
+            start: [10, 90],
+            connect: true,
+            range: {
+                'min': [0],
+                'max': [100]
+            }
+        });
+        var snapValues = [
+            document.getElementById('value-min'),
+            document.getElementById('value-max')
+        ];
+
+        snapSlider.noUiSlider.on('update', function(values, handle) {
+            snapValues[handle].innerHTML = values[handle];
+        });
+
+        /* ADD TAGS ON SEARCH-BOX */
+        if ($('.form-list-search').length) {
+            var _txtPlaceHolder = 'ex: Alentejo, Spa...';
+            var _segmentArray = [{ class:'local', value:'Alentejo'},{ class:'museum', value:'Palácio de Mafra'},{ class:'restaurant', value:'Sítio das Tapas'},{ class:'noCategory', value:'Não pertence às categorias anteriores'},{ class:'hotel', value: 'InMurus'}];
+
+            // adicionar nesta variável o texto default do inicio da lista consoante lingua do site
+            var titleDefault = 'Palavras chave:';
+
+            $('.form-list-search').tagit({
+                autocomplete: {
+                    source: _segmentArray,
+                    create: function () {
+                        $(this).data('ui-autocomplete')._renderItem = function (ul, item) {
+                            return $('<li class="'+ item.class +'">')
+                                .append('<a>'+ item.value + '</a>')
+                                .appendTo(ul);
+                        };
+                    },
+                    open: function(){
+                        /*var offset = $('.search-module .tagit').offset(),
+                        offsetHeight = $('.search-module .tagit').outerHeight(), 
+                        offsetBottom = offset.top + offsetHeight,
+                        scrollHeight = $(window).scrollTop(),
+                        windowHeigth = window.innerHeight,
+                        spaceBelow = parseInt((windowHeigth - offsetBottom) + scrollHeight);
+
+                        if(spaceBelow < 210 && window.innerWidth >= 1024){
+                            $('.results-list').addClass('top-results').css('display','block');
+                        }
+                        else{
+                            $('.results-list').css('display','block');
+                        }*/
+                        $(this).autocomplete('widget').prepend('<li class="title-list">Palavras chave:</li>');
+
+                    }/*,   
+                    close: function(){
+                        $('.results-list').css('display','none').removeClass('top-results');
+                    }*/
+
+                },
+                placeholderText: _txtPlaceHolder,
+                singleFieldDelimiter: ',;',
+                allowSpaces: true,
+                caseSensitive: false,
+                afterTagAdded: function(event,ui){
+                    changePlaceholder($(this));
+                },
+                beforeTagRemoved: function(event, ui) {
+                    $('.list-segments .list-txt').each(function() {
+                        var _this = $(this).html();
+                        if (_this == ui.tagLabel) {
+                            $(this).parent().removeClass('active');
+                            return false;
+                        }
+                    });
+                },
+                afterTagRemoved: function(event,ui){
+                    changePlaceholder($(this));
+                }
+            });
+
+            function changePlaceholder($tagit){
+               var $input = $tagit.data("ui-tagit").tagInput;
+
+                if ($tagit.tagit("assignedTags").length > 0) {
+                    $input.attr('placeholder', 'adicione...');
+                } else {
+                    $input.attr('placeholder', _txtPlaceHolder);
+                }
+            }
+
+            //$('.ui-autocomplete').appendTo('.results-autocomplete');
+            $('.ui-autocomplete').wrap('<div class="results-list"></div>');
+
+        }
+
+        /* ADD TAGS TO SEARCH-BOX */
+        if ($('.list-filter .list-segments .list-link').length) {
+            $('.list-filter .list-segments .list-link').on('click', function() {
+                var _segmentText = $(this).find('.list-txt').html();
+
+                if ($(this).hasClass('active')) {
+                    $('.form-list-search').tagit('removeTagByLabel', _segmentText);
+                    $(this).removeClass('active');
+                } else {
+                    $('.form-list-search').tagit('createTag', _segmentText);
+                    $(this).addClass('active');
+                }
+            });
+
+            $('.list-segments .my-segment').each(function() {
+                var _segmentActive = $(this).find('.list-txt').html();
+
+                $('.form-list-search').tagit('createTag', _segmentActive);
+                $(this).addClass('active');
+            });
+        }
+        /* ===== END ======= */
+        
+        /* ====== FUNCTION STICKY SEARCH BAR =======*/
+        /*if (window.innerWidth >= 1024) {
+            $(".js-sticky").stick_in_parent({
+                offset_top: 70,
+                parent: '.scroll-container'
+            });
+        }else {
+            $(".js-sticky").trigger("sticky_kit:detach");
+        }
+
+        $(window).on('resize', function () {
+            if (window.innerWidth >= 1024) {
+                $(".js-sticky").stick_in_parent({
+                    offset_top: 70,
+                    parent: '.scroll-container'
+                });
+            }else {
+                $(".js-sticky").trigger("sticky_kit:detach");
+            }
+        });*/
+    });
+</script>
+
+
+
+
+<!-- MODULE-SEARCH END -->

@@ -1,0 +1,101 @@
+<!-- module-services-highway-main START -->
+
+<section class="services_info">
+    <header class="services_info_header">
+        <h3 class="services_info_title">Como usar Via Verde nas portagens</h3>
+    </header>
+    
+    <div class="info_steps_wrapper">
+        <div class="info_steps">
+            <figure class="info_steps_figure">
+                <img src="cms-images/autoestradas_step1.png" alt="" />
+            </figure>
+            <div class="info_steps_text cleanStyle">
+                <p>Afixe o identificador no topo interior direito do pára-brisas do veículo. O identificador tem de estar associado a um cartão de débito.</p>
+            </div>
+        </div>
+        <div class="info_steps">
+            <figure class="info_steps_figure">
+                <img src="cms-images/autoestradas_step2.png" alt="" />
+            </figure>
+            <div class="info_steps_text cleanStyle">
+                <p>Ao aproximar-se da portagem, use as vias identificadas com o símbolo Via Verde. Deverá reduzir a velocidade por questões de segurança.</p>
+            </div>
+        </div>
+        <div class="info_steps">
+            <figure class="info_steps_figure">
+                <img src="cms-images/autoestradas_step3.png" alt="" />
+            </figure>
+            <div class="info_steps_text cleanStyle">
+                <p>Ao sair da autoestrada, consulte no leitor da cancela o valor debitado através da sua conta Via Verde.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <header class="services_info_header">
+        <h3 class="services_info_title">Como usar Via Verde nas portagens</h3>
+    </header>
+
+    <div class="info_steps_wrapper">
+        <div class="info_steps go-in-out">
+            <figure class="info_steps_figure">
+                <img src="cms-images/services_in_out.png" alt="" />
+            </figure>
+            <div class="info_steps_in_out">
+                <div class="step_in">
+                    <span class="step_in_out_title">Entrada</span>
+                    <strong class="step_in_out_subTitle">Antena regista no identicador:</strong>
+                    <div class="step_in_out_text cleanStyle">
+                        <p>Portagem, data e hora.</p>
+                    </div>
+                </div>
+                <div class="step_out">
+                    <span class="step_in_out_title">Saída</span>
+                    <strong class="step_in_out_subTitle">Antena lê do identificador:</strong>
+                    <div class="step_in_out_text cleanStyle">
+                        <p>Portagem entrada, data entrada, hora entrada, número identificador e classe da viatura.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="services_locations">
+
+    <header class="services_locations_header">
+        <h3 class="services_locations_title">Onde estão os parques de estacionamento com Via Verde</h3>
+    </header>
+
+    <div class="services_locations_text cleanStyle">
+        <p>Em todas as autoestradas, pontes e antigas SCUTS de Portugal.</p>
+    </div>
+
+    <div class="services_locations_map">
+        <!--#include file="module-gm-maps.html" -->
+    </div>
+
+</section>
+
+
+
+<!-- Small Banner -->
+<article class="gm-banner small-banner left-banner">
+	<div class="gm-banner-img">
+		<img data-src-base="cms-images/banner-aderir-viaverde02.jpg" data-src="<768:?w=768&amp;h=317, <1024:?w=1024&amp;h=423, >1024:?w=470&amp;h=194" alt="">
+	</div>
+	<div class="gm-banner-content">
+		<h4 class="gm-banner-tit"><strong>Adira já</strong></h4>
+		<div class="gm-banner-txt">
+			<p>Torne-se cliente Via Verde e tenha acesso exclusivo às vantagens de circular sem limites.</p>
+		</div>
+		<div class="gm-banner-button">
+			<a href="" class="button button-small"><span class="button-txt">Aderir</span></a>
+		</div>
+	</div>
+</article>
+<!-- Small Banner -->
+
+<!-- module-services-highway-main END -->

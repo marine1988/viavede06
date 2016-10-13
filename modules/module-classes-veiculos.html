@@ -1,0 +1,148 @@
+<!-- module-classes-veiculos.html START -->
+
+<!-- Page Title -->
+<header class="tools-header">
+	<h1 class="page-title">Classes de Veículos</h1>
+	<div class="page-lead"></div>
+</header>
+<!-- End Page Title -->
+
+<!-- Vehicle Classes -->
+<div class="vehicle-classes form form-theme-default">
+	<fieldset>
+		<legend><span class="form-legend">Descubra a classe do seu veículo</span></legend>
+
+		<div class="form-group form-group-4 select-classes-vehicles">
+			<div class="form-group-wrapper">
+				<div id="grpLicensePlate" class="form-select-wrapper custom-tooltip">
+					<label for="ddlLicensePlates">
+						<span class="form-label hidden">
+							<asp:literal id="labelLicensePlates" runat="server"></asp:literal>
+						</span>
+						<span class="">
+							<asp:dropdownlist runat="server" id="ddlBrands" cssclass="form-control" clientidmode="Static"></asp:dropdownlist>
+						</span>
+						<span class="tooltip-icon"></span>
+						<span class="tooltip-message">
+							<asp:literal id="labelLicensePlateValidation" runat="server"></asp:literal>
+						</span>
+					</label>
+				</div>
+				<div id="grpLicensePlate" class="form-select-wrapper custom-tooltip">
+					<label for="ddlLicensePlates">
+						<span class="form-label hidden">
+							<asp:literal id="Literal1" runat="server"></asp:literal>
+						</span>
+						<asp:dropdownlist runat="server" id="ddlModels" cssclass="form-control" clientidmode="Static"></asp:dropdownlist>
+						<span class="tooltip-icon"></span>
+						<span class="tooltip-message">
+							<asp:literal id="Literal2" runat="server"></asp:literal>
+						</span>
+					</label>
+				</div>
+
+				<div class="form-button clearFloats">
+					<button type="submit" class="button button-small">
+						<span class="button-txt">Procurar</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+
+<div id="lblVehicleClass"></div>
+
+<!-- E' so' adicionar o valor que recebes do servico das classes dos veiculos na seguinte. Ex.: class="vehicle-class_2" -->
+<div id="vehicle-class-container" class="vehicle-class-type vehicle-class_2">
+	<div class="vehicle-class-type-wrapper">
+		<ul>
+			<li>
+				<div class="vehicle-class-icon">
+					<span class="vehicle-class-tooltip-text" data-vehicle-class-select="O seu Veículo"></span>
+					<img src="images/vehicle-class_1.png" alt="">
+				</div>
+				<div class="vehicle-class-text">
+					<h4 class="title">Classe 1</h4>
+					<span class="vehicle-class-text_5">Motociclos<sup>*</sup></span> e veículos com altura inferior a <strong>1,1m</strong>.
+				</div>
+			</li>
+			<li>
+				<div class="vehicle-class-icon">
+					<span class="vehicle-class-tooltip-text" data-vehicle-class-select="O seu Veículo"></span>
+					<img src="images/vehicle-class_2.png" alt="">
+				</div>
+				<div class="vehicle-class-text">
+					<h4 class="title">Classe 2</h4>
+					Veículos com <strong>2 eixos</strong> com altura superior a <strong>1,1m</strong>.
+				</div>
+			</li>
+			<li>
+				<div class="vehicle-class-icon">
+					<span class="vehicle-class-tooltip-text" data-vehicle-class-select="O seu Veículo"></span>
+					<img src="images/vehicle-class_3.png" alt="">
+				</div>
+				<div class="vehicle-class-text">
+					<h4 class="title">Classe 3</h4>
+					Veículos com <strong>3 eixos</strong> com altura superior a <strong>1,1m</strong>.
+				</div>
+			</li>
+			<li>
+				<div class="vehicle-class-icon">
+					<span class="vehicle-class-tooltip-text" data-vehicle-class-select="O seu Veículo"></span>
+					<img src="images/vehicle-class_4.png" alt="">
+				</div>
+				<div class="vehicle-class-text">
+					<h4 class="title">Classe 4</h4>
+					Veículos com <strong>4 eixos</strong> ou mais, com altura superior a <strong>1,1m</strong>.
+				</div>
+			</li>
+			<li>
+				<div class="vehicle-class-icon">
+					<span class="vehicle-class-tooltip-text" data-vehicle-class-select="O seu Veículo"></span>
+					<img src="images/vehicle-class_5.png" alt="">
+				</div>
+				<div class="vehicle-class-text">
+					<h4 class="title">Classe 1</h4>
+					<span class="vehicle-class-text_5">Motociclos<sup>*</sup></span> e veículos com altura inferior a <strong>1,1m</strong>.
+					<div class="vehicle-class-text_5-info">
+						<small><sup>*</sup>Ao aderir à Via Verde, os motociclos são considerados Classe 5, beneficiando de um desconto especial.</small>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+		<div class="vehicle-class-text">
+			<div class="vehicle-class-text_5">
+				<small><sup>*</sup>Ao aderir à Via Verde, os motociclos são considerados Classe 5, beneficiando de um desconto especial.</small>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="vehicle-class-definition">
+	<div class="vehicle-class-container">
+		<header class="vehicle-definition-title">
+			<h3>Como são definidas as classes dos veículo?</h3>
+		</header>
+
+		<div class="cleanStyle">
+			Os critérios utilizados para a classificação de veículos, para efeitos de pagamento de taxas de portagem, são aqueles fixados na Base XIV, do DL 294/97, de 24 de Outubro. De acordo com o referido Decreto-Lei, existem dois critérios para definição desta classificação:
+			<ol>
+				<li>Altura do veículo (corresponde à medida vertical do primeiro eixo)</li>
+				<li>Número total de eixos do veículo.</li>
+			</ol>
+		</div>
+
+		<div class="gm-notes">
+			<small class="gm-notes-tit">Nota:</small>
+			<div class="gm-notes-detail">
+				<p>O Decreto-Lei n.o 39/2005, de 17 de Fevereiro, veio estabelecer que os «veículos ligeiros de passageiros e mistos, tal como definidos no Código da Estrada, com dois eixos, peso bruto superior a 2300 kg e inferior ou igual a 3500 kg, com lotação igual ou superior a cinco lugares e uma altura, medida à vertical do primeiro eixo do veículo, igual ou superior a 1,1m e inferior a 1,3m, desde que não apresentem tracção às quatro rodas permanente ou inserível, pagam a tarifa de portagem relativa à classe 1 quando utilizem o sistema de pagamento automático».</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script src="script/slick.min.js" type="text/javascript"></script>
+
+<!-- module-classes-veiculos.html END -->

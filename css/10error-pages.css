@@ -1,0 +1,71 @@
+/* ERROR PAGES START */
+.error-template {
+	/*background: url(images/404-image.jpg) no-repeat center center;*/
+	background-color: #10180b;
+	background-size: cover;
+}
+
+.error-template .DNNEmptyPane{
+	width: auto;
+}
+
+.error-template .Sticky-Wrapper {
+	max-width: none;
+}
+.error-template .main {
+	margin: 0;
+}
+.error-template .mainContent {
+	margin-bottom: 0;
+}
+.error-template-wrapper {
+	position: relative;
+}
+.error-template-wrapper .cover {
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+.error-template-wrapper .error-template-msg {
+	color: #fff;
+	font-size: 2.0rem;
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	-webkit-transform: translate(-10%, -50%);
+	-moz-transform: translate(-10%, -50%);
+	-ms-transform: translate(-10%, -50%);
+	transform: translate(-10%, -50%);
+}
+
+/* MEDIA QUERIES START */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.error-template .footer-nav {
+		width: 7%;
+	}
+}
+@media screen and (max-width: 767px) {
+	.error-template {
+		background-color: #019c34;
+	}
+	.error-template .footer-nav {
+		margin-top: 0;
+	}
+	.error-template-wrapper .cover {
+		visibility: hidden;
+	}
+	.error-template-wrapper .error-template-msg {
+		top: 20%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 85%;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+}
+/* MEDIA QUERIES END */
+
+/* ERROR PAGES END */

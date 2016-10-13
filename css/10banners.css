@@ -1,0 +1,241 @@
+/* BANNERS START */
+/* Big banner START */
+.big-banner {position:relative;margin-bottom:-150px;}
+.big-banner * {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.wrapper.back-button-wrapper {margin-top:0}
+.big-banner img {width:100%;height:auto;}
+.big-banner .slider-fixed-top-content {
+    position:absolute;
+    top:25px;
+    right:25px;
+    text-align:right;
+    width:100%;
+    z-index:1;
+    color: #FFFFFF;
+    font-family:'PrometoRegular', sans-serif;
+    font-size:16px;
+    font-size:1.6rem;
+}
+.big-banner [class*="ic-"] {
+    display:inline-block;
+    line-height:30px;
+    vertical-align:top;
+    padding-left:25px;
+    text-shadow: 2px 1px 3px #424649;
+}
+.big-banner .ic-location {padding-left:0}
+.big-banner [class*="ic-"]:before {
+    content:'';
+    display:inline-block;
+    vertical-align:top;
+    width:38px;
+    height:30px;
+    background-image:url(images/categories-sprite.png);
+    background-repeat:no-repeat;
+    background-position:0 0;
+}
+
+.big-banner .ic-sun-beach:before {background-position:0 0;padding-right: 5px;}
+.big-banner .ic-fairs-events:before {background-position:0 -30px;padding-right: 5px;}
+.big-banner .ic-family:before {background-position:0 -60px;padding-right: 5px;}
+.big-banner .ic-gastronomy-wine:before {background-position:0 -90px;}
+.big-banner .ic-golf:before {background-position:0 -120px;}
+.big-banner .ic-history:before {background-position:0 -150px;}
+.big-banner .ic-location:before {background-position:0 -180px;}
+.big-banner .ic-nature:before {background-position:0 -210px;}
+.big-banner .ic-romance:before {background-position:0 -240px;padding-right: 5px;}
+.big-banner .ic-surf:before {background-position:0 -270px;padding-right: 5px;}
+.big-banner .ic-welfare:before {background-position:0 -300px;padding-right: 5px;}
+
+.big-banner .slick-arrow {
+    width:23px;
+}
+.big-banner .slick-arrow.slick-next {
+    background-position: -23px 0;
+}
+.big-banner .slider-fixed-content {
+    position:absolute;
+    bottom:0;
+    left:0;
+    padding:30px;
+    width:100%;
+    z-index:1;
+    color:#FFFFFF;
+    font-family:'PrometoRegular', sans-serif;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+}
+
+.big-banner .slider-fixed-content .offer-location {
+    font-size:16px;
+    font-size:1.6rem;
+}
+
+.big-banner .slider-fixed-content .offer-title {
+    font-size:48px;
+    font-size:4.8rem;
+    font-style: italic;
+    max-width:800px;
+    line-height: 1;
+}
+
+.big-banner .slider-fixed-content .js-slider-pagination {
+    display:inline-block;
+    font-size:14px;
+    font-size:1.4rem;
+    font-family:'Arial', sans-serif;
+}
+
+.big-banner .slider-item > a {
+    position: relative;
+    display:block;
+    width:100%;
+}
+    /* buttons*/
+.big-banner .play-btn {
+    width:100px;
+    height:100px;
+    cursor:pointer;
+    font-size:0;
+    line-height:0;
+    background: rgba(0,0,0,0.35);
+    border: 3px solid #FFFFFF;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.big-banner .play-btn:after {
+    content:'';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 22px 0 22px 31px;
+    border-color: transparent transparent transparent #ffffff;
+    line-height: 0px;
+    margin-left:5px;
+    _border-color: #000000 #000000 #000000 #ffffff;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+/* Big banner END */
+
+.big-banner .play-btn:hover {filter:alpha(opacity=80);opacity:0.8}
+
+.big-banner .video-ratio{
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.big-banner .video-ratio:before{
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 43.75%;
+}
+
+    /* Big banner END */
+@media screen and (min-width:1024px) {
+    //.big-banner .slider-item a {height:600px;}
+}
+@media screen and (max-width: 1279px) {
+    .big-banner .slider-fixed-content .offer-title {
+        font-size:38px;
+        font-size:3.8rem;
+        max-width:580px
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .big-banner {
+        margin-bottom:0;
+    }
+    .big-banner .slider-fixed-content .offer-title,
+    .big-banner .slider-fixed-content .offer-location,
+    .big-banner [class*="ic-"] {font-size:0;}
+    .big-banner [class*="ic-"] {padding-left:5px;}
+    .big-banner [class*="ic-"].ic-location {font-size:inherit;padding-left:0;}
+    .big-banner [class*="ic-"].ic-location:before {margin-left:-5px}
+    .big-banner .play-btn {
+        width:80px;
+        height:80px;
+        border: 2px solid #FFFFFF;
+    }
+    .big-banner .play-btn:after {border-width: 16px 0 16px 25px;}
+    
+    .big-banner .slider-fixed-content .offer-title {
+        font-size:36px;
+        font-size:3.6rem;
+    }
+    //.big-banner a {max-height:400px;overflow: hidden;}
+    .big-banner .slider-fixed-top-content {
+        font-size:14px;
+        font-size:1.4rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .big-banner {
+        margin-left:-15px;
+        margin-right:-15px;
+    }
+    .big-banner .slick-arrow.slick-next {
+        background-position: -18px 0;
+    }
+    .big-banner .slick-arrow {
+        height: 23px;
+        width: 14px;
+    }
+    .big-banner .slider-fixed-content{
+        height: 50px;
+    }
+    .big-banner .slider-fixed-content .offer-title,
+    .big-banner .slider-fixed-content .offer-location,
+    .big-banner .slider-fixed-content .js-slider-pagination{display:none;}
+    
+    .big-banner .play-btn {
+        width:60px;
+        height:60px;
+    }
+    .big-banner .play-btn:after {border-width: 11px 0 11px 20px;}
+    .big-banner .slider-fixed-content {padding:15px;}
+    //.big-banner a {max-height:250px; overflow: hidden;}
+    .big-banner .slider-fixed-top-content{
+        top: auto;
+        bottom: 15px;
+        right: 12px;
+        z-index: 3;
+    }
+
+    .big-banner [class*="ic-"]:before{
+        width: 30px;
+        height: 25px;
+        background-size: 100%;
+    }
+    .big-banner .ic-sun-beach:before {background-position:0 -1px;}
+    .big-banner .ic-fairs-events:before {background-position:0 -30px;}
+    .big-banner .ic-family:before {background-position:0 -57px;}
+    .big-banner .ic-gastronomy-wine:before {background-position:0 -70px;}
+    .big-banner .ic-golf:before {background-position:0 -93px;}
+    .big-banner .ic-history:before {background-position:0 -117px;}
+    .big-banner .ic-location:before {background-position:0 -180px;}
+    .big-banner .ic-nature:before {background-position:0 -165px;}
+    .big-banner .ic-romance:before {background-position:0 -221px;}
+    .big-banner .ic-surf:before {background-position:0 -248px;}
+    .big-banner .ic-welfare:before {background-position:0 -276px;}
+}
+/* BANNERS END */

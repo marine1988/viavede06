@@ -1,0 +1,164 @@
+/* RELATED-SUGGESTIONS START */
+.related-suggestions {
+    font-size:0;
+}
+.related-suggestions .wrapper {
+    margin-top: 0;
+}
+
+.aside-article-offer.wrapper {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.aside-article-offer.wrapper .list-offer {
+    margin-top:0;
+}
+
+.related-suggestions .suggestion-item {
+    background:#FFFFFF;
+    padding: 5px;
+    width:48.5%;
+    font-size:0;
+    margin-right:1.5%;
+    margin-bottom: 35px;
+    display:inline-block;
+    vertical-align:top;
+    text-decoration:none;
+    color:inherit;
+    transition:all 0.3s ease-in-out;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.suggestion-item.table .table-cell {
+    font-size: 23px;
+    font-size: 2.3rem;
+    font-family: 'PrometoRegular', sans-serif;
+}
+.suggestion-item.table .table-cell .suggestions-img{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.suggestion-item.table .table-cell .suggestions-img img{
+    height: auto;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -ms-transition: .6s;
+    transition: .6s;
+
+    -webkit-transform: scale(1.00001);
+    -moz-transform: scale(1.00001);
+    -ms-transform: scale(1.00001);
+    transform: scale(1.00001);
+}
+.suggestion-item.table .table-cell .suggestions-img:hover img{
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+}
+.suggestion-item.table .table-cell:hover{
+    color: #02b245;
+}
+
+.related-suggestions .suggestion-item:nth-child(even) {
+    margin-left:1.5%;
+    margin-right:0
+}
+.suggestion-item .category {padding:0 20px;}
+
+.suggestion-item .col2 {
+    display:inline-block;
+    vertical-align:top;
+    font-size:24px;
+    max-width:60%;
+    font-family:'PrometoRegular', sans-serif;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.suggestion-item .col2 img {display:inline-block;}
+
+.col2.categorie {
+    background:url(images/ic-article.png) no-repeat 0 0;
+    padding-left:20px;
+}
+/* End */
+
+
+/* MEDIA QUERIES START */
+@media screen and (min-width:1024px) and (max-width:1180px)  {
+    .suggestion-item.table .table-cell {
+        font-size: 20px;
+        font-size: 2.0rem;
+        font-family: 'PrometoRegular', sans-serif;
+    }
+    .big-banner .play-btn {
+        width: 90px;
+        height: 90px;
+    }
+    .big-banner .play-btn:after {
+        border-width: 17px 0 17px 29px;
+        margin-left: 5px;
+    }
+    .gm-maps {height:400px}
+}
+@media screen and (max-width:1023px) {
+    .related-suggestions .suggestion-item {
+        width:100%;
+        margin-right:0;
+        margin-left:0;
+    }
+    .related-suggestions .suggestion-item:nth-child(even),
+    .related-suggestions .suggestion-item:nth-child(odd){
+        margin-left:0;
+        margin-right:0
+    }
+    .aside-article-offer.wrapper {margin-top:15px !important;}
+}
+@media screen and (max-width:767px) {
+    .related-suggestions .suggestion-item:nth-child(even),
+    .related-suggestions .suggestion-item:nth-child(odd){
+        margin-left:0;
+        margin-right:0
+    }
+    .suggestion-item.table .table-row {display:block;}
+    .suggestion-item.table .table-cell {
+        font-size: 20px;
+        font-size:2.0rem;
+    }
+    .suggestion-item .category {
+        width: 60px;
+        padding:0 13px;
+    }
+    
+    /* fix design */
+    .aside-article-offer.wrapper .gm-list-intro,
+    .aside-article-offer.wrapper .list-offer .gm-list-intro {margin: 30px 0;line-height:1.2;}
+    .aside-article-offer.wrapper .gm-list-intro-tit {font-size:26px;}
+    .aside-article-offer.wrapper .gm-list-intro-tit:before {left: 0;}
+}
+
+@media screen and (max-width: 425px){
+    .suggestion-item.table .table-cell {
+        padding: 20px 0;
+    }
+    .suggestion-item.table .table-cell:first-child {
+        display: block;
+        width: 100%;
+        padding: 0
+    }
+    .suggestion-item.table .table-cell:first-child img {
+        width: 100%;
+    }
+    .suggestion-item.table .table-cell .suggestions-img{
+        height: 170px;
+    }
+}
+
+/* MEDIA QUERIES END */
+
+/* OFFER-DETAIL-SUGGESTIONS END */

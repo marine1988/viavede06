@@ -1,0 +1,59 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-icon-checked {
+    width: 19px;
+    height: 20px;
+    background-position: -5px -5px;
+}
+
+.sprite-icon-drink {
+    width: 12px;
+    height: 21px;
+    background-position: -5px -35px;
+}
+
+.sprite-icon-galp {
+    width: 20px;
+    height: 20px;
+    background-position: -5px -66px;
+}
+
+.sprite-icon-heart {
+    width: 19px;
+    height: 16px;
+    background-position: -5px -96px;
+}
+
+.sprite-icon-hotel {
+    width: 23px;
+    height: 20px;
+    background-position: -5px -122px;
+}
+
+.sprite-icon-park {
+    width: 13px;
+    height: 16px;
+    background-position: -5px -152px;
+}
+
+.sprite-icon-pass {
+    width: 17px;
+    height: 22px;
+    background-position: -5px -178px;
+}
+
+.sprite-icon-place {
+    width: 17px;
+    height: 23px;
+    background-position: -5px -210px;
+}
+
+.sprite-icon-vverde {
+    width: 24px;
+    height: 20px;
+    background-position: -5px -243px;
+}

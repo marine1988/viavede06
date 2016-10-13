@@ -1,0 +1,16 @@
+{
+    "remotePath": "./htdocs/wingman/brisa/",
+    "host": "ftp.ihostfull.com",
+    "username": "uoolo_19016077",
+    "password": "Impresora7",
+    "port": 21,
+    "protocol": "ftp",
+    "uploadOnSave": true,
+    "passive": true,
+    "debug": false,
+    "privateKeyPath": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git"
+    ]
+}

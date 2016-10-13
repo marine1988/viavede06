@@ -1,0 +1,98 @@
+.como-aderir {
+    padding: 30px 0;
+    overflow: hidden;
+    background: #FFF url("images/bg-como-aderir.png")no-repeat left bottom;
+    background-size: 50% auto;
+}
+
+.como-aderir .content {
+    width: 44%;
+    padding: 0 3%;
+    float: left;
+}
+
+.como-aderir .content.lft {
+    padding-bottom: 290px;
+}
+
+.como-aderir .content h4 {
+    font-family: 'PrometoMediumItalic';
+    font-size: 3.6rem;
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+.como-aderir .content p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.como-aderir .content cite {
+    font-weight: 700;
+    color: #02b245;
+    text-transform: uppercase;
+}
+
+.no-icon-tit {
+    padding: 40px 0 40px 3%;
+}
+
+.no-icon-tit h1 {
+    color: #02b245;
+    font-family: 'PrometoMediumItalic';
+    font-size: 4.8rem;
+    font-weight: normal;
+    line-height: .8;
+    margin-top: 0;
+}
+
+.no-icon-tit h1 span {
+    color: #363c4c;
+}
+
+.no-icon-tit p {
+    font-family: 'PrometoRegular';
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1023px) {
+    .como-aderir {
+        background-size: 62% auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .como-aderir .content {
+        width: 91%;
+    }
+    .como-aderir .content.rgt {
+        padding-bottom: 210px;
+    }
+    .como-aderir .content.lft {
+        padding-bottom: 20px;
+    }
+    .como-aderir {
+        background-size: 75% auto;
+    }
+    .no-icon-tit h1 {
+        font-size: 3.4rem;
+        line-height: 1;
+    }
+    .no-icon-tit p{
+        font-size: 1.8rem;
+    }
+    .no-icon-tit {
+        padding-left: 4.5%;
+    }
+    .como-aderir .content {
+        padding: 0 4.5%;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    .como-aderir {
+        background-size: 100% auto;
+    }
+}

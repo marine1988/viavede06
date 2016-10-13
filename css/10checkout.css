@@ -1,0 +1,158 @@
+/* CHECKOUT */
+.shop-offer .end-date {
+    text-align:right;
+    padding-top:10px;
+    font-size:14px;
+    font-size:1.4rem;
+}
+.checkout-container .title {
+    color:#02b245;
+    font-size:22px;
+    font-size:2.2rem;
+    font-family:'PrometoRegular', sans-serif;
+    padding:30px 0 20px;
+}
+.table.checkout-table .table-row.header-th .table-cell {
+    color: #495264;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family:'Arial', sans-serif;
+    font-weight:bold;
+    line-height:35px;
+}
+.table.checkout-table .table-cell {
+    border-bottom:1px dashed #a9abb1;
+    height:100px;
+    font-family:'Arial',sans-serif;
+    font-size:16px;
+    vertical-align:middle;
+    min-width:140px;
+    padding: 0 20px 0 10px;
+}
+.table.checkout-table .table-cell.text-left{
+    text-align: left;
+}
+.table.checkout-table .table-cell.text-center{
+    text-align: center;
+}
+.table.checkout-table .table-cell.text-right{
+    text-align: right;
+}
+.table.checkout-table .table-row.header-th .table-cell {height:auto;}
+.amount-btn {
+    background:none;
+    border:none;
+    display:block;
+    cursor:pointer;
+    padding:10px;
+    margin: 0 auto;
+}
+.amount-btn.single{
+	padding: 0;
+	margin: auto;
+	float: none;
+}
+.amount-btn .results {
+    padding-right:20px;
+    font-weight:bold;
+    font-size:16px;
+}
+.amount-btn em {
+    text-decoration:underline;
+    font-style:normal;
+    color: #989a9f;
+    font-size:14px;
+}
+
+.table.checkout-table .suggestion-options {display:none}
+.table.checkout-table .price span {
+    color:#989a9f;
+    font-family:'PrometoRegular', sans-serif;
+    font-size:24px;
+    font-size:2.4rem;
+    line-height: 24px;
+    padding-bottom:10px;
+    white-space: nowrap;
+    position:relative;
+    display:inline-block;
+    vertical-align:middle;
+}
+.table.checkout-table .price span:nth-child(2){
+    font-size:18px;
+    font-size:1.8rem;
+    line-height: 18px;
+    padding-bottom:10px;
+    white-space: nowrap;
+    position:relative;
+    display:inline-block;
+    vertical-align:middle;
+}
+.table.checkout-table .price.dark span {
+    color:#495264;
+}
+.table.checkout-table .price sup{
+    text-transform: uppercase;
+    font-size: 55%;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    line-height: normal;
+    top: 0;
+}
+.table.checkout-table .price .bold-price {font-weight:bold}
+
+.shop-offer .total-price {
+    text-align: right;
+    margin:15px 0 60px;
+}
+.shop-offer .total-price .price-label {
+    display:inline-block;
+    vertical-align:top;
+    font-size:16px;
+    color:#495264;
+    font-weight:bold;
+    line-height:70px;
+    padding-right:10px;
+}
+.shop-offer .total-price .new-price {
+    color: #02b245;
+}
+
+.checkout .total-price .bold-price{
+    font-size: 43px;
+    font-size: 4.3rem;
+    line-height: 43px;
+}
+.checkout .total-price .points{
+    font-size: 26px;
+    font-size: 2.6rem;
+    line-height: 26px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width:1024px) and (max-width:1200px) {
+    .table.checkout-table .price {font-size:20px;}
+}
+@media screen and (max-width:1023px) {
+    .mainContent.noMargin {margin-bottom:0;}
+    .mainContent.noMargin .accession-panel {margin: 45px 0 0 0;}
+}
+@media screen and (max-width:767px) {
+    .table.checkout-table .table-row .table-cell:nth-child(2) {display:none}
+    .lists.checkout-list .txt-columm .bottom .disc-cont {border-bottom:none;}
+    
+    .shop-offer .total-price .price-label {line-height:40px;}
+}
+@media screen and (max-width:520px) {
+    .table.checkout-table .table-row .table-cell:nth-child(even) {display:none}
+}
+
+@media screen and (max-width:480px) {
+    .shop-offer.checkout .form-button .button {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 35px 0 0 0;
+    }
+    .shop-offer .total-price {text-align: center; margin: 30px 0 0;}
+}

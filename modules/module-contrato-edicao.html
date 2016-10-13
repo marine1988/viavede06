@@ -1,0 +1,254 @@
+
+
+<section class="column-section">
+    <header class="column-header">
+       <h1 class="page-title">Contratos</h1>
+    </header>
+    <div class="column-body noPadding">
+
+        
+        <div class="contract-detail">
+            
+            <div class="form form-theme-default form-contract-detail">
+                <script type="text/javascript">
+                    $(function () {
+                        /* Tooltipster */
+                        /* 
+                        Parametros:
+                        - Selector
+                        - É Modal
+                        */
+                        initTooltipster($('.form-contract-detail .custom-tooltip .tooltip-icon'), false);
+
+                        $('.form-contract-detail .Validator').blur(function () {
+                            /* 
+                            Parametros:
+                            - Selector do controlo
+                            - Nome do grupo de validação
+                            - Nome na class a colocar no pai em caso de erro
+                            - Selector da mensagem generica de erro a mostrar
+                            */
+                            SingleValidator($(this).attr("id"), 'FormContractDetail', 'tooltip-error', null);
+
+                            /* Update Single Tooltipster Message */
+                            updateSingleTooltipster($(this));
+                        });
+
+                        /* CUSTOM SELECT */
+                        /* Ver mais em: https://select2.github.io/ */
+                        $('#Select1').select2({
+                            minimumResultsForSearch: Infinity,
+                            dropdownParent: '.form-contract-detail'
+                        }).on('change', function () {
+                            var valueLang = $(this).attr('value');
+
+                        });
+
+                        $('#Select2').select2({
+                            minimumResultsForSearch: Infinity,
+                            dropdownParent: '.form-contract-detail'
+                        }).on('change', function () {
+                            var valueLang = $(this).attr('value');
+
+                        });
+
+                        $('#Select3').select2({
+                            minimumResultsForSearch: Infinity,
+                            dropdownParent: '.form-contract-detail'
+                        }).on('change', function () {
+                            var valueLang = $(this).attr('value');
+
+                        });
+
+
+                        //showControlLoading($("#Button2"));
+                        //hideControlLoading($("#Button2"));
+                        //updateTooltipster($('.form-contract-list .custom-tooltip .tooltip-icon'));
+                    });
+                </script>
+                <fieldset class="header-contract-detail-wrapper clearFloats">
+                    <div class="header-contract-detail">
+                        <legend class="clearFloats">
+                            <span class="form-legend">Delegação Setúbal</span>
+		                </legend>
+                        <div class="form-input-wrapper">
+			                <label for="txt-Alias">
+				                <span class="form-label">Titular</span>
+				                <span class="form-input custom-tooltip">
+					                <input id="txt-Alias" type="text" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+				                </span>
+			                </label>
+		                </div>
+
+                        <div class="form-group form-group-4">
+
+                                <div class="form-group-wrapper">
+            
+                                    <div class="form-input-wrapper">
+			                            <label for="form-nif">
+				                            <span class="form-label">NIF</span>
+				                            <span id="Span4" class="form-pre-filled"><strong>876587986</strong></span>
+			                            </label>
+		                            </div>
+
+                                    <div class="form-input-wrapper">
+			                            <label for="form-contract-number">
+				                            <span class="form-label">Número Contrato</span>
+				                            <span id="Span1" class="form-pre-filled"><strong>0978262682</strong></span>
+			                            </label>
+		                            </div>
+
+                                    <div class="form-input-wrapper">
+			                            <label for="form-type">
+				                            <span class="form-label">Tipo</span>
+				                            <span id="Span2" class="form-pre-filled"><strong>Débito</strong></span>
+			                            </label>
+		                            </div>
+
+                                    <div class="form-input-wrapper">
+			                            <label for="form-date">
+				                            <span class="form-label">Ínicio</span>
+				                            <span id="Span3" class="form-pre-filled"><strong>23-05-2010</strong></span>
+			                            </label>
+		                            </div>
+
+                                </div>
+                            </div>
+                    </div>
+                </fieldset>
+            
+                <fieldset class="fieldset65">
+                    <div class="form-input-wrapper">
+			            <label for="txt-address">
+				            <span class="form-label">Morada</span>
+				            <span class="form-input custom-tooltip">
+					            <input id="txt-address" type="text" value="" class="Validator">
+                                <span class="tooltip-icon"></span>
+                                <span class="tooltip-message">Campo obrigatório!</span>
+				            </span>
+			            </label>
+		            </div>
+
+                    <div class="form-group">
+                        <div class="form-group-wrapper">
+                            <div class="form-input-wrapper">
+			                    <label for="txt-codpost">
+				                    <span class="form-label">Código Postal</span>
+				                    <span class="form-input custom-tooltip">
+					                    <input id="txt-codpost" type="text" value="" class="Validator">
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+				                    </span>
+			                    </label>
+		                    </div>
+
+                            <div class="form-input-wrapper">
+			                    <label for="txt-local">
+				                    <span class="form-label">Localidade</span>
+				                    <span class="form-input custom-tooltip">
+					                    <input id="txt-local" type="text" value="" class="Validator">
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+				                    </span>
+			                    </label>
+		                    </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-group-wrapper">
+                            <div class="form-select-wrapper">
+                                <label for="Select1">
+                                    <span class="form-label">País</span>
+                                    <select id="Select1">
+                                        <option value="0">Portugal</option>
+                                        <option value="1">Espanha</option>
+                                        <option value="2">...</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-input-wrapper">
+			                    <label for="txt-local">
+				                    <span class="form-label">Telemóvel <span class="additional-info">(Opcional)</span></span>
+				                    <span class="form-input custom-tooltip">
+					                    <input id="Text1" type="text" value="" class="Validator">
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+				                    </span>
+			                    </label>
+		                    </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group-wrapper">
+                            <div class="form-input-wrapper">
+			                    <label for="txt-telefone">
+				                    <span class="form-label">Telefóne <span class="additional-info">(Opcional)</span></span>
+				                    <span class="form-input custom-tooltip">
+					                    <input id="txt-telefone" type="text" value="" class="Validator">
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+				                    </span>
+			                    </label>
+		                    </div>
+
+                            <div class="form-input-wrapper">
+			                    <label for="txt-mail">
+				                    <span class="form-label">E-mail</span>
+				                    <span class="form-input custom-tooltip">
+					                    <input id="txt-mail" type="email" value="" class="Validator">
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+				                    </span>
+			                    </label>
+		                    </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-select-wrapper">
+                        <label for="Select2">
+                            <span class="form-label">Tipo de Extrato</span>
+                            <select id="Select2">
+                                <option value="0">Extracto Electrónico - Consulta no Portal</option>
+                                <option value="1">Extracto Electrónico - Via e-mail (CSV)</option>
+                                <option value="2">Extracto Electrónico - Via e-mail (XML)</option>
+                                <option value="3">Extracto em papel - Factura/Recibo e Detalhe Contínuo</option>
+                                <option value="4">Extracto em papel - Factura/Recibo Resumo</option>
+                                <option value="5">Sem Extracto</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form-select-wrapper">
+                        <label for="Select2">
+                            <span class="form-label">Períodicidade</span>
+                            <select id="Select3">
+                                <option value="0">Mensal</option>
+                                <option value="1">Trimestral</option>
+                                <option value="2">Semanal</option>
+                            </select>
+                        </label>
+                    </div>
+
+                </fieldset>
+                <div class="form-button clearFloats">
+                    <button class="button button-border btPrev" id="BtnCancel" type="submit">
+			            <span class="button-txt">Cancelar</span>
+		            </button>
+
+		            <button class="button btNext" id="BtnStep2" type="submit">
+			            <span class="button-txt">Actualizar</span>
+		            </button>
+	            </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+                   

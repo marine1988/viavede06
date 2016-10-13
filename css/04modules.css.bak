@@ -1,0 +1,4220 @@
+/* MODULES */
+.form-management-reference .contextual-modal fieldset {max-height: 300px;overflow: auto;-webkit-overflow-scrolling: touch;overflow-scrolling: auto;}
+
+/* lnk-back-top */
+.lnk-back-top{text-align: right;clear: both; padding: 30px 20px;}
+.lnk-back-top .link{position: relative; display: inline-block; color: #272b36; margin: 0;}
+.lnk-back-top .link:before{content: '';position: absolute;left: -35px;top: -4px;-webkit-border-radius: 26px;-moz-border-radius: 26px;border-radius: 26px;width: 26px;height: 26px;background-color: #02b245;}
+.lnk-back-top .link .link-txt:before{content: '';position: absolute;left: -27px;top: 5px;width: 11px;height: 8px;background: transparent url(images/ic-arrow01.png) no-repeat left top;}
+
+/******************/
+/* column-section */
+/******************/
+.column-section {display: block;clear: both;}
+.column-header {display: block;clear: both;padding: 60px 0 0 0;}
+.column-header .page-title {display: block;clear: both;margin: 0 25px 50px 25px;padding: 0;font-family: 'PrometoMediumItalic';font-size: 4.8rem;font-weight: normal;line-height: 1;color: #363c4c;}
+.column-section .column-body {display: block;clear: both;padding: 50px 5.2%;background: #ffffff;}
+.column-section .column-body.noPadding {padding: 0;}
+.column-section .column-body.cleanBody {padding: 0;background: none;}
+.column-section .column-aside {display: block;clear: both;padding: 30px 0 35px 0;}
+
+/**********************/
+/* Fim column-section */
+/**********************/
+
+/* accession-wrapper */
+.accession-wrapper {display: block;clear: both;}
+.accession-header {display: block;clear: both;padding: 50px 3.5% 0;text-align: center;}
+
+/*.accession-header h1.page-title {*/
+.accession-header .page-title {display: block;clear: both;font-family: 'PrometoMediumItalic';font-size: 4.8rem;font-weight: normal;line-height: 1;color: #02b245;margin: 0;}
+.accession-header .page-lead {display: block;clear: both;padding: 15px 0 0 0;font-size: 1.6rem;font-weight: normal;line-height: 1;color: #495264;}
+.accession-panel {position: relative;display: block;clear: both;margin: 45px 0 40px 0;}
+.accession-panel:after {content: "";display: table;clear: both;}
+
+/* accession-main */
+.accession-panel .accession-main {float: left;width: 70.14%;background: #ffffff;}
+.accession-panel .accession-main.big {width: 100%;clear: both;}
+.accession-panel .accession-main.big + .accession-aside {display: none;}
+.accession-panel .accession-main .column-article .column-header {padding-top: 0;}
+.accession-panel .accession-main .column-article .column-body:first-child {padding-top: 0;}
+.accession-panel p{}
+.wizardSteps {display: block;clear: both;}
+.wizardSteps ul {display: block;clear: both;font-size: 0;list-style: none;margin: 0;padding:0}
+.wizardSteps li {display: inline-block;width: 25%;vertical-align: top;}
+.wizardSteps.two-steps li {width: 50%;}
+.wizardSteps li a {cursor: default;position: relative;display: block;height: 47px;font-family: 'PrometoRegular';font-size: 1.4rem;line-height: 1;padding: 33px 0 0 20px;color: #0f5222;text-decoration: none;text-align: center;background: #23bb46;}
+.wizardSteps li:first-child a {padding: 33px 0 0 0;}
+.wizardSteps li a:after {content: " ";display: block;width: 0;height: 0;border-top: 40px solid transparent;
+/* Go big on the size, and let overflow hide */
+border-bottom: 40px solid transparent;border-left: 20px solid #23bb46;position: absolute;top: 50%;margin-top: -40px;left: 100%;z-index: 2;}
+.wizardSteps li a:before {content: " ";display: block;width: 0;height: 0;border-top: 40px solid transparent;border-bottom: 40px solid transparent;border-left: 20px solid #ffffff;position: absolute;top: 50%;margin-top: -40px;margin-left: 1px;left: 100%;z-index: 1;}
+.wizardSteps li:last-child a:after,
+.wizardSteps li:last-child a:before {display: none;}
+.wizardSteps li.current a,
+.wizardSteps li.completed a {cursor: pointer;}
+.wizardSteps li.current a {color: #ffffff;background: #009b3a;}
+.wizardSteps li.current a:after {border-left-color: #009b3a!important;}
+.wizardSteps li.completed a {color: #009b3a;background: #dbdbdb;}
+.wizardSteps li.completed a:after {border-left-color: #dbdbdb!important;}
+.wizardSteps li a > span {display: inline-block;width: 90%;}
+.wizardSteps li a > span:before {content: '';vertical-align: middle;display: inline-block;width: 0;height: 100%;}
+.wizardSteps li a > span > span {vertical-align: middle;display: inline-block;max-width: 95%;padding: 1% 0 1% 5%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.accession-panel .wizardStep{display: none;}
+.accession-panel .accession-main .wizardStep {clear: both;padding: 50px 5.2%;}
+.adhesion-main-container .accession-panel .accession-main .wizardStep {display: block;} /* Added display: block; because we are now using AngularJS to Show/Hide this element */
+.accession-panel .accession-main .wizardStep.noLateralPadding {padding-left: 0;padding-right: 0;}
+.accession-panel .accession-main .wizardStep fieldset {padding: 0;margin: 0;}
+.form-theme-default .form-group .form-group-wrapper .column68 {display: inline-block;width: 68%;margin-top: 30px;}
+.form-theme-default .form-group .form-group-wrapper .column30 {display: inline-block;width: 30%;margin-top: 30px;}
+.accession-panel .accession-main .additionalCost {display: block;clear: both;padding: 30px 0 0 0;font-size: 1.6rem;color: #363c4c;}
+.accession-panel .accession-main .additionalCost .cost {font-family: 'PrometoRegular';font-size: 3.2rem;color: #23bb46;vertical-align: middle;}
+.accession-panel .accession-main .additionalCost .feed {font-family: 'PrometoRegular';font-size: 2rem;color: #363c4c;vertical-align: middle;text-transform: uppercase;}
+.accession .form-theme-default .form-group-nif-country .form-pre-filled {padding-top: 0;}
+.accession .form-theme-default legend {/*float: none;clear: both;width: 100%;*/} /* foi retirado o float para nao comer a margem do elemente abaixo - esta propriedade esta' a esmagar o float do ficheiro 03styles.css */
+.accession .form-theme-default .form-legend {/*float: left;display: inline-block;clear: none;*/} /* foi retirado todas as propriedades porque nao esta' a fazer nada */
+.accession .form-theme-default .form-legend.legend-final {color: #02b245;}
+.accession .form-theme-default .mandatory-fields {display: block;clear: both;font-size: 1.6rem;padding-top: 10px;}
+.desktop-version .accession-panel .accession-main .form-theme-default .block-info{width: 60%;}
+
+/**
+* Service Plan
+*/
+.service-plan {display: block;clear: both;text-align: center;font-size: 0;margin: 40px 0 60px 0;}
+.service-plan .service-plan-item-wrapper {position: relative;display: inline-block;width: 29%;margin: 0 1%;vertical-align: middle;}
+.service-plan .service-plan-item-wrapper > a {text-decoration: none;}
+.service-plan .service-plan-item {position: relative;display: inline-block;width: 100%;vertical-align: middle;background: #ffffff;}
+.service-plan .service-plan-item-wrapper .service-plan-item + .link {color: #a9abb1;}
+.service-plan .service-plan-item label {cursor: pointer;display: block;clear: both;padding: 0 0 60px 0;}
+.service-plan .service-plan-item .card-indication {display: inline-block;position: relative;clear: both;padding: 7px 23px 8px;min-width: 40%;font-family: 'PrometoRegular';font-size: 1.5rem;text-transform: uppercase;color: #fff;}
+
+.service-plan .service-plan-item .card-wrapper {margin-top: -34px;}
+.service-plan .service-plan-item .card-wrapper:first-child {margin-top: 0;}
+
+.service-plan .service-plan-item .card-indication:before,
+.service-plan .service-plan-item .card-indication:after {content: '';position: absolute;top: 0;width: 23px;height: 35px;background-image: url(images/service-plan-curve.png);background-repeat: no-repeat;-webkit-backface-visibility: hidden;}
+.service-plan .service-plan-item .card-indication:before {left: 0;background-position: left top;}
+.service-plan .service-plan-item .card-indication:after {right: 0;background-position: right top;}
+/*.service-plan .service-plan-item .popular,
+.service-plan .service-plan-item .type_2,
+.service-plan .service-plan-item .new,
+.service-plan .service-plan-item .type_3 {display: block;clear: both;line-height: 60px;font-family: 'PrometoRegular';font-size: 1.2rem;text-transform: uppercase;color: #fff;}*/
+.service-plan .service-plan-item .card-indication.popular,
+.service-plan .service-plan-item .card-indication.type_2,
+.service-plan .service-plan-item .card-indication.new,
+.service-plan .service-plan-item .card-indication.type_3 {display: inline-block;line-height: normal;font-size: 1.5rem;color: #fff;}
+.service-plan .service-plan-item .popular,
+.service-plan .service-plan-item .type_2 {background: #02b245;}
+.service-plan .service-plan-item .new,
+.service-plan .service-plan-item .type_3 {background: #0f5222;}
+
+.service-plan .service-plan-item .card-wrapper {display: table;clear: both;width: 100%;}
+.service-plan .service-plan-item .card-row {display: table-row;clear: both;width: 100%;height: 100%;}
+.service-plan .service-plan-item .card-cell {display: table-cell;clear: both;width: 100%;height: 100%;vertical-align: middle;padding: 55px 2% 20px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.service-plan .service-plan-item .card-wrapper .plan-name {display: block;clear: both;padding: 0;font-family: 'PrometoRegular';font-size: 2.8rem;text-transform: uppercase;line-height: 1;color: #363c4c;}
+.service-plan .service-plan-item .card-wrapper .plan-cost {position: relative;display: inline-block;clear: both;margin: 5px 0 0 0;font-family: 'PrometoRegular';font-size: 8.0rem;color: #02b245;line-height: 1;vertical-align: middle;}
+.service-plan .service-plan-item .card-wrapper .plan-cost.old {margin: 5px 10px 0 0;font-size: 4.8rem;color: #a9abb1;}
+.service-plan .service-plan-item .card-wrapper .plan-cost.old:before {content: '';position: absolute;left: -10%;top: 0;width: 115%;height: 47%;border-bottom: 3px solid #a9abb1;}
+.service-plan .service-plan-item .card-wrapper .plan-cost.crossed .plan-cost-wrapper {position: relative;display: inline-block;padding: 0 20px;}
+.service-plan .service-plan-item .card-wrapper .plan-cost.crossed .plan-cost-wrapper:before {content: '';position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 1;background: url(images/crossed-out.png) no-repeat center;background-size: contain;}
+.service-plan .service-plan-item .card-wrapper .plan-cost sup{top: -0.75em;font-size: 45%;font-family: 'PrometoRegular';}
+.service-plan .paperIconMessage,
+.service-plan .service-plan-item .card-wrapper .plan-cost sup .icon {display: none;}
+.service-plan .service-plan-item .card-wrapper .plan-cost .feed {font-family: 'PrometoRegular';font-size: 2rem;color: #363c4c;line-height: 2;vertical-align: bottom;margin-left: -1.8rem;}
+.service-plan .service-plan-item .card-wrapper .plan-feed {display: block;clear: both;padding: 10px 5% 0;font-size: 1.5rem;color: #363c4c;line-height: 1.2;min-height: 40px;}
+.service-plan .service-plan-item .card-wrapper .plan-feed sup {font-size: 65%;font-weight: 700;color: #02b245;}
+.service-plan .service-plan-item .card-wrapper .plan-offers {display: inline-block;clear: both;list-style: none;margin: 20px 10% 0 10%;text-align: left;}
+.service-plan .service-plan-item .card-wrapper .plan-offers li {display: block;clear: both;list-style: none;padding: 0 0 0 25px;margin: 0 0 5px 0;font-family: Arial, sans-serif;font-size: 1.6rem;color: #a9abb1;background: url(images/correct-green.png) no-repeat left 5px;}
+.service-plan.paper .service-plan-item .card-wrapper .plan-offers li,
+.service-plan.paper .service-plan-item.active .card-wrapper .plan-offers li {background: url(images/cross.png) no-repeat left 5px;}
+.service-plan.paper .service-plan-item-wrapper.InLeve .card-wrapper .plan-offers li,
+.service-plan.paper .service-plan-item-wrapper.InLeve.active .card-wrapper .plan-offers li {background: url(images/correct-green.png) no-repeat left 5px;}
+.service-plan .service-plan-item.active .card-wrapper .plan-offers li {color: #0f5222;background: url(images/correct-white.png) no-repeat left 5px;}
+
+.service-plan .service-plan-item .collaps-content {display: none;clear: both;/*border-top: 1px solid #dedfe0;*/}
+.service-plan .service-plan-item .collaps-content-wrapper {margin: 0 10%;}
+/*.service-plan .service-plan-item .collaps-content .service-plan-info {margin: 0 -12.5%;}*/
+.service-plan .service-plan-item .collaps-content ul {display: block;clear: both;padding: 0;margin: 0;list-style: none;text-align: left;min-height: 155px;}
+.service-plan .service-plan-item .collaps-content ul li {display: block;clear: both;list-style: none;padding: 15px 0 15px 0;font-size: 1.5rem;color: #363c4c;line-height: 1;font-weight: bold;border-bottom: 1px solid #dedfe0;}
+.service-plan .service-plan-item .collaps-content ul li.send:first-child {border-top: 1px solid #dedfe0;}
+.service-plan .service-plan-item .collaps-content ul li.send {padding: 15px 45px 15px 0;background: url(images/ic-send.png) no-repeat right center;}
+.service-plan .service-plan-item .collaps-content ul li.send sup {font-size: 65%;font-weight: 700;color: #02b245;}
+.service-plan .service-plan-item .collaps-content ul li.warranty {padding: 15px 45px 15px 0;background: url(images/ic-warranty.png) no-repeat right center;}
+.service-plan .service-plan-item .collaps-content ul li.campaign {padding: 15px 45px 15px 0;background: url(images/ic-campaign.png) no-repeat right center;}
+.service-plan .service-plan-item .collaps-content .button-wrapper {padding: 12% 0;}
+.service-plan .service-plan-item .collaps-content .block-collaps-content {display: block;clear: both;padding: 0 0 15px 0;text-align: left;border-top: 1px solid #dedfe0;border-bottom: 1px solid #dedfe0;}
+.service-plan .service-plan-item .collaps-content .block-collaps-title {display: block;clear: both;font-size: 1.6rem;color: #363c4c;padding: 15px 0 0 0;}
+.service-plan .service-plan-item .collaps-content .block-collaps-text {display: block;clear: both;font-size: 1.4rem;color: #a9abb1;padding: 5px 0 0 0;}
+.service-plan .service-plan-item .collaps-content .block-collaps-text p {margin: 0;}
+.service-plan .service-plan-item input[type="radio"] {display: none;}
+.service-plan .service-plan-item .collaps-arrow {cursor: pointer;display: block;/*margin-top: -30px;*/width: 100%;height: 60px;background: url(images/ic-collaps-arrow-down.png) no-repeat center;}
+.service-plan .service-plan-item .collaps-arrow.open {background: url(images/ic-collaps-arrow-up.png) no-repeat center;}
+.service-plan .service-plan-info.type_1 {background-color: #a9abb1;}
+.service-plan .service-plan-info.type_2 {background-color: #02b245;}
+.service-plan .service-plan-info.type_3 {background-color: #0f5222;}
+.service-plan .service-plan-info {color: #fff;font-size: 1.4rem;text-align: center;position: relative;padding: 0 5% 5%;}
+.service-plan .service-plan-info .plan-type {font-size: 1.5rem;font-family: 'PrometoBold';text-transform: uppercase;display: block;margin: 0 auto;}
+.service-plan .service-plan-item-wrapper.highlighted {padding: 0;background-color: transparent;-webkit-box-shadow: -3px 3px 5px 0 rgba(2, 2, 2, 0.11);-moz-box-shadow: -3px 3px 5px 0 rgba(2, 2, 2, 0.11);box-shadow: -3px 3px 5px 0 rgba(2, 2, 2, 0.11);}
+.service-plan .service-plan-item-wrapper.highlighted .card-wrapper:first-child {margin-top: 36px;}
+.service-plan .service-plan-item-wrapper.highlighted .card-wrapper:first-child ~ .collaps-content .button-wrapper {padding-bottom: 25%;}
+.service-plan .service-plan-item-wrapper.highlighted .card-indication ~ .card-wrapper {margin-top: 0;}
+.service-plan .service-plan-item-wrapper.highlighted .card-indication ~ .collaps-content .button-wrapper {padding-bottom: 20%;}
+
+ /* Service Plan Corner */
+.service-plan .service-plan-corner{font-size: 0;display: block;position: relative;top: 0;margin: 0 auto;width: 62px;}
+.service-plan .service-plan-corner-left,
+.service-plan .service-plan-corner-right{display: inline-block;overflow: hidden;position: relative;top: 0;width: 20px;height: 20px;}
+.service-plan .service-plan-corner-left{right: 0;}
+.service-plan .service-plan-corner-right{left: 0;}
+.service-plan .service-plan-corner-left:before,
+.service-plan .service-plan-corner-right:before{content: '';position: absolute;top: -30px;width: 40px;height: 40px;border: 30px solid #fff;-webkit-border-radius: 100%;-moz-border-radius: 100%;border-radius: 100%;}
+.service-plan .service-plan-corner-left:before{left: -50px;}
+.service-plan .service-plan-corner-right:before{right: -50px;}
+
+/* Service Plan Notes */
+.service-plan-notes {margin: 0 auto;max-width: 91%;}
+
+/* Hovers & Actives */
+.touch .service-plan .service-plan-item:hover {/*background: #ececec;*/}
+.touch .service-plan .service-plan-item:hover + .service-plan-info .service-plan-corner-left:before,
+.touch .service-plan .service-plan-item:hover + .service-plan-info .service-plan-corner-right:before {/*border-color: #ececec;*/}
+.touch .service-plan .service-plan-item:hover .card-indication:before {/*background-position: left bottom;*/}
+.touch .service-plan .service-plan-item:hover .card-indication:after {/*background-position: right bottom;*/}
+.service-plan .service-plan-item.active,
+.touch .service-plan .service-plan-item.active:hover {background: #23bb46;}
+.service-plan .service-plan-item.active + .service-plan-info:not(.type_3):not(.type_2){background-color: #1b8539;}
+.service-plan .service-plan-item.active + .service-plan-info .service-plan-corner-left:before,
+.service-plan .service-plan-item.active + .service-plan-info .service-plan-corner-right:before,
+.touch .service-plan .service-plan-item.active:hover + .service-plan-info .service-plan-corner-left:before,
+.touch .service-plan .service-plan-item.active:hover + .service-plan-info .service-plan-corner-right:before {border-color: #23bb46;}
+.service-plan .service-plan-item.active .popular,
+.service-plan .service-plan-item.active .type_2,
+.touch .service-plan .service-plan-item.active:hover .popular,
+.touch .service-plan .service-plan-item.active:hover .type_2 {color: #ffffff;background: #02b245;}
+.service-plan .service-plan-item.active .new,
+.service-plan .service-plan-item.active .type_3,
+.touch .service-plan .service-plan-item.active:hover .new,
+.touch .service-plan .service-plan-item.active:hover .type_3 {color: #ffffff;background: #0f5222;}
+.service-plan .service-plan-item.active .card-wrapper .plan-name {color: #0f5222;}
+.service-plan .service-plan-item.active .card-wrapper .plan-cost {color: #ffffff;}
+.service-plan .service-plan-item.active .card-wrapper .plan-cost.old:before{border-bottom-color: #ffffff;}
+.service-plan .service-plan-item.active .card-wrapper .plan-cost .feed {color: #0f5222;}
+.service-plan .service-plan-item.active .card-wrapper .plan-feed {color: #0f5222;}
+.service-plan .service-plan-item.active .card-wrapper .plan-feed sup {color: #ffffff;}
+.service-plan .service-plan-item.active .collaps-content .block-collaps-content,
+.service-plan .service-plan-item.active .collaps-content ul li.send:first-child {border-top: 1px solid #009b3a;}
+.service-plan .service-plan-item.active .collaps-content ul li {color: #ffffff;border-bottom: 1px solid #009b3a;}
+.service-plan .service-plan-item.active .collaps-content ul li.send {background: url(images/ic-send-active.png) no-repeat right center;}
+.service-plan .service-plan-item.active .collaps-content ul li.send sup{color: #0f5222;}
+.service-plan .service-plan-item.active .collaps-content ul li.warranty {background: url(images/ic-warranty-active.png) no-repeat right center;}
+.service-plan .service-plan-item.active .collaps-content ul li.campaign {padding: 15px 45px 15px 0;background: url(images/ic-campaign-active.png) no-repeat right center;}
+.service-plan .service-plan-item.active .collaps-content .block-collaps-content {border-bottom: 1px solid #009b3a;}
+.service-plan .service-plan-item.active .collaps-content .block-collaps-title {color: #0f5222;}
+.service-plan .service-plan-item.active .collaps-content .block-collaps-text {color: #ffffff;}
+.service-plan .service-plan-item.active .collaps-arrow {background: url(images/ic-collaps-arrow-down-active.png) no-repeat center;}
+.service-plan .service-plan-item.active .collaps-arrow.open {background: url(images/ic-collaps-arrow-up-active.png) no-repeat center;}
+
+/**
+* Service Plan
+* Horizontal
+*/
+.service-plan.horizontal {}
+.service-plan.horizontal .service-plan-item-wrapper {position: relative;display: block;clear: both;width: 100%;margin: 1.72% 0 0 0;}
+.service-plan.horizontal .service-plan-item-wrapper:first-child {margin: 0;}
+.service-plan.horizontal .service-plan-item .card-cell {width: 50%;clear: none;padding: 3% 2%;}
+.service-plan.horizontal .service-plan-item .card-cell + .card-cell {border-left: 1px solid #d8d8da;}
+.service-plan.horizontal .service-plan-item.active .card-cell + .card-cell {border-left: 1px solid #009b3a;}
+.service-plan.horizontal .service-plan-item .card-wrapper .plan-cost.crossed {font-size: 4rem;}
+.service-plan.horizontal .service-plan-item .card-wrapper .plan-offers {display: block;clear: both;padding: 0 0 25px 0;margin: 0 10%;}
+.service-plan.horizontal .service-plan-item label {padding: 0;}
+.service-plan.horizontal .service-plan-item .card-wrapper {height: 260px;}
+.service-plan.horizontal .service-plan-item .collaps-arrow {display: none;}
+.service-plan.horizontal .service-plan-item .collaps-content {display: block;}
+.service-plan.horizontal .service-plan-item .collaps-content ul {min-height: 0;}
+
+/**
+* Service Plan
+* Horizontal
+* Paper
+*/
+.service-plan.horizontal.paper .service-plan-item .card-wrapper .plan-cost.crossed .plan-cost-wrapper:before {display: none;}
+.service-plan.horizontal.paper .service-plan-item .card-wrapper .plan-cost + .plan-cost {font-size: 3.4rem;color: rgba(35,187,70,0.4);}
+.service-plan.horizontal.paper .service-plan-item.active .card-wrapper .plan-cost + .plan-cost {font-size: 3.4rem;color: rgba(255,255,255,0.4);}
+.service-plan.horizontal.paper .service-plan-item .card-wrapper .plan-cost sup .icon {display: inline-block;width: 15px;height: 15px;background: url(images/red_alert_icon.png) no-repeat center;background-size: contain;vertical-align: top;}
+.service-plan.horizontal.paper .paperIconMessage {display: block;clear: both;padding: 20px 20px 20px 55px;margin: 5% 0 0 0;font-family: Arial, sans-serif;font-size: 1.5rem;line-height: 1.5;color: #515151;font-weight: bold;text-align: left;background: #f8f8f8 url(images/red_alert_icon.png) no-repeat 2% center;}
+
+/* End service-plan */
+
+.accession-panel .accession-main .wizardStep .data-send {margin: 35px 0 0 0;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-wrapper {display: block;clear: both;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-body {display: block;clear: both;width: 66.5%;padding: 30px 4%;margin: 30px 0 0 0;background: #f5f5f5;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.accession-panel .accession-main .wizardStep .accession-data-send .data-send .data-send-body {width: auto;padding: 30px 0;}
+.accession-panel .accession-main .wizardStep .accession-data-send .accession-data-send-wrapper {padding: 0 2%;}
+.accession-panel .accession-main .wizardStep .accession-data-send .accession-data-send-wrapper .form-pre-filled-data {padding-top: 35px;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-controls {display: block;clear: both;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-controls .form-radiobox-wrapper {margin: 0 0 0 45px;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-controls .form-radiobox-wrapper:first-child {margin: 0;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-panel {display: none;clear: both;padding: 30px 0 0 0;}
+.adhesion-main-container .accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-panel {display: block;} /* Added display: block; because we are now using AngularJS to Show/Hide this element */
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-panel .data-send-header {display: block;clear: both;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-panel .data-send-header .title {display: inline-block;float: left;clear: none;font-family: 'PrometoRegular';font-size: 2.2rem;line-height: 1.5;color: #495264;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-panel .data-send-header .form-checkbox-wrapper {display: inline-block;float: right;clear: none;width: auto;margin-top: 2px;}
+.accession-panel .accession-main .wizardStep .data-send .accession-data-send-checkbox .form-checkbox-wrapper{margin-top: 0;}
+.accession-panel .accession-main .wizardStep .data-send .accession-data-send-checkbox .form-checkbox-wrapper label{margin: 0;}
+
+/* Remocao Avalon */
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .select2-container {background: #ffffff;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .select2-container--default .select2-selection--single .select2-selection__arrow {border-left: 2px solid #f5f5f5;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .form-select-wrapper {margin-top: 35px;min-height: 50px;}
+
+/* Fim Remocao Avalon */
+
+.accession-panel .accession-main .wizardStep .data-send .data-send-text {display: block;clear: both;font-size: 1.6rem;color: #495264;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-address {display: block;clear: both;font-size: 1.6rem;color: #495264;margin-top: 30px;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-destination {padding: 15px 2%;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-destination .form-group-wrapper:after {content: '';display: table;clear: both;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-destination .form-group-wrapper > div {margin-top: 0;width: auto;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-destination .form-group-wrapper > div:last-child {margin-left: 2%;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-destination .form-group-wrapper .form-input-wrapper {width: calc(98% - 140px);}
+.accession-panel .accession-main .wizardStep .data-send .data-send-destination .form-group-wrapper .form-button {margin-top: 20px;width: 140px;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-destination-title {font-family: 'PrometoMedium';font-size:1.8rem;color: #02b245;font-weight: normal;line-height: 1;margin: 0 0 20px 0;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-destination-text {padding: 25px 0 0 0;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-destination-address {margin-top: 5px;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-panel.custom-data-send-panel {padding: 0;}
+.accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-panel.custom-data-send-panel .form-select-wrapper {margin-top: 0;}
+
+.form-theme-default .form-vehicle-wrapper .vehicle-type {font-size: 1.6rem;color: #495264;padding: 0 0 0 40px;line-height: 50px;margin: 5px 0 0 0;background-size: 30px!important;}
+.form-theme-default .form-vehicle-wrapper .vehicle-type.classe1 {background: url(images/vehicle-classe1.png) no-repeat left center;}
+.form-theme-default .form-vehicle-wrapper .vehicle-type.classe2 {background: url(images/vehicle-classe2.png) no-repeat left center;}
+.form-theme-default .form-vehicle-wrapper .vehicle-type.classe3 {background: url(images/vehicle-classe3.png) no-repeat left center;}
+.form-theme-default .form-vehicle-wrapper .vehicle-type.classe4 {background: url(images/vehicle-classe4.png) no-repeat left center;padding: 0 0 0 50px;background-size: 40px !important;}
+.form-theme-default .form-vehicle-wrapper .vehicle-type.classe5 {background: url(images/vehicle-classe5.png) no-repeat left center;}
+.form-theme-default .form-vehicle-wrapper .vehicle-type .form-checkbox-wrapper {display: block;clear: both;width: 100%;margin: 0;}
+
+.form-theme-default .form-group .form-group-wrapper .form-vehicle-wrapper .vehicle-type + .form-checkbox-wrapper,
+.form-theme-default .form-vehicle-wrapper .vehicle-type + .form-checkbox-wrapper {
+    margin-top: 8px;
+}
+
+.form-theme-default .chosen-identifier {
+    color:inherit;
+    font-size:1.4rem;
+    margin-left:10px;
+}
+
+/* billing-data */
+.form-theme-default .billing-data {display: block;clear: both;margin: 35px 0 0 0;}
+
+/* payment-references */
+.form-theme-default .payment-references {display: block;clear: both;margin: 35px 0 0 0;}
+.form-theme-default .payment-references .left {float: left;width: 38%;}
+.form-theme-default .payment-references .left .form-legend {display: block;clear: both;}
+.form-theme-default .payment-references .left .form-sub-legend {display: block;clear: both;font-family: 'PrometoRegular';font-size: 2.2rem;color: #363c4c;}
+.form-theme-default .payment-references .right {float: right;width: 60%;}
+.form-theme-default .payment-references .right .payment-references-controls {display: block;clear: both;}
+.form-theme-default .payment-references .right .payment-references-controls .form-radiobox-wrapper {display: block;clear: both;margin-top: 10px; margin-left: 0;}
+.form-theme-default .payment-references .right .payment-references-controls .form-radiobox-wrapper:first-child {margin-top: 0;}
+
+.form-theme-default .payment-references .payment-references-controls {margin-top: 20px;padding: 20px 2%;background-color: #f5f5f5;}
+
+/* additional-cars */
+.form-theme-default .additional-cars {display: block;clear: both;margin: 25px 0 0 0;}
+.form-theme-default .additional-cars .additional-car {display: block;clear: both;padding: 20px 0;border-top: 1px solid #e5e6e7;}
+.form-theme-default .additional-cars .additional-car legend .link-remove {float: right; font-size: 1.6rem;/*font-family: 1.6rem;*/color: #272b36;line-height: 26px;padding: 0 0 0 35px;margin: 0 0 0 35px;background: url(images/link-close.png) no-repeat left center;}
+.form-theme-default .additional-cars .additional-car legend .link-remove:hover {text-decoration: none;}
+.form-theme-default .additional-car label .form-pre-filled {display: block;padding: 0;}
+
+
+.form-theme-default .additional-car .identifier-controls {display: block;clear: both; list-style: none; font-size: 0; margin: 1% 0 0 -1%;}
+.form-theme-default .additional-car .identifier-controls li {display: inline-block; vertical-align: top; width: 32.33%; margin: 0 0 0 1%;}
+
+.form-theme-default .additional-car .identifier-controls li label {
+    cursor: pointer;
+    display: block;
+    clear: both;
+}
+
+.form-theme-default .additional-car .identifier-controls li input {
+    display: none;
+}
+
+.form-theme-default .additional-car .identifier-controls li .form-label-wrapper {
+    display: block;
+    clear: both;
+    padding: 0 20px;
+    background: #f5f5f5;
+    line-height: 100px;
+    vertical-align: middle;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-theme-default .additional-car .identifier-controls li .form-label-wrapper .labelWrapper {
+    display: inline-block;
+    width: 100%;
+    line-height: 1.2;
+    vertical-align: middle;
+}
+
+.form-theme-default .additional-car .identifier-controls li .form-label-wrapper .title {
+    display: block;
+    clear: both;
+    text-align: center;
+    font-family: 'PrometoMedium';
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #363c4c;
+}
+
+.form-theme-default .additional-car .identifier-controls li .form-label-wrapper span.oldValue{color: #e64f4f;text-transform: none; font-size: 2.0rem; text-decoration:line-through; font-weight: normal;}
+
+.form-theme-default .additional-car .identifier-controls li input:checked + .form-label-wrapper span.oldValue{color: #495264;}
+
+.form-theme-default .additional-car .identifier-controls li .form-label-wrapper sup {
+	top: -0.75em;
+	font-size: 50%;
+}
+
+.form-theme-default .additional-car .identifier-controls li .form-label-wrapper small {
+	font-size: 1.5rem;
+    text-transform: none;
+}
+
+.form-theme-default .additional-car .identifier-controls li .form-label-wrapper .lead {
+    display: block;
+    clear: both;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #363c4c;
+    margin: 5px 0 0 0;
+}
+
+.form-theme-default .additional-car .identifier-controls li input:checked + .form-label-wrapper {
+    background: #02b245;
+}
+
+.form-theme-default .additional-car .identifier-controls li input:checked + .form-label-wrapper .title,
+.form-theme-default .additional-car .identifier-controls li input:checked + .form-label-wrapper .lead {
+    color: #ffffff;
+}
+
+
+
+/* accession-aside */
+.accession-panel .accession-aside {float: right;width: 28.35%;background: #02b245;}
+.article-block {display: block;clear: both;font-size: 1.6rem;color: #0f5222;margin: 0 7.89%;padding: 30px 0 30px 0;background: url(images/filler_first_menu_viaverde-info.gif) no-repeat left top;}
+.article-block:first-child {background: none;}
+.article-block header {display: block;clear: both;padding: 80px 0 0 0;}
+.article-block header.info {background: url(images/ic-information.png) no-repeat left top;}
+.article-block header.question {background: url(images/ic-question.png) no-repeat left top;}
+
+
+.exposition-forms-aside .article-block header.info,
+.accession-aside .article-block header.info{
+	background: none;
+	padding: 0 0 0 0;
+	position: relative;
+}
+.exposition-forms-aside .article-block header.info:before,
+.accession-aside .article-block header.info:before {
+	content: '';
+	width: 65px;
+	height: 61px;
+	background: url(images/ic-information.png) no-repeat left center;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+.exposition-forms-aside .article-block header.info h3,
+.accession-aside .article-block header.info h3{
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(100% - 85px);
+}
+
+
+.accession-aside .article-block header.question{
+	background: none;
+	padding: 0 0 0 0;
+	position: relative;
+}
+.accession-aside .article-block header.question:before {
+	content: '';
+	width: 65px;
+	height: 61px;
+	background: url(images/ic-question.png) no-repeat left center;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+.accession-aside .article-block header.question h3{
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(100% - 85px);
+}
+
+
+.article-block header h3 {display: block;clear: both;font-family: 'PrometoMedium';font-size: 2.2rem;line-height: 1.2;color: #ffffff;font-weight: normal;margin: 0;}
+.article-block .accordion-items > a{text-decoration: none;}
+.article-block .accordion-items > a:hover > .see-more{text-decoration: underline;}
+.article-block h4 {display: block;clear: both;font-family: 'PrometoMedium';font-size: 1.7rem;line-height: 1.2;color: #0f5222;padding: 15px 0 0 0;font-weight: normal;}
+.article-block .article-block-text {display: block;clear: both;padding: 5px 0 0 0;color: #0f5222;}
+.article-block .article-block-text strong{font-family: 'PrometoRegular';font-size:18px;font-size: 1.8rem;}
+.article-block .article-block-text p {margin: 8px 0 5px 0; color: #fff; font-family: 'Arial', sans-serif; font-size: 16px; font-size: 1.6rem;}
+.article-block .article-block-text a {color: #ffffff;}
+.touch .article-block .article-block-text a:hover {text-decoration: none;}
+
+/* form-group-resume */
+.form-group-resume {margin-top: 35px;margin-bottom: 35px;border-top: 2px solid #ebebeb;border-bottom: 2px solid #ebebeb;padding-bottom: 30px;}
+.form-group-resume:last-child {margin-bottom: 0;}
+.form-group-resume ~ .form-group-resume {margin-top: 0;border-top: none;}
+.form-theme-default .form-group-resume ~ .form-group.form-group-resume .form-input-wrapper {margin-top: 0;}
+.form-theme-default .form-group.form-group-resume .form-group-wrapper > div {margin-top: 30px;margin-left: 0;width: 50%;}
+.form-group-resume .form-group-resume-title {display: block;clear: both;font-family: 'PrometoRegular';font-size: 2.6rem;color: #02b245;}
+.form-group-resume .form-group-resume-title span {color: #363c4c;}
+.form-group-resume .btnChange .button-icon {padding: 0 25px 0 0;background: url(images/btnChange.png) no-repeat right center;}
+
+/* Aside table-resume */
+.article-block-table {display: none;width: 100%;margin: 0;border-collapse: collapse;border-spacing: 0;background-color: transparent;}
+.accession-aside .article-block-table {display: table;}
+.accession-aside .article-block-table.sticky {position: fixed;/*top: 205px;*/width: 363px;}
+.article-block-table caption {line-height: 35px;padding: 0 20px;text-align: left;font-family: 'PrometoRegular';font-size: 2.6rem;color: #ffffff;background: #02b245;}
+.article-block-table th,
+.article-block-table td {text-align: left;height: 48px;padding: 2px 20px;vertical-align: middle;font-weight: normal;}
+.article-block-table tbody th,
+.article-block-table tbody td {font-size: 1.6rem;color: #ffffff;border-top: solid 1px #02a03e;background: #02b245;}
+.article-block-table tfoot th {font-size: 1.6rem;color: #ffffff;background: #009b3a;}
+.article-block-table tfoot td {font-size: 2.5rem;color: #ffffff;background: #009b3a;}
+
+/******************/
+/* column-article */
+/******************/
+.column-article {display: block;clear: both;padding: 50px 5.2%;}
+.column-article .column-header {display: block;clear: both;}
+.column-article .column-header .page-title {display: block;clear: both;padding: 0;margin: 0;font-family: 'PrometoMediumItalic';font-size: 4.8rem;font-weight: normal;line-height: 1;color: #363c4c;}
+.column-article .column-body {display: block;clear: both;padding: 35px 0 0 0;font-size: 1.6rem;color: #495264;}
+
+/**********************/
+/* Fim column-article */
+/**********************/
+
+/* change-pwd */
+.form-theme-default .form-pre-filled a.change-pwd {display: inline-block;line-height: 26px;padding: 0 0 0 35px;margin: 0 0 0 5px;background: url(images/lock.png) no-repeat left center;}
+.form-theme-default .form-pre-filled a.change-pwd:hover {text-decoration: none;}
+
+/* end change-pwd */
+
+
+/* contract-list */
+.contract-detail-table-wrapper {/*background: #ffffff;*/}
+.contract-list {display: block;clear: both;}
+.contract-list .contract-list-filter {display: block;clear: both;padding: 50px 5.2%;}
+.contract-list .contract-list-wrapper {display: block;clear: both;background: #ffffff;}
+
+/* End contract-list */
+
+/* contract-detail */
+.contract-detail {display: block;clear: both;}
+.contract-detail .form-contract-detail {background: #ffffff;}
+.contract-detail .header-contract-detail-wrapper {display: block;clear: both;padding: 20px 2.08%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.contract-detail .header-contract-detail {clear: both;padding: 30px 3.26%;background: #f5f5f5;}
+.contract-detail .header-contract-detail legend {clear: both;width: 100%;}
+.contract-detail .header-contract-detail .form-legend {float: left;display: inline-block;clear: none;}
+.contract-detail .header-contract-detail .link-edit {float: right;display: inline-block;font-size: 1.6rem;color: #272b36;line-height: 26px;padding-left: 35px;text-decoration: none;background: url(images/ic-edit.png) no-repeat left center;}
+.contract-detail .header-contract-detail legend .link-edit:hover {text-decoration: underline;}
+.form-theme-default .fieldset65 {padding: 0 5.2%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.contract-detail .form-theme-default .form-select-wrapper {margin: 25px 0 0 0;}
+.contract-detail .form-button {padding: 30px 3.26% 40px 3.26%;margin: 0;}
+.contract-detail .form-button.contract-tools {padding: 15px 5.2% 20px 5.2%;}
+.contract-detail .form-button .link-movements {display: inline-block;padding: 0 0 0 35px;line-height: 26px;font-size: 1.6rem;color: #495264;text-decoration: none;background: url(images/btnMovements.png) no-repeat left center;}
+.form-button .link-movements:hover {text-decoration: underline;}
+.contract-detail .form-button .link-split-billing {display: inline-block;padding: 0 0 0 35px;line-height: 26px;font-size: 1.6rem;color: #495264;text-decoration: none;background: url(images/btnSplitBilling.png) no-repeat left center;}
+.form-button .link-split-billing:hover {text-decoration: underline;}
+.contract-detail .contract-tools a {margin: 20px 2% 0 0;}
+.contract-detail .contract-tools a:last-child {margin-right: 0;}
+.contract-detail .contract-detail-table-wrapper {margin: 35px 0 0 0;overflow: hidden;background: #ffffff;}
+.contract-list-table .tooltip-inquiry .tooltip-icon {background: url(images/tooltip-inquiry_hi.png) no-repeat center;}
+
+/*vehicles-table*/
+.vehicles-table .arrow {display: inline-block;visibility: hidden;width: 18px;height: 11px;vertical-align: middle;background: url(images/ddl-arrow-down.png) no-repeat center;}
+.vehicles-table .row-header.active .arrow {background: url(images/ddl-arrow-up.png) no-repeat center;visibility: visible;}
+.vehicles-table .tooltip-inquiry .tooltip-icon {background: url(images/tooltip-inquiry_hi.png) no-repeat center;}
+.vehicles-table tr.row-header + tr.row-body .vehicle-detail {display: none;}
+.vehicles-table tr.row-body td{padding: 0;}
+.touch .vehicles-table tbody tr.row-header:hover th,
+.touch .vehicles-table tbody tr.row-header:hover td{cursor: pointer; background: #e4e4e4;}
+.touch .vehicles-table tbody tr.row-header:hover td .arrow{visibility: visible;}
+.vehicles-table tbody tr:nth-child(4n-1) th,
+.vehicles-table tbody tr:nth-child(4n-1) td {background: #f8f8f8;}
+.vehicles-table tbody td.noPadding {padding: 0;}
+.vehicle-detail-list {display: block;clear: both;}
+.vehicle-detail-list .vehicle-detail {display: block;clear: both;margin: 35px 0 0 0;background: #ffffff;}
+.vehicle-detail {display: block;clear: both;}
+.vehicle-detail .vehicle-main {display: block;clear: both;font-size: 0;background-color: #fff;}
+.vehicle-detail .vehicles-info {position: relative;display: inline-block;vertical-align: top;text-align: center;width: 31.25%;padding: 25px 0;background: #02b245;}
+.vehicle-detail .vehicles-info .type {display: inline-block;width: 95px;height: 100px;}
+.vehicle-detail .vehicles-info .type.classe1 {background: url(images/big-vehicle-classe1.png) no-repeat center top;}
+.vehicle-detail .vehicles-info .type.classe2 {background: url(images/big-vehicle-classe2.png) no-repeat center top;}
+.vehicle-detail .vehicles-info .type.classe3 {background: url(images/big-vehicle-classe3.png) no-repeat center top;}
+.vehicle-detail .vehicles-info .type.classe4 {background: url(images/big-vehicle-classe4.png) no-repeat center top;}
+.vehicle-detail .vehicles-info .type.classe5 {background: url(images/big-vehicle-classe5.png) no-repeat center top;}
+.vehicle-detail .vehicles-info .type.mobile {background: url(images/ic-mobile.png) no-repeat center top;height: 80px;position:relative;}
+.vehicle-detail .vehicles-info .type-info {color: #fff;display: inline-block;font-family: 'PrometoRegular';font-size: 1.2rem;width: 100%;}
+.vehicle-detail .vehicles-info .name {display: block;clear: both;text-align: center;font-family: 'PrometoRegular';font-size: 2.4rem;color: #ffffff;line-height: 1;}
+.vehicle-detail .vehicles-info .classe {display: block;clear: both;text-align: center;font-size: 1.6rem;color: #ffffff;padding: 5px 0 0 0;}
+.vehicle-detail .vehicles-info .registration {display: block;clear: both;text-align: center;font-family: 'PrometoRegular';font-size: 1.4rem;color: #009b3a;padding: 5px 0 0 0;}
+.vehicle-detail .vehicles-info .registration span {display: inline-block;padding: 4px 8px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;background: #ffffff;}
+.vehicle-detail .vehicles-vv-info-wrapper {display: inline-block;vertical-align: top;width: 68.75%;padding: 0 20px 20px 20px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info,
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-row {display: block;clear: both;font-size: 0;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell {display: inline-block;width: 33.33%;margin: 25px 0 0 0;vertical-align: top;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .label {display: block;clear: both;font-size: 1.4rem;color: #989a9f;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .value {display: block;clear: both;font-family: 'PrometoRegular';font-size: 2.4rem;line-height: 1;color: #495264;margin: 5px 0 0 0;-ms-word-wrap: break-word;word-wrap: break-word;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services {display: block;clear: both;margin: 5px 0 0 0;padding: 0;list-style: none;font-size: 0;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li {display: inline-block;width: 30px;height: 30px;margin: 0 0 0 2%;list-style: none;vertical-align: top;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li:first-child {margin: 0;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li strong {font-size: 1.4rem;color: #363c4c;line-height: 30px;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li span {display: none;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service2 {background: url(images/sprite-services.png) no-repeat left top;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service2.active {background-position: 0 -30px;}.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service2.disabled {background-position: 0 -60px;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service4 {background: url(images/sprite-services.png) no-repeat -30px top;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service4.active {background-position: -30px -30px;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service4.disabled {background-position: -30px -60px;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service3 {background: url(images/sprite-services.png) no-repeat -60px top;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service3.active {background-position: -60px -30px;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service3.disabled {background-position: -60px -60px;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service337 {background: url(images/sprite-services.png) no-repeat -90px top;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service337.active {background-position: -90px -30px;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service337.disabled {background-position: -90px -60px;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service381.active {background-position: -150px -30px;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell .services li.service381 {background: url(images/sprite-services.png) no-repeat -150px top;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-controls {display: block;clear: both;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-controls .button {margin: 20px 2% 0 0;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-controls .button:last-child {margin-right: 0;}
+.vehicle-detail .vehicles-vv-info-wrapper .vehicle-controls .button .button-txt {font-size: 1.2rem;padding: 10px;}
+.vehicle-detail .vehicles-detail-tools {display: block;clear: both;padding: 0 0 20px 0;text-align: center;background-color: #f8f8f8;border-bottom: 1px solid #e6e6e6;}
+.vehicle-detail .vehicles-detail-tools a {margin: 20px 8px 0;display: inline-block;padding: 0 0 0 35px;line-height: 26px;font-size: 1.6rem;color: #495264;}
+a.link-inspection {background: url(images/btnInspection.png) no-repeat left center;display: inline-block;height: 26px;line-height: 2.4rem;padding-left: 36px;}
+a.link-movements {background: url(images/btnMovements.png) no-repeat left center;}
+a.link-services {background: url(images/btnServices.png) no-repeat left center;}
+a.link-split-bill {background: url(images/btnSplitBilling.png) no-repeat left center;}
+a.link-mb {background: url(images/btnMB.png) no-repeat left center;}
+a.link-contract {background: url(images/btnContract.png) no-repeat left center;}
+.vehicle-detail .vehicles-detail-tools a.link-header {display: none;padding: 0 0 0 35px;line-height: 26px;font-size: 1.6rem;color: #495264;text-decoration: none;background: url(images/addButton.png) no-repeat left center;}
+.vehicle-detail .vehicles-detail-tools-body {display: inline-block;clear: both;}
+.vehicle-detail .vehicles-detail-tools-body a{cursor: pointer;}
+
+/* vehicles-info-corner */
+.vehicles-info-corner {font-size: 0;position: absolute;top: 50%;right: -15px;margin: -15px 0 0 0;height: 30px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.vehicles-info-corner-left,
+.vehicles-info-corner-right {display: block;clear: both;overflow: hidden;position: relative;width: 15px;height: 15px;}
+.vehicles-info-corner-left:before,
+.vehicles-info-corner-right:before {content: '';position: absolute;right: -25px;width: 30px;height: 30px;border: 10px solid #02b245;-webkit-border-radius: 100%;-moz-border-radius: 100%;border-radius: 100%;}
+.vehicles-info-corner-left:before {bottom: -10px;}
+.vehicles-info-corner-right:before {top: -10px;}
+
+/* vehicle-detail-split-billing */
+.vehicle-detail-split-billing .vehicles-info{background: #ffffff;}
+.vehicle-detail-split-billing .vehicles-info .name,
+.vehicle-detail-split-billing .vehicles-info .classe {color: #495264;}
+.vehicle-detail-split-billing .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell {width: 43%;}
+.vehicle-detail-split-billing .vehicles-detail-tools-body {text-align: center;}
+.vehicle-title {display: block;clear: both;margin: 35px 0 0 0;}
+.vehicle-title h2 {display: block;clear: both;font-family: 'PrometoMediumItalic';font-size: 3.4rem;color: #363c4c;font-weight: normal;padding: 0 25px;margin: 0;}
+.vehicle-title h3 {display: block;clear: both;font-family: 'PrometoRegular';font-size: 3rem;color: #02b245;font-weight: normal;padding: 0 25px;margin: 0;}
+
+/* End vehicle-detail-split-billing */
+
+/* vehicle-detail-mobility */
+.vehicle-detail-mobility {margin: 35px 0 0 0;background: #ffffff;}
+.vehicle-detail-mobility .vehicles-vv-info-wrapper,
+.vehicle-detail-mobility .vehicle-buttons{display: inline-block;vertical-align: middle;}
+.vehicle-detail .vehicles-info .type.mobile {height:80px;position:relative;}
+
+.mobility-id {background-color:#282C34;-moz-border-radius:25px;-webkit-border-radius: 2px;border-radius:25px;bottom:15px;color:#fff;font-family:'PrometoBold';font-size:1.3rem;height:25px;line-height:25px;position:absolute;right:8px;width:25px;}
+
+.vehicle-detail-mobility .vehicles-info .classe {padding: 0 10px 0 40px;text-align: left;-ms-word-wrap: break-word;word-wrap: break-word;}
+
+.ID-number-label {display:block;padding:10px 10px 0 40px;text-align:left;}
+.vehicle-detail-mobility .vehicle-buttons .button {margin-left: 20px;}
+.vehicle-detail-mobility .vehicles-vv-info-wrapper {}
+.vehicle-detail-mobility .vehicles-detail-tools-body {text-align: center;}
+
+/* End vehicle-detail-mobility */
+/* End vehicles-table */
+/* End contract-detail */
+
+/*********************/
+/* Contextual Modals */
+/*********************/
+.contextual-modal {display: block;clear: both;padding: 0 9.67%;}
+.contextual-modal .contextual-modal-header {display: block;clear: both;margin: 0 0 40px 0;font-size: 0;text-align: left;}
+.contextual-modal .contextual-modal-header .header-icon {display: inline-block;width: 80px;height: 80px;vertical-align: middle;background-size: contain!important;margin-right: 15px;}
+.contextual-modal .contextual-modal-header .header-icon.split-billing {background: url(images/ic-split-billing.png) no-repeat center;}
+.contextual-modal .contextual-modal-header .header-icon.services {background: url(images/ic-services.png) no-repeat center;}
+.contextual-modal .contextual-modal-header .header-icon.classe1 {background: url(images/big-vehicle-classe1.png) no-repeat center;}
+.contextual-modal .contextual-modal-header .header-icon.classe2 {background: url(images/big-vehicle-classe2.png) no-repeat center;}
+.contextual-modal .contextual-modal-header .header-icon.classe3 {background: url(images/big-vehicle-classe3.png) no-repeat center;}
+.contextual-modal .contextual-modal-header .header-icon.classe4 {background: url(images/big-vehicle-classe4.png) no-repeat center;}
+.contextual-modal .contextual-modal-header .header-icon.classe5 {background: url(images/big-vehicle-classe5.png) no-repeat center;}
+.contextual-modal .contextual-modal-header .header-icon.mobile {background: url(images/ic-mobile.png) no-repeat center;}
+.contextual-modal .contextual-modal-header .header-icon.success {background: url(images/message-success.png) no-repeat center;}
+.contextual-modal .contextual-modal-header .header-icon.error {background: url(images/message-error.png) no-repeat center;}
+.contextual-modal .contextual-modal-header .header-info {display: inline-block;width: 77%;vertical-align: middle;/*padding: 0 0 0 15px;*/padding: 0;height: auto;}
+.contextual-modal .contextual-modal-header .header-info .alias {display: block;clear: both;font-family: 'PrometoRegular';font-size: 2.2rem;color: #495264;}
+.contextual-modal .contextual-modal-header .header-info .action {display: block;clear: both;font-family: 'PrometoItalic';font-size: 3.4rem;color: #02b245;margin: 10px 0 0 0;}
+.contextual-modal-button .button{margin: 0 0 0 2%;}
+.contextual-modal-button button:first-child{margin-left: 0;}
+.modal .contextual-modal fieldset {padding: 0;}
+.contextual-modal-table span {display: inline-block;width: 70%;vertical-align: middle;}
+.contextual-modal-table .icon-service {width: 30px;height: 30px;margin: 0 5px 0 0;}
+.contextual-modal-table .service2 {background: url(images/sprite-services.png) no-repeat right top;}
+.contextual-modal-table .service2.active {background-position: 0 -30px;}
+.contextual-modal-table .service2.disabled {background-position: 0 -60px;}
+.contextual-modal-table .service4 {background: url(images/sprite-services.png) no-repeat -30px top;}
+.contextual-modal-table .service4.active {background-position: -30px -30px;}
+.contextual-modal-table .service4.disabled {background-position: -30px -60px;}
+.contextual-modal-table .service3 {background: url(images/sprite-services.png) no-repeat -60px top;}
+.contextual-modal-table .service3.active {background-position: -60px -30px;}
+.contextual-modal-table .service3.disabled {background-position: -60px -60px;}
+.contextual-modal-table .service337 {background: url(images/sprite-services.png) no-repeat -90px top;}
+.contextual-modal-table .service337.active {background-position: -90px -30px;}
+.contextual-modal-table .service337.disabled {background-position: -90px -60px;}
+.contextual-modal-table .service1 {background: url(images/sprite-services.png) no-repeat -130px top;}
+.contextual-modal-table .service1.active {background-position: -120px -30px;}
+.contextual-modal-table .service1.disabled {background-position: -120px -60px;}
+.contextual-modal .split-billing-block {display: block;clear: both;padding: 20px 3%;margin: 15px 0 0 0;font-size: 1.6rem;color: #495264;background: #f5f5f5;}
+.contextual-modal .split-billing-block-controls {display: block;clear: both;margin: 15px 0 0 0;}
+.contextual-modal .split-billing-block-controls a {display: inline-block;margin: 0 0 0 20px;line-height: 26px;font-size: 1.6rem;color: #495264;text-decoration: none;font-weight: bold;}
+.contextual-modal .split-billing-block-controls a:first-child {margin-left: 0; }
+.contextual-modal .split-billing-block-controls a:hover {text-decoration: underline;}
+.contextual-modal .split-billing-block-controls a.link-split-bill {padding: 0 0 0 35px;font-weight: normal;background: url(images/btnSplitBilling.png) no-repeat left center;}
+.contextual-modal .services-list{display: block;clear: both;}
+.contextual-modal .services-list ul{display: block;clear: both;margin: 0;padding: 0;list-style: none;font-size: 0;}
+.contextual-modal .services-list li {display: inline-block;margin: 30px 0 0 5%;vertical-align: top;}
+.contextual-modal .services-list li:first-child {margin-left: 0;}
+.contextual-modal .services-list li label {cursor: pointer;display: block;width: 95px;height: 95px;margin: 0 auto;}
+.contextual-modal .services-list li strong {display: block;clear: both;text-align: center;font-family: 'PrometoRegular';font-size: 1.6rem;max-width: 100px;padding: 10px 0 0 0;}
+.contextual-modal .services-list li label .controllabel {display: none;}
+.contextual-modal .services-list li label.service2 {background: url(images/sprite-big-services.png) no-repeat 0 0;}
+.contextual-modal .services-list li label.service2.active {background: url(images/sprite-big-services.png) no-repeat 0 -95px;}
+.contextual-modal .services-list li label.service2.disabled {background: url(images/sprite-big-services.png) no-repeat 0 -190px!important;}
+.contextual-modal .services-list li label.service4 {background: url(images/sprite-big-services.png) no-repeat -95px 0;}
+.contextual-modal .services-list li label.service4.active {background: url(images/sprite-big-services.png) no-repeat -95px -95px;}
+.contextual-modal .services-list li label.service4.disabled {background: url(images/sprite-big-services.png) no-repeat -95px -190px!important;}
+.contextual-modal .services-list li label.service337 {background: url(images/sprite-big-services.png) no-repeat -285px 0;}
+.contextual-modal .services-list li label.service337.active {background: url(images/sprite-big-services.png) no-repeat -285px -95px;}
+.contextual-modal .services-list li label.service337.disabled {background: url(images/sprite-big-services.png) no-repeat -285px -190px!important;}
+.contextual-modal .services-list li label.service3 {background: url(images/sprite-big-services.png) no-repeat -190px 0;}
+.contextual-modal .services-list li label.service3.active {background: url(images/sprite-big-services.png) no-repeat -190px -95px;}
+.contextual-modal .services-list li label.service3.disabled {background: url(images/sprite-big-services.png) no-repeat -190px -190px!important;}
+.services-list-legend {display: block;clear: both;margin: 40px 0 0 0;}
+.services-list-legend .legend {display: block;clear: both;padding: 0 0 15px 0;font-size: 1.6rem;font-family: 'PrometoMedium';color: #495264;}
+.services-list-legend ul {display: block;clear: both;margin: 0;padding: 0;list-style: none;}
+.services-list-legend li {display: inline-block;margin: 0 10px 0 0;padding: 0;list-style: none;font-size: 1.6rem;color: #495264;line-height: 20px;}
+.services-list-legend li span {display: inline-block;vertical-align: middle;margin: 0 10px 0 0;}
+.services-list-legend li span.active {width: 20px;height: 20px;background: #02b245;-moz-border-radius: 50px;-webkit-border-radius: 50px;border-radius: 50px;}
+.services-list-legend li span.disabled {width: 20px;height: 20px;background: #a9abb1;-moz-border-radius: 50px;-webkit-border-radius: 50px;border-radius: 50px;}
+.services-list-legend li span.fr {width: 20px;height: 20px;background: #ffffff;-moz-border-radius: 50px;-webkit-border-radius: 50px;border-radius: 50px;border: 1px solid #02b245;}
+.wellcome-modal {text-align: center;margin: 20px 0;}
+.wellcome-modal-tit {font-size: 2.0rem;font-family: 'PrometoMediumItalic';font-weight: 400;line-height: 1;text-align: center;display: inline-block;}
+.wellcome-modal-tit > span {color: #02b245;font-size: 2.8rem;font-family: 'PrometoMedium';font-weight: 400;text-align: center;display: block;}
+.wellcome-modal-button {text-align: center;}
+.wellcome-modal-button .button {float: none;}
+
+/*************************/
+/* End Contextual Modals */
+/*************************/
+
+/* form-vehicle-identifiers-filter */
+.form-vehicle-identifiers-filter {display: block;clear: both;padding: 20px 2.08%;background: #ffffff;}
+.form-vehicle-identifiers-filter legend {float: left;width: 100%;clear: both;}
+.form-vehicle-identifiers-filter legend .form-legend {float: left;}
+.form-vehicle-identifiers-filter legend a {float: right;margin: 0 0 0 15px;}
+.form-vehicle-identifiers-filter .link-discount {display: inline-block;padding: 0 0 0 35px;line-height: 26px;font-size: 1.6rem;color: #495264;text-decoration: none;background: url(images/vehicle-classe3.png) no-repeat left center;background-size: 30px;}
+.form-vehicle-identifiers-filter .link-discount:hover {text-decoration: underline;}
+.form-vehicle-identifiers-filter .filter-tools {margin-bottom: 0;}
+.form-vehicle-identifiers-filter .filter-tools .button {margin: 0 0 0 20px;}
+.form-vehicle-identifiers-filter .filter-tools .button:first-child {margin-left: 0;}
+.form-vehicle-identifiers-filter .filter-tools .button-txt{padding: 12px;}
+.form-vehicle-identifiers-filter .filter-tools .button-border .button-txt{padding: 11px;}
+.form-vehicle-identifiers-filter .filter-tools .link-excel{/*margin: 20px 0 0 0;*/margin: 10px 0 0 0;}
+.form-vehicle-identifiers-filter .filter-tools .totalRowsFound,
+.theme-default-table tfoot .page-counter {color: #989a9f;font-size: 1.4rem;margin: 20px 0 0 0;}
+.total-rows{color: #989a9f;font-size: 1.4rem;}
+.form-vehicle-identifiers-filter .filter-tools .totalRowsFound {display: block;clear: both;}
+
+/* End form-vehicle-identifiers-filter */
+
+/* form-change-registration */
+.form-change-registration .btNext .button {margin-left: 20px;}
+.form-change-registration .btNext .button:first-child {margin-left: 0;}
+
+/* end form-change-registration */
+
+/* Column-aside Faqs */
+.column-section .column-aside .faqs-header {display: block;clear: both;padding: 0 25px;}
+.column-section .column-aside .faqs-header h2 {float: left;}
+.column-section .column-aside .faqs-header .link-add {float: right;margin-top: 25px;}
+.column-section .column-aside .accordion {margin: 25px 0 0 0;}
+.column-section .column-aside .accordion h3 {padding-left: 5.2%;padding-right: 7.2%;background: url("images/ddl-arrow-down.png") no-repeat right 5.2% center;}
+.column-section .column-aside .accordion h3.ui-accordion-header-active {background:url("images/ddl-arrow-up.png") no-repeat right 5.2% center;}
+.column-section .column-aside .accordion article > div {padding: 0 5.2%;}
+
+/* End Column-aside Faqs */
+
+/* form-group-separator */
+.accession-panel .accession-main .wizardStep .identifier-data-config {margin-top: 35px;padding-top: 35px;border-top: 2px solid #ebebeb;}
+.accession-panel .accession-main .wizardStep .identifier-data-config legend {float: left;padding: 0 0 35px 0;}
+
+/* End form-group-separator */
+
+body .InfoContractIdentifier .editable-mode .form-select-wrapper {margin-top: 35px;}
+
+/* discount-wizzard */
+.discount-wizzard {}
+.column-section.discount-wizzard .column-header h1.page-title {padding-bottom: 0;}
+.column-section.discount-wizzard .column-header h2.page-title {padding-top: 15px;padding-bottom: 0;font-size: 2.6rem;}
+.column-section.discount-wizzard .accession-panel .accession-main {width: 100%;}
+.discount-wizzard .accession-panel .accession-main .wizardStep fieldset {margin-top: 35px;}
+.discount-wizzard .accession-panel .accession-main .wizardStep fieldset:first-child {margin-top: 0;}
+.discount-wizzard .form-group .form-filter-group-wrapper .form-button .button .button-txt{padding: 12px;}
+.discount-wizzard .form-group .form-filter-group-wrapper .form-button .button.button-border .button-txt{padding: 11px;}
+.discount-wizzard .discount-list-filter .form-button .button {margin-left: 10px;}
+.discount-wizzard .discount-list-filter .form-button .button:first-child {margin-left: 0;}
+.discount-wizzard .discount-list-wrapper {}
+.discount-wizzard .discount-filter-results {display: block;clear: both;}
+.discount-wizzard .discount-filter-results .total-rows {float: left;font-size: 1.4rem;color: #989a9f;margin-top: 35px;}
+.discount-wizzard .discount-filter-results .total-selected-rows {float: right;font-size: 1.6rem;color: #989a9f;margin-top: 27px;margin-bottom: 0;}
+.discount-wizzard .discount-filter-results .total-selected-rows a {text-decoration: underline;/*color: #989a9f;*/}
+.discount-wizzard .discount-filter-results .total-selected-rows a:hover {text-decoration: none;}
+.discount-wizzard .discount-list-table-type {margin-top: 35px;}
+.discount-wizzard .discount-list-table .form-checkbox-wrapper,
+.discount-wizzard .discount-list-table-type .form-checkbox-wrapper {margin-top: 0;}
+.discount-wizzard .form-button .total-selected-rows {float: right;font-size: 1.6rem;color: #989a9f;margin: 22px 10px 0 0;}
+.discount-wizzard .accession-panel .accession-main .wizardStep .lateralPadding {padding-left: 5.2%;padding-right: 5.2%;}
+.discount-wizzard .fake-checked-list {display: block;clear: both;margin-top: 35px; }
+.discount-wizzard .checked {display: inline-block;width: 17px;height: 13px;vertical-align: middle;background: url(images/checkbox-green-checked.png) no-repeat center;}
+.discount-wizzard .fake-checked-list .checked {margin-left: 10px;}
+
+/* End discount-wizzard */
+
+/* gm-banner-wrapper */
+.gm-banner-wrapper {display: block; clear: both;}
+.gm-banner-intro{font-size: 0;margin: 35px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.gm-banner-intro:after{content: '';display: table;clear: both;}
+.gm-banner-intro-tit{position: relative; color: #363c4c;font-size: 2.2rem;font-family: 'PrometoItalic';font-weight: 400;vertical-align: top;display: inline-block;/*float: left;*/margin: 0 0 0 100px; padding: 0 0 20px 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.gm-banner-intro-tit > span{color: #12b544;font-size: 4.8rem;font-family: 'PrometoMediumItalic';line-height: 0.9;text-transform: capitalize;display: block;}
+.gm-banner-intro-tit:before{content: '';position: absolute;right: 0;width: 82px;height: 77px;background: url(images/ic-tool-services.png) no-repeat center top;background-size: auto 155px; left: -90px;}
+.gm-banner-wrapper .gm-banner {margin-bottom: 20px;}
+
+/* End gm-banner-wrapper */
+
+/* channel-services */
+.channel-services {display: block;clear: both;padding: 0 5% 35px;background: #ffffff;}
+.channel-services .channel-services-header {display: block;clear: both;padding: 45px 2% 0 2%;text-align: center;}
+.channel-services .channel-services-header h3 {display: block;clear: both;font-family: 'PrometoRegular';font-size: 2.6rem;color: #363c4c;font-weight: normal;}
+.channel-services .channel-services-list {display: block;clear: both;font-size: 0;text-align: center;margin: 0;padding: 0;list-style: none;}
+.channel-services .channel-services-list li {display: inline-block;margin: 45px 2% 0 2%;vertical-align: top;}
+.channel-services .channel-services-list li a {display: block;clear: both;text-align: center;font-size: 1.6rem;color: #495264;}
+.channel-services .channel-services-list li .text {display: block;clear: both;margin: 15px 0 0 0;}
+.channel-services .channel-services-list li .icon {display: block;clear: both;width: 85px;height: 85px;margin: 0 auto;background-size: 510px 255px!important;}
+.channel-services .channel-services-list li .service1 {background: url(images/sprite-big-services.png) no-repeat -340px -85px;}
+.channel-services .channel-services-list li .service2 {background: url(images/sprite-big-services.png) no-repeat 0 -85px;}
+.channel-services .channel-services-list li .service3 {background: url(images/sprite-big-services.png) no-repeat -170px -85px;}
+.channel-services .channel-services-list li .service4 {background: url(images/sprite-big-services.png) no-repeat -85px -85px;height: 84px;}
+.channel-services .channel-services-list li .service4 + .text {padding-top: 1px;}
+.channel-services .channel-services-list li .service337 {background: url(images/sprite-big-services.png) no-repeat -255px -85px;}
+.channel-services .channel-services-list li .service5 {background: url(images/sprite-big-services.png) no-repeat -425px -85px;}
+.channel-services .channel-services-buttons {margin: 45px 0 0 0;text-align: center;}
+
+/* End channel-services */
+
+/* offers-suggestions-section */
+.offers-suggestions-section {position: relative;display: block;clear: both;padding: 25px 0 70px 0;background: url(images/sunset-field.jpg) no-repeat left top;background-size: cover;}
+.offers-suggestions-section-header {display: block;clear: both;width: 70%;margin: 35px auto 0 auto;text-align: center;}
+.offers-suggestions-section-header h3 {display: block;clear: both;font-family: 'PrometoRegular';font-size: 2.6rem;color: #ffffff;font-weight: normal;}
+.offers-suggestions-section-column-wrapper {display: block;clear: both;margin: 0;font-size: 0;text-align: center;}
+.offers-suggestions-section-separator {display: inline-block;vertical-align: bottom;height: 150px;border-left: 1px dashed #ffffff;}
+.offers-suggestions-section-column {display: inline-block;vertical-align: middle;max-width: 33%;padding: 20px 8.33% 0 8.33%;font-size: 1.6rem;color: #ffffff;text-align: left;}
+.offers-suggestions-section-column .offer-icon {display: block; clear: both;height: 100px;background: url(images/ic-offer.png) no-repeat center top;}
+.offers-suggestions-section-column .suggestion-icon {display: block; clear: both;height: 100px;background: url(images/ic-sugestion.png) no-repeat center top;}
+.offers-suggestions-section-column .cleanStyle h1,
+.offers-suggestions-section-column .cleanStyle h2,
+.offers-suggestions-section-column .cleanStyle h3,
+.offers-suggestions-section-column .cleanStyle h4,
+.offers-suggestions-section-column .cleanStyle h5,
+.offers-suggestions-section-column .cleanStyle h6,
+.offers-suggestions-section-column .offers-suggestions-section-column-buttons a {color: #ffffff;}
+
+/* .offers-suggestions-section-corner-top */
+.offers-suggestions-section-corner-top {font-size: 0;position: absolute;left: 0;top: 0;margin: 0 auto;width: 100%;text-align: center;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.offers-suggestions-section-corner-top-left,
+.offers-suggestions-section-corner-top-right {display: inline-block;overflow: hidden;position: relative;top: 0;width: 30px;height: 30px;}
+.offers-suggestions-section-corner-top-left {right: 0;}
+.offers-suggestions-section-corner-top-right {left: 0;}
+.offers-suggestions-section-corner-top-left:before,
+.offers-suggestions-section-corner-top-right:before {content: '';position: absolute;top: -10px;width: 62px;height: 62px;border: 10px solid #ffffff;-webkit-border-radius: 100%;-moz-border-radius: 100%;border-radius: 100%;}
+.offers-suggestions-section-corner-top-left:before {left: -38px;}
+.offers-suggestions-section-corner-top-right:before {right: -38px;}
+
+/* offers-suggestions-section-corner-bottom */
+.offers-suggestions-section-corner-bottom {font-size: 0;position: absolute;left: 0;bottom: 0;margin: 0 auto;width: 100%;text-align: center;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.offers-suggestions-section-corner-bottom-left,
+.offers-suggestions-section-corner-bottom-right {display: inline-block;overflow: hidden;position: relative;top: 0;width: 50%;height: 25px;background: #ffffff;}
+.offers-suggestions-section-corner-bottom-left {right: 0;-webkit-border-top-right-radius: 100px;-moz-border-radius-topright: 100px;border-top-right-radius: 100px;}
+.offers-suggestions-section-corner-bottom-right {left: 0;-webkit-border-top-left-radius: 100px;-moz-border-radius-topleft: 100px;border-top-left-radius: 100px;}
+
+/* offers-suggestions-section */
+
+/* auto-support-section */
+.auto-support-section {display: block;clear: both;padding: 0 5% 35px;background: #ffffff;}
+.auto-support-section-header {display: block;clear: both;padding-top: 20px;text-align: center;}
+.auto-support-section-header .auto-support-icon {display: block;clear: both;height: 100px;background: url(images/ic-auto-support.png) no-repeat center top;}
+.auto-support-section-header h3 {display: block;clear: both;font-family: 'PrometoRegular';font-size: 2.6rem;color: #02b245;font-weight: normal;margin: 0;}
+.auto-support-section-header h4 {display: block;clear: both;font-family: 'PrometoRegular';font-size: 2.2rem;color: #363c4c;font-weight: normal;}
+.auto-support-section-content {display: block;clear: both;margin: 35px 0 0 0;}
+.auto-support-section-content ul {display: block;clear: both;max-width: 60%;margin: 0 auto;text-align: center;font-size: 0;}
+.auto-support-section-content ul li {display: inline-block;text-align: left;width: 190px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;font-size: 1.6rem;}
+.auto-support-section-buttons {display: block;clear: both;margin: 35px 0 0 0;text-align: center;}
+
+/* End auto-support-section */
+
+/* page-video-section */
+.page-video-section {display: block;clear: both;margin-bottom: 20px;}
+.page-video-section-header {display: block;clear: both;margin: 20px 0 0 0;text-align: center;}
+.page-video-section-header h3 {display: block;clear: both;font-family: 'PrometoRegular';font-size: 2.6rem;color: #363c4c;margin: 0;}
+.page-video-section-container {display: block;clear: both;position: relative;/*margin: 20px 0 0 0;*/width: 100%;/*height: 564px;*/}
+.page-video-section-container:before {content: '';display: block;padding-top: 50%;}
+.page-video-section-container iframe,
+.page-video-section-container .iframe-video{position: absolute;left: 0;top: 0;bottom: 0;right: 0;}
+.page-video-section-buttons {display: block;clear: both;margin: 20px 0 0 0;text-align: center;}
+
+/* End page-video-section */
+
+/* aside-faqs */
+.aside-faqs {display: block;clear: both;background: #02b245;}
+.aside-faqs .cleanStyle ul li:before {background-color: #0f5222;}
+.aside-faqs h4{color: #0f5222;}
+.aside-faqs p{color: #FFF;}
+.aside-faqs .article-block header { display: block;clear: both;padding: 3px 0 10px 80px;}
+
+/* End */
+
+/* exposition-forms-body */
+.column-section .column-body .exposition-forms-body {float: left;display: block;width: 70.14%;padding: 50px 5.2%;background: #ffffff;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.column-section .column-body .exposition-forms-aside {float: right;width: 28.35%;background: #02b245;}
+
+/* End exposition-forms-body */
+
+.column-section .column-header.centro-apoio {padding-left: 25px;padding-right: 25px;}
+
+/* road-map */
+.road-map {display: block;clear: both;}
+.road-map .road-map-iframe{display: block;clear: both;text-align: center;}
+.road-map .road-map-iframe iframe{margin: 0 auto;width: 680px;}
+.road-map .road-map-iframe-mobile{display: none;clear: both;}
+.road-map .road-map-iframe-mobile .services_app{padding: 0;}
+
+/* End road-map */
+
+/* ===== SERVICE-TOOLS ====== */
+.bg-black {background: #363c4c;}
+.bg-gray {background: #495264;}
+.service-tool {display: block;width: 100%;padding: 30px 7.89%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.service-tool > a{text-decoration: none;}
+.service-tool > a:hover .service-tool-buttons > .link-add{text-decoration: underline;}
+.service-tool .service-tool-title {display: block;clear: both;font-family: 'PrometoRegular';font-size: 2.2rem;line-height: 1;color: #ffffff;font-weight: normal;}
+.service-tool.bg-white .service-tool-title {color: #363c4c;}
+.landing-services-cell .service-tool-title {font-family: 'PrometoMediumItalic';font-size: 4.8rem;color: #12b544;}
+.service-tool .service-tool-figure {display: block;clear: both;margin: 15px 0 0 0;}
+.service-tool .service-tool-figure img {display: block;clear: both;max-width: 100%;}
+.service-tool .service-tool-text {display: block;clear: both;font-size: 1.6rem;margin: 15px 0 0 0;}
+.service-tool.bg-black .service-tool-text,
+.service-tool.bg-gray .service-tool-text,
+.service-tool.bg-black .service-tool-text *,
+.service-tool.bg-gray .service-tool-text *{color: #ffffff;}
+.service-tool.bg-white .service-tool-text,
+.service-tool.bg-white .service-tool-text *{color: #363c4c;}
+.service-tool .service-tool-buttons {display: block;clear: both;margin: 30px 0 0 0;}
+.service-tool.bg-black .service-tool-buttons *,
+.service-tool.bg-gray .service-tool-buttons * {color: #ffffff;}
+.service-tool.bg-white .service-tool-buttons * {color: #495264;}
+
+/* ===== END SERVICES-TOOLS ====== */
+
+/* ===== SERVICES LANDING PAGE ====== */
+.column-header .services-title span {color: #12b544;}
+
+/* services_network */
+.services_network_wrapper {display: block;clear: both;margin: 20px 0 0 0;padding: 50px 0;background: #ffffff;}
+.services_network_header {display: block;clear: both;}
+.services_network_header h3 {display: block;clear: both;text-align: center;font-size: 2.6rem;color: #363c4c;font-family: 'PrometoRegular';font-weight: normal;}
+.services_network_header h3 strong {display: block;clear: both;text-align: center;font-size: 2.6rem;color: #363c4c;font-family: 'PrometoMedium';font-weight: normal;}
+.services_network {position: relative;display: block;clear: both;margin: 50px 0 0 0;overflow: hidden;}
+.service_network_buttons {display: block;clear: both;margin: 50px 0 0 0;text-align: center;}
+.services_network_bgd {width:100%;height:auto;}
+.services_network_node img {display: block;clear: both;max-width: 100%;border: none;}
+.services_network_node.controlauto_network_location img {float: left;clear: none;max-width: 45%;}
+.services_network_node .node_info {display: block;clear: both;width: 60%;padding-left: 35px;}
+.services_network_node.controlauto_network_location .node_info {float: left;clear: none;width: 20%;}
+.services_network_node .node_info .node_info_title {display: block;clear: both; font-size: 2.6rem;line-height: 1.4;color: #363c4c;font-family: 'PrometoRegular';font-weight: normal;}
+.services_network_node .node_info .node_info_buttons {display: block;clear: both;margin: 15px 0 0 0;}
+.highways_network_location  {position: absolute;top: 2.8%;left: 12%;width: 34%}
+.highways_network_location .node_info {padding-top: 40px;}
+.parking_network_location  {position: absolute;top: 0;right: 8%;width: 34%}
+.parking_network_location .node_info {padding-top: 5px;}
+.galp_network_location {position: absolute;top: 28.5%;left: 35%;width: 34%;}
+.galp_network_location .node_info {padding-top: 110px;}
+.ferries_network_location {position:absolute;bottom: 20.4%;left: 10.7%;width:34%}
+.ferries_network_location .node_info {padding-top: 40px;}
+.mcdrive_network_location {position:absolute;bottom: 20.4%;left: 56%;width:34%}
+.mcdrive_network_location .node_info {padding-top: 40px;}
+.controlauto_network_location {position:absolute;bottom: 4.4%;left:17%;width:100%;}
+.controlauto_network_location .node_info {padding-top: 0;}
+body .link-location {display: inline-block;font-size: 1.6rem;color: #ffffff;padding: 0 0 0 35px;line-height: 26px;text-decoration: underline;background: url(images/link-location.png) no-repeat left center;}
+body.touch .link-location:hover {text-decoration: none;}
+
+/* ===== END SERVICES LANDING PAGE ====== */
+
+/* Servicos */
+/* services-page-title */
+body .column-header .services-page-title {    position: relative;    display: inline-block;    font-size: 2.2rem;    font-family: 'PrometoItalic';    font-weight: normal;    vertical-align: top; margin-left: 120px;}
+body .column-header .services-page-title span {    display: block;    clear: both;    color: #12b544;    font-size: 4.8rem;    font-family: 'PrometoMediumItalic';    line-height: 1;    text-transform: capitalize;}
+body .column-header .services-page-title:before {    content: '';    position: absolute;    left: -90px;    width: 82px;    height: 77px;}
+.services-page-title.mcdrives:before {    background: url(images/mcdrives_header_logo.png) no-repeat center top;}
+.services-page-title.parking:before {    background: url(images/parking_header_logo.png) no-repeat center top;}
+.services-page-title.ferries:before {    background: url(images/ferries_header_logo.png) no-repeat center top;}
+.services-page-title.highways:before {    background: url(images/autoestradas_header_logo.png) no-repeat center top;}
+.services-page-title.controlauto:before {    background: url(images/controlauto_header_logo.png) no-repeat center top;}
+.services-page-title.galp:before {background: url(images/galp_header_logo.png) no-repeat center top;}
+
+/* End services-page-title */
+
+/* services_info */
+.services_info {display: block;clear: both;padding: 0 0 40px 0;text-align: center;background-color: #ffffff;}
+.services_info .services_info_header {display: block;clear: both;padding: 40px 3% 0 3%;}
+.services_info .services_info_header .services_info_title {display: block;clear: both;color: #02b245;font-size: 2.6rem;font-family: 'PrometoRegular';font-weight: normal;margin: 0;padding: 0;}
+.info_steps_wrapper{display: block;clear: both;font-size: 0;margin-top: 40px;}
+.info_steps {display: inline-block;width: 28%;padding: 0 2%;vertical-align: top;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.info_steps.go-in-out {width: 80%;}
+.info_steps .info_steps_figure {display: block;clear: both;}
+.info_steps .info_steps_figure img {max-width: 100%;margin: 0 auto;border: none;}
+.info_steps .info_steps_text {display: block;clear: both;text-align: left;font-size: 1.5rem;color: #363c4c;margin: 20px 0 0 0;}
+.info_steps .info_steps_in_out {display: block;clear: both;font-size: 0;}
+.info_steps .info_steps_in_out .step_in {display: inline-block;width: 30%;vertical-align: top;margin: 40px 2% 0 2%;padding: 0 0 0 60px;text-align: left;background: url(images/Icon_IN.png) no-repeat left top;}
+.info_steps .info_steps_in_out .step_out {display: inline-block;width: 30%;margin: 40px 2% 0 2%;vertical-align: top;padding: 0 0 0 60px;text-align: left;background: url(images/Icon_OUT.png) no-repeat left top;}
+.info_steps .step_in_out_title {display: block;clear: both;font-family: 'PrometoBold';font-size: 1.6rem;color: #009b3a;font-weight: 400;}
+.info_steps .step_in_out_subTitle {display: block;clear: both;font-family: 'PrometoBold';font-size: 1.6rem;color: #485263;margin: 5px 0 0 0;font-weight: 400;}
+.info_steps .step_in_out_text {display: block;clear: both;font-size: 1.6rem;color: #485263;margin: 5px 0 0 0;}
+.services_locations {display: block;clear: both;}
+.desktop-version .threePosTemplate-section .mainContent .services_locations,
+.desktop-version .threePosTemplate-section .mainContent .services_header .gm-banner{margin-right: 0;}
+.services_locations .services_locations_header {display: block;clear: both;margin: 40px 3% 0 3%;}
+.services_locations .services_locations_header .services_locations_title {display: block;clear: both;color: #495264;font-size: 2.6rem;font-family: 'PrometoRegular';font-weight: normal;margin: 0;padding: 0;}
+.services_locations .services_locations_text {display: block;clear: both;margin: 0 3% 0 3%;color: #495264;font-size: 1.6rem;}
+.services_locations .services_locations_map {position: relative;display: block;clear: both;/*margin: 30px 0;*/}
+.tools,
+.services_locations .services_locations_map{margin-top: 30px;height: 710px;}
+.threePosTemplate-section .services_locations .services_locations_map{margin: 30px 0;height: 315px;}
+.tools .gm-maps,
+.services_locations .services_locations_map .gm-maps{height: 100%;}
+.services_advantages {display: block;clear: both;padding: 0 0 40px 0;margin: 20px 0 0 0;background: #ffffff;}
+.services_advantages .services_advantages_header {display: block;clear: both;margin: 0;padding: 40px 3% 0 3%;}
+.services_advantages .services_advantages_header .services_advantages_title {display: block;clear: both;color: #495264;font-size: 2.6rem;font-family: 'PrometoRegular';font-weight: normal;margin: 0;padding: 0;}
+.card_advantages_wrapper {display: block;clear: both;font-size: 0;}
+.card_advantages_wrapper .card_advantages {display: 	block;clear: 			both;padding: 	40px 2% 0 3%;vertical-align: top;}
+.card_advantages .card_advantages_figure {display: block;clear: both;}
+.card_advantages .card_advantages_figure img {display: block;clear: both;max-width: 100%;border: none;}
+.card_advantages .card_advantages_title {display: block;clear: both;font-size: 2.6rem;font-family: 'PrometoRegular';font-weight: normal;margin: 40px 0 0 0;color: #02b245;}
+.card_advantages .card_advantages_text {display: block;clear: both;font-size: 1.6rem;color: #363c4c;margin: 15px 0 0 0;}
+.reading_system {background-color:#FFF;padding:0 0 40px 0;text-align:center;}
+.reading_steps_wrapper {margin:0 auto;width: 93.5%;margin-top:40px;}
+.reading_steps {width: 37%;padding: 0 1% 0 1%;display: inline-block;vertical-align: top;}
+.reading_steps img {margin:0 auto;margin-bottom:20px;border:none;max-width:100%;}
+.reading_steps_info_wrapper {display:inline-block;width: 84%;}
+.reading_steps_info_wrapper img {border:none;max-width:100%;margin-right:3%;}
+.reading_steps_info {text-align: left;overflow: hidden;}
+.reading_steps_info h4 {font-size:1.6rem; font-size:16px;color:#009b3a;}
+.reading_steps_info p {font-size:1.5rem; font-size:15px;color:#363c4c;font-weight:bold;margin:0;}
+.reading_steps_info span {font-size:1.5rem; font-size:15px;color:#363c4c;}
+.locations_map {position: relative;display: block;clear: both;margin-top: 40px;}
+.locations_map .tools_box .box_slide {width: 360px;}
+/*.services_locations a {color: #495264;font-size: 1.6rem;margin: 0;font-weight: bold;text-decoration: none;padding: 0;}*/
+.aside_faq {padding: 10%;background-color:#02b245;}
+
+/* End Servicos */
+
+/* ===== TOOLS HEADER ====== */
+.tools-header {display: block;clear: both;/*padding: 50px 0 0 0;*/margin-top: 50px;text-align: center;}
+.main .tools-header.wrapper{margin-top: 50px;}
+.ModDirectionsC .tools-header {margin-bottom: 30px;}
+.tools-header .page-title {display: block;clear: both;font-family: 'PrometoMediumItalic';font-size: 4.8rem;font-weight: normal;line-height: 1;color: #363c4c;margin: 0;}
+.tools-header .page-lead {display: block;clear: both;padding: 15px 0 0 0;font-size: 1.6rem;font-weight: normal;line-height: 1;color: #495264;}
+.tools-header .page-lead p {margin-bottom: 5px;}
+
+/* ===== TOOLS PANEL ====== */
+.tools_panel {display: table;width: 100%;margin: 30px 0;}
+.tools_panel .tools_panel_row {display: table-row;width: 100%;}
+.tools_panel .tools_panel_cell {display: table-cell;width: 50%;vertical-align: middle;text-align: center;}
+.tools_panel .tools_panel_cell a {display: block;width: 100%;height: 100%;text-decoration: none;}
+.tools_panel h3 {color:#FFF;font-size: 2.2rem;font-family: 'PrometoRegular';font-weight: normal;}
+.tools_panel p {color:#FFF;font-size: 1.6rem;font-family: 'PrometoRegular';margin:0;}
+.tools_panel .toll_section {/*width: 50%;*/background-color:#303542;}
+.tools_panel .toll_section a:hover {background-color:#2b303c;}
+.tools_panel .toll_tools, 
+.tools_panel .highways_tools, 
+.tools_panel .traffic_tools, 
+.tools_panel .services_tools {padding:70px 0 70px 0;text-align:center;}
+.tools_panel .toll_section .toll_tools .toll_tools_pic {width:84px;height:87px;background: url(images/tolls_logo.png) no-repeat;margin:0 auto;margin-bottom:20px;}
+.tools_panel .highways_section {/*width: 50%;*/background-color:#393f4f;}
+.tools_panel .highways_section a:hover {background-color:#343a4a;}
+.tools_panel .highways_section .highways_tools .highways_tools_pic {width:84px;height:87px;background: url(images/highways_logo.png) no-repeat;margin:0 auto;margin-bottom:20px;}
+.tools_panel .traffic_section {/*width: 50%;*/background-color:#495264;}
+.tools_panel .traffic_section a:hover {background-color:#444d5f;}
+.tools_panel .traffic_section .traffic_tools .traffic_tools_pic {width:84px;height:87px;background: url(images/traffic_logo.png) no-repeat;margin:0 auto;margin-bottom:20px;}
+.tools_panel .services_section {/*width: 50%;*/background-color:#40475a;}
+.tools_panel .services_section a:hover {background-color:#3b4254;}
+.tools_panel .services_section .services_tools .services_tools_pic {width:87px;height:87px;background: url(images/services_logo.png) no-repeat;margin:0 auto;margin-bottom:20px;}
+.tools_panel-landing{width: 100%; margin: 30px 0 0 0;}
+.tools-panel-landing-margin{margin-bottom:55px;}
+
+/*
+    Modulos Ferramentas / Servicos (adicionado por SA)
+*/
+/* Traffic */
+.tools {/*max-width:1280px;*/margin: 30px 0;position:relative;}
+.tools_wrapper {left: 20px;position: absolute;top: 10px;z-index: 1;}
+.tools .tools_box {width:auto;margin:0 auto;padding:10px 0 10px 0;}
+.tools_box .box_slide h3,
+.tools_box .alerts_box_slide h3 {float:left;font-size: 1.6rem; font-size:16px;color:#495264;font-family: 'PrometoRegular';font-weight:400;margin:0;}
+.tools_box .btn_up,
+.tools_box .btn_down {width:17px;height:10px;margin:0 auto;margin-top:8px;background: url(images/ddl-arrow_green.png) no-repeat;}
+.tools_box .btn_down {background-position: left bottom;}
+.tools_box .btn_up {background-position: left top;}
+.tools_box .alerts_slider {margin: 34px -10px 10px;position: relative;padding:0 30px 40px 30px;text-align:left;list-style-type: none;height: 100%;}
+.tools_box .alerts_slider_inactive {display:none;}
+.tools_box .alerts_slider li {cursor:pointer;display: none;position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.tools_box .alerts_box_panel .alerts_box {cursor:pointer;padding-right:10px;padding-top:10px;}
+.tools_box .alerts_box_panel .alerts_box:hover {background-color:#f5f5f5;}
+.tools_box p {font-size: 1.4rem;color:#495264;font-family: 'PrometoRegular';font-weight:400;padding-left:48px;}
+.tools_box p span {font-weight: 400;font-family: 'PrometoBold';}
+.tools_box .red_alert_icon {width:27px;height:27px;background: url(images/red_alert_icon.png) no-repeat;margin:0 10px 0 10px;}
+.tools_box .yellow_alert_icon {width:27px;height:27px;background: url(images/yellow_alert_icon.png) no-repeat;margin:0 10px 0 10px;}
+.tools_box .green_alert_icon {width:27px;height:27px;background: url(images/green_alert_icon.png) no-repeat;margin:0 10px 0 10px;}
+.tools_box .info_box {position: relative;margin: 0 auto;padding: 0 10px 10px;width: 100%;min-height: 284px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;background-color: #f4f4f4;background-repeat: no-repeat;background-position: center center;}
+.tools_box .ic-cam-loading {background-image: url(images/modal-loading.gif);}
+.tools_box .cam-mask {display: block;width: 100%;max-height: 284px;}
+.tools_box .cam-vv-service {position: absolute;top: 0;left: 0;padding: 0 10px 10px;width: 100%;height: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.tools_box .info_box .info_box_nav {position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
+.tools_box .info_box .info_box_nav .nav {cursor: pointer;position: absolute;top: 45%;margin: 0;border: none;padding: 0;background: none;}
+.tools_box .info_box .info_box_nav .nav:disabled {display: none;}
+/* Remocao Avalon */
+.highways_box_panel .form-theme-default .select2-container--default .select2-dropdown {top: 6px;}
+.highways_box_panel .form-theme-default .form-select-wrapper .select2-container--default .select2-selection--single .select2-selection__arrow {background: url(images/ddl-arrow-down_dark.png) no-repeat center;}
+.highways_box_panel .form-theme-default .form-select-wrapper .select2-container--open .select2-selection--single .select2-selection__arrow {background: url(images/ddl-arrow-up_dark.png) no-repeat center;}
+.highways_box_panel .form-theme-default .js-camera-select .select2-container--default .select2-results>.select2-results__options {max-height: 275px;}
+.highways_box_panel .form-theme-default .js-highways-select .select2-container {margin-top: 0;}
+.highways_box_panel .form-theme-default .js-camera-select .select2-container--default .select2-dropdown {top: 0;}
+.cameras_box_wrapper .highways_box_panel .form-select-wrapper select:disabled,
+.cameras_box_wrapper .highways_box_panel .form-select-wrapper .select2-container--disabled {display: none;}
+
+/* Fim Remocao Avalon */
+
+.tools_wrapper .cameras_box_wrapper .highways_box_panel {padding-top: 0;}
+.tools_box .info_box .info_box_nav .nav > span {overflow: hidden;position: absolute;clip: rect(0 0 0 0);margin: -1px;border: none;padding: 0;width: 1px;height: 1px;}
+.tools_box .info_box .info_box_nav .nav:before {content: '';display: block;width: 25px;height: 30px;background-repeat: no-repeat;}
+.tools_box .info_box .info_box_nav .nav.prev {left: 9px;}
+.tools_box .info_box .info_box_nav .nav.prev:before {background: url(images/half-arrow.png) left top;}
+.tools_box .info_box .info_box_nav .nav.next {right: 9px;}
+.tools_box .info_box .info_box_nav .nav.next:before {background: url(images/half-arrow.png) right top;}
+.tools_box .video_box {background-color:#FFF;-webkit-border-radius: 5px;-webkit-border-bottom-left-radius: 0;-moz-border-radius: 5px;-moz-border-radius-bottomleft: 0;border-radius: 5px;border-bottom-left-radius: 0;padding:22px;}
+.tools_box .video_box_bottom {width:27px;height:27px;background: url(images/info_box_bottom.png) no-repeat left top;}
+.tools_box .close_btn {width:18px;height:15px;background: url(images/close_btn.png) no-repeat;float:right;}
+.tools_box .info_box h3,
+.tools_box .video_box h3  {margin:0;color:#06b348;font-size: 1.8rem; font-size:18px;font-family: 'PrometoRegular';font-weight:400;margin-bottom:20px;padding-right:20px;}
+.tools_box .info_box p,
+.tools_box .video_box p {margin:0;color:#495264;font-size: 1.4rem; font-size:14px;font-family: 'PrometoRegular';font-weight:400;}
+.tools_box .description_box {background-color: #FFF;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin-top: 10px;padding: 22px;width: 399px;}
+.tools_box .description_box .description_box_top {margin-bottom:10px;}
+.tools_box .description_box h3 {margin:0;color:#06b348;font-size: 1.8rem;font-family: 'PrometoRegular';font-weight:400;margin-bottom:20px;}
+.tools_box .description_box p {margin:0;color:#495264;font-size: 1.4rem;font-family: 'PrometoRegular';font-weight:400;padding-left: 0;}
+.tools_box .description_box a {color:#06b348;font-size: 1.4rem;font-family: 'PrometoRegular';text-decoration:underline;}
+
+/* Highways */
+/* ===== TOOLS ====== */
+.tools_box .services_box_panel,
+.tools_box .highways_box_panel,
+.tools_box .cameras_box_panel,
+.tools_box .alerts_box_panel {background-color: #FFF;-webkit-border-bottom-right-radius: 5px;-webkit-border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px;-moz-border-radius-bottomleft: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;padding: 10px 22px 22px 22px;display: none;width: 399px;/*overflow: auto;*/-webkit-overflow-scrolling: touch;overflow-scrolling: auto;}
+.tools_box .alerts_box_panel {padding: 0 12px 22px;position: relative;z-index: 1;}
+.tools_box .box_slide,
+.tools_box .alerts_box_slide {background-color: #FFF;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: pointer;text-align: center;padding: 22px;width: 300px;}
+.tools_box .box_slide_active,
+.tools_box .alerts_box_slide_active {background-color:#FFF;-webkit-border-bottom-left-radius: 0;-webkit-border-bottom-right-radius: 0;-moz-border-radius-bottomleft: 0;-moz-border-radius-bottomright: 0;border-bottom-left-radius: 0;border-bottom-right-radius: 0;}
+.cameras_box_wrapper.tools_box .box_slide {padding-right: 35px;}
+.tools_box .services_box_panel .services_box {padding-top:10px;}
+.tools_box .services_box_panel .services_box span {font-size: 1.4rem; font-size:14px;color:#495264;font-family: 'PrometoRegular';font-weight:400;margin-bottom:10px !important;line-height:2;}
+.tools_box .services_box_panel .services_box .parks_icon {width:33px;height:23px;background: url(images/parks_icon.png) no-repeat;margin:0 20px 0 10px;}
+.tools_box .services_box_panel .services_box .galp_icon {width:33px;height:30px;background: url(images/galp_icon.png) no-repeat;margin:0 20px 0 10px;}
+.tools_box .services_box_panel .services_box .ferries_icon {width:33px;height:27px;background: url(images/ferries_icon.png) no-repeat;margin:0 20px 0 10px;}
+.tools_box .services_box_panel .services_box .mcdrive_icon {width:33px;height:24px;background: url(images/mcdrive_icon.png) no-repeat;margin:0 20px 0 10px;}
+.tools_box .services_box_panel .services_box .viaverde_icon {width:33px;height:31px;background: url(images/viaverde_icon.png) no-repeat;margin:0 20px 0 10px;}
+.tools_box .services_box_panel .services_box input[type=checkbox] {display:none;}
+.tools_box .services_box_panel .services_box input[type=checkbox] + label {background: #f5f5f5;height: 24px;width: 24px;display:inline-block;padding:0;}
+.tools_box .services_box_panel .services_box input[type=checkbox]:checked + label {background: url(images/checkbox_checked.png) no-repeat;height: 24px;width: 24px;display:inline-block;padding:0;}
+.tools_box .box_slide h3 {text-align:left;width:90%;}
+.tools_box .alerts_box_panel .alerts_box p {font-size: 1.4rem; font-size:14px;color:#495264;font-family: 'PrometoRegular';font-weight:400;margin-bottom:10px !important;}
+.tools_box .alerts_box_panel .alerts_box p span,
+.tools_box .description_box p span {font-family: 'PrometoRegular';}
+.tools_box .info_box .info_box_top,
+.tools_box .video_box .video_box_top {margin-bottom:10px;}
+.info_box h3,
+.tools_box .video_box h3 {margin:0;color:#06b348;font-size: 1.8rem; font-size:18px;font-family: 'PrometoRegular';font-weight:400;margin-bottom:20px;}
+
+/* ===== SCROLL PANE ===== */
+.scroll-pane,
+.tools .scroll-pane {width: 100%;height: 200px;overflow: auto;position: static;}
+.scroll-pane a {padding-right:20px;display:block;text-decoration:underline;color:#495264;margin-bottom:5px;font-size: 1.4rem; font-size:14px;font-family: 'PrometoRegular';}
+.scroll-pane a span {font-family: 'PrometoRegular';}
+.scroll-pane .scroll_pane_link {padding:10px;margin-right:10px;}
+.scroll-pane .scroll_pane_link:hover {background-color:#f5f5f5;}
+.scroll-pane .scroll_pane_link a {display:block;text-decoration:underline;color:#495264;margin-bottom:5px;font-size: 1.4rem; font-size:14px;font-family: 'PrometoRegular';}
+.scroll-pane .scroll_pane_link a span {font-family: 'PrometoRegular';}
+.scroll-pane .scroll_pane_link .scroll_pane_arrow {width:18px;height:10px;background: url(images/scroll_arrow.png) no-repeat;display:none;margin-top:5px;}
+.scroll-pane .scroll_pane_link .scroll_pane_arrow_active {width:18px;height:10px;background: url(images/scroll_arrow.png) no-repeat;display:block;margin-top:5px;}
+.jspVerticalBar .jspTrack {margin-left:0;}
+.jspDrag {-moz-border-radius: 0;-webkit-border-radius: 0;border-radius: 0;}
+
+/*
+* CSS Styles that are needed by jScrollPane for it to operate correctly.
+*
+* Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+* may not operate correctly without them.
+*/
+.jspContainer{overflow: hidden;position: relative;}
+.jspPane{position: absolute;}
+.jspVerticalBar{position: absolute;top: 0;right: 0;width: 10px;height: 100%;background: #e0e0e0;}
+.jspHorizontalBar{position: absolute;bottom: 0;left: 0;width: 100%;height: 16px;background: transparent;}
+.jspCap{display: none;}
+.jspHorizontalBar .jspCap{float: left;}
+.jspTrack{background: #dde;position: relative;}
+.jspDrag{background: #495264;position: relative;top: 0;left: 0;cursor: pointer;}
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag{float: left;height: 100%;}
+.jspArrow{background: #50506d;text-indent: -20000px;display: block;cursor: pointer;padding: 0;margin: 0;}
+.jspArrow.jspDisabled{cursor: default;background: #80808d;}
+.jspVerticalBar .jspArrow{height: 16px;}
+.jspHorizontalBar .jspArrow{width: 10px;float: left;height: 100%;}
+.jspVerticalBar .jspArrow:focus{outline: none;}
+.jspCorner{background: #eeeef4;float: left;height: 100%;}
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner{margin: 0 -3px 0 0;}
+
+/* End jScrollPane */
+
+/* ServicesMap */
+.tools_box {width: 399px;margin: 0 auto;padding: 10px 0 10px 0;}
+.tools_box .services_box_panel .locations {font-size: 1.4rem;font-size: 14px;color: #495264;font-family: 'PrometoRegular';font-weight: normal;line-height: 2;}
+.tools_box .services_box_panel .parks_icon {width: 33px;height: 23px;background: url(images/gmicons/parks_icon.png) no-repeat;margin: 0 20px 0 0;}
+.tools_box .services_box_panel .galp_icon {width: 33px;height: 30px;background: url(images/gmicons/galp_icon.png) no-repeat;margin: 0 20px 0 0;}
+.tools_box .services_box_panel .ferries_icon {width: 33px;height: 27px;background: url(images/gmicons/ferries_icon.png) no-repeat;margin: 0 20px 0 0;}
+.tools_box .services_box_panel .mcdrive_icon {width: 33px;height: 24px;background: url(images/gmicons/mcdrive_icon.png) no-repeat;margin: 0 20px 0 0;}
+.tools_box .services_box_panel .viaverde_icon {width: 33px;height: 31px;background: url(images/gmicons/viaverde_icon.png) no-repeat;margin: 0 20px 0 0;}
+.tools_box .services_box_panel .controlauto_icon {width: 33px;height: 33px;background: url(images/gmicons/controlauto_icon.png) no-repeat;margin: 0 20px 0 0;}
+.services-checkbox-wrapper {width: 100%;display: inline-block;padding-top: 10px;}
+.services-checkbox-wrapper label {cursor: pointer;position: relative;clear: both;margin: 0;width: 100%;float: left;}
+.services-checkbox-wrapper .services-checkbox {vertical-align: middle;display: inline-block;position: relative;width: 25px;height: 25px;}
+.services-checkbox-wrapper .services-checkbox input {font-size: 1.6rem;position: absolute;clip: rect(0 0 0 0);margin: -1px;border: 0;padding: 0;width: 1px;height: 1px;background-color: transparent;}
+.services-checkbox-wrapper .services-checkbox .services-checkbox-style {line-height: 1;display: inline-block;border: 1px solid #dbdbdb;width: 100%;height: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.services-checkbox-wrapper .services-checkbox input:checked + .services-checkbox-style,
+.services-checkbox-wrapper .services-checkbox input.checked + .services-checkbox-style {border: none;background: url(images/checkbox_checked.png) no-repeat center;}
+.infoWindow {width:200px;}
+
+/* Fim modulos Ferramentas Servicos */
+
+/* Benefit Detail LOGO - Personalized Content */
+.benefit-detail_logo{text-align: center;margin: 0 auto;width: 95%;}
+.benefit-detail_logo:after{content: '';display: table;clear: both;}
+.benefit-element{display: table;float: left;padding: 0 2.5%;width: 50%;height: 200px;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.benefit-ball{text-align: center;display: table-cell;margin-bottom: 0;padding-bottom: 40px;}
+.benefit-ball-txt{color: #fff;font-size: 2.2rem;text-transform: uppercase;text-align: center;vertical-align: middle;display: table-cell;-webkit-border-radius: 100%;-moz-border-radius: 100%;border-radius: 100%;padding: 10px;width: 145px;height: 145px;-webkit-box-sizing: border-box;box-sizing: border-box;background-color: #e57c22;}
+.benefit-txt{color: #495264;text-align: left;vertical-align: middle;display: table-cell;padding-left: 5%;padding-bottom: 40px;}
+.benefit-txt p{margin-bottom: 0;}
+
+/* END Benefit Detail LOGO */
+
+/* Modal */
+.form-theme-default .form-description.link-centered {text-align: center;padding: 0 0 15px 0;}
+.form-theme-default .form-description .align-left {text-align: left;}
+/* End Modal */
+
+/* CONTACTS PAGE */
+.button .button-grey {background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 50%, #e6e6e6 50%, #e6e6e6 100%);background-color: #e6e6e6;color: #02B245;}
+.button:hover .button-grey.button-txt {background: #e6e6e6;}
+.button .button-txt.locator {background: url(images/locator.png) no-repeat 92% center, linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 50%, #e6e6e6 50%, #e6e6e6 100%);background-color: #e6e6e6;color: #272b36;padding-right: 35px;}
+.button:hover .button-grey.button-txt.locator {background: url(images/locator.png) no-repeat 92% center #e6e6e6;}
+
+/* End CONTACTS PAGE */
+
+/* INFO CORNER */
+/* supportCenter-corner */
+.supportCenter-corner {font-size: 0;position: absolute;top: 50%;right: -15px;margin: -15px 0 0 0;height: 30px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;z-index: 1;}
+.supportCenter-corner-left,
+.supportCenter-corner-right {display: block;clear: both;overflow: hidden;position: relative;width: 15px;height: 15px;}
+.supportCenter-corner-left:before,
+.supportCenter-corner-right:before {content: '';position: absolute;right: -25px;width: 30px;height: 30px;border: 10px solid #02b245;-webkit-border-radius: 100%;-moz-border-radius: 100%;border-radius: 100%;}
+.supportCenter-corner-left:before {bottom: -10px;}
+.supportCenter-corner-right:before {top: -10px;}
+
+/* End supportCenter-corner */
+
+.column-section .column-body.contactsBody {display: table;font-size: 0;padding: 20px;width: 100%;
+/* To Test if Is OK */
+-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.contactsBody > div {display: table-row;}
+.contactsBody article {border: none;display: table-cell;font-size: 1.6rem;padding: 30px;position: relative;vertical-align: top;width: 50%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.contactsBody .supportCenter {background: #02B245;}
+.contactsBody .SChelp {background: #F5F5F5;}
+.contactsBody .VVstores {background: #272b36;}
+.contactsBody .emergencyCall {background: url(images/bg-darkRow.png)no-repeat right top #363c4c;background-size: contain;vertical-align: middle;text-align: center;}
+.contactsBody .emergencyCall:before {content: '';display: inline-block;vertical-align: top;margin-top: 35px;width: 86px;height: 83px;background: url(images/attention.png) no-repeat left top;background-size: auto 73px;}
+.contactsBody article h2 {color: #02b245;font-family: "PrometoRegular";font-size: 2.6rem;font-weight: normal;margin: 0;}
+.contactsBody article p {color: #FFFFFF;font-size: 1.6rem;line-height: normal;margin: 25px 0 0 0;}
+.contactsBody article .button {margin: 40px 0 0 0;}
+.contactsBody .supportCenter h2 {color: #0f5222;}
+.contactsBody .VVcontacts h3,
+.contactsBody .emergencyCall em {color: #02b245;}
+.contactsBody .SChelp .link-add {float: right;}
+.contactsBody .SChelp ul {list-style: none;margin: 0;}
+.contactsBody .SChelp ul li {font-style: italic;margin: 25px 0 0 0;padding: 0 0 0 15px;background: url(images/link-arrow.png) no-repeat left center;}
+.contactsBody .SChelp ul li a {text-decoration: none;color: #495264;}
+.contactsBody .SChelp ul li a:hover {text-decoration: underline;}
+.contactsBody .emergencyCallContent {display: inline-block;max-width: 76%;text-align: left;}
+.contactsBody .emergencyCallContent p {margin: 0;}
+.contactsBody .emergencyCall .emergencyNumber {color: #FFFFFF;display: block;font-family: "PrometoRegular";font-size: 4.5rem;text-decoration: none;}
+.contactsBody .emergencyCall .emergencyCallContent .emergencyLink {color: #02b245;font-family: "PrometoRegular";font-size: 1.8rem;font-style: normal;text-decoration: none;}
+.contactsBody .emergencyCall em {font-family: "PrometoRegular";font-size: 2.1rem;font-style: normal;display: inline-block;margin-top: 10px;}
+.contactsBody .VVcontacts h3 {font-size: 1.6rem;font-weight: bold;margin: 20px 0 0 0;}
+.contactsBody .VVcontacts {padding: 30px 15% 30px 30px;}
+.contactsBody .VVcontacts h3:first-child {margin: 35px 0 0 0;}
+.contactsBody .VVcontacts p,
+.contactsBody .VVcontacts a {color: #495264;font-size: 1.6rem;margin: 0;text-decoration: none;}
+.contactsBody .VVcontacts a:hover {text-decoration: underline;}
+
+/* END CONTACTS PAGE*/
+
+/* USERS LIST PAGE */
+.usersList aside {clear: both;padding: 35px 25px 50px;}
+.usersList p {color: #989A9F;font-size: 1.4rem;}
+.usersList .users-total-records-found {margin: 18px 0 0;}
+.usersList .form-theme-default .form-group .form-group-wrapper > div {margin: 0 0 0 2%;}
+.usersList .form-theme-default .button-txt{padding:12px;}
+.usersList .form-theme-default .button-border .button-txt{padding:11px;}
+.usersList .form-input-wrapper input {color: #495264;padding: 0px 10px;}
+.usersList .form-button {margin: 20px 0 0;}
+.usersList .button {/*border: 1px solid #12B544;float: left;*/margin: 0px 20px 0px 0px;}
+.usersList .carregar-mais .button {float: none;margin: 0;}
+
+/* usersList table */
+.contracts th,
+.contracts td {padding: 20px;-ms-word-wrap: break-word;word-wrap: break-word;}
+.contracts td.noPadding {padding: 0;}
+.contracts tbody tr:nth-child(odd) {background: #EFEFEF;}
+.contracts tbody tr:nth-child(even) {background: #F8F8F8;}
+.contracts .contractSettingsIcon {background: url(images/contract-settings.png) no-repeat center center;display: block;height: 24px;margin: 0 auto;width: 35px;}
+.contracts .disable:hover,
+.contracts .enable:hover {text-decoration: underline;}
+.contracts .disable,
+.contracts .enable {display: inline-block;height: 26px;line-height: 2.6rem;margin: -6px 0;min-width: 105px;padding: 0 0 0 35px;text-align: left;text-decoration: none;vertical-align: middle;}
+.contracts .disable {background: url(images/ativar.png) no-repeat 0 0;}
+.contracts .enable {background: url(images/desativar.png) no-repeat 0 0;}
+
+/* END usersList table */
+/* END USERS LIST PAGE */
+
+/* PL 6.12.1 - NEW USER */
+.newUsers {padding: 0 0 70px 0;}
+.newUsers .column-header{padding-top: 0;}
+.newUsers .fieldset65 {padding: 0;}
+.newUsers .link-add-wrapper {padding: 20px 0 0 0;}
+.newUsers .link-add {line-height: 5.4rem;}
+.newUsers .contracts {margin: 0;table-layout: fixed;}
+.newUsers .form-theme-default .form-group .form-group-wrapper > div {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+/* END PL 6.12.1 - NEW USER */
+
+/* PL 6.12.2 - CONTRATOS ASSOCIADOS */
+.existingContracts .column-header {padding: 20px 0 0 0;}
+.existingContracts .user-data,
+.newUsers .user-data {background: #FFFFFF;font-size: 0;margin: 0;padding: 50px 5.2%;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.existingContracts .user-data-cell {display: inline-block;padding: 0 30px 0 0;vertical-align: top;width: 33%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.user-data-cell .label {color: #989A9F;display: block;font-size: 1.4rem;}
+.user-data-cell .value {color: #495264;display: block;font-family: "PrometoRegular";font-size: 2.4rem;margin: 5px 0px 0px;-ms-word-wrap: break-word;word-wrap: break-word;}
+
+/* END PL 6.12.2 - CONTRATOS ASSOCIADOS */
+
+/* HDP2 PAGE */
+.hdp2-tabs .hdp2-tab1,
+.hdp2-tabs .hdp2-tab2,
+.hdp2-tabs .hdp2-tab3 {background: #FFFFFF;padding: 50px 5%;}
+
+/* docs list */
+.list-docs-wrapper {background: #F8F8F8;font-size: 0;}
+.list-docs-wrapper .docs-article {display: inline-block;padding: 30px;vertical-align: top;width: 50%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.list-docs-wrapper .docs-title {display: block;clear: both;color: #02B245;font-family: "PrometoRegular";font-size: 2.6rem;line-height: 1.2;}
+.list-docs-wrapper .docs-content {color: #495264;clear: both;display: block;font-size: 1.6rem;line-height: 1.6;}
+.list-docs-wrapper .docs-content .detail-row-wrapper {list-style: none;margin: 0;width: 100%;}
+.list-docs-wrapper .docs-content .detail-row {color: #222;font-family: "PrometoRegular";font-size: 1.6rem;padding-top: 10px;width: 100%;}
+.list-docs-wrapper .docs-content .detail-row > span {padding-right: 5px;position: relative;}
+.list-docs-wrapper .docs-content .delivered-no:before {content: '\00D7';color: #E64F4F;font-size: 3.2rem;line-height: 21px;position: absolute;left: 5px;top: 0;}
+.list-docs-wrapper .docs-content .delivered-ok:before {content: url(images/checkbox-green-checked.png);line-height: 21px;position: absolute;left: 5px;top: 0;}
+
+/* end docs list */
+
+.hdp2-tabs .list-docs-wrapper {background: none;}
+.hdp2-tabs .hdp2-table {margin: 30px 0 0 0;}
+.hdp2-table thead th:first-child,
+.hdp2-table th,
+.hdp2-table td {padding: 15px;-ms-word-break: break-all;word-break: break-all;}
+.hdp2-form .form-group .form-group-wrapper .form-input-wrapper,
+.hdp2-form .form-group .form-group-wrapper .form-button {margin: 20px 30px 0 0;vertical-align: bottom;}
+.hdp2-tabs .hdp2-form .hdp2-btn .button-txt {padding: 11px;}
+
+/* HDP2 PAGE modal */
+.form-vehicle-docs {padding: 10px 0 20px 0;}
+.form-vehicle-docs .list-docs-wrapper {background: none;}
+.form-vehicle-docs .list-docs-wrapper .docs-article {padding: 0 15px 10px 0;}
+.form-vehicle-docs .list-docs-wrapper .docs-article:nth-child(even) {padding: 0 0 10px 15px;}
+.form-vehicle-docs .list-docs-wrapper .docs-title {font-size:2.2rem;}
+.form-vehicle-docs .btn-wrapper {margin: 30px auto 0;text-align: center;}
+.form-vehicle-docs .btn-wrapper .button-txt {padding: 15px;}
+
+/* END HDP2 PAGE modal */
+/* END HDP2 PAGE */
+
+/* PL6.6 CONTROLAUTO PAGE */
+/* generic styles - usado em mais que 1 página */
+.licence {background: #02B245 none repeat scroll 0% 0%;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;color: #FFFFFF;display: inline-block;font-family: "PrometoRegular";font-size: 1.4rem;padding: 6px 10px;vertical-align: top;}
+.ctrlauto .class1 {background: url(images/big-vehicle-classe1.png) no-repeat left center;}
+.ctrlauto .class2 {background: url(images/big-vehicle-classe2.png) no-repeat left center;}
+.ctrlauto .class3 {background: url(images/big-vehicle-classe3.png) no-repeat left center;}
+.ctrlauto .class4 {background: url(images/big-vehicle-classe4.png) no-repeat left center;}
+.ctrlauto .class5 {background: url(images/big-vehicle-classe5.png) no-repeat left center;}
+
+/* inicio controlauto */
+.ctrlauto .column-header {padding: 60px 0 0 25px;}
+.ctrlauto h1 {color: #363C4C;font-family: "PrometoMediumItalic";font-size: 4.8rem;font-weight: normal;margin: 0;}
+.ctrlauto .column-header p {margin: 10px 0 0 0;background: url(images/icon.png);}
+.ctrlauto .ctrlauto-detail {margin: 30px 0 0 0;font-size: 0;}
+.ctrlauto .vehicles-info {height: 195px;}
+.ctrlauto .vehicles-vv-info-wrapper {background: #FFFFFF;}
+.type.ctrlauto {background: url(images/ic-controlauto-whiteborder.png) no-repeat center center;padding-top: 40px;}
+.ctrlauto .button .locator:after {content: url(images/locator_btn.png);display: inline-block;padding: 0 0 0 10px;vertical-align: top;}
+.booking-header {padding: 0 0 0 25px;}
+.booking-header h2 {color: #363c4c;font-family: "PrometoMediumItalic";font-size: 3.4rem;margin: 30px 0 0 0;}
+.booking-header .intro {float: left;margin: 0;width: 65%;}
+.ctrlauto .ctrlauto-search {float: right;min-width: 180px;width: 25%;}
+
+/* book inspection section */
+.booking-section .transitions {-webkit-transition: 0.3s ease-in-out;-moz-transition: 0.3s ease-in-out;-o-transition: 0.3s ease-in-out;transition: 0.3s ease-in-out;}
+.booking-section .list-wrapper {padding-top: 20px;clear: both;}
+.booking-section .list-wrapper ul {list-style: none;margin: 0;}
+.booking-section .list-wrapper li {height: 60px;margin: 10px 0 0 0;width: 100%;}
+.booking-section .list-wrapper li:last-child {height: 60px;margin: 10px 0 0 0;width: 100%;}
+.booking-section .list-wrapper li button {border: none;color: #495264;cursor: pointer;font-family: "PrometoRegular";font-size: 2.4rem;height: 60px;overflow: hidden;padding: 0 66px;position: relative;text-align: left;width: 100%;}
+.booking-section .list-wrapper li button.class1 {background: url(images/ic-car-green.png) no-repeat 20px center #FFFFFF;}
+.booking-section .list-wrapper li button.class2 {background: url(images/ic-car-green.png) no-repeat 20px center #FFFFFF;}
+.booking-section .list-wrapper li button.class3 {background: url(images/ic-car-green.png) no-repeat 20px center #FFFFFF;}
+.booking-section .list-wrapper li button.class4 {background: url(images/ic-car-green.png) no-repeat 20px center #FFFFFF;}
+.booking-section .list-wrapper li:hover > button.class1 {background: url(images/ic-car-white.png) no-repeat 20px center #02b245;color: #FFFFFF;}
+.booking-section .list-wrapper li:hover > button.class2 {background: url(images/ic-car-white.png) no-repeat 20px center #02b245;color: #FFFFFF;}
+.booking-section .list-wrapper li:hover > button.class3 {background: url(images/ic-car-white.png) no-repeat 20px center #02b245;color: #FFFFFF;}
+.booking-section .list-wrapper li:hover > button.class4 {background: url(images/ic-car-white.png) no-repeat 20px center #02b245;color: #FFFFFF;}
+.booking-section .list-wrapper .licence {margin: 0 0 0 20px;}
+.booking-section .list-wrapper button:hover > .licence {background: #FFFFFF;color: #02b245;}
+.booking-section .list-wrapper .book-this {background: url(images/link-arrow.png) no-repeat left center;color: #FFFFFF;font-size: 1.6rem;line-height: 60px;padding: 0 0 0 31px;position: absolute;top: 0;right: -51px;}
+.booking-section .list-wrapper button:hover > .book-this {background: url(images/link-arrow-white.png) no-repeat left center;}
+.booking-section .list-wrapper button:hover > .slide-left {-webkit-transform: translate(-70px,0);-moz-transform: translate(-70px,0);-ms-transform: translate(-70px,0);-o-transform: translate(-70px,0);transform: translate(-70px,0);}
+
+/* END book inspection section */
+
+/* loader */
+.loader-wrapper {margin: 40px auto;text-align: center;}
+.loader-wrapper .button-loader {background: transparent url("images/modal-loading.gif") no-repeat scroll center center;}
+
+/* END PL6.6 CONTROLAUTO PAGE */
+
+/* PL6.6.1. CONTROLAUTO PAGE */
+.ctrlauto-book {font-family: "PrometoRegular";}
+.ctrlauto-book .subheader {font-size: 0;}
+.ctrlauto-book .gm-box-mark {background-color: #02B245;-webkit-border-top-left-radius: 5px;border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;border-top-right-radius: 5px;color: #FFF;display: inline-block;font-size: 2.2rem;line-height: 1;padding: 15px 9px 0px;position: relative;vertical-align: top;width: 50px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.ctrlauto-book .gm-box-mark:before {background: transparent url("images/suggestion-mark-curve-small.png") no-repeat 0 0;content: "";position: absolute;left: 0;bottom: -24px;width: 50px;height: 24px;}
+.ctrlauto-book h2 {color: #495264;display: inline-block;font-size: 2.6rem;line-height: 50px;margin: 0;padding: 0 0 0 10px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.ctrlauto-book .ctrlauto-vehicle-info {display: block;min-height: 89px;padding: 0 0 0 115px;margin: 50px 0 0 0;}
+.ctrlauto-book .ctrlauto-vehicle-info p {color: #989a9f;font-size: 1.4rem;margin: 0;padding: 0;}
+.ctrlauto-book .ctrlauto-vehicle-info .model {color: #495264;font-size: 2.4rem;}
+.ctrlauto-book section {padding: 50px 0 0 0;max-width: 500px;}
+.ctrlauto-book section h2 {color: #02b245;display: block;padding: 0;}
+.ctrlauto-book .inspection-centre .form-select-wrapper {min-height: 44px;padding-top: 20px;}
+.ctrlauto-book .inspection-date .form-group-wrapper > div {display: inline-block;width: 49%;}
+.ctrlauto-book .inspection-date .form-time {display: block;}
+.ctrlauto-book .form-theme-default .form-input-wrapper .form-time input {display: inline-block;margin-top: 5px;height: 44px;}
+.ctrlauto-book .btn-wrapper {text-align: right;padding: 45px 0 0 0;}
+.ctrlauto-book .btn-wrapper button {margin-left: 25px;}
+
+/* controlauto modal */
+.ctrlauto-modal {padding: 50px 0;}
+.ctrlauto-modal .form-button {margin: 60px auto 0;padding: 0 9.67%;text-align: center;}
+.ctrlauto-modal .form-button .button {float: none;}
+
+/* END PL6.6.1. CONTROLAUTO PAGE */
+
+/* PL 6.6.3. CONTROLAUTO FEEDBACK */
+.ctrlauto .ctrlauto-feedback h2 {color: #02b245;font-family: "PrometoRegular";font-size: 2.4rem;font-weight: normal;margin: 0;padding-top: 25px;}
+.ctrlauto .ctrlauto-feedback p {max-width: 650px;line-height: 1.5;margin: 0;padding: 0 25px 0 0;}
+
+/* END PL 6.6.3. CONTROLAUTO FEEDBACK */
+
+/*
+    Landing Page - Centro de Apoio
+*/
+.centro-apoio {
+    position:relative;
+}
+.centro-apoio.wrapper{margin-top: 0;}
+
+.centro-apoio .column-header.header-track-trace {
+    padding-right:300px;
+    margin-bottom: 25px;
+}
+
+.centro-apoio h1 {
+    color:#02b245;
+    font-family:'PrometoMediumItalic';
+    font-size:4.8rem;
+    font-weight:normal;
+    margin-top:0;
+}
+
+.centro-apoio h2 {
+    color:#02b245;
+    font-family:'PrometoRegular';
+    font-size:2.6rem;
+    font-weight:normal;
+    margin-right:15px;
+}
+.centro-apoio h3 {
+    color:#02b245;
+    font-family:'PrometoRegular';
+    font-size: 21px;
+    font-size:2.1rem;
+    font-weight:normal;
+    margin-right:15px;
+}
+
+.centro-apoio .form-theme-sidebar .form-button {
+    margin:0;
+    margin-top: 10px;
+}
+.centro-apoio a.link-return{
+	cursor: pointer;
+    display: inline-block;
+    padding: 0 0 0 35px;
+    line-height: 26px;
+    font-size: 1.6rem;
+    color: #495264;
+    text-decoration: none;
+    background: url(images/ic-arrow-green.png) no-repeat left center;
+}
+.centro-apoio a.link-return:hover{
+	text-decoration: underline;
+}
+
+/*==================================*/
+/*=========== SUPPORT NEW ==========*/
+.support-main-top{
+	margin-bottom: 25px;
+    margin-top: 39px;
+    overflow: hidden;
+}
+.support-main-top:after{
+	content: '';
+    display: table;
+    clear: both;
+}
+.support-main-top .yellow-light{
+	float: left;
+	width: calc(100% - 365px);
+    background-color: #fff;
+}
+.support-aside-track-trace {
+    background-color:#02b245;
+    float: right;
+    padding:30px 20px 29px;
+    width: 300px;
+    color: #fff;
+    height: 100%;
+}
+.support-main-top .support-aside-track-trace{
+	margin-bottom: -200px;
+    padding-bottom: 200px;
+}
+.support-main-top.without-track .yellow-light{
+	float: none;
+	width: 100%;
+}
+.support-themes,
+.support-videos,
+.footer-support{
+	display: block;
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 25px;
+}
+.support-videos{
+	background-color: #f5f5f5;
+}
+.support-subthemes{
+	display: block;
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 25px;
+    margin-top: 39px;
+}
+
+/*==================================*/
+
+
+
+/* Article Podemos ajudar? */
+.podemos-ajudar{
+    background-color:#fff;
+    float: left;
+    font-size:0;
+    margin:39px 0 25px;
+    padding:50px 3% 30px;
+    width:68%;
+}
+
+.hide-track-trace .podemos-ajudar {
+    width:94%;
+}
+
+.hide-track-trace .podemos-ajudar a {
+    margin:0.2%;
+    min-width:230px;
+    padding:2%;
+    width:32.9%;
+}
+
+.podemos-ajudar h2:before {
+    background:url(images/ic-contact.png) no-repeat;
+    content:"";
+    height:65px;
+    left:0;
+    position:absolute;
+    top:-17px;
+    width:69px;
+}
+
+.podemos-ajudar h2 {
+    margin-bottom:30px;
+    padding-left:80px;
+    position:relative;
+    text-align:left;
+}
+
+.podemos-ajudar a {
+    background-color: #f5f5f5;
+    color: #495264;
+    display: inline-block;
+    font-family: 'PrometoItalic';
+    font-size: 2.0rem;
+    font-weight: normal;
+    height: 130px;
+    margin: 3px;
+    padding: 25px;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+    width: 32.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.podemos-ajudar a:first-of-type{background: url(images/ic-ticket.png) no-repeat right 10px bottom 10px;}
+
+.podemos-ajudar a:first-of-type,
+.podemos-ajudar a:hover {
+    background-color:#02b245;
+    color:#fff;
+}
+
+/* Aside Track & Trace*/
+.hide-track-trace .aside-track-trace {
+    display:none;
+}
+
+.aside-track-trace {
+    background-color:#02b245;
+    float: right;
+    padding:30px 20px 29px;
+    margin-bottom:25px;
+    margin-top:39px;
+    width:260px;
+    color: #fff;
+    height: 501px;
+}
+
+.aside-track-trace h2,
+.support-aside-track-trace h2 {
+    border-bottom:1px solid #02a03e;
+    color:#fff;
+    margin-bottom:24px;
+    margin-top:-1px;
+    padding-bottom:16px;
+}
+
+.support-aside-track-trace h2.ui-accordion-header{
+	background: url('images/ddl-arrow-down-white.png') no-repeat right 12px;
+}
+.support-aside-track-trace h2.ui-accordion-header.ui-accordion-header-active{
+	background: url('images/ddl-arrow-up-white.png') no-repeat right 12px;
+}
+
+
+.aside-track-trace p,
+.support-aside-track-trace p {
+    line-height:24px;
+}
+
+/* Perguntas frequentes (FAQs) */
+.faqs {
+    margin-bottom:25px;
+}
+
+.faqs h2 {
+    margin-bottom: 30px;
+    padding-left: 80px;
+    position: relative;
+    text-align: left;
+    display: inline-block;
+}
+.faqs h2:before {
+    background: url(images/ic-question2.png) no-repeat;
+    content: "";
+    height: 65px;
+    left: 0;
+    position: absolute;
+    top: -17px;
+    width: 69px;
+}
+
+.faqs > .link-add {
+    color: #02b245;
+    float: right;
+    margin-top: 10px;
+}
+
+.faqs .form-theme-default {
+    clear:both;
+}
+.faqs .form-theme-default:after{content: '';display: table;clear: both;}
+
+.faqs .form-theme-default .form-input-wrapper {
+    float:left;
+    margin-top:8px;
+    width:45%;
+}
+
+.faqs .form-theme-default .form-input-wrapper .form-input {
+    padding: 20px;
+}
+
+.faqs .form-theme-default .form-button {
+    float: left;
+    margin: 13px 0 0 20px;
+}
+
+.centro-apoio .link-add {
+    float:right;
+}
+
+/* Categorias de FAQs */
+.faq-categories {
+    clear: both;
+    font-size: 0;
+    list-style: none;
+    margin: 30px 0 10px;
+}
+
+.faq-categories > li {
+    background-color:#f5f5f5;
+    display:inline-block;
+    height: 300px;
+    margin:3px;
+    padding:5px 15px;
+    position:relative;
+    text-align:left;
+    vertical-align:top;
+    width: 21.5%;
+}
+
+.faq-categories li h3 {
+    color:#02b245;
+    font-family:'PrometoMedium';
+    font-size:2.0rem;
+    font-weight:normal;
+    margin-bottom:8px;
+}
+
+.faq-categories ul {
+    list-style:none;
+    margin:0;
+}
+
+.faq-categories li li {
+    padding-left:10px;
+    padding-bottom: 10px;
+    position:relative;
+}
+
+.faq-categories li li:before {
+    content:"-";
+    font-size:1.6rem;
+    left:0;
+    position:absolute;
+}
+    
+.faq-categories li li a {
+    color:#495264;
+    font-size:1.5rem;
+    font-weight:normal;
+    line-height:1.2;
+    text-decoration:none;
+}
+.faq-categories li li a:hover{
+    text-decoration:underline;
+}
+
+.faq-categories > li a.link-add {
+    bottom:20px;
+    position:absolute;
+    right:20px;
+}
+
+/* Guias Práticos */
+.guias-praticos {
+    margin-bottom:25px;
+}
+
+.guias-praticos h2 {
+    background:url(images/ic-mobile.png) no-repeat left center;
+    padding:12px 0 12px 80px;
+    position:relative;
+}
+
+/*
+    Centro de Apoio - Situação
+*/
+.column-section .centro-apoio-situacao {
+    padding:50px 20px!important;
+}
+
+/* O seu Problema */
+.o-seu-problema {
+    margin-bottom:25px;
+}
+
+.o-seu-problema p {
+    font-family:'PrometoMediumItalic';
+    font-size:2.8rem;
+    margin:0;
+}
+
+.o-seu-problema a:before {
+    background:url(images/ic-arrow-green.png) no-repeat center left;
+    content:"";
+    height:26px;
+    left:10px;
+    position:absolute;
+    top:-4px;
+    width:26px;
+}
+
+.o-seu-problema a {
+    color:#495264;
+    float:right;
+    font-weight:normal;
+    margin-top:9px;
+    padding-left:45px;
+    position:relative;
+}
+
+.o-seu-problema a:hover {
+    color:#02b245;
+}
+
+.topicos-relacionados .accordion-content > b:first-child {
+    display:block;
+    margin:30px 0 20px;
+}
+
+.tabela-classes-veiculos {
+    margin-bottom:25px;
+}
+
+.tabela-classes-veiculos .theme-default-table tbody tr:nth-child(2n) td {
+    background-color:#fff;
+}
+
+.tabela-classes-veiculos th:first-child {
+    text-align:center;
+}
+
+.tabela-classes-veiculos th {
+    text-align:left;
+}
+
+.tabela-classes-veiculos td:first-child {
+    font-weight:bold;
+    text-align:center;
+}
+
+.tabela-classes-veiculos td {
+    text-align:left;
+}
+
+.topicos-relacionados a {
+    text-decoration:underline;
+}
+
+.topicos-relacionados a:hover {
+    text-decoration:none;
+}
+
+.topicos-relacionados .envie-dados {
+    margin:55px 0 50px;
+}
+
+.topicos-relacionados .form-theme-default {
+    float: right;
+    margin-top: -95px;
+}
+
+.topicos-relacionados .accordion .resposta-util {
+    clear:both;
+    margin:0 9%;
+    width:82%;
+}
+
+/* Encontrei resposta */
+.situacao-encontrei-resposta {
+    margin-top:50px;
+}
+
+.situacao-encontrei-resposta .form-button:first-child {
+    margin:0 1% 0 0;
+}
+
+.situacao-encontrei-resposta .form-button {
+    float:none;
+    margin:0;
+    text-align:center;
+    width:100%;
+}
+
+.situacao-encontrei-resposta .form-button .button {
+    float:none;
+}
+
+/*
+    Form Theme Sidebar & Default
+ */
+.form-theme-sidebar .form-label {
+    color:#fff;
+    margin-bottom:7px;
+}
+
+.form-theme-sidebar .form-input-wrapper {
+    margin-top:0;
+}
+
+.form-theme-sidebar .form-input-wrapper .form-input {
+    margin-bottom:20px;
+}
+
+.form-theme-default.form-theme-sidebar .form-button .button-white .button-txt {
+    color: #02b245;
+}
+
+.touch .form-theme-default.form-theme-sidebar .form-button .button-white:hover .button-txt {
+    color: #02b245;
+}
+ 
+
+/*
+    FAQs - Defeito / Default
+*/
+.faqs-content:after{content: '';display: table;clear: both;}
+
+/* FAQs pesquisa */
+.faqs-content .form-theme-default {
+    margin-bottom:55px;
+}
+.faqs-content .form-theme-default:after{content: '';display: table;clear: both;}
+
+.faqs-content .form-input-wrapper {
+    float:left;
+    margin:0 20px 0 0;
+    width:43%;
+}
+
+.faqs-content .form-theme-default .form-input-wrapper .form-input {
+    margin-top: 0;
+    padding: 20px 15px;
+}
+
+.faqs-content .form-button {
+    float:left;
+    margin: 0;
+}
+
+/* FAQs menu mobile */
+.menu-faqs-mobile {
+    display:none;
+}
+
+
+/* FAQs menu */
+.faqs-content nav {
+    clear:both;
+    display:block;
+    float:left;
+    width:32%;
+}
+
+.faqs-content nav ul {
+    background-color:#009b3a;
+    list-style:none;
+    margin:0;
+}
+
+.faqs-content nav li {
+    padding:22px 25px 0;
+}
+
+.faqs-content nav li a {
+    border-bottom:1px solid #008b34;
+    color:#0f5222;
+    display:block;
+    font-family:"PrometoMediumItalic";
+    font-size:2.2rem;
+    font-weight:normal;
+    padding-bottom:22px;
+}
+
+.faqs-content nav li a:hover,
+.faqs-content nav li.faq-active a {
+    color:#fff;
+}
+
+/* FAQS Mais Procurados */
+.mais-procurados {
+    float:left;
+    margin-left:3%;
+    width:65%;
+}
+
+.mais-procurados .accordion-form-link {
+    display: block;
+    margin-top: 5px;
+}
+
+/* FAQS Encontrei resposta */
+.faqs-encontrei-resposta {
+    margin-top:35px;
+}
+
+.faqs-encontrei-resposta .form-button {
+    margin:0;
+    width:49%;
+}
+
+.faqs-encontrei-resposta .form-button:first-child {
+    margin-right: 2%;
+}
+
+.faqs-encontrei-resposta .form-button .button {
+    width:99%;
+}
+
+.faqs-encontrei-resposta .form-button .button .button-txt {
+    font-size:1.4rem;
+}
+
+.faqs-encontrei-resposta .link .link-txt {
+    color: #989a9f;
+}
+
+.obrigado-feedback {
+    clear:both;
+    display:none;
+    float:left;
+    margin-top:20px;
+}
+
+.obrigado-feedback p {
+    font-size:1.6rem;
+    margin:0;
+}
+.obrigado-feedback a {
+    font-size:1.4rem;
+}
+
+
+/*
+    Movimentos e Extratos
+*/
+
+/* Movimentos */
+.movimentos-extratos-movimentos .ui-tabs-panel > .list-button,
+.movimentos-extratos-extratos .ui-tabs-panel > .list-button {
+    margin-right:20px;
+}
+
+.movimentos-extratos-movimentos section {
+    padding-bottom:0;
+}
+
+.movimentos-extratos-movimentos .ui-tabs-panel {
+    background-color:#fff;
+    padding:50px 0;
+}
+
+.movimentos-extratos-movimentos .form-theme-default,
+.movimentos-extratos-movimentos aside {
+    margin:0 5%;
+    width:90%;
+}
+
+.movimentos-extratos-movimentos .form-theme-default .form-input-wrapper,
+.movimentos-extratos-movimentos .form-theme-default .form-select-wrapper,
+.movimentos-extratos-movimentos .form-theme-default .form-datepicker-wrapper {
+    display:inline-block;
+    margin-right:1%;
+    margin-top:20px;
+    min-width:215px;
+    vertical-align:top;
+    width:23%;
+}
+
+.movimentos-extratos-movimentos .form-theme-default .form-input-wrapper input {
+    color:#495264;
+}
+
+.movimentos-extratos-movimentos .form-button {
+    margin:40px 0 30px;
+}
+
+.movimentos-extratos-movimentos .form-button .button {
+    float:left;
+    margin:0;
+}
+
+.movimentos-extratos-movimentos .form-button .button:last-child {
+    margin:0 0 0 20px;
+}
+
+.movimentos-extratos-movimentos .form-button .form-loader {
+    float:left;
+}
+
+.movimentos-extratos-movimentos .button-txt {
+    padding:12px;
+}
+.movimentos-extratos-movimentos .button-border .button-txt {
+    padding:11px;
+}
+
+.movimentos-extratos-movimentos aside {
+    float:left;
+    margin-bottom:10px;
+}
+
+.movimentos-extratos-movimentos .button-loader {
+    display:none;
+}
+
+.carregar-mais {
+    clear:both;
+    text-align:center;
+}
+
+.carregar-mais .form-button {
+    float:none;
+    margin:0;
+}
+
+.carregar-mais .form-button .button {
+    float:none;
+}
+
+.movimentos-extratos-movimentos .carregar-mais .form-button button {
+    float:none;
+}
+
+.movimentos-extratos-movimentos .pedidos-segunda-via .button {
+    margin: 0 20px 0 0 !important;
+}
+
+/* Tabela de Movimentos */
+.tabela-movimentos {
+    color:#495264;
+}
+
+.tabela-movimentos th:first-child,
+.tabela-movimentos td:first-child {
+    text-align:left;
+}
+
+.theme-default-table.tabela-movimentos tbody th:first-child,
+.theme-default-table.tabela-movimentos td:first-child {
+    color:#495264;
+}
+
+.tabela-movimentos th,
+.tabela-movimentos td {
+    padding:15px 20px;
+}
+
+.tabela-movimentos tbody th {
+    font-weight:normal;
+}
+
+.tabela-movimentos tbody td {
+    white-space:nowrap;
+}
+
+.tabela-movimentos tbody .transactionsEmpty-list td {
+    white-space:normal;
+}
+
+.tabela-movimentos td:first-child {
+    font-size:1.2rem;
+}
+
+.tabela-movimentos.list-extracts td {
+    font-size: 1.4rem;
+}
+
+.tabela-movimentos td b {
+    font-size:1.4rem;
+}
+
+.tabela-movimentos td:nth-child(6) {
+    padding:0 20px;
+}
+
+.tabela-movimentos .custom-tooltip .movimentos-nao-pago:before {
+    color:#a9abb1;
+    content:"\d7";
+    font-size:3.0rem;
+}
+
+.tabela-movimentos .custom-tooltip .movimentos-nao-pago {
+    background: none;
+    cursor: default;
+}
+
+.tabela-movimentos .custom-tooltip .movimentos-pendentes {
+    background-color: #e8c55f;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    display: block;
+    height: 18px;
+    margin: 0 auto;
+    width: 18px;
+}
+
+.tabela-movimentos .custom-tooltip .movimentos-pago {
+    background:url(images/check-big.png) no-repeat center center;
+    display:block;
+    height:19px;
+    margin:0 auto;
+    width:25px;
+}
+
+.movimentos-nao-loyalty th.custom-tooltip {
+    color:#1b8539;
+    min-width:103px;
+}
+
+.movimentos-nao-loyalty td:last-child {
+    color:#d5d5d5;
+}
+
+.tabela-movimentos th.custom-tooltip span.tooltip-icon {
+    display:none;
+}
+
+.movimentos-nao-loyalty th.custom-tooltip span.tooltip-icon {
+    cursor:pointer;
+    display:inline-block;
+}
+
+.movimentos-sem-pontos thead th:last-child,
+.movimentos-sem-pontos tbody th:last-child:not(:first-child),
+.movimentos-sem-pontos tbody td:last-child:not(:first-child) {
+    display:none;
+}
+
+.tabela-movimentos .transactionsEmpty-list td,
+.tabela-movimentos .extrascts-empty-list td {
+    font-size: 1.6rem;
+}
+
+/* Extratos */
+.movimentos-extratos-extratos .block-exclamation  {
+    margin:35px 0;
+}
+
+.movimentos-extratos-extratos .block-exclamation-message {
+    color:#989a9f;
+    font-size:1.4rem;
+}
+.movimentos-extratos-extratos .block-exclamation-message:after{content: '';display: table;clear: both;}
+
+.movimentos-extratos-extratos .form-theme-default .form-input-wrapper.autocomplete-container {
+    max-width:none;
+    min-width:unset;
+    width:210px;
+}
+
+.export-extrato {
+    background-color:#fff;
+    border: 2px solid #02b245;
+    -moz-border-radius: 23px;
+    -webkit-border-radius: 23px;
+    border-radius: 23px;
+    color:#02b245;
+    cursor:pointer;
+    display:block;
+    font-size: 1.8rem;
+    font-weight:bold;
+    height: 23px;
+    line-height: 13px;
+    margin:0 auto;
+    text-align: center;
+    width: 23px;
+}
+
+.export-extrato:hover {
+    background-color: #02b245;
+    color:#fff;
+}
+
+.tooltipster-default .tooltipster-content a.export-format {
+    display:inline-block;
+    text-align:center;
+    text-decoration:none;
+    width:40px;
+}
+
+.tooltipster-default .tooltipster-content a.export-format:hover {
+    color:#02b245;
+    text-decoration:underline;
+}
+
+.movimentos-extratos-extratos .link-bill {
+    color:#495264;
+    float:right;
+}
+
+/* Segunda Via Extratos */
+.segunda-via-extratos .tooltip-error input {
+    width:80%;
+}
+
+.segunda-via-extratos .tooltip-error.form-datepicker .datepicker-icon {
+    right:20%;
+}
+
+.segunda-via-extratos .button-border {
+    float:right;
+    margin-right:20px;
+}
+
+.segunda-via-extratos .ui-autocomplete {
+    z-index:2;
+}
+
+/*
+    My Via Verde - Pontos
+*/
+.myvv-pontos section.column-body {
+    padding:40px 20px; 
+}
+.myvv-pontos h2 {
+    color:#02b245;
+    font-family:"PrometoRegular";
+    font-size:2.6rem;
+    font-weight:normal;
+}
+
+/* Movimentos */
+.myvv-pontos-tab-1 .column-body:first-child {
+    padding: 40px 20px 1px;
+}
+
+.myvv-pontos-tab-1-header {
+    display:inline-block;
+    margin-bottom:50px;
+    margin-top:20px;
+    vertical-align:middle;
+    width:33%;
+}
+
+.myvv-pontos-tab-1-header .myvv-dest-label {
+    font-size:1.8rem;
+    margin:0;
+}
+
+.myvv-pontos-tab-1-header .myvv-dest {
+    color:#02b245;
+    font-size:2.6rem;
+    font-weight:bold;
+}
+
+
+.myvv-pontos-tab-1 .red-alert {
+    font-weight:bold;
+    line-height:17px;
+    margin-bottom:40px;
+}
+
+.myvv-pontos-tab-1-header .red-alert span {
+    display:block;
+    font-size:1.2rem;
+    font-weight:normal;
+}
+
+.myvv-pontos-tab-1-header .blue-alert {
+    line-height:1.2;
+    padding:5px 0 5px 35px;
+}
+
+.myvv-pontos-tab-1-header ul {
+    margin-top:-40px;
+}
+
+.myvv-pontos-tab-1-header li {
+    margin-bottom:10px;
+}
+
+.myvv-pontos-tab-1 aside {
+    clear: both;
+    float: left;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.myvv-pontos-tab-1 p {
+    color: #989a9f;
+    font-size: 1.4rem;
+}
+
+.myvv-pontos-tab-1 .yellow-alert {
+    margin:40px 0;
+}
+
+.myvv-pontos-tab-1 .form .button + .button {
+    margin-left: 20px;
+}
+
+.myvv-movimentos-table th:first-child,
+.myvv-movimentos-table td:first-child {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+    width:40%;
+}
+
+.myvv-movimentos-table th:last-child,
+.myvv-movimentos-table td:last-child {
+    width:30px;
+}
+
+.myvv-movimentos-table thead th a {
+    padding:0;
+}
+
+.myvv-movimentos-table thead th a.order_down,
+.myvv-movimentos-table thead th a.order_up {
+    padding:0 28px 0 0;
+}
+
+.myvv-movimentos-table .row-header {
+    cursor:pointer;
+}
+
+.myvv-movimentos-table .row-body .slide {
+    display:none;
+}
+
+.myvv-movimentos-table .slide td {
+    padding:15px 25px 15px 0;
+}
+
+.myvv-movimentos-table .row-body > td {
+    padding:0;
+}
+
+.myvv-movimentos-table .row-body td tr {
+    border-bottom:1px solid #e6e6e6;
+    border-top:1px solid #e6e6e6;
+}
+
+.myvv-movimentos-table .row-body tr th {
+    padding-left:40px;
+}
+
+.myvv-movimentos-table .row-body tr th,
+.myvv-movimentos-table .row-body tr td {
+    background-color:#efefef;
+}
+
+.myvv-movimentos-table .arrow {
+    background:url(images/ddl-arrow-down.png) no-repeat center top;
+    display:none;
+    height:11px;
+    vertical-align:middle;
+    width:18px;
+}
+
+.myvv-movimentos-table .row-header .arrow {
+    display:inline-block;
+}
+
+.myvv-movimentos-table tr.row-header.active .arrow {
+    background-image:url(images/ddl-arrow-up.png);
+}
+
+.myvv-pontos-tab-1 .form-theme-default .form-select-wrapper,
+.myvv-pontos-tab-1 .form-theme-default .form-datepicker-wrapper {
+    display:inline-block;
+    margin-right:2%;
+    vertical-align:top;
+    width:30%;
+}
+
+.myvv-pontos-tab-1 .form-button {
+    display: inline-block;
+    margin: 25px 0 0;
+}
+
+.myvv-pontos-tab-1 .form-button .button .button-txt {
+    line-height:2rem;
+    padding:11px;
+}
+
+.myvv-pontos-tab-1 .form-button .button.button-border .button-txt {
+    padding:10px;
+}
+
+/* Segmentos */
+.myvv-pontos-tab-2 .interests-list ul {
+    width:      100%;
+    max-width:  900px;
+    margin:     0;
+}
+
+.myvv-pontos-tab-2 .interests-list li {
+    margin:0 2% 2% 0;
+}
+
+.myvv-pontos-tab-2 .segmentMessage {
+    background: transparent url("images/tooltip-error.png") no-repeat scroll 12px 22px;
+    float:left;
+    padding:25px 50px;
+    text-align: left;
+}
+
+.myvv-pontos-tab-2 .segmentSuccess {
+    font-size: 0;
+    color: #495264;
+    text-align: right;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    margin-top: 15px;
+    margin-right: 25px;
+}
+.myvv-pontos-tab-2 .segmentSuccess > div {
+	font-size: 1.6rem;
+    text-align: left;
+	vertical-align: middle;
+	display: inline-block;
+	margin-left: 23px;
+}
+.myvv-pontos-tab-2 .segmentSuccess:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: url(images/ativar.png) no-repeat;
+    background-size: cover;
+}
+.myvv-pontos-tab-2 .segmentSuccess:after {
+    content: '';
+    vertical-align: middle;
+    display: inline-block;
+    width: 0;
+    height: 100%;
+}
+
+.myvv-pontos-tab-2 .form-board-segments .form-board-segments-bottom {
+	text-align: right;
+    padding:0;
+}
+
+.myvv-pontos-tab-2 .form-board-segments .form-board-segments-bottom .form-button {
+	vertical-align: middle;
+	display: inline-block;
+	float: none;
+}
+
+
+/* As minhas ofertas (vouchers) */
+.myvv-pontos-tab-3 .column-body + .column-body {
+    padding:40px 0;
+}
+
+.myvv-pontos-tab-3 .column-body + .column-body h2 {
+    padding: 0 20px;
+}
+
+.myvv-pontos-tab-3 .no-offers {
+    background: rgba(0, 0, 0, 0) url("images/message-error.png") no-repeat scroll 0 0;
+    font-size:2rem;
+    margin:40px 0;
+    padding:30px 0 30px 90px;
+}
+
+.myvv-voucher {
+    font-size:0;
+    height:230px;
+    margin-top:20px;
+    position:relative;
+}
+
+.myvv-voucher-img::before {
+    background-image:url("images/voucher-curve.png");
+    background-position:right top;
+    background-repeat: no-repeat;
+    background-size:250px 230px;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width:130px;
+}
+
+.myvv-voucher-img {
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width:25%;
+}
+
+.myvv-voucher-img img {
+    background-color: #495264;
+    width: 100%;
+}
+
+.myvv-voucher-content {
+    background-color:#efefef;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    height:230px;
+    padding:15px 10px 15px 0;
+    position:relative;
+    width:55%;
+}
+
+.myvv-voucher-left {
+    float:left;
+    width:49%;
+}
+
+.myvv-voucher-right {
+    float:right;
+    width:49%;
+}
+
+.myvv-voucher-title {
+
+}
+
+.myvv-voucher-title span {
+    display:inline-block;
+    height:52px;
+    vertical-align:middle;
+}
+
+.myvv-voucher-content h1 {
+    color:#02b245;
+    display:inline-block;
+    font-family:'PrometoItalic';
+    font-size:2.2rem;
+    line-height:2.2rem;
+    margin:0;
+    vertical-align:middle;
+}
+
+.myvv-voucher-content span {
+    color:#989a9f;
+    font-size:1.4rem;
+}
+
+.myvv-voucher-content .form-datepicker-wrapper {
+    vertical-align:top;
+}
+
+.myvv-voucher-content .form-datepicker {
+    width:70%;
+}
+
+.myvv-voucher-content ul {
+    list-style:none;
+    margin-top:8px;
+}
+
+.myvv-voucher-content li {
+    font-size:1.4rem;
+}
+
+.myvv-voucher-date {
+    margin-top:20px;
+    vertical-align:top;
+}
+
+.myvv-voucher-date p {
+    color:#495264;
+    font-family:'PrometoRegular';
+    font-size:2.2rem;
+    font-weight:normal;
+    margin:0;
+}
+
+.myvv-voucher-discount {
+    border:none;
+    margin-top:20px;
+    vertical-align:top;
+}
+
+.myvv-voucher-discount p {
+    color: #989a9f;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.myvv-voucher-content .myvv-voucher-alert {
+    background: rgba(0, 0, 0, 0) url("images/tooltip-error.png") no-repeat scroll left center;
+    color:#495264;
+    display:inline-block;
+    vertical-align: middle;
+    font-size:1.4rem;
+    padding:5px 0 5px 35px;
+}
+
+.myvv-voucher-content .button {
+    margin-left:65px;
+}
+.myvv-voucher-content .button-txt {
+    padding: 15px 20px;
+}
+
+.voucher2 .form-button {
+    margin-top:15px;
+}
+
+.voucher2 .button-small {
+    margin: 0;
+}
+
+.voucher2 .button-border {
+    background-color:#fff;
+}
+
+.voucher2 .button-small:first-child {
+    margin-right: 2%;
+}
+
+body .voucher2 .button-small .button-txt {
+    padding: 10px;
+}
+
+.voucher2 .button-small.button-border .button-txt {
+    padding: 9px;
+}
+
+.voucher2 .myvv-voucher-data .form-label {
+    vertical-align: sub;
+}
+
+.voucher2 .form-datepicker input{
+    height: 40px !important;
+}
+
+.voucher2 .form-datepicker .datepicker-icon{
+    height: 40px;
+    width: 38px;
+}
+
+/* Remocao Avalon */
+.voucher2 .form-theme-default .form-select-wrapper .select2-container .select2-selection--single {
+    height: 40px !important;
+}
+
+.voucher2 .form-theme-default .form-select-wrapper .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 40px;
+    padding:0 10px;
+}
+
+.voucher2 .form-theme-default .form-select-wrapper .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 40px;
+    width: 38px;
+}
+/* Fim Remocao Avalon */
+
+.voucher2 .tooltip-error.form-datepicker input.datepicker,
+.voucher2 .tooltip-info.form-datepicker input.datepicker,
+.voucher2 .tooltip-inquiry.form-datepicker input.datepicker {
+    max-width: 75% !important;
+}
+
+.voucher2 .tooltip-error.form-datepicker .datepicker-icon,
+.voucher2 .tooltip-info.form-datepicker .datepicker-icon,
+.voucher2 .tooltip-inquiry.form-datepicker .datepicker-icon {
+    right:25%;
+}
+
+.myvv-voucher-content .myvv-voucher-dates {
+    background: rgba(0, 0, 0, 0) url("images/ic-calendar.png") no-repeat scroll left center;
+    color: #495264;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 35px;
+    padding: 5px 0 5px 35px;
+}
+
+.form-theme-default.myvv-voucher-data .form-select-wrapper {
+    min-height: 0;
+    vertical-align: top;
+}
+
+.myvv-voucher-data .form-label {
+    margin-right:10px;
+    width:60px;
+}
+
+.myvv-voucher-content .myvv-voucher-guardar,
+.myvv-voucher-content .myvv-voucher-cancel {
+    background:transparent url("images/ic-save-date.png") no-repeat scroll 0 0 / 26px 26px;
+    height:30px;
+    margin:0 0 5px 5px;
+    vertical-align:bottom;
+    width:30px;
+}
+
+.myvv-voucher-content .myvv-voucher-guardar {
+    margin-left: 70px;
+}
+
+.myvv-voucher-content .myvv-voucher-cancel {
+    background-image:url('images/desativar.png');
+}
+
+.myvv-voucher select {
+    width:150px;
+}
+
+/* Remocao Avalon */
+.myvv-voucher .form-theme-default .form-select-wrapper .select2 {
+    display:inline-block;
+    margin:0;
+}
+
+.myvv-voucher .form-theme-default .tooltip-error .select2 {
+    width: 70% !important;
+}
+
+.myvv-voucher .select2 {
+    display:inline-block;
+    margin:0;
+    width:150px !important;
+}
+
+/* Fim Remocao Avalon */
+.myvv-voucher-corner {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 0;
+    height: 30px;
+    margin: -15px 0 0;
+    position: absolute;
+    right: -15px;
+    top: 50%;
+}
+
+.myvv-voucher-corner-left:before {
+    bottom: -10px;
+}
+.myvv-voucher-corner-right:before {
+    top: -10px;
+}
+.myvv-voucher-corner-left:before,
+.myvv-voucher-corner-right:before {
+    border: 10px solid #efefef;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    content: "";
+    height: 30px;
+    position: absolute;
+    right: -25px;
+    width: 30px;
+}
+
+.myvv-voucher-corner-left,
+.myvv-voucher-corner-right {
+    clear: both;
+    display: block;
+    height: 15px;
+    overflow: hidden;
+    position: relative;
+    width: 15px;
+}
+
+.myvv-voucher-reserve {
+    background-color: #02b245;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #0f5222;
+    display: inline-block;
+    font-size: 1.4rem;
+    height: 100%;
+    padding-top:30px;
+    text-align: center;
+    vertical-align: top;
+    width: 20%;
+}
+
+.myvv-voucher-code {
+    color:#fff;
+    font-family:'PrometoRegular';
+    font-size:1.7rem;
+    margin:0 0 20px;
+}
+
+.myvv-voucher-reserve .button {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+.myvv-voucher-reserve .button-txt{color: #02b245;padding:15px 10px;background: #fff;background: -moz-linear-gradient(top, #fff 0%,#fff 50%,#e6e6e6 50%, #e6e6e6 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(50%,#fff), color-stop(50%,#e6e6e6), color-stop(100%,#e6e6e6));background: -webkit-linear-gradient(top, #fff 0%,#fff 50%,#e6e6e6 50%, #e6e6e6 100%);background: -o-linear-gradient(top, #fff 0%,#fff 50%,#e6e6e6 50%, #e6e6e6 100%);background: -ms-linear-gradient(top, #fff 0%,#fff 50%,#e6e6e6 50%, #e6e6e6 100%);background: linear-gradient(to bottom, #fff 0%,#fff 50%,#e6e6e6 50%, #e6e6e6 100%);}
+.ie9 .myvv-voucher-reserve .button-txt{filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);}
+.touch .myvv-voucher-reserve .button:hover .button-txt{background: #e6e6e6;filter: none;}
+
+.myvv-voucher-reserve .button-icon {
+    background: rgba(0, 0, 0, 0) url("images/ic-print.png") no-repeat scroll right center;
+    padding: 0 25px 0 0;
+}
+
+
+/*
+    DASHBOARD
+*/
+.myvv-dashboard .column-body:after{content: '';display: table;clear: both;}
+
+.myvv-dashboard h2 {
+    clear:both;
+    color:#02b245;
+    font-family:"PrometoRegular";
+    font-size:2.6rem;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.myvv-dashboard .see-more {
+    float:right;
+    margin:20px 0 20px 40px;
+    text-decoration:underline;
+}
+
+.myvv-dashboard .dashboard-transactions-links {
+    clear: both;
+    float: right;
+}
+
+.myvv-dashboard .see-more:hover {
+    text-decoration:none;
+}
+
+/* Banners */
+.my-viaverde .myvv-dashboard .small-banner{
+    margin:20px 0;
+}
+
+.myvv-dashboard .gm-banner.small-banner .gm-banner-img::before {
+    background-size: auto 230px;
+    max-height: 230px;
+    width: 145px;
+}
+
+/* Notificações */
+.myvv-dashboard-notifications .tooltip-close {
+    display:none;
+}
+
+.myvv-dashboard-notifications .tooltip-close .tooltip-icon {
+    cursor:pointer;
+}
+
+.myvv-dashboard-notifications th.alignLeft,
+.myvv-dashboard-notifications td:last-child {
+    width:35px;
+}
+
+/* Balanço */
+.myvv-dashboard-balance {
+    background-color: #f8f8f8;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #495264;
+    font-family: "PrometoRegular";
+    font-size: 2.4rem;
+    width: 100%;
+    position: relative;
+}
+.myvv-dashboard-balance:after{content: '';display: table;clear: both;}
+
+.myvv-dashboard-balance .balance-row {
+    display:    block;
+    clear:      both;
+}
+
+.myvv-dashboard-balance .balance-left,
+.myvv-dashboard-balance .balance-right {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float:left;
+    padding:35px 0 15px 35px;
+    width:40%;
+}
+
+.myvv-dashboard-balance .balance-right {
+    padding:35px 35px 15px 35px;
+    width:60%;
+}
+
+.myvv-dashboard-balance .balance-left div,
+.myvv-dashboard-balance .balance-right div {
+    display:inline-block;
+    margin:0 0 20px;
+    vertical-align:top;
+    width:48%;
+}
+
+.myvv-dashboard-balance .balance-right div {
+    width:43%;
+}
+
+.myvv-dashboard-balance span {
+    display:    inline-block;
+    clear:      both;
+    color:#a9abb1;
+    font-size:1.4rem;
+    line-height: 1.4rem;
+}
+
+.myvv-dashboard-balance .balance-green {
+    color:#02b245;
+}
+
+.myvv-dashboard-balance.balance-disabled .balance-right div,
+.myvv-dashboard-balance.balance-disabled .balance-right span {
+    color:#ddd;
+}
+
+.myvv-dashboard-balance.balance-disabled .balance-inactive {
+    display:block;
+}
+
+.myvv-dashboard-balance .balance-inactive {
+    background-color:rgba(0, 0, 0, 0.1);
+    display:none;
+    height:100%;
+    right:0;
+    position:absolute;
+    text-align:center;
+    top:0;
+    width:60%;
+}
+
+.myvv-dashboard-balance .balance-inactive .form-button {
+    margin: 15% 0 0 0;
+}
+
+.myvv-dashboard-balance.balance-disabled .balance-inactive p {
+    color:#495264;
+    margin:40px 0 0;
+    padding:0;
+}
+
+.myvv-dashboard-balance .balance-inactive .form-button .button {
+    float:none;
+}
+
+.myvv-dashboard-balance .balance-inactive .form-button .button .button-txt {
+    color:#fff;
+}
+
+.myvv-dashboard-balance.balance-hide .balance-left {
+    width:100%;
+}
+
+.myvv-dashboard-balance.balance-hide .balance-left div {
+    width:22%;
+}
+
+.myvv-dashboard-balance.balance-hide .balance-right {
+    display:none;
+}
+
+.myvv-dashboard-balance .see-more {
+
+}
+
+/* Actividade recente */
+.recent-activity-chart .piechart {
+    float:left;
+    padding:30px;
+    position:relative;
+    width:300px;
+}
+
+.recent-activity-chart .piechart.disabled > div {
+    height: 30px!important;
+}
+
+.piechart-legend span {
+    color:#a9abb1;
+    font-size:1.2rem;
+}
+
+.piechart-legend p {
+    color:#02b245;
+    display:inline-block;
+    font-size:2.6rem;
+    margin:0;
+    width:32%;
+}
+
+.piechart-unavailable {
+    background-color: #f8f8f8;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display:none;
+    font-size:1.8rem;
+    height:100%;
+    left:0;
+    padding:50px 20px;
+    position: absolute;
+    text-align:center;
+    top:0;
+    width:100%;
+}
+
+.piechart.disabled .piechart-unavailable {
+    display:block;
+}
+
+.myvv-dashboard .tabela-movimentos {
+    float:right;
+    table-layout:fixed;
+    width:58%;
+}
+
+.recent-activity-chart .tabela-movimentos td {
+    white-space: inherit;
+}
+
+.recent-activity-disabled th.custom-tooltip {
+    color:#1b8539;
+    min-width:103px;
+}
+
+.recent-activity-disabled td:last-child {
+    color:#d5d5d5;
+}
+
+.recent-activity-disabled th.custom-tooltip span.tooltip-icon {
+    cursor:pointer;
+    display:inline-block;
+}
+
+.recent-activity-hide thead th:last-child,
+.recent-activity-hide tbody th:last-child:not(:first-child),
+.recent-activity-hide tbody td:last-child:not(:first-child) {
+    display:none;
+}
+
+/*
+    FORMULÁRIOS
+*/
+.ccForms-container {
+    font-size:1.4rem;
+    position:relative;
+}
+
+.ccForms-container legend {
+    margin-bottom: 20px;
+}
+
+#ccFormsForm > fieldset {
+    position: relative;
+}
+
+.ccForms-container .back-button .link {
+    margin-bottom: 0;
+}
+
+.ccForms-container .column-section .column-header {
+    padding-top:20px;
+}
+
+.ccForms-container textarea {
+    border:0;
+    resize:none;
+    width:100%;
+}
+
+.ccForms-container .form-input,
+.ccForms-container .form-datepicker {
+    display:inline-block;
+}
+
+/* Remocao Avalon */
+.ccForms-container .form-theme-default .form-select-wrapper .select2-container,
+.ccForms-container .select2 {
+    display:inline-block;
+}
+
+.ccForms-container.form-theme-default .form-select-wrapper .select2 {
+    display:inline-block;
+    width:40% !important;
+}
+
+/* Fim Remocao Avalon */
+
+.ccForms-container .form-datepicker-wrapper {
+    margin-top: 35px;
+}
+
+.ccForms-container .tooltip-error.form-datepicker .tooltip-icon {
+    position:absolute;
+    right:-4px;
+    top:7px;
+}
+
+.ccForms-container .form-label,
+.ccForms-container .fileUpload .fileUpload-header {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    padding-right: 15px;
+    width: 30%;
+}
+
+.ccForms-container .form-textarea-wrapper .form-label,
+.ccForms-container .fileUpload .fileUpload-header {
+    padding-top:20px;
+    vertical-align:top;
+}
+
+.ccForms-container .tooltip-error textarea + .tooltip-icon {
+    background-position:center 10px;
+    height:48px;
+}
+
+.ccForms-container .block-info {
+    background-position:12px center;
+}
+
+.ccForms-container .block-info-message {
+    padding:0;
+}
+
+.ccForms-container .block-info-message p {
+    margin:0;
+}
+
+.ccForms-container.form-theme-default .form-select-wrapper {
+    margin-top:35px;
+}
+
+.ccForms-container.form-theme-default .form-input-wrapper {
+    margin-top:20px;
+}
+
+.ccForms-container .form-input.field-small,
+.ccForms-container .form-datepicker.field-small {
+    width:25%;
+}
+
+.ccForms-container .form-input.field-medium {
+    width:40%;
+}
+
+.ccForms-container .form-input {
+    width:69%;
+}
+
+.ccForms-container .form-datepicker.tooltip-error input {
+    width:80%;
+}
+
+.ccForms-container .form-datepicker.tooltip-error .datepicker-icon {
+    right:20%;
+}
+
+.ccForms-container.form-theme-default .tooltip-error {
+    padding-right: 45px;
+}
+
+.ccForms-container .form-select-wrapper.tooltip-error {
+    padding-right:0;
+}
+
+.ccForms-container .form-checkbox-wrapper .form-label {
+    width:auto;
+}
+
+
+.ccForms-container.form-theme-default .form-checkbox-wrapper {
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+    width: auto;
+}
+
+.ccForms-container .license-input {
+    display:inline-block;
+    width:50%;
+}
+
+.ccForms-container .license-input .form-label {
+    width:60%;
+}
+
+.ccForms-container .license-input .form-input {
+    width:35%;
+}
+
+.ccForms-container .license-input + .form-checkbox-wrapper {
+    position:relative;
+    top:-4px;
+    width:40%;
+}
+
+.ccForms-container .two-datepickers .two-datepickers-label {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    padding-right: 15px;
+    width: 26.4%;
+}
+
+.ccForms-container .two-datepickers .form-datepicker-wrapper {
+    display:inline-block;
+    width:35%;
+}
+
+.ccForms-container .two-datepickers .form-label {
+    width:9%;
+}
+
+.ccForms-container .two-datepickers .form-datepicker {
+    width:70%;
+}
+
+.ccForms-container .fileUpload .fileUpload-body {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display:inline-block;
+    width:69%;
+}
+
+.ccForms-container .fileUpload {
+    margin-top:35px;
+    position:relative;
+}
+
+.ccForms-container .fileUpload-button {
+    margin:10px 0 0;
+    padding-left:31%;
+}
+
+.ccForms-container .fileUpload .fileUpload-button a {
+    font-size:1.4rem;
+}
+
+.ccForms-container .fileUpload .fileUpload-header .fileUpload-header-title {
+    color:inherit;
+    font-size:1.4rem;
+    font-weight:normal;
+}
+
+.ccForms-container .fileUpload.tooltip-error {
+    padding-right:0;
+}
+
+.ccForms-container .fileUpload .fileUpload-body .fileUpload-control {
+    padding:10px 0 0;
+}
+
+.ccForms-container .fileUpload .fileUpload-body .fileUpload-control .max-size {
+    font-size:1.4rem;
+}
+
+.ccForms-container .fileUpload .fileUpload-body .link-remove {
+    font-size:1.4rem;
+    margin:10px 0 0 10px;
+}
+
+.ccForms-container .fileUpload .tooltip-icon.tooltipstered {
+    left:490px;
+    position:absolute;
+    top:22px;
+}
+
+.ccForms-container .fileUpload .uploaded {
+    margin-left:30%;
+}
+
+.ccForms-container .uploaded .document-loading {
+    background: rgba(0, 0, 0, 0) url("images/control-loading.gif") no-repeat scroll left center;
+    color: #989a9f;
+    display: inline-block;
+    line-height: 26px;
+    margin: 0 0 0 10px;
+    min-height:16px;
+    min-width:16px;
+    padding: 0 0 0 25px;
+}
+
+/*
+    REGISTO DE UTILIZADOR
+*/
+/* Ecrã de registo sem contactos (e-mail e telefone) - Cândida 2/9 */
+
+.no-contact {
+    margin: 0 auto 20px;
+    text-align:center;
+}
+        
+.no-contact .channel-column {
+    clear:both;
+    float:none;
+    margin: 0 auto 20px;
+}
+        
+.no-contact .channel-column .label {
+    color: #495264;
+    clear: both;
+    font-family: 'PrometoRegular';
+    font-size: 1.6rem;
+}
+        
+.no-contact .control {
+    display:inline-block;
+}
+        
+.no-contact .control .call-center-number {
+    color: #02b245;
+    font-family: 'PrometoMedium';
+    font-size: 3.0rem;
+    line-height: 1;
+}
+        
+.no-contact .link-location {
+    color: #495264;
+    margin-left: 10px;
+}
+
+/*
+    ASIDE FAQS
+*/
+.aside-faqs .see-more {
+    color:#fff;
+    line-height: 26px;
+    margin-top: 8px;
+    padding: 0 0 0 35px;
+    display: inline-block;
+    background: url(images/addButton2.png) no-repeat left center;
+}
+
+/*
+    ADESAO
+*/
+.accession-panel .accession-main .page-title {
+    font-size: 3.2rem;
+}
+
+
+/*
+    Form Register
+*/
+.form-register-confirmation .form-button {
+    margin:15px 0;
+    text-align:center;
+}
+
+.form-register-confirmation .form-button button {
+    float:none;
+}
+
+.form-register-confirmation .form-input-wrapper {
+    margin-top:15px;
+}
+
+.form-register-confirmation .link-location {
+    color:#495264;
+    margin-left:10px;
+}
+
+/* Form Register Error */
+.form-register-vv .status-message.error .form-flash {
+    margin-top:0;
+}
+
+
+/*
+    FERRAMENTAS (Google Maps)
+*/
+.marker-content p {
+    margin:0 0 5px;
+}
+
+.marker-content-title {
+    color:#00B44C;
+    font-size:1.6rem;
+    font-weight:bold;
+}
+
+.form-theme-default .InfoContractIdentifier .form-select,
+.form-theme-default .identifier-data-config .form-select {
+    height: auto;
+}
+
+/*
+    ACCESSION (Google Maps)
+*/
+.chronopost-content-wrapper {
+	font-size: 0;
+	margin-bottom: 10px;
+	max-width: 260px;
+}
+.chronopost-content-wrapper .form-button {
+	text-align: center;
+	margin-top: 0;
+}
+.chronopost-content-wrapper .form-button .button {
+	float: none;
+}
+.chronopost-content {
+	font-size: 1.4rem;
+	vertical-align: top;
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.chronopost-content:after{content: '';display: table;clear: both;}
+.chronopost-content ~ .chronopost-content {
+	float: right;
+	padding-left: 20px;
+	width: 50%;
+}
+.chronopost-content p {
+    margin:0 0 20px;
+}
+.chronopost-content-title {
+    color:#00B44C;
+    font-size:1.8rem;
+    font-family: 'PrometoMedium';
+}
+.chronopost-content-address {
+	font-weight: 700;
+}
+.chronopost-content table {
+	border-collapse: collapse;
+	width: 99%;
+	background-color: #ffffff;
+}
+.chronopost-content table th,
+.chronopost-content table td {
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.chronopost-content table thead th[colspan="3"] {
+	color: #ffffff;
+	background-color: #23bb46;
+}
+.chronopost-content table thead th,
+.chronopost-content table thead td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.chronopost-content table thead tr:last-child td:first-child {
+	border-left: 1px solid #ebebeb;
+}
+.chronopost-content table thead tr:last-child th {
+	border-left: 1px solid #ebebeb;
+	border-right: 1px solid #ebebeb;
+}
+.chronopost-content table thead tr:last-child th:last-child {
+	border-left: none;
+	border-right: 1px solid #ebebeb;
+}
+.chronopost-content table tbody tr:first-child th {
+	padding-top: 5px;
+}
+.chronopost-content table tbody tr:first-child td {
+	border-top: 1px solid #ebebeb;
+	padding-top: 5px;
+}
+.chronopost-content table tbody tr:last-child th,
+.chronopost-content table tbody tr:last-child td {
+	border-bottom: 1px solid #ebebeb;
+	padding-bottom: 5px;
+}
+.chronopost-content table tbody th:first-child {
+	border-left: 1px solid #ebebeb;
+}
+.chronopost-content table tbody td {
+	border-left: 1px solid #ebebeb;
+	border-right: 1px solid #ebebeb;
+}
+.chronopost-content table tbody td:last-child {
+	border-left: none;
+	border-right: 1px solid #ebebeb;
+}
+
+/* ACTIVATE IDENTIFIER & START TRACK TRACE */
+.ModActivateIdentifierC header,
+.ModStartTrackTraceC header {
+    padding: 0;
+}
+
+.ModActivateIdentifierC .form-label,
+.ModStartTrackTraceC .form-label {
+    display: block;
+    margin: 20px 0 5px;
+}
+
+.ModActivateIdentifierC .form-input,
+.ModStartTrackTraceC .form-input {
+    width: 250px;
+}
+
+/* VIATURAS E IDENTIFICADORES */
+.vehicles-table tfoot {
+    background-color: #fff;
+}
+
+/* PEDIDO DE DESCONTO DE MERCADORIAS (hdm) */
+.ModVehicleDiscountC .cleanStyle ol li {
+    list-style-type: inherit;
+}
+
+/* RECUPERAR PASSWORD */
+.dnnPasswordReset {
+    margin: 30px 0 20px;
+}
+
+.dnnPasswordResetContent input[type="text"] {
+    width: 45%;
+}
+
+/* CONTROLAUTO */
+.controlauto .back-button .link {
+    margin-left: 20px;
+}
+
+.controlauto .gm-banner {
+    margin-bottom: 25px;
+}
+
+.controlauto-title {
+    background: rgba(0, 0, 0, 0) url("images/btnInspection.png") no-repeat scroll 0 0;
+    line-height: 26px;
+    padding-left: 35px;
+}
+
+.controlauto .message-success {
+    line-height: 77px;
+}
+
+.controlauto .schedule-inspection {
+    background-color: #f5f5f5;
+    margin-top: 30px;
+    padding: 20px 30px 30px;
+}
+
+.controlauto .schedule-inspection p {
+    margin: 18px 0 0;
+}
+
+.controlauto .form-loader {
+    float: left;
+}
+
+/* Schedule Inspection form */
+.form-schedule-inspection {
+    position: relative;
+    width: 100%;
+}
+
+.form-schedule-inspection-inner {
+    max-width: 640px;
+    width: 100%;
+}
+
+.form-schedule-inspection .form-select-wrapper,
+.form-schedule-inspection .form-datepicker-wrapper {
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-right: 2%;
+    vertical-align: top;
+    width: 47%;
+}
+
+.form-schedule-inspection .form-select-wrapper:first-child {
+    width: 97%;
+}
+
+.form-schedule-inspection fieldset {
+    margin-bottom: 35px;
+}
+
+.form-schedule-inspection .form-label {
+    display: block;
+}
+
+.form-schedule-inspection .button {
+    margin-right: 20px;
+}
+
+.form-schedule-inspection .form-radiobox-wrapper {
+    margin-top: 0;
+    min-width: 138px;
+    width: 30%;
+}
+
+.form-theme-default .form-radiobox-wrapper .form-label {
+    display: inline-block;
+}
+
+.form-schedule-inspection legend {
+    float: left;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.form-schedule-inspection .form-datepicker-wrapper.tooltip-error {
+    display: inline-block;
+    width: 83% !important;
+}
+
+/* Remocao Avalon */
+.form-schedule-inspection .form-select-wrapper.tooltip-error:first-child .select2 {
+    width: 90% !important;
+}
+
+.form-schedule-inspection .form-select-wrapper.tooltip-error .select2 {
+    display: inline-block;
+    width: 83% !important;
+}
+
+/* Fim Remocao Avalon */
+
+/* HOMEPAGE */
+.gm-banner-lead {
+    margin-top: 30px;
+}
+
+.gm-banner-lead p {
+    color: #fff;
+    font-weight: bold;
+}
+
+.gm-banner-lead .button .button-txt {
+    padding: 15px 30px;
+}
+
+.homepage .DnnModule-Headline .gm-banner {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 60px auto 0;
+    max-width: 1280px;
+    width: 100%;
+}
+
+/* USER DEBT */
+.alert-title:before {
+    background: url(images/red_alert_icon.png);
+    content: "";
+    height: 27px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 27px;
+}
+
+.alert-title,
+.accession-main .column-article .alert-title {
+    height: 2.6rem;
+    padding-left: 37px;
+    position: relative;
+}
+
+/* LOGIN MODAL */
+.login-modal {
+    overflow: auto;
+}
+
+/* Vantagens Auto */
+.benefit-button {
+    text-align: right;
+}
+
+/*.no-aside-article*/
+.no-aside-article .detail-itinerary-content .gm-box-img {
+	width: 25%;
+}
+
+.no-aside-article .detail-itinerary-content .gm-box-content {
+	width: 75%;
+}
+
+/*Fim .no-aside-article*/
+
+.form-theme-default .legalBlockWrapper{
+    display: block;
+    clear: both;
+    /*text-align: right;*/
+}
+
+.legalBlockWrapper .legalBlock {
+    display: inline-block;
+    clear: both;
+    /*width: 70%;*/
+}
+
+.legalBlockWrapper .legalBlock label {
+    /*float: right;
+    text-align: left;*/
+}
+
+.legalBlockWrapper .legalBlock .legalBlockText {
+    font-size: 1.4rem;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1.8rem;
+}
+
+.legalBlockWrapper.left .legalBlock{
+    text-align: left;
+}
+
+.legalBlockWrapper.left .legalBlock label {
+    /*float: left;*/
+}
+
+
+@media screen and (max-width: 1279px) {
+    .theme-default-table .column1279 {display: none;}
+    
+    .vehicle-detail .vehicles-info {display: block;clear: both;width: 100%;}
+    .vehicle-detail .vehicles-info .type{height: 90px;vertical-align: middle;}
+    .vehicle-detail .vehicles-info .type-info {width: auto;margin: 0 0 0 10px;vertical-align: middle;}
+    .vehicle-detail .vehicles-vv-info-wrapper {display: block;clear: both;width: 100%;}
+
+    /* vehicles-info-corner */
+    .vehicles-info-corner {top: auto;right: 0;bottom: -15px;margin: 0 auto;width: 100%;height: auto;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+    .vehicles-info-corner-left,
+    .vehicles-info-corner-right {display: inline-block;overflow: hidden;position: relative;width: 15px;height: 15px;}
+    .vehicles-info-corner-left {right: 0;}
+    .vehicles-info-corner-right {left: 0;}
+    .vehicles-info-corner-left:before,
+    .vehicles-info-corner-right:before {content: '';position: absolute;top: -10px;right: 0;width: 30px;height: 30px;border: 10px solid #02b245;-webkit-border-radius: 100%;-moz-border-radius: 100%;border-radius: 100%;}
+    .vehicles-info-corner-left:before {left: -25px;bottom: auto;}
+    .vehicles-info-corner-right:before {top: -10px;right: -25px;}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    /* Services Network Node */
+    .services_network_node.controlauto_network_location img {max-width: 25%;}
+    .services_network_node .node_info{width: 100%;}
+    .services_network_node.controlauto_network_location .node_info {width: 40%;}
+    
+    .galp_network_location .node_info {padding-top: 90px;}
+    .mcdrive_network_location {left: 60%;}
+    .ferries_network_location {left: 8.7%;}
+
+    /* Benefit Detail LOGO */
+    .benefit-ball-txt{font-size: 1.6rem;width: 111px;height: 111px;}
+
+    /* End Benefit Detail LOGO */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+	.support-main-top .yellow-light{
+		width: 100%;
+		float: none;
+	}
+	.support-main-top .support-aside-track-trace {
+		width: auto;
+		float: none;
+		margin-bottom: 20px;
+		padding-bottom: 29px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+    .accession-panel .accession-main {width: 100%;}
+    .accession-panel .accession-aside {display: none;}
+    .accession-panel .accession-main .wizardStep .data-send .data-send-body {width: 100%;}
+    
+    body .accession .main {margin: 0;}
+    
+    .wizardStep .article-block-table {display: table;margin: 35px 0 0 0;}
+    
+    .mobile-version .vehicles-table tbody tr td .arrow {background: url(images/ddl-arrow-down.png) no-repeat center;}
+    .mobile-version .vehicles-table tbody tr.row-header td .arrow{visibility: visible;}
+    
+    body .column-section .column-body .exposition-forms-body,
+    body .column-section .column-body .exposition-forms-aside {width: 100%;clear: both;}
+    body .column-section .column-body .exposition-forms-aside {margin-top: 25px;}
+    
+    .services_network {font-size: 0;text-align: center;}
+    .services_network_bgd {display: none;}
+    .services_network_node {position: static;display: inline-block;padding: 50px 5% 0 5%;width: 40%;margin: 0;vertical-align: top;}
+    .services_network_node.controlauto_network_location img {float: none;clear: both;max-width: 100%;}
+    body .services_network_node .node_info {width: auto;text-align: left;padding-top: 40px;}
+    .services_network_node.controlauto_network_location .node_info {float: none;clear: both;width: auto;}
+    .services_network_header {margin: 0 5%;}
+
+    /* Benefit Detail LOGO */
+    .benefit-element{float: none;width: 100%;height: auto;}
+
+    /* End Benefit Detail LOGO */
+
+    /**
+    * Service Plan
+    */
+    .service-plan .service-plan-item .card-wrapper .plan-name {font-size: 2.4rem;}
+	.service-plan .service-plan-item .card-wrapper .plan-cost {font-size: 5.0rem;}
+    .service-plan .service-plan-item .card-wrapper .plan-cost.old {font-size: 3.6rem;}
+    .service-plan .service-plan-item .card-wrapper .plan-cost .feed {font-size: 1.6rem;line-height: 1.6;margin-left: -1.0rem;}
+    .service-plan .service-plan-item .card-wrapper .plan-feed {font-size: 1.4rem;}
+    .service-plan .service-plan-item .collaps-content ul li{font-size: 1.4rem;}
+    .service-plan .service-plan-info .plan-type {font-size: 1.4rem;}
+    .service-plan .service-plan-item .collaps-content .button-wrapper .button .button-txt{font-size: 1.4rem;padding: 15px;min-width: 100px;}
+    .service-plan .service-plan-item ~ .service-plan-info {display: none;}
+	.service-plan .service-plan-item-wrapper.highlighted .card-indication ~ .card-wrapper {margin-top: -34px;}
+
+    /**
+    * Service Plan
+    * Horizontal
+    */
+    .service-plan.horizontal .service-plan-item .card-wrapper {padding: 0;}
+    .service-plan.horizontal .service-plan-item .card-cell {display: block;clear: both;width: 100%;height: auto;padding: 30px 0;}
+    .service-plan.horizontal .service-plan-item .card-cell + .card-cell {/*padding: 30px 0 60px 0;*/border: 0;border-top: 1px solid #d8d8da;}
+    .service-plan.horizontal .service-plan-item.active .card-cell + .card-cell {border: 0;border-top: 1px solid #009b3a;}
+    .service-plan.horizontal.paper .paperIconMessage {margin: 30px 0 0 0;}
+
+	/**
+	* .no-aside-article
+	*/
+	.no-aside-article .detail-itinerary-content .gm-box-img {
+		width: 33.5%;
+	}
+
+	.no-aside-article .detail-itinerary-content .gm-box-content {
+		width: 66.5%;
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+	/**
+	* Service Plan
+	*/
+	.service-plan .service-plan-item .collaps-content {display: block;}
+	.service-plan .service-plan-item .collaps-arrow,
+	.service-plan .service-plan-item .button-wrapper.mobile {display: none;}
+}
+
+@media screen and (max-width: 767px) {
+    body .service-plan {margin: 40px 0 0 0;}
+
+    /* accession-main */
+    .wizardSteps li {display: none;}
+    .wizardSteps li.current {display: block;width: 100%;}
+    .wizardSteps li.current a:before,
+    .wizardSteps li.current a:after {display: none;}
+
+    /**
+    * Service Plan
+    */
+    .service-plan .service-plan-item {min-height: 0;}
+    .service-plan .service-plan-item .card-cell {padding-bottom: 15px;}
+    .service-plan .service-plan-item .card-wrapper:first-child .card-cell {padding-top: 30px;}
+    .service-plan .service-plan-item .card-wrapper .plan-feed {min-height: 0;}
+    .service-plan .service-plan-item-wrapper {width: 90%;clear: both;margin: 0 0 35px 0;}
+    .service-plan .service-plan-item-wrapper.highlighted {-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;}
+	.service-plan .service-plan-item .collaps-content .button-wrapper {display: none;}
+	.service-plan .service-plan-item .collaps-content ul {min-height: 170px;}
+
+    /**
+    * Service Plan
+    * Horizontal
+    */
+    .service-plan.horizontal .service-plan-item .card-wrapper .plan-cost.crossed {font-size: 3rem;}
+
+    .accession-panel .accession-main .wizardStep .data-send .data-send-destination .form-group-wrapper .form-input-wrapper {width: 100%;}
+	.accession-panel .accession-main .wizardStep .data-send .data-send-destination .form-group-wrapper .form-button {margin-left: 0!important;margin-top: 10px;width: 100%;}
+	.accession-panel .accession-main .wizardStep .data-send .data-send-destination .form-group-wrapper .form-button .button {float: none;width: 100%;}
+
+    body .form-theme-default .form-group.form-group-3 .form-group-wrapper > div {width: 100%;clear: both;margin: 25px 0 0 0;}
+    body .form-theme-default .form-group.form-group-4 .form-group-wrapper > div {width: 100%;clear: both;margin: 25px 0 0 0;}
+    body .form-theme-default .form-group.form-group-2x1 .form-group-wrapper > div,
+    body .form-theme-default .form-group.form-group-2x1 .form-group-wrapper > div:first-child {width: 100%;clear: both;margin: 25px 0 0 0;}
+    /*.form-theme-default .form-group .form-group-wrapper .form-checkbox-wrapper {margin-top: 35px;}*/
+    
+    /*body .accession-panel .accession-main .wizardStep .data-send .data-send-body .form-select-wrapper,*/
+    body .form-theme-default .form-vehicle-wrapper .vehicle-type {margin: 0;}
+
+    body .block-exclamation {margin: 20px 0 0 0;}
+    body .block-exclamation .block-exclamation-upload .file-upload-controls .form-radiobox-wrapper {display: block;clear: both;margin: 0 0 10px 0!important;}
+    
+    body .form-theme-default .payment-references .left {width: 100%;clear: both;}
+    body .form-theme-default .payment-references .right {width: 100%;clear: both;padding: 20px 0 0 0;}
+    
+    body .additional-car .identifier-controls {display: block;clear: both;}
+    
+    .form-theme-default .form-group-resume ~ .form-group.form-group-resume .form-input-wrapper {margin-top: 30px;}
+
+    body .form-theme-default .additional-car .identifier-controls .form-radiobox-wrapper {margin-top: 20px;margin-left: 0;margin-right: 20px;}
+    
+    body .InfoContractIdentifier .visualization-mode .form-group .form-group-wrapper {margin-top: 25px;}
+    body .InfoContractIdentifier .visualization-mode .form-group .form-group-wrapper > div {display: block;clear: both;width: 100%;margin: 0;}
+    
+    body .road-map .road-map-iframe{display: none;}
+    body .road-map .road-map-iframe-mobile{display: block;}
+    
+    .aside_faq {padding: 5%;}
+    
+    .info_steps,
+    .reading_steps {width: 100%;padding: 0 2% 3% 2%;}
+    
+    .services_network_node {width: auto;}
+    .services_network_node .node_info {padding-right: 35px;}
+    
+    .landing-services-table,
+    .landing-services-row,
+    .landing-services-cell {display: block;}
+    .landing-services-cell {width: 100%;clear: both;}
+    
+    .info_steps .info_steps_in_out .step_in,
+    .info_steps .info_steps_in_out .step_out {display: block;clear: both;width: 80%;}
+    .tools_box .info_box {min-height: 190px;}
+
+    /* Benefit Detail LOGO */
+    .benefit-element,
+    .benefit-ball{display: block;}
+    .benefit-ball-txt{display: inline-block;padding: 45px 10px;}
+    .benefit-txt{display: block;padding-left: 0;}
+
+    /* End Benefit Detail LOGO */
+	
+
+	/*
+    	My Via Verde - Pontos
+	*/
+	/* Movimentos */
+    .myvv-pontos-tab-2 .form-board-segments .form-board-segments-bottom {
+	    text-align: left;
+	}
+
+	/* End */
+
+
+	/**
+	* .no-aside-article
+	*/
+	.no-aside-article .detail-itinerary-content .gm-box-img {
+		width: 100%;
+	}
+
+	.no-aside-article .detail-itinerary-content .gm-box-content {
+		width: 100%;
+	}
+
+    .form-theme-default .additional-car .identifier-controls {
+        margin: 1% 0 0 0;
+    }
+
+    .form-theme-default .additional-car .identifier-controls li{
+        display: block;
+        clear: both;
+        width: 100%;
+        margin: 0 0 1% 0;
+    }
+
+	/*
+	    ACCESSION (Google Maps)
+	*/
+	.chronopost-content-wrapper .form-button .button {
+		float: none;
+	}
+    .chronopost-content ~ .chronopost-content {
+		float: none;
+		padding-left: 0;
+		padding-top: 10px;
+		width: 100%;
+	}
+	.chronopost-content table tbody td {
+		font-size: 1.3rem;
+	}
+
+	/*===== SUPPORT =======*/
+	.support-main-top .yellow-light{
+		width: 100%;
+		float: none;
+	}
+	.support-main-top .support-aside-track-trace {
+		width: auto;
+		float: none;
+		margin-bottom: 20px;
+		padding-bottom: 29px;
+	}
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 767px) {
+    /* theme-default-table */
+    .theme-default-table .column767 {display: none;}
+}
+
+@media screen and (max-width: 640px) {
+    .form-theme-default .form-group .form-group-wrapper .column68,
+    .form-theme-default .form-group .form-group-wrapper .column30 {display: block;clear: both;width: 100%;margin: 10px 0 0 0;}
+    
+    body .accession .form-theme-default .mandatory-fields {float: left;clear: both;width: 100%;padding: 15px 0 0 0;}
+    .accession .form-theme-default .form-group-nif-country .form-group-wrapper > div {display: block;clear: both;width: 100%;margin: 35px 0 0 0;}
+    .accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-controls .form-radiobox-wrapper {display: block;clear: both;margin: 20px 0 0 0;}
+    .accession-panel .accession-main .wizardStep .data-send .data-send-body .data-send-panel .data-send-header .form-checkbox-wrapper {display: block;clear: both;float: left;margin: 15px 0 0 0;}
+    
+    body .block-exclamation {padding: 60px 15px 25px 15px;}
+    
+    body .form .button .button-txt,
+    body .theme-default-table .button .button-txt,
+    body .form-button .button.btPrev .button-txt {font-size: 1.2rem;padding: 14px 10px;}
+    body .form .button-border .button-txt,
+    body .theme-default-table .button-border .button-txt,
+    body .form-button .button.btPrev .button-txt{padding: 13px 10px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+    
+    body .form-theme-default .additional-cars .additional-car .identifier-controls {display: block;clear: both;margin: 10px 0 0 0;}
+    .form-theme-default .additional-cars .additional-car .identifier-controls .form-radiobox-wrapper {display: block;clear: both;margin: 0 0 10px 0;}
+    .form-theme-default .additional-cars .additional-car legend .link-remove {width: 0;height: 26px;overflow: hidden;}
+    body .form-theme-default .form-group.form-group-resume .form-group-wrapper > div {display: block;clear: both;width: 100%;margin-left: 0;}
+    
+    body .block-payment .block-payment-controls .form-radiobox-wrapper {display: block;clear: both;margin: 0 0 20px 0!important;}
+    body .block-payment .mastercard,
+    body .block-payment .visacard,
+    body .block-payment .multibanco {display: none;}
+    
+    /*.form-theme-default .form-checkbox-wrapper .form-label {max-width: 85%;}*/
+    /*.form-theme-default .form-input {padding: 2px 6px;}*/
+    .form-theme-default .form-group .form-filter-group-wrapper > div {display: block;clear: both;margin: 35px 0 0 0;}
+
+    /* theme-default-table */
+    .theme-default-table .column767,
+    .theme-default-table .column640 {display: none;}
+    .contract-detail .header-contract-detail .link-edit {clear: both;margin: 20px 0 0 0;}
+    
+    body .vehicle-detail-split-billing .vehicles-detail-tools-body,
+    body .vehicle-detail-mobility .vehicles-detail-tools-body{text-align: left;}
+    body .vehicle-detail .vehicles-detail-tools a.link-header {display: inline-block;}
+    body .vehicle-detail .vehicles-detail-tools-body {display: none;}
+    body .vehicle-detail .vehicles-detail-tools a {display: block;clear: both;text-align: left;}
+    .vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell {width: 50%;}
+    
+    .contextual-modal .contextual-modal-header .header-icon {display: none;}
+    .contextual-modal .contextual-modal-header .header-info {width: 100%;padding: 0;}
+    .contextual-modal .services-list li {margin: 30px 8% 0 8%!important;}
+    
+    body .form-change-registration .form-button .btPrev,
+    body .form-change-registration .form-button .btNext {display: block;clear: both;width: 100%;margin: 20px 0 0 0;}
+    body .form-theme-default .form-group .form-filter-group-wrapper > div {display: block;clear: both;margin-left: 0;}
+    
+    body .offers-suggestions-section-column {max-width: 100%;clear: both;}
+    .offers-suggestions-section-separator {width: 80%;height: 1px;border-left: 0;clear: both;margin: 20px auto 0 auto;border-top: 1px dashed #ffffff;}
+}
+@media screen and (max-width: 480px) {
+    .theme-default-table .column480 {display: none;}
+
+    .vehicle-detail .vehicles-info .type {display: none;}
+    .vehicle-detail .vehicles-info .type-info {margin: 0;}
+    .vehicle-detail .vehicles-vv-info-wrapper .vehicle-info .vehicle-info-cell {width: 100%;}
+
+    .contextual-modal-table span.name-service {display: none;}
+    .contextual-modal-button .breakOnMobile {clear: both;margin: 10px 0 0 0;}
+
+    .info_steps img,
+    .reading_steps img  {width: 40%;}
+    .info_steps img {width: 40%;}
+    .reading_steps img {width: 80%;}
+    .reading_steps_info_wrapper img {width:12%;}
+
+    .channel-services .channel-services-list li{width: 35%;}
+}

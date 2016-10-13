@@ -1,0 +1,422 @@
+/* OFFER-DETAIL-SUGGESTIONS START */
+
+.offer-detail-suggestions-title {
+    display: block;
+    vertical-align: top;
+    background: #FFFFFF;
+    height: 47px;
+    position: relative;
+    width:100%;
+}
+.container-title {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    background: #e6e6e6;
+    display: block;
+    width:100%;
+}
+.container-title span {
+    display: inline-block;
+    background: transparent;
+    background: #ffffff url(images/offer-detail-suggestions-title.jpg) no-repeat;
+    background-position: right 0 top 0;
+    padding-right: 50px;
+    text-align: left;
+    line-height: 47px;
+    font-size: 22px;
+    font-size: 2.2rem;
+    color: #02b245;
+    font-family: 'PrometoRegular', sans-serif;
+}
+/* content block */
+.offer-detail-suggestions {
+    background:#FFFFFF;
+    display:block;
+    position: relative;
+}
+.offer-detail-suggestions.map-only,
+.offer-detail-suggestions.map-only:before,
+.offer-detail-suggestions.map-only:after {background:#e6e6e6}
+
+.offer-detail-suggestions * {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.offer-detail-suggestions:before,
+.offer-detail-suggestions-title:before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    background: #ffffff;
+    width:100%;
+    height: 100%;
+    top: 0;
+}
+.offer-detail-suggestions:after,
+.offer-detail-suggestions-title:after{
+    content: '';
+    position: absolute;
+    right: -100%;
+    background: #ffffff;
+    width:100%;
+    height: 100%;
+    top: 0;
+}
+.offer-detail-suggestions-title:after {background: #e6e6e6;}
+.offer-detail-suggestions .wrapper {margin-top: 0;}
+.offer-detail-suggestions .suggestion-detail {
+    color:#989a9f;
+    width: 100%;
+    position: relative;
+    margin:0;
+    padding:30px 0 70px 0;
+    max-width:920px;
+    border-bottom:1px dashed #a9abb1;
+}
+.offer-detail-suggestions .suggestion-detail:last-child {border-bottom:0;}
+.suggestion-detail .col {
+    cursor:default;
+    line-height:1.45;
+    max-width:79%;
+    display:inline-block;
+    vertical-align:top;
+    position:relative;
+}
+.suggestion-detail .col a {width:100%;display:block;position: relative;}
+.suggestion-detail .col a img {
+    clear:both;
+    max-width: 180px;
+    /*min-height: 115px;*/
+    width: 100%;
+    display: block;
+}
+.suggestion-detail .offer-location-link {width:180px;margin-bottom:-30px;text-align:left;}
+.suggestion-detail .ic-gallery,
+.offer-detail-description .ic-gallery {
+    background: url(images/gallery-icn.png) no-repeat 0 0;
+    display: block;
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    z-index: 1;
+}
+/*este comando sem a class venobox estava a estragar a homepage*/
+.venobox.absolute-img {position:absolute;top:0;left:0;width:0;height:0;}
+
+.offer-detail-suggestions .suggestion-detail .subtitle {
+    color: #495264;
+    font-size:20px;
+    font-size:2.0rem;
+    font-family:'PrometoRegular',sans-serif;
+    padding-bottom:15px;
+}
+.offer-detail-suggestions .suggestion-detail > .subtitle {
+    display:inline-block;
+    vertical-align:middle;
+    max-width:50%;
+    min-height:50px;
+    padding:7px 0 0 0;
+}
+.offer-location-link {
+    margin:20px auto 0;
+    width:100%;
+    border:none;
+    background:none;
+    font-size:14px;
+    font-size:1.4rem;
+    line-height:28px;
+    cursor:pointer;
+    text-decoration:underline;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:200px;
+    text-align:center;
+    display:block;
+    color: #495264 !important;
+}
+.offer-location-link span {
+    text-transform:uppercase;
+    text-decoration:none;
+    display:inline-block;
+    vertical-align:top;
+    height:28px;
+    width:20px;
+    margin-right:10px;
+    line-height:1.5;
+    color: #FFFFFF;
+    text-align:center;
+    background: url(images/icon-offer-location-link.png) no-repeat center center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.offer-location-link:hover,
+.offer-location-link:hover > span {
+    filter:alpha(opacity=80);
+    opacity:0.8;
+}
+.suggestion-detail .col:first-child {max-width:180px;}
+.suggestion-detail.no-img .col:first-child {max-width:none;padding-left:0}
+.suggestion-detail.no-img .offer-location-link {margin:0 0 -30px 0;}
+.suggestion-detail .col.has-more-info {
+    padding-left:20px;
+    margin-bottom:20px;
+}
+.suggestion-detail .col.has-more-info:after {
+    content:'';
+}
+.suggestion-detail .col.has-more-info.js-collapsed,
+.suggestion-detail .col.has-more-info.js-expanded {
+    overflow:hidden;
+    position:relative;
+    cursor:pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.suggestion-detail .col.has-more-info.js-collapsed {
+    max-height:114px;
+}
+.suggestion-detail .col.has-more-info.js-expanded {
+    max-height:1200px;
+    margin-bottom:20px;
+}
+.suggestion-detail .col.has-more-info.js-collapsed:after,
+.suggestion-detail .col.has-more-info.js-expanded:after {
+    background: #FFFFFF;
+    color: #00b360;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-left: 5px;
+}
+.suggestion-detail .col.has-more-info.js-collapsed:after {content: '[+]'}
+.suggestion-detail .col.has-more-info.js-expanded:after {content: '[-]'}
+
+/* price element */
+.suggestion-detail .container-detail {
+    display:block;
+    text-align: right;
+    position:relative;
+    float: right;
+}
+.suggestion-detail .container-detail.pull-right {
+    float: right;
+    clear:both;
+}
+
+/*===== PRICES =======*/
+
+.suggestion-detail .old-price > span {
+    color: #e64f4f;
+    font-size:22px;
+    font-size:2.2rem;
+    line-height:22px;
+    position: relative;
+    padding-bottom: 20px;
+    display:inline-block;
+    vertical-align:middle;
+    text-decoration: line-through;
+    font-family:'PrometoRegular', sans-serif;
+}
+.suggestion-detail .new-price,
+.suggestion-detail .old-price{
+    display: inline-block;
+}
+.suggestion-detail .new-price .bold-price {
+    font-family:'PrometoBold', sans-serif;
+    font-size: 30px;
+    font-size: 3rem;
+    line-height: 30px;
+    padding-bottom:10px;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    color: #02b245;
+    padding-bottom: 20px;    
+}
+.suggestion-detail .new-price .points {
+    font-size:22px;
+    font-size:2.2rem;
+    line-height: 22px;
+    font-family:'PrometoRegular', sans-serif;
+    position:relative;
+    display:inline-block;
+    vertical-align:middle;
+    color: #02b245;
+    padding-left: 0;
+    padding-bottom: 20px;
+    padding-right: 30px;
+}
+.suggestion-detail .old-price sup,
+.suggestion-detail .new-price sup,
+.suggestion-detail .new-price .points sup
+ {
+    text-transform: uppercase;
+    font-size: 55%;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    line-height: normal;
+    top: 0;
+}
+
+/* Offer Detail Options */
+.suggestion-options, .suggestion-options * {
+    display:inline-block;
+    vertical-align:top;
+    font-size:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.suggestion-options .btn-pagination {
+    background: #02b245;
+    border: 0;
+    width: 35px;
+    height: 35px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 2.4rem;
+    cursor:pointer;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.suggestion-options .btn-pagination.prev {
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.suggestion-options .btn-pagination.next {
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.suggestion-options .btn-pagination:hover {background: #009b3a;}
+.suggestion-options .amount-value {
+    border:none;
+    width:35px;
+    height:35px;
+    text-align:center;
+    font-size: 1.4rem;
+    color:#02b245;
+    background:#f5f5f5;
+}
+.suggestion-options .opt-nr {
+    display:block;
+    color: #989a9f;
+    font-size:14px;
+    text-align:center;
+    padding-top:5px;
+}
+.desktop {display:block}
+.mobile {display:none}
+/* End */
+.suggestion-options select {
+    border: 0;
+    display:inline-block;
+    vertical-align:top;
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    color: #02b245;
+    font-family: 'arial', sans-serif;
+    padding:0 0 0 12px;
+    font-weight:bold;
+    line-height: 35px;
+    background:#f5f5f5;
+    margin:0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.suggestion-options select option {display:block; font-size:14px;}
+.suggestion-options select[disabled] {cursor: default;}
+
+
+
+/* MEDIA QUERIES START */
+@media screen and (min-width:1280px) and (max-width:1379px) {
+    .offer-detail-description .description-container,
+    .offer-detail-suggestions .suggestion-detail,
+    .offer-detail-conditions .wrapper {
+        width: calc(100% - 370px);
+    }
+}
+@media screen and (max-width:1379px) {
+    
+    .suggestion-detail .col {max-width: 74%;}
+    
+}
+@media screen and (min-width:1024px) and (max-width:1279px) {
+    .offer-detail-description .description-container,
+    .offer-detail-suggestions .suggestion-detail,
+    .offer-detail-conditions .wrapper {
+        width: calc(100% - 370px);
+    }
+}
+@media screen and (max-width:1279px) {
+    .suggestion-detail .col {max-width: 67%;}
+    .offer-detail-suggestions .suggestion-detail > .subtitle {max-width: 40%;}
+}
+@media screen and (max-width:1023px) {
+    .big-banner .slider-fixed-content .js-slider-pagination {font-size:13px;}
+    
+    .offer-detail-description .title {
+            padding: 10px 0 20px;
+    }
+    
+    
+}
+@media screen and (max-width:767px) {
+    .desktop {display:none}
+    .mobile {display:block}
+    .offer-location-link.desktop{
+        display: none !important;
+    }
+    .offer-detail-description .description-container,
+    .offer-detail-suggestions .suggestion-detail {max-width: none; padding: 30px 0;}
+    .suggestion-detail .col:first-child,
+    .suggestion-detail .col {max-width: 100%;width: 100%;}
+    .suggestion-detail .col a img {width:100%;max-width: none}
+    .suggestion-detail .container-detail {padding-top:20px;margin:20px 0; float: none;}
+    .suggestion-detail .col.has-more-info {padding:0;}
+    .offer-location-link,
+    .suggestion-detail .offer-location-link {
+        width:100%;
+        text-align: left;
+        margin: 0 auto;
+        max-width:none;
+        margin-bottom: 30px;
+    }
+    .offer-detail-suggestions .suggestion-detail > .subtitle {max-width: 100%;}
+    .suggestion-detail .container-detail.pull-right {float:none;margin:0; margin-top: 15px;}
+    .suggestion-detail .container-detail {text-align: left;}
+    .suggestion-detail .old-price {position:absolute;top:-10px;}
+    
+    .offer-detail-suggestions .suggestion-detail .subtitle {padding:15px 0}
+
+    .offer-detail-suggestions .suggestion-detail .gm-maps{
+        height: 280px;
+    }
+    
+}
+@media screen and (max-width:425px) {
+    .offer-detail-suggestions .suggestion-detail .gm-maps{
+        height: 250px;
+    }
+}
+/* MEDIA QUERIES END */
+
+/* OFFER-DETAIL-SUGGESTIONS END */

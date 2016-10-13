@@ -1,0 +1,872 @@
+<!-- module-pontos.html START -->
+<script type="text/javascript">
+    $(function () {
+
+        /* jQuery UI Tabs call */
+        $('.myvv-pontos').tabs();
+
+        /* jQuery UI Datepicker */
+        $("#datepicker-from").datepicker({
+            dateFormat: "dd/mm/yy",
+            firstDay: 1,
+            minDate: "-6m",
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function (selectedDate) {
+                $("#datepicker-to").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        $("#datepicker-to").datepicker({
+            dateFormat: "dd/mm/yy",
+            firstDay: 1,
+            minDate: "-6m",
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function (selectedDate) {
+                $("#datepicker-from").datepicker("option", "maxDate", selectedDate);
+            }
+        });
+
+        $("#datepicker-from2").datepicker({
+            dateFormat: "dd/mm/yy",
+            firstDay: 1,
+            minDate: "-6m",
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function (selectedDate) {
+                $("#datepicker-to2").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        $("#datepicker-to2").datepicker({
+            dateFormat: "dd/mm/yy",
+            firstDay: 1,
+            minDate: "-6m",
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function (selectedDate) {
+                $("#datepicker-from2").datepicker("option", "maxDate", selectedDate);
+            }
+        });
+
+        /* Select */
+        $('#SelectID').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '#myvv-pontos-tab-1 .form-theme-default'
+        });
+
+        $('.voucher2 select').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.myvv-voucher-data'
+        });
+
+        /* Collapse tabela de movimentos */
+        $('.row-header').click(function () {
+            $(this).toggleClass('active').next('.row-body').find('.slide').slideToggle('slow');
+        });
+        $('.myvv-movimentos-table > tbody > tr:not(.row-body)').each(function (i) {
+            var two = (i + 1) % 2;
+            if (two === 0) {
+                $(this).find('th, td').css('background-color', '#f8f8f8');
+            } else {
+                $(this).find('th, td').css('background-color', '#efefef');
+            }
+        });
+        $('.row-body table th, .row-body table td').each(function () {
+            finalColor = $(this).closest('.row-body').prev().find(':first-child').css('background-color');
+            $(this).css('background-color', finalColor);
+        });
+
+        /* Tooltips */
+        initTooltipster($('.classe-exemplo .custom-tooltip .tooltip-icon'), false);
+
+    });
+</script>
+
+<section class="column-section">
+    <header class="column-header">
+        <h1 class="page-title">Pontos</h1>
+    </header>
+
+    <div class="myvv-pontos">
+        <!-- movimentos-extratos Tabs -->
+        <ul class="gm-tabs-list">
+            <li><a href="#myvv-pontos-tab-1"><span class="gm-box-corner"></span><span class="gm-link-txt">Movimentos</span></a></li>
+            <li><a href="#myvv-pontos-tab-2"><span class="gm-box-corner"></span><span class="gm-link-txt">Segmentos</span></a></li>
+            <li><a href="#myvv-pontos-tab-3"><span class="gm-box-corner"></span><span class="gm-link-txt">As minhas ofertas</span></a></li>
+        </ul>
+        <!-- End movimentos-extratos Tabs -->
+
+        <!-- TAB 1 - MOVIMENTOS -->
+        <section id="myvv-pontos-tab-1" class="myvv-pontos-tab-1">
+            <section class="column-body">
+                <h2>Actividade da Conta VVP</h2>
+
+                <div class="myvv-pontos-tab-1-header">
+
+                    <p class="myvv-dest-label">Saldo</p>
+                    <p class="myvv-dest">1.305 pontos</p>
+
+                    <p class="myvv-dest-label">Estatuto</p>
+                    <p class="myvv-dest">Loyalty</p>
+                </div>
+                <div class="myvv-pontos-tab-1-header">
+                    <p class="red-alert">Tem 100 pontos a expirar <span>a 12/12/2015</span></p>
+
+                    <a href="#1" class="blue-alert">Como é calculado o Estatuto?</a>
+                </div>
+                <div class="myvv-pontos-tab-1-header">
+                    <ul>
+                        <li><a href="#1">Como utilizar pontos?</a></li>
+                        <li><a href="#1">Porque os meus pontos expiram?</a></li>
+                    </ul>
+                </div>
+
+                <div class="form form-theme-default">
+                    <!--<div class="form-select-wrapper">
+                        <label for="todos-servicos">
+                            <span class="form-label">Serviço</span>
+                            <select id="SelectID">
+                                <option value="0">Todos os serviços</option>
+                                <option value="1">Lorem ipsum</option>
+                                <option value="2">Dolor sit amet</option>
+                            </select>
+                        </label>
+                    </div>-->
+
+                    <div class="form-datepicker-wrapper">
+                        <label for="datepicker-from2">
+                            <span class="form-label">De:</span>
+                            <span class="form-datepicker custom-tooltip">
+                                <input id="datepicker-from2" type="text" value="" class="datepicker Validator">
+                                <span class="datepicker-icon"></span>
+                                <span class="tooltip-icon"></span>
+                                <span class="tooltip-message">Campo obrigatório!</span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="form-datepicker-wrapper">
+                        <label for="datepicker-to2">
+                            <span class="form-label">Até:</span>
+                            <span class="form-datepicker custom-tooltip">
+                                <input id="datepicker-to2" type="text" value="" class="datepicker Validator">
+                                <span class="datepicker-icon"></span>
+                                <span class="tooltip-icon"></span>
+                                <span class="tooltip-message">Campo obrigatório!</span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="form-button">
+                        <button id="Button1" class="button" type="submit">
+                            <span class="button-txt">Filtrar</span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <br />
+                <p class="yellow-alert">A atividade é atualizada uma vez por dia, mas alguns dos movimentos podem demorar em aparecer. <a href="#1">Saiba mais.</a></p>
+
+                <p>18 movimentos</p>
+            </section>
+
+            <!-- Tabela de movimentos -->
+            <table class="theme-default-table myvv-movimentos-table">
+                <thead>
+                    <tr>
+                        <th scope="col"><a href="#1">Descrição</a></th>
+                        <th scope="col" class="column767"><a href="#1">Data</a></th>
+                        <th scope="col"><a href="#1">Pontos</a></th>
+                        <th scope="col"><a href="#1">Saldo</a></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-header">
+                        <th scope="row">Portagens - A5, A4</th>
+                        <td class="column767">23/11/2014</td>
+                        <td><span class="green">+178 pts</span></td>
+                        <td>1299</td>
+                        <td><span class="arrow"></span></td>
+                    </tr>
+                    <tr class="row-body">
+                        <td colspan="6">
+                            <div class="slide">
+                                <table class="theme-default-table">
+                                    <tr>
+                                        <th scope="row">Portagens - A4</th>
+                                        <td class="column767">23/11/2014</td>
+                                        <td><span class="green">+78 pts</span></td>
+                                        <td>1299</td>
+                                        <td><span class="arrow"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Portagens - A5</th>
+                                        <td class="column767">23/11/2014</td>
+                                        <td><span class="green">+100 pts</span></td>
+                                        <td>1299</td>
+                                        <td><span class="arrow"></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Oferta - Pacote « fim de semana na praia »</th>
+                        <td class="column767">22/11/2014</td>
+                        <td><span class="red">-300 pts</span></td>
+                        <td>1121</td>
+                        <td><span class="arrow"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Parque - Colombo</th>
+                        <td class="column767">21/11/2014</td>
+                        <td><span class="green">+3 pts</span></td>
+                        <td>1421</td>
+                        <td><span class="arrow"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Abastecimento - Galp Forum Barreiro</th>
+                        <td class="column767">15/11/2014</td>
+                        <td><span class="green">+53 pts</span></td>
+                        <td>1418</td>
+                        <td><span class="arrow"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">McDrive - Padre Cruz</th>
+                        <td class="column767">15/11/2014</td>
+                        <td><span class="green">+16 pts</span></td>
+                        <td>1365</td>
+                        <td><span class="arrow"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ferries - Troia</th>
+                        <td class="column767">15/11/2014</td>
+                        <td><span class="green">+10 pts</span></td>
+                        <td>1305</td>
+                        <td><span class="arrow"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <section class="column-body">
+                <p>18/18 movimentos</p>
+
+                <div class="form form-theme-default carregar-mais">
+                    <div class="form-button clearFloats">
+                        <button id="Button7" class="button button-border" type="submit">
+                            <span class="button-txt">CARREGAR MAIS</span>
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+
+        </section>
+        <!-- End Tab 1 -->
+
+
+        <!-- TAB 2 - SEGMENTOS -->
+        <section id="myvv-pontos-tab-2" class="myvv-pontos-tab-2">
+            <section class="column-body">
+
+                <!-- UC Form-Board-Segments -->
+                <div class="form form-theme-default form-board-segments">
+
+                    <script type="text/javascript">
+                        $(function () {
+
+                            $(".interests-list input:checkbox").change(function () {
+                                if (this.checked) {
+                                    $(this).closest("li").addClass("selected");
+                                }
+                                else {
+                                    $(this).closest("li").removeClass("selected");
+                                }
+                            });
+
+                        });
+                    </script>
+                    <fieldset>
+                        <legend><span class="form-legend">Alterar os seus interesses (DEV)</span></legend>
+
+                        <div class="form-description">
+                            <p>Deve selecionar 4 segmentos, e após a primeira compra, só poderá modificá-los X vezes ao ano.</p>
+                            <p>Os interesses permitem oferecer ofertas personalizadas e apresentar o que realmente lhe interessa</p>
+                        </div>
+
+                        <div class="interests-list">
+                            <ul>
+                                <li class="ic-open-air-bg">
+                                    <label for="Label1">
+                                        <span class="ic ic-open-air">Ar Livre</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Parques Naturais<br />
+                                                        Birdwatching<br />
+                                                        Caminhadas
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id="Label1" type="checkbox" value="">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="ic-art-culture-bg">
+                                    <label for="Label2">
+                                        <span class="ic ic-art-culture">Arte e Cultura</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Parques Naturais<br />
+                                                        Birdwatching<br />
+                                                        Caminhadas
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id="Label2" type="checkbox" value="">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="ic-welfare-bg">
+                                    <label for="Label3">
+                                        <span class="ic ic-welfare">Bem Estar</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Parques Naturais<br />
+                                                        Birdwatching<br />
+                                                        Caminhadas
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id="Label3" type="checkbox" value="">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="ic-nautic-sport-bg">
+                                    <label for="Label4">
+                                        <span class="ic ic-nautic-sport">Desportos Náuticos</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Parques Naturais<br />
+                                                        Birdwatching<br />
+                                                        Caminhadas
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id="Label4" type="checkbox" value="">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="ic-family-bg">
+                                    <label for="Label5">
+                                        <span class="ic ic-family">Família</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Parques Naturais<br />
+                                                        Birdwatching<br />
+                                                        Caminhadas
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id="Label5" type="checkbox" value="">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="ic-gastronomy-wine-bg">
+                                    <label for="Label6">
+                                        <span class="ic ic-gastronomy-wine">Gastronomia e Vinho</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Parques Naturais<br />
+                                                        Birdwatching<br />
+                                                        Caminhadas
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id="Label6" type="checkbox" value="">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="ic-golf-bg">
+                                    <label for="Label7">
+                                        <span class="ic ic-golf">Golf</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Parques Naturais<br />
+                                                        Birdwatching<br />
+                                                        Caminhadas
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id="Label7" type="checkbox" value="">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="ic-history-bg">
+                                    <label for="Label8">
+                                        <span class="ic ic-history">História</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Parques Naturais<br />
+                                                        Birdwatching<br />
+                                                        Caminhadas
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id="Label8" type="checkbox" value="">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="ic-nature-bg">
+                                    <label for="Label9">
+                                        <span class="ic ic-nature">Natureza</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Parques Naturais<br />
+                                                        Birdwatching<br />
+                                                        Caminhadas
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id="Label9" type="checkbox" value="">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="ic-romance-bg">
+                                    <label for="Label10">
+                                        <span class="ic ic-romance">Romance</span>
+                                        <div class="ic-related-table">
+                                            <div class="ic-related-row">
+                                                <div class="ic-related-cell">
+                                                    <div class="ic-related-text">
+                                                        Parques Naturais<br />
+                                                        Birdwatching<br />
+                                                        Caminhadas
+                                                    </div>
+                                                    <div class="form-checkbox-wrapper">
+                                                        <span class="form-checkbox">
+                                                            <input id="Label10" type="checkbox" value="">
+                                                            <span class="form-checkbox-style"></span>
+                                                        </span>
+                                                        <span class="form-label">Selecionar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="form-board-segments-bottom">
+                        <div class="segmentMessage">Só poderá alterar os seus segmentos a partir de 18/05/2015</div>
+
+                        <div class="segmentSuccess">
+                            <div>Os interesses foram alterados corretamente</div>
+                        </div>
+
+                        <div class="form-button">
+                            <button class="button" id="Button9" type="submit">
+                                <span class="button-txt">Alterar Seleção</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </section>
+        </section>
+        <!-- End Tab 2 -->
+
+
+        <!-- TAB 3 - AS MINHAS OFERTAS -->
+        <section id="myvv-pontos-tab-3" class="myvv-pontos-tab-3">
+            <section class="column-body">
+                <h2>Ofertas por usar</h2>
+
+                <!-- Voucher -->
+                <article class="myvv-voucher voucher1">
+                    <div class="myvv-voucher-img">
+                        <img src="img-cms/article-01.jpg" />
+                    </div>
+
+                    <div class="myvv-voucher-content">
+                        <div class="myvv-voucher-left">
+                            <div class="myvv-voucher-title">
+                                <span></span>
+                                <h1>Fim de semana em Alcobaça</h1>
+                            </div>
+
+                            <div class="myvv-voucher-date">
+                                <span>Data limite de utilização:</span>
+                                <p>10/06/2016</p>
+                            </div>
+
+                            <div class="myvv-voucher-discount gm-box-offer">
+                                <p>Descontos deste pacote:</p>
+                                <ul>
+                                    <li class="ic-offer ic-offer-toll">30% Portagem</li>
+                                    <li class="ic-offer ic-offer-fuel">8 cent./Litro</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="myvv-voucher-right">
+                            <a class="button button-small" href="#1">
+                                <span class="button-txt">Definir Datas</span>
+                            </a>
+
+                            <span class="myvv-voucher-alert">Viatura e datas da viagem não definidas. </span>
+
+                            <span class="myvv-voucher-corner">
+                                <span class="myvv-voucher-corner-left"></span>
+                                <span class="myvv-voucher-corner-right"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="myvv-voucher-reserve">
+                        <span>Código de reserva:</span>
+                        <p class="myvv-voucher-code">EA5C78</p>
+
+
+                        <div class="form form-theme-default">
+                            <button class="button">
+                                <span class="button-txt">
+                                    <span class="button-icon">Voucher</span>
+                                </span>
+                            </button>
+                        </div>
+                        <br />
+                        <a href="#1" class="link-bill-white">Fatura</a>
+                    </div>
+
+                </article>
+                <!-- End voucher -->
+
+                <!-- Voucher -->
+                <article class="myvv-voucher voucher2">
+                    <div class="myvv-voucher-img">
+                        <img src="img-cms/article-03.jpg" />
+                    </div>
+
+                    <div class="myvv-voucher-content">
+                        <div class="myvv-voucher-left">
+                            <div class="myvv-voucher-title">
+                                <span></span>
+                                <h1>Rejuvenesça com o Hotel Bienestar</h1>
+                            </div>
+
+                            <div class="myvv-voucher-date">
+                                <span>Data limite de utilização:</span>
+                                <p>10/06/2016</p>
+                            </div>
+
+                            <div class="myvv-voucher-discount gm-box-offer">
+                                <p>Descontos deste pacote:</p>
+                                <ul>
+                                    <li class="ic-offer ic-offer-toll">30% Portagem</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form form-theme-default myvv-voucher-data myvv-voucher-right">
+                            <div class="form-datepicker-wrapper">
+                                <label for="datepicker-from">
+                                    <span class="form-label">Ida:</span>
+                                    <span class="form-datepicker custom-tooltip">
+                                        <input id="datepicker-from" type="text" value="" class="Validator datepicker">
+                                        <span class="datepicker-icon"></span>
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-datepicker-wrapper">
+                                <label for="datepicker-to">
+                                    <span class="form-label">Volta:</span>
+                                    <span class="form-datepicker custom-tooltip">
+                                        <input id="datepicker-to" type="text" value="" class="Validator datepicker">
+                                        <span class="datepicker-icon"></span>
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-select-wrapper">
+                                <label>
+                                    <span class="form-label">Matrícula:</span>
+                                    <span class="form-datepicker custom-tooltip">
+                                        <select>
+                                            <option value="0">Lorem ipsum</option>
+                                            <option value="1">Dolor sit amet</option>
+                                            <option value="2">Lorem ipsum</option>
+                                            <option value="3">Dolor sit amet</option>
+                                        </select>
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-button">
+                                <button id="Button2" class="button button-small" type="submit">
+                                    <span class="button-txt">Guardar</span>
+                                </button>
+                                <button id="Button3" class="button button-small button-border" type="submit">
+                                    <span class="button-txt">Cancelar</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                        <span class="myvv-voucher-corner">
+                            <span class="myvv-voucher-corner-left"></span>
+                            <span class="myvv-voucher-corner-right"></span>
+                        </span>
+                    </div>
+
+                    <div class="myvv-voucher-reserve">
+                        <span>Código de reserva:</span>
+                        <p class="myvv-voucher-code">EA5C78</p>
+
+
+                        <div class="form form-theme-default">
+                            <button class="button">
+                                <span class="button-txt">
+                                    <span class="button-icon">Voucher</span>
+                                </span>
+                            </button>
+                        </div>
+                        <br />
+                        <a href="#1" class="link-bill-white">Fatura</a>
+                    </div>
+
+                </article>
+                <!-- End voucher -->
+
+                <!-- Voucher -->
+                <article class="myvv-voucher voucher3">
+                    <div class="myvv-voucher-img">
+                        <img src="img-cms/article-03.jpg" />
+                    </div>
+
+                    <div class="myvv-voucher-content">
+                        <div class="myvv-voucher-left">
+                            <div class="myvv-voucher-title">
+                                <span></span>
+                                <h1>Descubra os sabores do Alentejo</h1>
+                            </div>
+
+                            <div class="myvv-voucher-date">
+                                <span>Data limite de utilização:</span>
+                                <p>10/06/2016</p>
+                            </div>
+
+                            <div class="myvv-voucher-discount gm-box-offer">
+                                <p>Descontos deste pacote:</p>
+                                <ul>
+                                    <li class="ic-offer ic-offer-toll">30% Portagem</li>
+                                    <li class="ic-offer ic-offer-fuel">8 cent./Litro</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="myvv-voucher-right">
+                            <a class="button button-small button-border" href="#1">
+                                <span class="button-txt">Alterar Datas</span>
+                            </a>
+
+                            <div class="myvv-voucher-date">
+                                <span>Data limite de utilização:</span>
+                                <p>06/10/2015 » 10/10/2015</p>
+                            </div>
+
+                            <div class="myvv-voucher-date">
+                                <span>Viatura seleccionada:</span>
+                                <p>12-AB-34</p>
+                            </div>
+
+                            <span class="myvv-voucher-corner">
+                                <span class="myvv-voucher-corner-left"></span>
+                                <span class="myvv-voucher-corner-right"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="myvv-voucher-reserve">
+                        <span>Código de reserva:</span>
+                        <p class="myvv-voucher-code">EA5C78</p>
+
+
+                        <div class="form form-theme-default">
+                            <button class="button">
+                                <span class="button-txt">
+                                    <span class="button-icon">Voucher</span>
+                                </span>
+                            </button>
+                        </div>
+                        <br />
+                        <a href="#1" class="link-bill-white">Fatura</a>
+                    </div>
+
+                </article>
+                <!-- End voucher -->
+
+            </section>
+
+            <!-- Tabela de Ofertas usadas -->
+            <section class="column-body">
+
+                <table class="theme-default-table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col" class="column1279">Data compra</th>
+                            <th scope="col" class="column767">Referência</th>
+                            <th scope="col" class="column640">Data de Ida</th>
+                            <th scope="col">Regresso</th>
+                            <th scope="col">Fatura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <b>Benji na Serra da Estrela</b>
+                            </th>
+                            <td class="column1279">08/04/2015</td>
+                            <td class="column767">98372459873</td>
+                            <td class="column640">08/04/2015</td>
+                            <td>12/04/2015</td>
+                            <td><a href="#1" class="link-bill">Fatura</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <b>Benji na Serra da Estrela</b>
+                            </th>
+                            <td class="column1279">08/04/2015</td>
+                            <td class="column767">98372459873</td>
+                            <td class="column640">08/04/2015</td>
+                            <td>14/04/2015</td>
+                            <td><a href="#1" class="link-bill">Fatura</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <b>Benji na Serra da Estrela</b>
+                            </th>
+                            <td class="column1279">08/04/2015</td>
+                            <td class="column767">98372459873</td>
+                            <td class="column640">08/04/2015</td>
+                            <td>15/04/2015</td>
+                            <td><a href="#1" class="link-bill">Fatura</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <b>Benji na Serra da Estrela</b>
+                            </th>
+                            <td class="column1279">08/04/2015</td>
+                            <td class="column767">98372459873</td>
+                            <td class="column640">08/04/2015</td>
+                            <td>24/04/2015</td>
+                            <td><a href="#1" class="link-bill">Fatura</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+        </section>
+        <!-- End Tab 3 -->
+
+    </div>
+
+</section>
+<!-- module-pontos.html END -->

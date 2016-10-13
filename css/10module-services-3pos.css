@@ -1,0 +1,45 @@
+@media screen and (min-width: 767px) {
+    .three-pos {
+        margin-top: 20px;
+    }
+    .three-pos .landing-services-cell {
+        width: 49%;
+        position: relative;
+    }
+    .three-pos .service-tool {
+        padding: 20px 30px;
+    }
+    .three-pos .landing-services-cell.spacer {
+        width: 2%;
+    }
+    .three-pos .article-wrapper {
+        width: 55%;
+        display: block;
+        /*float: left;*/
+    }
+    .three-pos .app_button {
+        width: 35%;
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+    }
+    .three-pos .app_button .apps.ios {
+        background: url(images/bt-app-ios.png) no-repeat;
+        background-size: 100% auto;
+        max-width: 159px;
+    }
+    .three-pos .app_button .apps.android {
+        background: url(images/bt-app-droid.png) no-repeat;
+        background-size: 100% auto;
+        max-width: 159px;
+    }
+    .three-pos .app_button a {
+        margin-right: 0;
+        width: 100%;
+    }
+    .three-pos .app_button .apps {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {}

@@ -1,0 +1,694 @@
+<!-- module-etapa-volta-checkout START -->
+
+<section class="accession-wrapper">
+    <header class="accession-header">
+        <h1 class="page-title">Comprar Programa</h1>
+    </header>
+    <div class="accession-panel">
+        <script type="text/javascript">
+
+            function gotoStep(step) {
+
+                startLoading($('.accession-panel'));
+
+
+
+                var currentNavItem = $(".accession-panel .wizardSteps a[rel='" + step + "']");
+
+                //Nav
+                currentNavItem.parent().removeClass().addClass("current");
+                currentNavItem.parent().prevAll("li").removeClass().addClass("completed");
+                currentNavItem.parent().nextAll().removeClass().addClass("disabled");
+
+                //Panels
+                $(".accession-panel .wizardStep").hide();
+                $(".accession-panel ." + step).show();
+
+                // Stop Loading after 1 second
+                setTimeout(function () {
+                    stopLoading($('.accession-panel'));
+                }, 500);
+
+                window.scrollTo(0, 0);
+            }
+
+            $(function () {
+
+                //Wizard Nav click
+                $(".wizardSteps a").click(function (e) {
+                    e.preventDefault();
+
+                    if (!$(this).parent().hasClass("disabled") && !$(this).parent().hasClass("current")) {
+                        gotoStep($(this).attr("rel"));
+                    }
+                });
+
+                //Wizard First step
+                gotoStep("wizard-step-1");
+
+
+
+                /* Tooltipster */
+                /* 
+                Parametros:
+                - Selector
+                - É Modal
+                */
+                initTooltipster($('.accession-panel .custom-tooltip .tooltip-icon'), false);
+            });
+        </script>
+
+        <div class="accession-main">
+            <nav class="wizardSteps">
+                <ul>
+                    <li><a href="#" rel="wizard-step-1"><span><span>01. Resumo</span></span></a></li>
+                    <li><a href="#" rel="wizard-step-2"><span><span>02. Dados de Inscrição</span></span></a></li>
+                    <li><a href="#" rel="wizard-step-3"><span><span>03. Dados de Pagamento</span></span></a></li>
+                    <li><a href="#" rel="wizard-step-4"><span><span>04. Confirmação</span></span></a></li>
+                </ul>
+            </nav>
+
+            <!-- wizard-step-1 -->
+            <div class="wizardStep wizard-step-1">
+               
+                <div class="form form-theme-default">
+                    <script type="text/javascript">
+                        $(function () {
+                            $('.accession-main .wizard-step-1 .Validator').blur(function () {
+                                /* 
+                                Parametros:
+                                - Selector do controlo
+                                - Nome do grupo de validação
+                                - Nome na class a colocar no pai em caso de erro
+                                - Selector da mensagem generica de erro a mostrar
+                                */
+                                SingleValidator($(this).attr("id"), 'WizardStep1', 'tooltip-error', null);
+
+
+                                /* Update Single Tooltipster Message */
+                                updateSingleTooltipster($(this));
+                            });
+
+                            /* jQuery UI Datepicker */
+                            $("#datepicker-dob").datepicker({
+                                dateFormat: "dd/mm/yy",
+                                firstDay: 1,
+                                minDate: "-6m",
+                                showOtherMonths: true,
+                                selectOtherMonths: true
+                            });
+
+                            /* CUSTOM SELECT */
+                            $('#SelectFederado').selectric({
+                                disableOnMobile: false
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+                            });
+
+                            $('#SelectJersey').selectric({
+                                disableOnMobile: false
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+                            });
+
+                            //FederadoChoise
+                            
+                            $("#radio-ref-3").click(function () {
+                                $(".isFederado").hide();
+                            });
+
+                            $("#radio-ref-4").click(function () {
+                                $(".isFederado").show();
+                            });
+
+
+                            $('#Button1').click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 1 */
+                                gotoStep("wizard-step-1");
+                            });
+
+                            $('#Button2').click(function (e) {
+                                e.preventDefault();
+
+                                /* Validar Step 2 */
+                                //var pageIsValid = PageValidate(...);
+
+                                /* Ir para o passo 3 */
+                                gotoStep("wizard-step-2");
+                            });
+                        });
+                    </script>
+                
+                    <fieldset class="fieldset65">
+                        <legend class="clearFloats">
+                            <span class="form-legend">Dados do atleta</span>
+                        </legend>
+                        
+                        <div class="form-input-wrapper">
+                            <label for="form-name">
+                                <span class="form-label">Nome completo</span>
+                                <span class="form-input custom-tooltip">
+                                    <input id="form-name" type="text" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper">
+                            <label for="form-bi">
+                                <span class="form-label">BI/Documento de identificação</span>
+                                <span class="form-input custom-tooltip">
+                                    <input id="form-bi" type="text" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+			                <span class="group-label">Género</span>
+                            <div class="form-radiobox-wrapper-normal">
+                                <div class="form-radiobox-wrapper">
+			                        <label for="radio-ref-1">
+				                        <span class="form-radiobox">
+					                        <input id="radio-ref-1" type="radio" value="" name="radioGender" checked>
+					                        <span class="form-radiobox-style"></span>
+				                        </span>
+				                        <span class="form-label">
+                                            Masculino
+				                        </span>
+			                        </label>
+		                        </div>
+                                <div class="form-radiobox-wrapper">
+			                        <label for="radio-ref-2">
+				                        <span class="form-radiobox">
+					                        <input id="radio-ref-2" type="radio" value="" name="radioGender">
+					                        <span class="form-radiobox-style"></span>
+				                        </span>
+				                        <span class="form-label">
+                                            Feminino
+				                        </span>
+			                        </label>
+		                        </div>
+                            </div>
+                        </div>
+
+                        <div class="form-datepicker-wrapper form-datepicker-wrapper-normal">
+                            <label for="datepicker-dob">
+                                <span class="form-label">Data de nascimento</span>
+                                <span class="form-datepicker custom-tooltip">
+                                    <input id="datepicker-dob" type="text" value="" class="Validator">
+                                    <span class="datepicker-icon"></span>
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+			                <span class="group-label">Federado</span>
+                            <div class="form-radiobox-wrapper-normal">
+                                <div class="form-radiobox-wrapper">
+			                        <label for="radio-ref-3">
+				                        <span class="form-radiobox">
+					                        <input id="radio-ref-3" type="radio" value="" name="radioFederado" checked>
+					                        <span class="form-radiobox-style"></span>
+				                        </span>
+				                        <span class="form-label">
+                                            Não
+				                        </span>
+			                        </label>
+		                        </div>
+                                <div class="form-radiobox-wrapper">
+			                        <label for="radio-ref-4">
+				                        <span class="form-radiobox">
+					                        <input id="radio-ref-4" type="radio" value="" name="radioFederado">
+					                        <span class="form-radiobox-style"></span>
+				                        </span>
+				                        <span class="form-label">
+                                            Sim
+				                        </span>
+			                        </label>
+		                        </div>
+                            
+                                <div class="isFederado" style="display: none;">
+                                    <div class="form-select-wrapper">
+                                        <span class="form-label">Federação</span>
+                                        <span class="form-select custom-tooltip tooltip-error">
+                                            <select id="SelectFederado">
+                                                <option value="0">Portugal</option>
+                                                <option value="1">Espanha</option>
+                                                <option value="2">...</option>
+                                            </select>
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                        </span>
+                                    </div>
+                                    <div class="form-input-wrapper">
+                                        <label for="form-licenca">
+                                            <span class="form-label">Número de Licença</span>
+                                            <span class="form-input custom-tooltip">
+                                                <input id="form-licenca" type="text" value="" class="Validator">
+                                                <span class="tooltip-icon"></span>
+                                                <span class="tooltip-message">Campo obrigatório!</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <fieldset class="fieldset65 fieldset65-normal">
+                        <legend class="clearFloats">
+                            <span class="form-legend">Opções de Inscrição</span>
+                        </legend>
+
+                        <div class="form-input-wrapper">
+                            <label for="form-dorsal">
+                                <span class="form-label">Nome do Dorsal</span>
+                                <span class="form-input custom-tooltip">
+                                    <input id="form-dorsal" type="text" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper">
+                            <label for="form-team">
+                                <span class="form-label">Equipa <span>(opcional)</span></span>
+                                <span class="form-input custom-tooltip">
+                                    <input id="form-team" type="text" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+			                <span class="group-label">Classe Vintage</span>
+                            <div class="form-checkbox-wrapper">
+			                    <label for="form-vintage">
+				                    <span class="form-checkbox">
+					                    <input id="form-vintage" type="checkbox" value="">
+					                    <span class="form-checkbox-style"></span>
+				                    </span>
+				                    <span class="form-label">
+					                    Participação na CLASSE VINTAGE
+				                    </span>
+			                    </label>
+                                <div class="link-wrapper">
+                                    <a href="#" target="_blank">Regulamento da Classe Vintage</a>
+                                </div>
+		                    </div>
+                        </div>
+		                
+                        <div class="form-select-wrapper">
+                            <span class="form-label">Jersey da Etapa da Volta</span>
+                            <span class="form-select custom-tooltip tooltip-error">
+                                <select id="SelectJersey">
+                                    <option value="0">Portugal</option>
+                                    <option value="1">Espanha</option>
+                                    <option value="2">...</option>
+                                </select>
+                                <span class="tooltip-icon"></span>
+                                <span class="tooltip-message">Campo obrigatório!</span>
+                            </span>
+                        </div>
+
+                        <div class="link-wrapper">
+                            <a href="http://www.viaverde.pt/Portals/0/Missoes/7/a4813ac3-8f57-43be-a34c-fb32db0f98de.png" id="dnn_ctr1990_View_rptParticipations_lnkParticipationImage_1" class="venobox vbox-item" data-gall="paticipation-list" title="inesquecível">
+                                Tabela de tamanhos
+                            </a>
+                        </div>
+                        <div class="link-wrapper">
+                            <a href="http://www.viaverde.pt/Portals/0/Missoes/7/a4813ac3-8f57-43be-a34c-fb32db0f98de.png" id="A1" class="venobox vbox-item" data-gall="paticipation-list" title="inesquecível">
+                                Maquete do Equipamento
+                            </a>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="fieldset65 fieldset65-normal">
+                        <legend class="clearFloats">
+                            <span class="form-legend">Dados de contacto</span>
+                        </legend>
+                        
+                        <div class="form-input-wrapper">
+                            <label for="form-email">
+                                <span class="form-label">E-mail</span>
+                                <span class="form-input custom-tooltip">
+                                    <input id="form-email" type="text" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-input-wrapper">
+                            <label for="form-telemovel">
+                                <span class="form-label">Telemóvel</span>
+                                <span class="form-input custom-tooltip">
+                                    <input id="form-telemovel" type="text" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-input-wrapper">
+                            <label for="form-othertelemovel">
+                                <span class="form-label">Contacto telefónico de familiar em caso de acidente</span>
+                                <span class="form-input custom-tooltip">
+                                    <input id="form-othertelemovel" type="text" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <!-- Adicionar outras inscrições -->
+                        <div id="injectCars" class="additional-cars">
+                            <div class="additional-car">
+                                <legend class="clearFloats">
+                                    <span class="form-legend">Inscrição Adicional</span>
+                                    <a href="#" class="link-remove">Remover inscrição</a>
+                                </legend>
+
+<!--
+                                <div class="form-input-wrapper">
+                                    <label for="form-name">
+                                        <span class="form-label">Nome completo</span>
+                                        <span class="form-input custom-tooltip">
+                                            <input id="Text1" type="text" value="" class="Validator">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="form-input-wrapper">
+                                    <label for="form-bi">
+                                        <span class="form-label">BI/Documento de identificação</span>
+                                        <span class="form-input custom-tooltip">
+                                            <input id="Text2" type="text" value="" class="Validator">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+			                        <span class="group-label">Género</span>
+                                    <div class="form-radiobox-wrapper-normal">
+                                        <div class="form-radiobox-wrapper">
+			                                <label for="radio-ref-1">
+				                                <span class="form-radiobox">
+					                                <input id="radio1" type="radio" value="" name="radioGender" checked>
+					                                <span class="form-radiobox-style"></span>
+				                                </span>
+				                                <span class="form-label">
+                                                    Masculino
+				                                </span>
+			                                </label>
+		                                </div>
+                                        <div class="form-radiobox-wrapper">
+			                                <label for="radio-ref-2">
+				                                <span class="form-radiobox">
+					                                <input id="radio2" type="radio" value="" name="radioGender">
+					                                <span class="form-radiobox-style"></span>
+				                                </span>
+				                                <span class="form-label">
+                                                    Feminino
+				                                </span>
+			                                </label>
+		                                </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-datepicker-wrapper form-datepicker-wrapper-normal">
+                                    <label for="datepicker-dob">
+                                        <span class="form-label">Data de nascimento</span>
+                                        <span class="form-datepicker custom-tooltip">
+                                            <input id="Text3" type="text" value="" class="Validator">
+                                            <span class="datepicker-icon"></span>
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+			                        <span class="group-label">Federado</span>
+                                    <div class="form-radiobox-wrapper-normal">
+                                        <div class="form-radiobox-wrapper">
+			                                <label for="radio-ref-3">
+				                                <span class="form-radiobox">
+					                                <input id="radio3" type="radio" value="" name="radioFederado" checked>
+					                                <span class="form-radiobox-style"></span>
+				                                </span>
+				                                <span class="form-label">
+                                                    Não
+				                                </span>
+			                                </label>
+		                                </div>
+                                        <div class="form-radiobox-wrapper">
+			                                <label for="radio-ref-4">
+				                                <span class="form-radiobox">
+					                                <input id="radio4" type="radio" value="" name="radioFederado">
+					                                <span class="form-radiobox-style"></span>
+				                                </span>
+				                                <span class="form-label">
+                                                    Sim
+				                                </span>
+			                                </label>
+		                                </div>
+                            
+                                        <div class="isFederado" style="display: none;">
+                                            <div class="form-select-wrapper">
+                                                <span class="form-label">Federação</span>
+                                                <span class="form-select custom-tooltip tooltip-error">
+                                                    <select id="Select1">
+                                                        <option value="0">Portugal</option>
+                                                        <option value="1">Espanha</option>
+                                                        <option value="2">...</option>
+                                                    </select>
+                                                    <span class="tooltip-icon"></span>
+                                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                                </span>
+                                            </div>
+                                            <div class="form-input-wrapper">
+                                                <label for="form-licenca">
+                                                    <span class="form-label">Número de Licença</span>
+                                                    <span class="form-input custom-tooltip">
+                                                        <input id="Text4" type="text" value="" class="Validator">
+                                                        <span class="tooltip-icon"></span>
+                                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                            
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                        <div class="form-button clearFloats">
+                            <a href="#" class="link-add">Adicionar outra Inscrição</a>
+                        </div>
+                        <!-- Fim Adicionar outras inscriçoes -->
+
+                        <div class="form-checkbox-wrapper">
+			                <label for="CheckboxResponsabilidades" class="form-checkbox-group-wrapper custom-tooltip">
+				                <div class="form-checkbox-group">
+					                <span class="form-checkbox">
+						                <input id="CheckboxResponsabilidades" type="checkbox" value="">
+						                <span class="form-checkbox-style"></span>
+					                </span>
+					                <span class="form-label">
+						                Declaro que aceito e subscrevo o <a href="#" title="">Termos e responsabilidades</a>
+					                </span>
+				                </div>
+				                <span class="tooltip-icon"></span>
+				                <span class="tooltip-message">Veículo registado fora do território nacional...</span>
+
+			                </label>
+		                </div>
+
+                        <div class="form-checkbox-wrapper">
+			                <label for="CheckboxRegulamento" class="form-checkbox-group-wrapper custom-tooltip">
+				                <div class="form-checkbox-group">
+					                <span class="form-checkbox">
+						                <input id="CheckboxRegulamento" type="checkbox" value="">
+						                <span class="form-checkbox-style"></span>
+					                </span>
+					                <span class="form-label">
+						                Ao inscrever declaro que li e aceito o <a href="#" title="">Regulamento</a>
+					                </span>
+				                </div>
+				                <span class="tooltip-icon"></span>
+				                <span class="tooltip-message">Veículo registado fora do território nacional...</span>
+
+			                </label>
+		                </div>
+                    </fieldset>
+                    <div class="form-button clearFloats">
+                        <button class="button button-border btPrev" id="Button4" type="submit">
+                            <span class="button-txt">Passo Anterior</span>
+                        </button>
+
+                        <button class="button btNext" id="Button5" type="submit">
+                            <span class="button-txt">Seguinte</span>
+                        </button>
+                    </div>
+                </div>
+            
+
+            </div>
+            <!-- wizard-step-2 -->
+            <div class="wizardStep wizard-step-2">
+                ...
+            </div>
+            <!-- wizard-step-3 -->
+            <div class="wizardStep wizard-step-3">
+                ...
+            </div>
+            <!-- wizard-step-4 -->
+            <div class="wizardStep wizard-step-4">
+                ...
+            </div>
+
+        </div>
+        <aside class="accession-aside">
+            <div class="wizardStep wizard-step-1">
+
+                <article class="article-block">
+                    <header class="info">
+                        <h3>Informação Relacionada</h3>
+                    </header>
+                    <h4>Reactivar dispositivo</h4>
+                    <div class="article-block-text">
+                        <p>Para dar de alta um contrato com um dispositivo previamente usado, vai precisar do número de identificador.</p>
+                    </div>
+                    <h4>Extrato electrónico no portal</h4>
+                    <div class="article-block-text">
+                        <p>Poderá consultar os extratos na area de cliente Via Verde.</p>
+                    </div>
+                </article>
+
+                <article class="article-block">
+                    <header class="question">
+                        <h3>Perguntas Frequentes</h3>
+                    </header>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso ir a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="wizardStep wizard-step-2">
+                
+                <article class="article-block">
+                    <header class="info">
+                        <h3>Informação Relacionada</h3>
+                    </header>
+                    <h4>Reactivar dispositivo</h4>
+                    <div class="article-block-text">
+                        <p>Para dar de alta um contrato com um dispositivo previamente usado, vai precisar do número de identificador.</p>
+                    </div>
+                    <h4>Extrato electrónico no portal</h4>
+                    <div class="article-block-text">
+                        <p>Poderá consultar os extratos na area de cliente Via Verde.</p>
+                    </div>
+                </article>
+
+                <article class="article-block">
+                    <header class="question">
+                        <h3>Perguntas Frequentes</h3>
+                    </header>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso ir a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="wizardStep wizard-step-3">
+                
+                <article class="article-block">
+                    <header class="info">
+                        <h3>Informação Relacionada</h3>
+                    </header>
+                    <h4>Reactivar dispositivo</h4>
+                    <div class="article-block-text">
+                        <p>Para dar de alta um contrato com um dispositivo previamente usado, vai precisar do número de identificador.</p>
+                    </div>
+                    <h4>Extrato electrónico no portal</h4>
+                    <div class="article-block-text">
+                        <p>Poderá consultar os extratos na area de cliente Via Verde.</p>
+                    </div>
+                </article>
+
+                <article class="article-block">
+                    <header class="question">
+                        <h3>Perguntas Frequentes</h3>
+                    </header>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso ir a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="wizardStep wizard-step-4">
+                <table class="article-block-table">
+                    <caption>Resumo</caption>
+                    <tbody>
+                        <tr>
+                            <th>Id. compra online</th>
+                            <td>€20.00</td>
+                        </tr>
+                        <tr>
+                            <th>Id. compra online</th>
+                            <td>€20.00</td>
+                        </tr>
+                        <tr>
+                            <th>Id. compra online</th>
+                            <td>€20.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td>€60.00</td>
+                        </tr>
+                            
+                    </tfoot>
+                </table>
+                
+            </div>
+        </aside>
+
+        <div class="loading"><span>A carregar...</span></div>
+    </div>
+</section>
+
+<!-- module-etapa-volta-checkout END -->

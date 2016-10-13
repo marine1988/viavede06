@@ -1,0 +1,170 @@
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+
+/* start commented backslash hack \*/
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+
+/* close commented backslash hack */
+
+.h-packs {
+    text-align: center;
+    padding: 60px 0;
+    background: #363c4c;
+}
+
+.h-packs h4 {
+    font-family: 'PrometoMediumItalic';
+    font-size: 3.6rem;
+    font-weight: 100;
+    margin-bottom: 50px;
+    color: #FFF;
+}
+
+.h-packs.white h4{
+    color: #363c4c;
+}
+
+.h-packs ul {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.h-packs li {
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+    margin-right: -4px;
+    position: relative;
+    overflow: hidden;
+    vertical-align: top;
+    padding: 30px 0;
+   
+}
+
+.h-packs li:hover {
+    /*background: #495264;*/
+}
+
+.h-packs li:hover figure{
+background: #495264;
+}
+
+.h-packs li a {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+}
+
+.h-packs figure {
+    display: inline-block;
+    margin-bottom: 22px;
+    position: relative;
+    background: #d3d4d5;
+    border-radius: 50%;
+     -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+.h-packs figure img {
+    width: 100%;
+    max-width: 211px;
+    display: initial;
+}
+
+.h-packs figure::after {
+    content: url("images/global-banners/arrow-next.png");
+    position: absolute;
+    bottom: -5px;
+    right: 21px;
+    -webkit-transition: content 0.5s ease;
+    -moz-transition: content 0.5s ease;
+    transition: content 0.5s ease;
+}
+
+.h-packs li:hover figure:after{
+content: url("images/global-banners/arrow-next-on.png");
+}
+
+.h-packs span {
+    display: block;
+    color: #ffffff;
+    font-size: 22px;
+    padding: 0 10%;
+    font-family: 'PrometoRegular';
+}
+
+.h-packs-white span {
+   color: #444a58; 
+}
+
+@media (max-width: 1023px) {
+    .h-packs li {
+        width: 50%;
+        display: inline-block;
+    }
+    .h-packs h4 {
+        padding: 0 10%;
+    }
+    .h-packs li:hover {
+        background: none;
+    }
+    .h-packs figure {
+        vertical-align: middle;
+    }
+    .h-packs span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+@media (max-width: 767px) {
+    .h-packs li {
+        width: 90%;
+        margin-right: 0;
+        position: relative;
+        text-align: left;
+        padding: 0 5%;
+        margin-bottom: 35px;
+    }
+    .h-packs figure {
+        position: initial;
+        width: 25%;
+        margin-bottom: 0;
+    }
+    .h-packs figure::after {
+        top: 50%;
+        margin-top: -23px;
+        right: 0;
+        left: initial;
+    }
+    .h-packs span {
+        width: 50%;
+        padding: 0 4%
+    }
+    .h-packs h4 {
+        padding: 0 5%;
+    }
+}

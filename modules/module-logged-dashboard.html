@@ -1,0 +1,478 @@
+<!-- module-logged-dashboard.html START -->
+
+<script type="text/javascript">
+    $(function () {
+
+        //Google Chart (PIE Donut)
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Task', 'Hours per Day'],
+              ['Portagens', 45],
+              ['Parques', 20],
+              ['McDrive', 15],
+              ['Ferries', 10],
+              ['Estacionamento', 7],
+              ['Outros', 3]
+            ]);
+            var options = {
+                chartArea: {
+                    height: '90%',
+                    width: '90%'
+                },
+                colors: ['#02b245', '#ebebeb', '#a9abb1', '#02b245', '#ebebeb', '#a9abb1'],
+                enableInteractivity: true,
+                fontName: 'PrometoRegular',
+                fontSize: '18',
+                legend: 'none',
+                pieHole: 0.3,
+                slices: {
+                    0: {
+                        textStyle: { color: '#fff' }
+                    },
+                    1: {
+                        textStyle: { color: '#495264' }
+                    },
+                    2: {
+                        textStyle: { color: '#495264' }
+                    },
+                    3: {
+                        textStyle: { color: '#fff' }
+                    },
+                    4: {
+                        textStyle: { color: '#495264' }
+                    },
+                    5: {
+                        textStyle: { color: '#495264' }
+                    }
+                }
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+
+    });
+</script>
+
+<section class="column-section myvv-dashboard">
+    <header class="column-header">
+        <h1 class="page-title">A minha Via Verde</h1>
+
+        <div class="val-summary val-summary-dashboard">
+            <span class="close"></span>
+            <div class="val-summary-title">
+                Chegou ao Viagens & Vantagens
+            </div>
+            <div class="val-summary-message">
+                <p>Agora que aderiu ao programa de fidelização da Via Verde, queremos dar-lhe as boas vindas com uma oferta especial.</p>
+            </div>
+            <div class="welcome-board-table">
+                <div class="welcome-board-row">
+                    <div class="welcome-board-cell bgGray">
+                        <div class="title">Oferta de boas-vindas</div>
+                        <div class="points-stats">1000<sup>PTS</sup></div>
+                        <div class="action-link">Desconte os pontos em <a href="#">Programas de Lazer</a></div>
+                    </div>
+                    <div class="welcome-board-cell bgGrayDark">
+                        <div class="title">Estatuto</div>
+                        <div class="points-stats">Silver</div>
+                        <div class="action-link">Descubra os benefícios em<a href="#">Vantagens Auto</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interests-board-table">
+                <div class="interests-board-row">
+                    <div class="interests-board-cell">
+                        <div class="title">Os seus interesses</div>
+                        <div class="text">
+                            <p>
+                                Escolhemos 4 áreas de interesse para si.<br />
+                                Deverá alterá-las de acordo com as suas preferências em <a href="#">Pontos e Programas.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="interests-board-cell list-segment-cell">
+                        <div class="list-segment">
+                            <ul>
+                                <li class="list-link active">
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentIcon_0" class="ic ic-welfare "></span>
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentName_0" class="list-txt">Bem-Estar</span>
+                                </li>
+
+                                <li class="list-link active">
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentIcon_1" class="ic ic-family "></span>
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentName_1" class="list-txt">Família</span>
+                                </li>
+
+                                <li class="list-link active">
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentIcon_2" class="ic ic-fairs-events "></span>
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentName_2" class="list-txt">Festivais e Eventos</span>
+                                </li>
+
+                                <li class="list-link active">
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentIcon_3" class="ic ic-gastronomy-wine "></span>
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentName_3" class="list-txt">Gastronomia e Vinhos</span>
+                                </li>
+
+                                <!--<li class="list-link">
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentIcon_4" class="ic ic-golf "></span>
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentName_4" class="list-txt">Golfe</span>
+                                </li>
+
+                                <li class="list-link">
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentIcon_5" class="ic ic-history "></span>
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentName_5" class="list-txt">História e Cultura</span>
+                                </li>
+
+                                <li class="list-link">
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentIcon_6" class="ic ic-nature "></span>
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentName_6" class="list-txt">Natureza e Ar Livre</span>
+                                </li>
+
+                                <li class="list-link">
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentIcon_7" class="ic ic-romance "></span>
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentName_7" class="list-txt">Romance</span>
+                                </li>
+
+                                <li class="list-link">
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentIcon_8" class="ic ic-sun-beach "></span>
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentName_8" class="list-txt">Sol e Praia</span>
+                                </li>
+
+                                <li class="list-link">
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentIcon_9" class="ic ic-surf "></span>
+                                    <span id="dnn_ctr526_View_searchControl_repSegments_lbSegmentName_9" class="list-txt">Surf</span>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    
+
+    <section class="column-body">
+        <h2>Notificações</h2>
+
+        <!-- Tabela de notificações -->
+        <table class="theme-default-table myvv-dashboard-notifications">
+            <tbody>
+                <tr class="row-header">
+                    <th scope="row" class="alignLeft">
+                        <span class="tooltip-error"><span class="tooltip-icon"></span></span>
+                    </th>
+                    <td class="alignLeft"><a href="#1">Sinal amarelo - Identificador mal colocado</a></td>
+                    <td><span class="tooltip-close"><span class="tooltip-icon"></span></span></td>
+                </tr>
+                <tr class="row-header">
+                    <th scope="row" class="alignLeft">
+                        <span class="tooltip-info"><span class="tooltip-icon"></span></span>
+                    </th>
+                    <td class="alignLeft"><a href="#1">Conheça a nova Via Verde</a></td>
+                    <td><span class="tooltip-close"><span class="tooltip-icon"></span></span></td>
+                </tr>
+                <tr class="row-header">
+                    <th scope="row" class="alignLeft">
+                        <span class="tooltip-edit"><span class="tooltip-icon"></span></span>
+                    </th>
+                    <td class="alignLeft"><a href="#1">Dúvida - Service traveller</a></td>
+                    <td><span class="tooltip-close"><span class="tooltip-icon"></span></span></td>
+                </tr>
+                <tr class="row-header">
+                    <th scope="row" class="alignLeft">
+                        <span class="tooltip-inquiry"><span class="tooltip-icon"></span></span>
+                    </th>
+                    <td class="alignLeft"><a href="#1">Os seus dados de contactos estão actualizados?</a></td>
+                    <td><span class="tooltip-close"><span class="tooltip-icon"></span></span></td>
+                </tr>
+                <tr class="row-header">
+                    <th scope="row" class="alignLeft">
+                        <span class="tooltip-error_low"><span class="tooltip-icon"></span></span>
+                    </th>
+                    <td class="alignLeft"><a href="#1">Saldo insuficiente na conta de pagamento CTT</a></td>
+                    <td><span class="tooltip-close"><span class="tooltip-icon"></span></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="#1" class="see-more link-add">Ver todas no centro de mensagens</a>
+    </section>
+
+    <article class="gm-banner small-banner left-banner">
+        <div class="gm-banner-img">
+            <img data-src-base="cms-images/banner-app-viaverde02.jpg" data-src="<768:?w=768&amp;h=317, <1024:?w=1024&amp;h=423, >1024:?w=470&amp;h=194" alt="">
+        </div>
+        <div class="gm-banner-content">
+            <h4 class="gm-banner-tit"><span>Nova aplicação mobile</span> App <strong>Via Verde</strong></h4>
+            <div class="gm-banner-txt">
+                <p>Aproveite para fazer a sua inspeção periódica num dos nossos centros certificados ControlAuto.</p>
+            </div>
+        </div>
+    </article>
+
+    <section class="column-body">
+        <h2>Balanço</h2>
+
+        <article class="myvv-dashboard-balance balance-disabled">
+            <div class="balance-row clearFloats">
+                <div class="balance-left">
+                    <div class="balance-green">
+                        <span>
+                            Mês corrente
+                        </span><br>
+                        Junho
+                    </div>
+                    <div class="balance-green">
+                        <span>
+                            Consumos
+                        </span><br>
+                        0,00 €
+                    </div>
+                </div>
+                <div class="balance-right balance-right-inactive">
+                    <!-- com Overlay adicionar a classe "balance-right-inactive" -->
+                    <div class="balance-green">
+                        <span>
+                            Pontos acumulados
+                        </span><br>
+                        0
+                    </div>
+                    <div class="balance-green">
+                        <span id="dnn_ctr1780_View_labelStatusCurrentMonth">Estatuto</span><br>
+
+                    </div>
+                </div>
+            </div>
+            <div class="balance-row clearFloats">
+                <div class="balance-left">
+                    <div>
+                        <span>
+                            Mês anterior
+                        </span><br>
+                        Maio
+                    </div>
+                    <div>
+                        <span>
+                            Consumos
+                        </span><br>
+                        0,00 €
+                    </div>
+                </div>
+                <div class="balance-right balance-right-inactive">
+                    <!-- com Overlay adicionar a classe "balance-right-inactive" -->
+                    <div>
+                        <span>
+                            Pontos acumulados
+                        </span><br>
+                        0
+                    </div>
+                    <div>
+                        <span id="dnn_ctr1780_View_labelStatusLastMonth">Estatuto</span><br>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="balance-inactive">
+                <p>
+
+                </p>
+                <div class="form form-theme-default">
+                    <div class="form-button">
+                        <button id="btnRegisterVV" class="button" type="submit">
+                            <span class="button-txt">
+                                Ativar Pontos
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="myvv-dashboard-balance ">
+            <div class="balance-row clearFloats">
+                <div class="balance-left">
+                    <div class="balance-green">
+                        <span>
+                            Mês corrente
+                        </span><br>
+                        Junho
+                    </div>
+                    <div class="balance-green">
+                        <span>
+                            Consumos
+                        </span><br>
+                        0,00 €
+                    </div>
+                </div>
+                <div class="balance-right ">
+                    <!-- com Overlay adicionar a classe "balance-right-inactive" -->
+                    <div class="balance-green">
+                        <span>
+                            Pontos acumulados
+                        </span><br>
+                        0
+                    </div>
+                    <div class="balance-green">
+                        <span id="dnn_ctr1780_View_labelStatusCurrentMonth">Estatuto</span><br>
+                        SILVER
+                    </div>
+                </div>
+            </div>
+            <div class="balance-row clearFloats">
+                <div class="balance-left">
+                    <div>
+                        <span>
+                            Mês anterior
+                        </span><br>
+                        Maio
+                    </div>
+                    <div>
+                        <span>
+                            Consumos
+                        </span><br>
+                        0,00 €
+                    </div>
+                </div>
+                <div class="balance-right ">
+                    <!-- com Overlay adicionar a classe "balance-right-inactive" -->
+                    <div>
+                        <span>
+                            Pontos acumulados
+                        </span><br>
+                        0
+                    </div>
+                    <div>
+                        <span id="dnn_ctr1780_View_labelStatusLastMonth">Estatuto</span><br>
+                        SILVER
+                    </div>
+                </div>
+            </div>
+
+            <div class="balance-inactive">
+                <p>
+
+                </p>
+                <div class="form form-theme-default">
+                    <div class="form-button">
+                        <button id="btnRegisterVV" class="button" type="submit">
+                            <span class="button-txt">
+                                Ativar Pontos
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+        
+
+        <a href="#1" class="see-more link-add">Ir para Extratos</a>
+
+        <h2>Atividade recente</h2>
+
+        <article class="recent-activity-chart">
+            <div class="piechart">
+                <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
+                <div id="piechart" style="width: 250px; height: 250px;"></div>
+
+                <div class="piechart-legend">
+                    <p><span>Portagens</span><br />
+                        55%</p>
+                    <p><span>Parques</span><br />
+                        20%</p>
+                    <p><span>McDrive</span><br />
+                        15%</p>
+                    <p><span>Ferries</span><br />
+                        10%</p>
+                    <p><span>Estacionamento</span><br />
+                        7%</p>
+                    <p><span>Outros</span><br />
+                        3%</p>
+                </div>
+                <p class="piechart-unavailable">Não existem dados a apresentar.</p>
+            </div>
+
+            <table class="theme-default-table tabela-movimentos table-recent-activity">
+                <thead>
+                    <tr>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Viatura</th>
+                        <th scope="col">Valor</th>
+                        <th class="custom-tooltip tooltip-info" scope="col">
+                            <span>
+                                Pontos
+                            </span>
+                            <span class="tooltip-icon tooltipstered"></span>
+                            <span class="tooltip-message" aria-hidden="true">
+                                Ative o Viagens &amp; Vantagens e comece a acumular pontos
+                            </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <b>PQ Amoreiras</b><br>
+                            17-05-2015 20:11:32
+                        </th>
+                        <td>Alias do carro</td>
+                        <td>2.3 €</td>
+                        <td><b>+30</b> </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <b>PQ xxxxx</b><br>
+                            17-05-2015 20:11:32
+                        </th>
+                        <td>alias do carro</td>
+                        <td>2.3 €</td>
+                        <td><b>+30</b> </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <b>entrada AE >> saida AE</b><br>
+                            17-05-2015 20:11:32
+                        </th>
+                        <td>BMW, Serie 3 (12-AB-12)</td>
+                        <td>13,8 €</td>
+                        <td><b>+30</b> </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <b>PQ Amoreiras</b><br>
+                            17-05-2015 20:11:32
+                        </th>
+                        <td>45-LH-32</td>
+                        <td>2.3 €</td>
+                        <td><b>+30</b> </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a href="#1" class="see-more link-add">Ver atividade Pontos</a>
+            <a href="#1" class="see-more link-add">Ver mais Movimentos</a>
+        </article>
+
+    </section>
+
+    <article class="gm-banner small-banner left-banner">
+        <div class="gm-banner-img">
+            <img data-src-base="cms-images/banner-app-viaverde02.jpg" data-src="<768:?w=768&amp;h=317, <1024:?w=1024&amp;h=423, >1024:?w=470&amp;h=194" alt="">
+        </div>
+        <div class="gm-banner-content">
+            <h4 class="gm-banner-tit"><span>Nova aplicação mobile</span> App <strong>Via Verde</strong></h4>
+            <div class="gm-banner-txt">
+                <p>Aproveite para fazer a sua inspeção periódica num dos nossos centros certificados ControlAuto.</p>
+            </div>
+        </div>
+    </article>
+
+</section>
+
+<!-- module-logged-dashboard.html END -->

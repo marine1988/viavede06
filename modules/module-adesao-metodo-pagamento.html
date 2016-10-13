@@ -1,0 +1,106 @@
+<!-- module-adesao-metodo-pagamento.html START -->
+
+<fieldset class="block-payment-fielset">
+    <legend class="clearFloats">
+        <span class="form-legend">Método de pagamento</span>
+    </legend>
+
+    <div id="block-payment-1" class="block-payment">
+        <div class="block-payment-controls">
+            <script type="text/javascript">
+                $(function () {
+                    //Check for cheked input at load and go to the current div
+                    var firtPanelShow = $('#block-payment-1 .block-payment-controls .form-radiobox-wrapper input[type="radio"]:checked').attr("rel");
+                    $("#" + firtPanelShow).show();
+
+                    //Register events for change divs
+                    $('#block-payment-1 .block-payment-controls .form-radiobox-wrapper input[type="radio"]').change(function () {
+                        if (this.checked) {
+                            var panelShow = $(this).attr("rel");
+
+                            $('#' + panelShow).show();
+
+                            $('#' + panelShow).prevAll(".block-payment-panel").hide();
+                            $('#' + panelShow).nextAll(".block-payment-panel").hide();
+                        }
+                    });
+
+                });
+            </script>
+            <div class="form-radiobox-wrapper">
+                <label for="creditcard">
+                    <span class="netcaixa-online"></span>
+                    <span class="form-radiobox">
+                        <input id="creditcard" type="radio" value="" name="blockPayment" rel="PanelTT" checked="">
+                        <span class="form-radiobox-style"></span>
+                    </span>
+                    <span class="form-label">
+                        <strong>Carão de Crédito</strong>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-radiobox-wrapper">
+                <label for="mbmb">
+                    <span class="mb-multibanco"></span>
+                    <span class="form-radiobox">
+                        <input id="mbmb" type="radio" value="" name="blockPayment" rel="PanelYY">
+                        <span class="form-radiobox-style"></span>
+                    </span>
+                    <span class="form-label">
+                        <strong>Multibanco</strong>
+                    </span>
+                </label>
+            </div>
+        </div>
+        <div id="PanelTT" class="block-payment-panel">
+            <div class="cleanStyle">
+                <p>No passo seguinte, será encaminhado para um terminal de pagamento.<br>Uma vez finalizado, voltará a este website para a confirmação final.</p>
+                
+            </div>
+        </div>
+
+        <div id="PanelYY" class="block-payment-panel">
+            <div class="cleanStyle">
+                <p>No passo seguinte, será encaminhado para um terminal de pagamento.<br>Uma vez finalizado, voltará a este website para a confirmação final.</p>
+            </div>
+        </div>
+
+        <div class="block-payment-logos-wrapper">
+            <div class="block-payment-logos">
+                <img src="images/ic-netcaixa-online_2.png" alt="netcaixa@online" title="">
+                <a href="http://www.visa.pt/pt/about_us/o_que_fazemos/seguran%C3%A7a_nos_pagamentos/verified_by_visa.aspx" target="_blank"><img src="images/ic-verified-visa.png" alt="Verified by Visa" title="learn more"></a>
+                <a href="http://www.MasterCardbusiness.com/mcbiz/index.jsp?template=/orphans&content=securecodepopup" target="_blank"><img src="images/ic-mastercard-securecode.png" alt="MasterCard SecureCode" title="learn more"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-checkbox-wrapper legalBlockWrapper">
+        <div class="legalBlock">
+            <span class="legalBlockText">
+                Ao clicar em “CONCLUIR ADESÃO” estou a aceitar as <a href="http://www.viaverde.pt/termos-condicoes" target="_blank">condições gerais e específicas aplicáveis de adesão ao serviço Via Verde</a>
+            </span>
+            <label for="form-legal-marketing">
+                <span class="form-checkbox">
+                    <input id="form-legal-marketing" type="checkbox" value="">
+                    <span class="form-checkbox-style"></span>
+                </span>
+                <span class="form-label">
+                    <strong>Não pretendo receber comunicações de marketing da Via Verde Portugal</strong>
+                </span>
+            </label>
+            <label for="form-legal-data-trasmission">
+                <span class="form-checkbox">
+                    <input id="form-legal-data-trasmission" type="checkbox" value="">
+                    <span class="form-checkbox-style"></span>
+                </span>
+                <span class="form-label">
+                    <strong>Não autorizo a transmissão dos meus dados a outras empresas do Grupo no qual a Via Verde Portugal se insere</strong>
+                </span>
+            </label>
+        </div>
+    </div>
+</fieldset>
+
+<!-- module-adesao-metodo-pagamento.html END -->

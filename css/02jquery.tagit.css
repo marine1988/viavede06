@@ -1,0 +1,307 @@
+ul.tagit {
+    padding: 1px 5px;
+    overflow: auto;
+    margin-left: inherit; /* usually we don't want the regular ul margins. */
+    margin-right: inherit;
+}
+ul.tagit li {
+    line-height: 1.5;
+    /*margin: 11px 20px 0 0;*/
+    padding: 0;
+    display: block;
+    float: left;
+}
+ul.tagit li.tagit-choice {    
+    position: relative;
+    line-height: inherit;
+}
+
+input.tagit-hidden-field {
+    display: none;
+}
+ul.tagit li.tagit-choice-read-only { 
+    padding: 1em .5em .2em .5em; 
+} 
+
+ul.tagit li.tagit-choice-editable { 
+    padding: 1em 7px .2em .5em; 
+} 
+
+ul.tagit li.tagit-new {
+    padding: .25em 4px .25em 0;
+}
+
+ul.tagit li.tagit-choice a.tagit-label {
+    cursor: pointer;
+    text-decoration: none;
+}
+ul.tagit li.tagit-choice .tagit-close {
+    cursor: pointer;
+    position: absolute;
+    right: .1em;
+    top: 50%;
+    margin-top: -8px;
+    line-height: 17px;
+}
+
+/* used for some custom themes that don't need image icons */
+ul.tagit li.tagit-choice .tagit-close .text-icon {
+    display: none;
+}
+
+ul.tagit li.tagit-choice input {
+    display: block;
+    float: left;
+    margin: 2px 5px 2px 0;
+}
+ul.tagit input[type="text"] {
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: inherit;
+    background-color: inherit;
+    outline: none;
+}
+
+ul.tagit li.tagit-choice span.tagit-label{
+    color: #fff;
+    vertical-align: top;
+    display: inline-block;
+    -webkit-border-radius: 20px 0 0 20px;
+    -moz-border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px;
+    padding: 4px 15px;
+    background-color: #dadada;
+    line-height: 1.5;
+}
+ul.tagit li.tagit-choice a.tagit-close{
+    cursor: pointer;
+    line-height: 0.7;
+    vertical-align: top;
+    display: inline-block;
+    position: static;
+    margin-top: 0;
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0;
+    padding: 7px 6px 7px;
+    background-color: #dadada;
+}
+ul.tagit li.tagit-choice.tag-custom span.tagit-label,
+ul.tagit li.tagit-choice.tag-keyword span.tagit-label,
+ul.tagit li.tagit-choice.tag-custom a.tagit-close,
+ul.tagit li.tagit-choice.tag-keyword a.tagit-close{
+    background-color: #02b245;
+}
+ul.tagit li.tagit-choice a.tagit-close .ui-icon-close{
+    display: inline-block;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    background-image: url(images/ic-close01.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/*============ DIV RESULTS autocomplete (SEARCH BAR) ===========*/
+/* FUTURE IMPLEMENTATION */
+/*div.results-list{
+    display: none;
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    border: 1px solid #e6e6e6;
+    background: #ffffff;
+    z-index: 5;
+    padding-top: 10px;
+}
+div.results-autocomplete{
+    max-height: 150px;
+    overflow-x: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div.results-list:before{
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: -10px;
+    width: 21px;
+    height: 11px;
+    z-index: 50;
+    background: url(images/menu-arrow.png) no-repeat left top;
+}
+div.results-list .title-list{
+    font-size: 1.5rem;
+    color: #02b245;
+    padding: 0 10px 0px 15px;
+    text-align: left;
+    font-family: 'PrometoRegular', Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+div.results-list .title-list:hover{
+    background-color: #fff;
+}
+div.results-list ul.tagit-autocomplete{
+    position: relative !important;
+    top: auto !important;
+    left: 0 !important;
+    width: auto !important;
+    padding: 0;
+    margin: 0;
+}
+div.results-list.top-results{
+    bottom: 190px;
+}
+div.results-list.top-results:before{
+    top: auto;
+    bottom: -10px;
+    background: url(images/menu-arrow-bottom.png) no-repeat left top;
+}*/
+
+div.results-list{
+    width: auto;
+    max-width: 300px;
+    position: relative;
+    z-index: 5;
+}
+/*============ tagit autocomplete ===========*/
+ul.tagit-autocomplete{
+    border: 1px solid #e6e6e6;
+    display: block;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 5px 0;
+    width: 100%;
+    background-color: #fff;
+    cursor: default;
+    position: relative;
+    z-index: 2;
+    overflow-y: visible;
+    overflow-x: visible;
+    list-style: none;
+    text-transform: none;
+    background: #ffffff;
+    font-size: 1.5rem;
+    width: 100%;
+    margin-top: 5px;
+}
+ul.tagit-autocomplete:before{
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: -10px;
+    width: 21px;
+    height: 11px;
+    z-index: 50;
+    background: url(images/menu-arrow.png) no-repeat left top;
+}
+
+ul.tagit-autocomplete li{
+    display: block;
+    padding: 12px 10px 12px 45px;
+    position: relative;
+}
+
+ul.tagit-autocomplete li:hover{
+    background: #fff !important;
+}
+ul.tagit-autocomplete li:hover a{
+    text-decoration: underline;
+    color: #495264 !important;
+}
+
+ul.tagit-autocomplete li.local:before{
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 9px;
+    width: 25px;
+    height: 19px;
+    background: url(images/ic-local.png) no-repeat;
+    background-position: top 0 left 0;
+}
+ul.tagit-autocomplete li.local:hover:before{
+    background-position: top -19px left 0;
+}
+ul.tagit-autocomplete li.museum:before{
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 9px;
+    width: 25px;
+    height: 18px;
+    background: url(images/ic-museum.png) no-repeat left top;
+}
+ul.tagit-autocomplete li.museum:hover:before{
+    background-position: top -17px left 0;
+}
+ul.tagit-autocomplete li.hotel:before{
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 9px;
+    width: 25px;
+    height: 21px;
+    background: url(images/ic-hotel.png) no-repeat left top;
+}
+ul.tagit-autocomplete li.hotel:hover:before{
+    background-position: top -20px left 0;
+}
+ul.tagit-autocomplete li.restaurant:before{
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 9px;
+    width: 25px;
+    height: 21px;
+    background: url(images/ic-bar.png) no-repeat left top;
+}
+ul.tagit-autocomplete li.restaurant:hover:before{
+    background-position: top -21px left 0;
+}
+ul.tagit-autocomplete li.noCategory:before{
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 9px;
+    width: 25px;
+    height: 25px;
+    background: url(images/ic-no-category.png) no-repeat left top;
+}
+ul.tagit-autocomplete li.noCategory:hover:before{
+    background-position: top -24px left 0;
+}
+
+ul.tagit-autocomplete li.title-list{
+    color: #02b245;
+    padding: 10px 10px 5px 15px;
+    text-align: left;
+    font-family: 'PrometoRegular', Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+ul.tagit-autocomplete li.title-list:hover{
+    background-color: #fff;
+}
+
+ul.tagit-autocomplete li a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 480px){
+    div.results-list{
+        max-width: 240px;
+    }
+}

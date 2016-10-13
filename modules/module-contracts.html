@@ -1,0 +1,249 @@
+<!-- module-contracts.html START -->
+
+<section class="column-section">
+    <header class="column-header">
+       <h1 class="page-title">Contratos</h1>
+    </header>
+    <div class="column-body noPadding">
+
+        <div class="contract-list">
+            <div class="contract-list-filter">
+              
+                <div class="form form-theme-default form-contract-list">
+                    <script type="text/javascript">
+                        $(function () {
+                            /* Tooltipster */
+                            /* 
+				            Parametros:
+				            - Selector
+				            - É Modal
+				            */
+                            initTooltipster($('.form-contract-list .custom-tooltip .tooltip-icon'), false);
+
+                            $('.form-contract-list .Validator').blur(function () {
+                                /* 
+				                Parametros:
+				                - Selector do controlo
+				                - Nome do grupo de validação
+				                - Nome na class a colocar no pai em caso de erro
+				                - Selector da mensagem generica de erro a mostrar
+				                */
+                                SingleValidator($(this).attr("id"), 'FormContractList', 'tooltip-error', null);
+
+                                /* Update Single Tooltipster Message */
+                                updateSingleTooltipster($(this));
+                            });
+
+
+                            //showControlLoading($("#Button2"));
+                            //hideControlLoading($("#Button2"));
+                            //updateTooltipster($('.form-contract-list .custom-tooltip .tooltip-icon'));
+                        });
+                    </script>
+
+	                <fieldset>
+                        <script type="text/javascript">
+                            $(function () {
+
+                                var availableTags = [
+                                "ActionScript",
+                                "AppleScript",
+                                "Asp",
+                                "BASIC",
+                                "C",
+                                "C++",
+                                "Clojure",
+                                "COBOL",
+                                "ColdFusion",
+                                "Erlang",
+                                "Fortran",
+                                "Groovy",
+                                "Haskell",
+                                "Java",
+                                "JavaScript",
+                                "Lisp",
+                                "Perl",
+                                "PHP",
+                                "Python",
+                                "Ruby",
+                                "Scala",
+                                "Scheme"];
+
+                                $("#txt-contract-number").autocomplete({
+                                    source: availableTags,
+                                    appendTo: ".autocomplete-container"
+                                });
+
+
+                            });
+                        </script>
+
+		                <div class="form-lead">
+                            <p>Carregue em qualquer dos contratos para ver os detalhes</p>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-filter-group-wrapper">
+                        
+		                        <div class="form-input-wrapper autocomplete-container">
+			                        <label for="txt-contract-number">
+				                        <span class="form-label">Filtrar</span>
+				                        <span class="form-input custom-tooltip">
+					                        <input id="txt-contract-number" type="text" value="" class="Validator" placeholder="Nº Contrato">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+				                        </span>
+			                        </label>
+		                        </div>
+
+                                <div class="form-button-wrapper">
+                                    <div class="form-button">
+		                                <button class="button" id="Button2" type="submit">
+			                                <span class="button-txt">Filtrar</span>
+		                                </button>
+                                        <span class="form-loader"></span>
+	                                </div>
+
+                                    <div class="form-button">
+		                                <button class="button button-disabled" id="Button1" type="submit">
+			                                <span class="button-txt">Filtrar</span>
+		                                </button>
+                                        <span class="form-loader"></span>
+	                                </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+	                </fieldset>
+     
+                </div>
+           
+            </div>
+            <div class="contract-list-wrapper">
+                <script type="text/javascript">
+                    $(function () {
+                        $(".contract-list-table thead a").click(function (e) {
+                            e.preventDefault();
+                            $(this).toggleClass("active");
+
+                            //Efectuar o filtro...
+                        });
+
+                        $("#BtnLoadMore").click(function (e) {
+                            e.preventDefault();
+
+                            var currentButton = $(this);
+
+                            showButtonLoader(currentButton);
+
+                            // Stop Loading after 1 second
+                            setTimeout(function () {
+                                hideButtonLoader(currentButton);
+                            }, 500);
+
+                        });
+
+                    });
+                </script>
+                <table class="theme-default-table contract-list-table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="alignLeft">&nbsp;</th>
+                            <th scope="col" class="alignLeft"><a href="#" class="order_down">Número</a></th>
+                            <th scope="col" class="column480">Tipo</th>
+                            <th scope="col" class="column640">Início</th>
+                            <th scope="col" class="column767">e-mail contato</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="alignLeft">
+                                <a href="#">Delegação Leiria</a>
+                            </th>
+                            <td class="alignLeft">245252342</td>
+                            <td class="column480">Débito</td>
+                            <td class="column640">23-05-2010</td>
+                            <td class="column767">dadsadqweew@mail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="alignLeft">
+                                <a href="#">Delegação Leiria</a>
+                            </th>
+                            <td class="alignLeft">245252342</td>
+                            <td class="column480">Débito</td>
+                            <td class="column640">23-05-2010</td>
+                            <td class="column767">dadsadqweew@mail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="alignLeft">
+                                <a href="#">Delegação Leiria</a>
+                            </th>
+                            <td class="alignLeft">245252342</td>
+                            <td class="column480">Débito</td>
+                            <td class="column640">23-05-2010</td>
+                            <td class="column767">dadsadqweew@mail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="alignLeft">
+                                <a href="#">Delegação Leiria</a>
+                            </th>
+                            <td class="alignLeft">245252342</td>
+                            <td class="column480">Débito</td>
+                            <td class="column640">23-05-2010</td>
+                            <td class="column767">dadsadqweew@mail.com</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" class="alignLeft">25/121 extratos</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">
+
+                                
+                                <div class="button-loader" style="display: block;"></div>
+
+
+                                <button class="button button-border" id="BtnLoadMore" type="submit">
+			                        <span class="button-txt">Carregar mais</span>
+		                        </button>
+                                <div class="button-loader"></div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            
+                 <div class="lnk-back-top">
+	                <a class="link" href="#top-page">
+		                <span class="link-txt">Top</span>
+	                </a>
+                </div>
+            
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- BANNER -->
+	<article class="gm-banner small-banner left-banner">
+            <div class="gm-banner-img">
+                <img data-src-base="cms-images/app_banner-2.png" data-src="<768:?w=768&amp;h=317,<1024:?w=1024&amp;h=423,>1024:?w=470&amp;h=194" alt="App Via Verde — Ganhe até 1 ano de portagens gratuitas">
+            </div>
+            <div class="gm-banner-content">
+                <h4 class="gm-banner-tit">
+                    App Via Verde — Ganhe até 1 ano de portagens gratuitas</h4>
+                <div class="gm-banner-txt">
+                    <p>
+                        Participe nos Desafios e ganhe portagens gratuitas! Faça download da nova App Via Verde — <a target="_blank" href="#1">iOS</a> | <a target="_blank" href="#1">Android</a></p>
+                </div>
+                <div class="gm-banner-button">
+                    
+                    
+                </div>
+            </div>
+        </article>
+	<!-- END BANNER -->
+
+</section>
+
+<!-- module-contracts.html END -->

@@ -1,0 +1,850 @@
+
+<section class="column-section">
+
+    <!-- BACK BUTTON -->
+	<div class="back-button">
+		<a href="#" class="link"><span class="link-txt">Voltar</span></a>
+	</div>
+	<!-- END BACK BUTTON -->
+
+    <header class="column-header">
+       <h1 class="page-title">Contratos</h1>
+    </header>
+    <div class="column-body cleanBody">
+        
+        <div class="contract-detail">
+            
+            <div class="form form-theme-default form-contract-detail">
+                <script type="text/javascript">
+                    $(function () {
+                        /* Tooltipster */
+                        /* 
+                        Parametros:
+                        - Selector
+                        - É Modal
+                        */
+                        //initTooltipster($('.form-contract-detail .custom-tooltip .tooltip-icon'), false);
+
+                    });
+                </script>
+                <fieldset class="header-contract-detail-wrapper clearFloats">
+                    <div class="header-contract-detail">
+                        <legend class="clearFloats">
+                            <span class="form-legend">Delegação Setúbal</span>
+                            <a href="#" class="link-edit">Alterar Dados do Contrato</a>
+		                </legend>
+                        <div class="form-input-wrapper">
+			                <label for="txt-Alias">
+				                <span class="form-label">Titular</span>
+				                <span id="txt-Alias" class="form-pre-filled"><strong>Nome Segundo Apelido Apelido</strong></span>
+			                </label>
+		                </div>
+
+                        <div class="form-group form-group-4">
+
+                                <div class="form-group-wrapper">
+            
+                                    <div class="form-input-wrapper">
+			                            <label for="form-nif">
+				                            <span class="form-label">NIF</span>
+				                            <span id="Span4" class="form-pre-filled"><strong>876587986</strong></span>
+			                            </label>
+		                            </div>
+
+                                    <div class="form-input-wrapper">
+			                            <label for="form-contract-number">
+				                            <span class="form-label">Número Contrato</span>
+				                            <span id="Span1" class="form-pre-filled"><strong>0978262682</strong></span>
+			                            </label>
+		                            </div>
+
+                                    <div class="form-input-wrapper">
+			                            <label for="form-type">
+				                            <span class="form-label">Tipo</span>
+				                            <span id="Span2" class="form-pre-filled"><strong>Débito</strong></span>
+			                            </label>
+		                            </div>
+
+                                    <div class="form-input-wrapper">
+			                            <label for="form-date">
+				                            <span class="form-label">Ínicio</span>
+				                            <span id="Span3" class="form-pre-filled"><strong>23-05-2010</strong></span>
+			                            </label>
+		                            </div>
+
+                                </div>
+                            </div>
+                    </div>
+                </fieldset>
+            
+                <fieldset class="fieldset65">
+                    <div class="form-input-wrapper visualization-mode">
+			            <label for="txt-address">
+				            <span id="txt-address" class="form-pre-filled"><strong>Morada:</strong> Morada a descrever</span>
+			            </label>
+		            </div>
+                    <div class="form-input-wrapper visualization-mode">
+			            <label for="txt-codpost">
+				            <span id="txt-codpost" class="form-pre-filled"><strong>Código Postal:</strong> 2605-230</span>
+			            </label>
+		            </div>
+                    <div class="form-input-wrapper visualization-mode">
+			            <label for="txt-local">
+				            <span id="txt-local" class="form-pre-filled"><strong>Localidade:</strong> Belas</span>
+			            </label>
+		            </div>
+                    <div class="form-input-wrapper visualization-mode">
+                        <label for="Select1">
+				            <span id="Select1" class="form-pre-filled"><strong>País:</strong> Portugal</span>
+                        </label>
+                    </div>
+                    <div class="form-input-wrapper visualization-mode">
+			            <label for="txt-phone">
+				            <span id="txt-phone" class="form-pre-filled"><strong>Telemóvel:</strong> 911111111</span>
+			            </label>
+		            </div>
+                    <div class="form-input-wrapper visualization-mode">
+			            <label for="txt-telefone">
+				            <span id="txt-telefone" class="form-pre-filled"><strong>Telefóne:</strong> 21111111</span>
+			            </label>
+		            </div>
+                    <div class="form-input-wrapper visualization-mode">
+			            <label for="txt-mail">
+				            <span id="txt-mail" class="form-pre-filled"><strong>E-mail:</strong> changeme@mail.com</span>
+			            </label>
+		            </div>
+                    <div class="form-input-wrapper visualization-mode">
+                        <label for="Select2">
+                            <span id="Select2" class="form-pre-filled"><strong>Tipo de Extrato:</strong> Estrato escolhido</span>
+                        </label>
+                    </div>
+                    <div class="form-input-wrapper visualization-mode">
+                        <label for="Select3">
+                            <span id="Select3" class="form-pre-filled"><strong>Períodicidade:</strong> Mensal</span>
+                        </label>
+                    </div>
+
+                </fieldset>
+            
+                <div class="form-button contract-tools">
+                    <script type="text/javascript">
+                        $(function () {
+                            $(".link-split-billing").click(function (e) {
+                                openModal('modal-split-billing', null, true);
+                            });
+                        });
+                    </script>
+
+                    <a href="#" class="link-movements">Ver movimentos</a>
+                    <a href="#" class="link-split-billing">Adesão Fatua Repartida</a>
+                    <a href="#" class="link-add">Adicionar Viatura</a>
+                </div>
+                    
+            </div>
+        
+
+            <script type="text/javascript">
+                function setDetailRowClick() {
+                    //Contract Detail Table RowClick
+                    if ($(".vehicles-table").length) {
+                        $('.vehicles-table .row-header').click(function () {
+                            //Clean Selection
+                            $('.vehicles-table .row-body').fadeOut("fast", function () {
+                                // Animation complete
+                                $('.vehicles-table .row-header').fadeIn("fast");
+                            });
+
+                            //Set selection
+                            $(this).fadeOut("fast", function () {
+                                // Animation complete
+                                $(this).next(".row-body").fadeIn("fast");
+                            });
+                        });
+                    }
+                }
+
+                $(function () {
+                    //$(".contract-list-table thead a").click(function (e) {
+                    //    e.preventDefault();
+                    //    $(this).toggleClass("active");
+
+                    //    //Efectuar o filtro...
+                    //});
+
+                    //$("#BtnLoadMore").click(function (e) {
+                    //    e.preventDefault();
+
+                    //    showControlLoading($("#BtnLoadMore"));
+                    //    //hideControlLoading($("#Button2"));
+
+                    //});
+
+                    setDetailRowClick();
+
+
+                    $(".vehicle-detail .vehicles-detail-tools a.link-header").click(function (e) {
+                        e.preventDefault();
+
+                        $(this).hide();
+                        $(this).next(".vehicles-detail-tools-body").show();
+                    });
+                });
+            </script>
+            
+            <!--Até X viaturas mostra todos abertos-->
+            
+            <div class="vehicle-title">
+                <h3>Viaturas e identificadores neste contrato</h3>
+            </div>
+
+            <div class="vehicle-detail-list">
+                
+                <div class="vehicle-detail">
+                    <div class="vehicle-main">
+                        <div class="vehicles-info">
+                            <span class="type classe1"></span>
+                            <div class="type-info">
+                                <span class="name">Opel Astra</span>
+                                <span class="classe">Classe 1</span>
+                                <div class="registration"><span>24-09-OB</span></div>
+                            </div>
+                            <span class="vehicles-info-corner">
+					            <span class="vehicles-info-corner-left"></span>
+					            <span class="vehicles-info-corner-right"></span>
+				            </span>
+                        </div>
+                        <div class="vehicles-vv-info-wrapper">
+                            <div class="vehicle-info">
+                                <div class="vehicle-info-row">
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Identificador:</span>
+                                        <span class="value">123409987</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Estado:</span>
+                                        <span class="value">Ativo</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Contrato:</span>
+                                        <span class="value">124987768</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Modalidade:</span>
+                                        <span class="value">Aluguer</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Serviços:</span>
+                                        <ul class="services">
+                                            <li class="service2 active"><span>Parques de Estacionamento</span></li>
+                                            <li class="service4 active"><span>service4</span></li>
+                                            <li class="service3"><span>Postos de Abastecimento</span></li>
+                                            <li class="service337"><span>service337</span></li>
+                                            <li><strong>*FR</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Referência:</span>
+                                        <span class="value">987987987987</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vehicle-controls">
+                                <button class="button" id="BtnLoadMore" type="submit">
+			                        <span class="button-txt">Alterar Matricula</span>
+		                        </button>
+                                <button class="button button-border" id="Button1" type="submit">
+			                        <span class="button-txt">Suprimir Matricula</span>
+		                        </button>
+                                <button class="button button-border" id="Button2" type="submit">
+			                        <span class="button-txt">Desativar Identificador</span>
+		                        </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicles-detail-tools">
+                        <a href="#" class="link-header">Outros serviços</a>          
+                        <div class="vehicles-detail-tools-body">
+                            <a href="#" class="link-inspection"><span>Marcar Inspecção</span></a>
+                            <a href="#" class="link-movements"><span>Ver movimentos</span></a>
+                            <a href="#" class="link-services"><span>Serviços</span></a>
+                            <a href="#" class="link-split-bill"><span>fatura Repartida</span></a>
+                            <a href="#" class="link-mb"><span>Gestão Referência</span></a>
+                        </div>
+                    </div>
+                </div>
+                    
+                
+                <div class="vehicle-detail">
+                    <div class="vehicle-main">
+                        <div class="vehicles-info">
+                            <span class="type classe1"></span>
+                            <div class="type-info">
+                                <span class="name">Opel Astra</span>
+                                <span class="classe">Classe 1</span>
+                                <div class="registration"><span>24-09-OB</span></div>
+                            </div>
+                            <span class="vehicles-info-corner">
+					            <span class="vehicles-info-corner-left"></span>
+					            <span class="vehicles-info-corner-right"></span>
+				            </span>
+                        </div>
+                        <div class="vehicles-vv-info-wrapper">
+                            <div class="vehicle-info">
+                                <div class="vehicle-info-row">
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Identificador:</span>
+                                        <span class="value">123409987</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Estado:</span>
+                                        <span class="value">Ativo</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Contrato:</span>
+                                        <span class="value">124987768</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Modalidade:</span>
+                                        <span class="value">Aluguer</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Serviços:</span>
+                                        <ul class="services">
+                                            <li class="service2 active"><span>Parques de Estacionamento</span></li>
+                                            <li class="service4 active"><span>service4</span></li>
+                                            <li class="service3"><span>Postos de Abastecimento</span></li>
+                                            <li class="service337"><span>service337</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Referência:</span>
+                                        <span class="value">987987987987</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vehicle-controls">
+                                <button class="button" id="Button3" type="submit">
+			                        <span class="button-txt">Alterar Matricula</span>
+		                        </button>
+                                <button class="button button-border" id="Button4" type="submit">
+			                        <span class="button-txt">Suprimir Matricula</span>
+		                        </button>
+                                <button class="button button-border" id="Button5" type="submit">
+			                        <span class="button-txt">Desativar Identificador</span>
+		                        </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicles-detail-tools">
+                        <a href="#" class="link-header">Outros serviços</a>          
+                        <div class="vehicles-detail-tools-body">
+                            <a href="#" class="link-inspection"><span>Marcar Inspecção</span></a>
+                            <a href="#" class="link-movements"><span>Ver movimentos</span></a>
+                            <a href="#" class="link-services"><span>Serviços</span></a>
+                            <a href="#" class="link-split-bill"><span>fatura Repartida</span></a>
+                            <a href="#" class="link-mb"><span>Gestão Referência</span></a>
+                        </div>
+                    </div>
+                </div>
+                   
+                
+                <div class="vehicle-detail">
+                    <div class="vehicle-main">
+                        <div class="vehicles-info">
+                            <span class="type classe1"></span>
+                            <div class="type-info">
+                                <span class="name">Opel Astra</span>
+                                <span class="classe">Classe 1</span>
+                                <div class="registration"><span>24-09-OB</span></div>
+                            </div>
+                            <span class="vehicles-info-corner">
+					            <span class="vehicles-info-corner-left"></span>
+					            <span class="vehicles-info-corner-right"></span>
+				            </span>
+                        </div>
+                        <div class="vehicles-vv-info-wrapper">
+                            <div class="vehicle-info">
+                                <div class="vehicle-info-row">
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Identificador:</span>
+                                        <span class="value">123409987</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Estado:</span>
+                                        <span class="value">Ativo</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Contrato:</span>
+                                        <span class="value">124987768</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Modalidade:</span>
+                                        <span class="value">Aluguer</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Serviços:</span>
+                                        <ul class="services">
+                                            <li class="service2 active"><span>Parques de Estacionamento</span></li>
+                                            <li class="service4 active"><span>service4</span></li>
+                                            <li class="service3"><span>Postos de Abastecimento</span></li>
+                                            <li class="service337"><span>service337</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Referência:</span>
+                                        <span class="value">987987987987</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vehicle-controls">
+                                <button class="button" id="Button6" type="submit">
+			                        <span class="button-txt">Alterar Matricula</span>
+		                        </button>
+                                <button class="button button-border" id="Button7" type="submit">
+			                        <span class="button-txt">Suprimir Matricula</span>
+		                        </button>
+                                <button class="button button-border" id="Button8" type="submit">
+			                        <span class="button-txt">Desativar Identificador</span>
+		                        </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicles-detail-tools">
+                        <a href="#" class="link-header">Outros serviços</a>          
+                        <div class="vehicles-detail-tools-body">
+                            <a href="#" class="link-inspection"><span>Marcar Inspecção</span></a>
+                            <a href="#" class="link-movements"><span>Ver movimentos</span></a>
+                            <a href="#" class="link-services"><span>Serviços</span></a>
+                            <a href="#" class="link-split-bill"><span>fatura Repartida</span></a>
+                            <a href="#" class="link-mb"><span>Gestão Referência</span></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="vehicle-title">
+                    <h2>Faturação repartida de outras viaturas</h2>
+                </div>
+
+                <div class="vehicle-detail vehicle-detail-split-billing">
+                    <div class="vehicle-main">
+                        <div class="vehicles-info">
+                            <span class="type classe1"></span>
+                            <div class="type-info">
+                                <span class="name">Peugeot do Tiago</span>
+                                <span class="classe">Fatura Repartida</span>
+                            </div>
+                        </div>
+                        <div class="vehicles-vv-info-wrapper">
+                            <div class="vehicle-info">
+                                <div class="vehicle-info-row">
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Identificador:</span>
+                                        <span class="value">123409987</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Contrato:</span>
+                                        <span class="value">124987768</span>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Serviços:</span>
+                                        <ul class="services">
+                                            <li class="service2 active"><span>Parques de Estacionamento</span></li>
+                                            <li class="service4 active"><span>service4</span></li>
+                                            <li class="service3"><span>Postos de Abastecimento</span></li>
+                                            <li class="service337"><span>service337</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="vehicle-info-cell">
+                                        <span class="label">Referência:</span>
+                                        <span class="value">987987987987</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicles-detail-tools">
+                        <a href="#" class="link-header">Outros serviços</a>          
+                        <div class="vehicles-detail-tools-body">
+                            <a href="#" class="link-movements"><span>Ver movimentos</span></a>
+                            <a href="#" class="link-split-bill"><span>fatura Repartida</span></a>
+                            <a href="#" class="link-mb"><span>Gestão Referência</span></a>
+                        </div>
+                    </div>
+                </div>
+                          
+            </div>
+
+
+            
+            <!--Mais de  X viaturas mostra lista-->
+            <div class="vehicle-title">
+                <h3>Viaturas e identificadores neste contrato</h3>
+            </div>
+
+            <div class="contract-detail-table-wrapper">
+                <table class="theme-default-table vehicles-table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="alignLeft">&nbsp;</th>
+                            <th scope="col">&nbsp;</th>
+                            <th scope="col" class="column480">Matrícula</th>
+                            <th scope="col" class="column640">Identificador</th>
+                            <th scope="col" class="">Estado</th>
+                            <th scope="col" class="column1279">Referência</th>
+                            <th scope="col" class="column1279">Modalidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-header">
+                            <th scope="row" class="alignLeft">
+                                <strong>Alias do carro</strong><br />
+                                Opel, Astra, Classe 1
+                            </th>
+                            <td><span class="arrow"></span></td>
+                            <td class="column480">45-LH-32</td>
+                            <td class="column640">245252342</td>
+                            <td class="">Ativo</td>
+                            <td class="column1279">245252342</td>
+                            <td class="column1279">Compra</td>
+                        </tr>
+                        <tr class="row-body">
+                            <td colspan="7" class="alignLeft">
+                                <div class="vehicle-detail">
+                                    <div class="vehicle-main">
+                                        <div class="vehicles-info">
+                                            <span class="type classe1"></span>
+                                            <div class="type-info">
+                                                <span class="name">Opel Astra</span>
+                                                <span class="classe">Classe 1</span>
+                                                <div class="registration"><span>24-09-OB</span></div>
+                                            </div>
+                                            <span class="vehicles-info-corner">
+					                            <span class="vehicles-info-corner-left"></span>
+					                            <span class="vehicles-info-corner-right"></span>
+				                            </span>
+                                        </div>
+                                        <div class="vehicles-vv-info-wrapper">
+                                            <div class="vehicle-info">
+                                                <div class="vehicle-info-row">
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Identificador:</span>
+                                                        <span class="value">123409987</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Estado:</span>
+                                                        <span class="value">Ativo</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Contrato:</span>
+                                                        <span class="value">124987768</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Modalidade:</span>
+                                                        <span class="value">Aluguer</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Serviços:</span>
+                                                        <ul class="services">
+                                                            <li class="service2 active"><span>Parques de Estacionamento</span></li>
+                                                            <li class="service4 active"><span>service4</span></li>
+                                                            <li class="service3"><span>Postos de Abastecimento</span></li>
+                                                            <li class="service337"><span>service337</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Referência:</span>
+                                                        <span class="value">987987987987</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="vehicle-controls">
+                                                <button class="button" id="Button9" type="submit">
+			                                        <span class="button-txt">Alterar Matricula</span>
+		                                        </button>
+                                                <button class="button button-border" id="Button10" type="submit">
+			                                        <span class="button-txt">Suprimir Matricula</span>
+		                                        </button>
+                                                <button class="button button-border" id="Button11" type="submit">
+			                                        <span class="button-txt">Activar Identificador</span>
+		                                        </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vehicles-detail-tools">
+                                        <a href="#" class="link-header">Outros serviços</a>          
+                                        <div class="vehicles-detail-tools-body">
+                                            <a href="#" class="link-inspection"><span>Marcar Inspecção</span></a>
+                                            <a href="#" class="link-movements"><span>Ver movimentos</span></a>
+                                            <a href="#" class="link-services"><span>Serviços</span></a>
+                                            <a href="#" class="link-split-bill"><span>fatura Repartida</span></a>
+                                            <a href="#" class="link-mb"><span>Gestão Referência</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                 
+                            </td>
+                        </tr>
+
+                        <tr class="row-header">
+                            <th scope="row" class="alignLeft">
+                                <strong>Alias do carro</strong><br />
+                                Opel, Astra, Classe 1
+                            </th>
+                            <td><span class="arrow"></span></td>
+                            <td class="column480">45-LH-32</td>
+                            <td class="column640">245252342</td>
+                            <td class="">Ativo</td>
+                            <td class="column1279">245252342</td>
+                            <td class="column1279">Compra</td>
+                        </tr>
+                        <tr class="row-body">
+                            <td colspan="7" class="alignLeft">
+                                <div class="vehicle-detail vehicle-detail-split-billing">
+                                    <div class="vehicle-main">
+                                        <div class="vehicles-info">
+                                            <span class="type classe1"></span>
+                                            <div class="type-info">
+                                                <span class="name">Peugeot do Tiago</span>
+                                                <span class="classe">Fatura Repartida</span>
+                                            </div>
+                                        </div>
+                                        <div class="vehicles-vv-info-wrapper">
+                                            <div class="vehicle-info">
+                                                <div class="vehicle-info-row">
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Identificador:</span>
+                                                        <span class="value">123409987</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Contrato:</span>
+                                                        <span class="value">124987768</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Serviços:</span>
+                                                        <ul class="services">
+                                                            <li class="service2 active"><span>Parques de Estacionamento</span></li>
+                                                            <li class="service4 active"><span>service4</span></li>
+                                                            <li class="service3"><span>Postos de Abastecimento</span></li>
+                                                            <li class="service337"><span>service337</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Referência:</span>
+                                                        <span class="value">987987987987</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vehicles-detail-tools">
+                                        <a href="#" class="link-header">Outros serviços</a>          
+                                        <div class="vehicles-detail-tools-body">
+                                            <a href="#" class="link-movements"><span>Ver movimentos</span></a>
+                                            <a href="#" class="link-split-bill"><span>fatura Repartida</span></a>
+                                            <a href="#" class="link-mb"><span>Gestão Referência</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="row-header">
+                            <th scope="row" class="alignLeft">
+                                <strong>Alias do carro</strong><br />
+                                Opel, Astra, Classe 1
+                            </th>
+                            <td><span class="arrow"></span></td>
+                            <td class="column480">45-LH-32</td>
+                            <td class="column640">245252342</td>
+                            <td class="">Ativo</td>
+                            <td class="column1279">245252342</td>
+                            <td class="column1279">Compra</td>
+                        </tr>
+                        <tr class="row-body">
+                            <td colspan="7" class="alignLeft">
+                                <div class="vehicle-detail">
+                                    <div class="vehicle-main">
+                                        <div class="vehicles-info">
+                                            <span class="type classe1"></span>
+                                            <div class="type-info">
+                                                <span class="name">Opel Astra</span>
+                                                <span class="classe">Classe 1</span>
+                                                <div class="registration"><span>24-09-OB</span></div>
+                                            </div>
+                                            <span class="vehicles-info-corner">
+					                            <span class="vehicles-info-corner-left"></span>
+					                            <span class="vehicles-info-corner-right"></span>
+				                            </span>
+                                        </div>
+                                        <div class="vehicles-vv-info-wrapper">
+                                            <div class="vehicle-info">
+                                                <div class="vehicle-info-row">
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Identificador:</span>
+                                                        <span class="value">123409987</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Estado:</span>
+                                                        <span class="value">Ativo</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Contrato:</span>
+                                                        <span class="value">124987768</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Modalidade:</span>
+                                                        <span class="value">Aluguer</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Serviços:</span>
+                                                        <ul class="services">
+                                                            <li class="service2 active"><span>Parques de Estacionamento</span></li>
+                                                            <li class="service4 active"><span>service4</span></li>
+                                                            <li class="service3"><span>Postos de Abastecimento</span></li>
+                                                            <li class="service337"><span>service337</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Referência:</span>
+                                                        <span class="value">987987987987</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="vehicle-controls">
+                                                <button class="button" id="Button15" type="submit">
+			                                        <span class="button-txt">Alterar Matricula</span>
+		                                        </button>
+                                                <button class="button button-border" id="Button16" type="submit">
+			                                        <span class="button-txt">Suprimir Matricula</span>
+		                                        </button>
+                                                <button class="button button-border" id="Button17" type="submit">
+			                                        <span class="button-txt">Desativar Identificador</span>
+		                                        </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vehicles-detail-tools">
+                                        <a href="#" class="link-header">Outros serviços</a>          
+                                        <div class="vehicles-detail-tools-body">
+                                            <a href="#" class="link-inspection"><span>Marcar Inspecção</span></a>
+                                            <a href="#" class="link-movements"><span>Ver movimentos</span></a>
+                                            <a href="#" class="link-services"><span>Serviços</span></a>
+                                            <a href="#" class="link-split-bill"><span>fatura Repartida</span></a>
+                                            <a href="#" class="link-mb"><span>Gestão Referência</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                 
+                            </td>
+                        </tr>
+
+                        <tr class="row-header">
+                            <th scope="row" class="alignLeft">
+                                <strong>Alias do carro</strong><br />
+                                Opel, Astra, Classe 1
+                            </th>
+                            <td><span class="arrow"></span></td>
+                            <td class="column480">45-LH-32</td>
+                            <td class="column640">245252342</td>
+                            <td class="">Ativo</td>
+                            <td class="column1279">245252342</td>
+                            <td class="column1279">Compra</td>
+                        </tr>
+                        <tr class="row-body">
+                            <td colspan="7" class="alignLeft">
+                                <div class="vehicle-detail">
+                                    <div class="vehicle-main">
+                                        <div class="vehicles-info">
+                                            <span class="type classe1"></span>
+                                            <div class="type-info">
+                                                <span class="name">Opel Astra</span>
+                                                <span class="classe">Classe 1</span>
+                                                <div class="registration"><span>24-09-OB</span></div>
+                                            </div>
+                                            <span class="vehicles-info-corner">
+					                            <span class="vehicles-info-corner-left"></span>
+					                            <span class="vehicles-info-corner-right"></span>
+				                            </span>
+                                        </div>
+                                        <div class="vehicles-vv-info-wrapper">
+                                            <div class="vehicle-info">
+                                                <div class="vehicle-info-row">
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Identificador:</span>
+                                                        <span class="value">123409987</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Estado:</span>
+                                                        <span class="value">Ativo</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Contrato:</span>
+                                                        <span class="value">124987768</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Modalidade:</span>
+                                                        <span class="value">Aluguer</span>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Serviços:</span>
+                                                        <ul class="services">
+                                                            <li class="service2 active"><span>Parques de Estacionamento</span></li>
+                                                            <li class="service4 active"><span>service4</span></li>
+                                                            <li class="service3"><span>Postos de Abastecimento</span></li>
+                                                            <li class="service337"><span>service337</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="vehicle-info-cell">
+                                                        <span class="label">Referência:</span>
+                                                        <span class="value">987987987987</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="vehicle-controls">
+                                                <button class="button" id="Button18" type="submit">
+			                                        <span class="button-txt">Alterar Matricula</span>
+		                                        </button>
+                                                <button class="button button-border" id="Button19" type="submit">
+			                                        <span class="button-txt">Suprimir Matricula</span>
+		                                        </button>
+                                                <button class="button button-border" id="Button20" type="submit">
+			                                        <span class="button-txt">Desativar Identificador</span>
+		                                        </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vehicles-detail-tools">
+                                        <a href="#" class="link-header">Outros serviços</a>          
+                                        <div class="vehicles-detail-tools-body">
+                                            <a href="#" class="link-inspection"><span>Marcar Inspecção</span></a>
+                                            <a href="#" class="link-movements"><span>Ver movimentos</span></a>
+                                            <a href="#" class="link-services"><span>Serviços</span></a>
+                                            <a href="#" class="link-split-bill"><span>fatura Repartida</span></a>
+                                            <a href="#" class="link-mb"><span>Gestão Referência</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                 
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="7">
+                                <div class="button-loader" style="display: block;"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="7" class="alignLeft">25/121 extratos</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

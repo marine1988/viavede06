@@ -1,0 +1,489 @@
+<script type="text/javascript">
+    $(function () {
+
+        /* Autocomplete */
+        var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"];
+
+        $("#matricula-identificador-contrato").autocomplete({
+            source: availableTags,
+            appendTo: ".autocomplete-container"
+        });
+
+        $("#contrato").autocomplete({
+            source: availableTags,
+            appendTo: ".contrato-autocomplete"
+        });
+
+
+        /* Datepicker */
+        $(".datepicker").datepicker({
+            dateFormat: "dd/mm/yy",
+            firstDay: 1,
+            minDate: "-6m",
+            showOtherMonths: true,
+            selectOtherMonths: true
+        });
+
+
+        /* jQuery UI Datepicker */
+        $("#datepicker-from").datepicker("option", "onClose", function (selectedDate) {
+            $("#datepicker-to").datepicker("option", "minDate", selectedDate);
+        });
+
+        $("#datepicker-to").datepicker("option", "onClose", function (selectedDate) {
+            $("#datepicker-from").datepicker("option", "maxDate", selectedDate);
+        });
+
+        $("#datepicker-from2").datepicker("option", "onClose", function (selectedDate) {
+            $("#datepicker-to2").datepicker("option", "minDate", selectedDate);
+        });
+
+        $("#datepicker-to2").datepicker("option", "onClose", function (selectedDate) {
+            $("#datepicker-from2").datepicker("option", "maxDate", selectedDate);
+        });
+
+
+        /* Multi-select */
+        $('#todos-servicos').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '#movimentos-extratos-tab-1 .form-theme-default'
+        }).on('change', function () {
+
+        });
+
+
+        /* jQuery UI Tabs call */
+        $('.movimentos-extratos-tabs').tabs();
+
+
+        /* Tooltips */
+        initTooltipster($('.movimentos-extratos-movimentos .tabela-movimentos .custom-tooltip .tooltip-icon'), false);
+        initTooltipster($('.movimentos-extratos-extratos .tabela-movimentos .custom-tooltip .export-extrato'), false);
+        initTooltipster($('.form-datepicker-wrapper .tooltip-icon'), false);
+
+    });
+</script>
+
+<section class="column-section">
+    <header class="column-header">
+        <h1 class="page-title">Movimentos e Extratos</h1>
+    </header>
+
+    <div class="movimentos-extratos-tabs movimentos-extratos-movimentos">
+        <!-- movimentos-extratos Tabs -->
+        <ul class="gm-tabs-list">
+            <li><a href="#movimentos-extratos-tab-1"><span class="gm-box-corner"></span><span class="gm-link-txt">Movimentos</span></a></li>
+            <li><a href="#movimentos-extratos-tab-2"><span class="gm-box-corner"></span><span class="gm-link-txt">Extratos</span></a></li>
+        </ul>
+        <!-- End movimentos-extratos Tabs -->
+
+        <!-- TAB 1-->
+        <section id="movimentos-extratos-tab-1">
+
+            <section class="form form-theme-default">
+
+                <div class="form-input-wrapper autocomplete-container">
+                    <label for="matricula-identificador-contrato">
+                        <span class="form-label">Matrícula / Identificador</span>
+                        <span class="form-input custom-tooltip">
+                            <input id="matricula-identificador-contrato" type="text" value="" class="Validator">
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="form-select-wrapper">
+                    <label for="todos-servicos">
+                        <span class="form-label"></span>
+                        <span class="form-select custom-tooltip tooltip-error">
+                            <select id="todos-servicos">
+                                <option value="0">Todos os serviços</option>
+                                <option value="1">Portagens</option>
+                                <option value="2">Parques</option>
+                                <option value="3">Postos abastecimento</option>
+                                <option value="4">Ferries</option>
+                                <option value="5">McDrive</option>
+                                <option value="6">Inspeção Controlauto</option>
+                                <option value="7">Empark</option>
+                            </select>
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="clearFloats"></div>
+
+                <div class="form-datepicker-wrapper">
+                    <label for="datepicker-from">
+                        <span class="form-label">Data:</span>
+                        <span class="form-datepicker custom-tooltip tooltip-error">
+                            <input id="datepicker-from" type="text" value="" class="Validator datepicker">
+                            <span class="datepicker-icon"></span>
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="form-datepicker-wrapper">
+                    <label for="datepicker-to">
+                        <span class="form-label">a:</span>
+                        <span class="form-datepicker custom-tooltip">
+                            <input id="datepicker-to" type="text" value="" class="Validator datepicker">
+                            <span class="datepicker-icon"></span>
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="clearFloats"></div>
+
+                <div class="form-button">
+                    <button id="filtrar" class="button btNext" type="submit">
+                        <span class="button-txt">FILTRAR</span>
+                    </button>
+
+                    <button id="limpar" class="button button-border" type="submit">
+                        <span class="button-txt">LIMPAR</span>
+                    </button>
+                </div>
+
+            </section>
+
+            <aside>
+                <p>121 movimentos encontrados</p>
+                <a class="link-excel" href="#1">Excel resultados</a>
+            </aside>
+
+            <table class="theme-default-table tabela-movimentos movimentos-nao-loyalty">
+                <thead>
+                    <tr>
+                        <th scope="col">Descrição</th>
+                        <th scope="col" class="column1279">Serviço</th>
+                        <th scope="col" class="column767">Matrícula</th>
+                        <th scope="col" class="column640">Identificador</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Pago</th>
+                        <th scope="col" class="custom-tooltip tooltip-info column480">
+                            <span>Pontos</span>
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Ative a via verde pontos e comece a acumular</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <b>PQ Amoreiras</b>
+                            <br />
+                            17-05-2015 19:16 > 17-05-2015 20:11
+                        </th>
+                        <td class="column1279">Parques</td>
+                        <td class="column767">45-LH-32</td>
+                        <td class="column640">245252342</td>
+                        <td>€2.3</td>
+                        <td><span class="movimentos-nao-pago"></span></td>
+                        <td class="column480"><b>+30</b></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <b>PQ Amoreiras</b>
+                            <br />
+                            17-05-2015 19:16 > 17-05-2015 20:11
+                        </th>
+                        <td class="column1279">Abastecimento</td>
+                        <td class="column767">45-LH-32</td>
+                        <td class="column640">245252342</td>
+                        <td>€2.3</td>
+                        <td><span class="movimentos-pago"></span>21-05-2015</td>
+                        <td class="column480"><b>+30</b></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <b>PQ Amoreiras</b>
+                            <br />
+                            17-05-2015 19:16 > 17-05-2015 20:11
+                        </th>
+                        <td class="column1279">Portagens</td>
+                        <td class="column767">45-LH-32</td>
+                        <td class="column640">245252342</td>
+                        <td>€2.3</td>
+                        <td><span class="movimentos-pago"></span>21-05-2015</td>
+                        <td class="column480"><b>+30</b></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <b>PQ Amoreiras</b>
+                            <br />
+                            17-05-2015 19:16 > 17-05-2015 20:11
+                        </th>
+                        <td class="column1279">Portagens</td>
+                        <td class="column767">45-LH-32</td>
+                        <td class="column640">245252342</td>
+                        <td>€2.3</td>
+                        <td><span class="movimentos-pago"></span>21-05-2015</td>
+                        <td class="column480"><b>+30</b></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <section class="column-body">
+                <p>21/121 movimentos</p>
+
+                <div class="form form-theme-default carregar-mais">
+                    <div class="form-button clearFloats">
+                        <button id="carregar-mais" class="button button-border" type="submit">
+                            <span class="button-txt">CARREGAR MAIS</span>
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+        <!-- End Tab 1 -->
+
+        <!-- TAB 2 -->
+        <section id="movimentos-extratos-tab-2" class="movimentos-extratos-extratos">
+
+            <!-- Extratos todos em papel -->
+            <section class="column-body">
+                <h2>Atualmente o seu extrato é em papel.</h2>
+                <div class="cleanStyle">Se quere ganhar acesso aos extratos electrónicos basta:
+                    <br />
+                    · Aceder ao menu contratos;
+                    <br />
+                    · Seleccionar a opção Alterar Dados, do contrato pretendido;
+                    <br />
+                    · Optar pelo novo tipo de extracto e,
+                    <br />
+                    · actualizar e beneficiar de todas as vantagens:
+                    <br />
+                    <br />
+                    <b>Ganhe rapidez</b> – não espere pelos habituais dias de distribuição do correio;
+                    <br />
+                    <b>Ganhe comodidade</b> – organize e arquive os seus extractos com maior facilidade;
+                    <br />
+                    <b>Ganhe facilidade</b> – o seu extracto à distância de um clique;
+                    <br />
+                    <b>Apoie o ambiente</b> – contribua para a conservação e preservação do meio ambiente.
+                </div>
+            </section>
+
+            <!-- Extratos electónicos -->
+            <section class="form form-theme-default">
+
+                <div class="form-button pedidos-segunda-via">
+                    <button id="Button4" class="button btnAlert" type="submit">
+                        <span class="button-txt">
+                            <span class="button-icon">2ª Via Disponíveis</span>
+                        </span>
+                    </button>
+
+                    <button id="Button5" class="button" type="submit">
+                        <span class="button-txt">
+                            <span class="button-icon">Pedido 2ª Via de Extratos</span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="clearFloats"></div>
+
+                <div class="form-input-wrapper autocomplete-container contrato-autocomplete">
+                    <label for="contrato">
+                        <span class="form-label">Contrato</span>
+                        <span class="form-input custom-tooltip">
+                            <input id="contrato" type="text" value="" class="Validator">
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="form-datepicker-wrapper">
+                    <label for="datepicker-from2">
+                        <span class="form-label">Data:</span>
+                        <span class="form-datepicker custom-tooltip">
+                            <input id="datepicker-from2" type="text" value="" class="Validator datepicker">
+                            <span class="datepicker-icon"></span>
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="form-datepicker-wrapper">
+                    <label for="datepicker-to2">
+                        <span class="form-label">a:</span>
+                        <span class="form-datepicker custom-tooltip">
+                            <input id="datepicker-to2" type="text" value="" class="Validator datepicker">
+                            <span class="datepicker-icon"></span>
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="clearFloats"></div>
+
+                <div class="form-button">
+                    <button id="Button1" class="button btNext" type="submit">
+                        <span class="button-txt">FILTRAR</span>
+                    </button>
+
+                    <button id="Button2" class="button button-border" type="submit">
+                        <span class="button-txt">LIMPAR</span>
+                    </button>
+                </div>
+
+                <!-- AVISO: Extratos electrónicos e em papel -->
+                <div class="block-exclamation">
+			        <div class="block-exclamation-title">
+				        Extrato em papel nos contratos
+			        </div>
+			        <div class="block-exclamation-message">
+				        <p>
+					        Um o mais contratos recebe o extrato em papel, e por tanto os extratos electrónicos não são mostrados na lista seguinte. Para ver os extratos pode:
+                            <br />
+                            - Alterar à extrato electrónico os <a href="#1">contratos</a>
+                            <br />
+                            - Pedir os extratos com a <a href="#1">2ª Via de Extratos</a> (custo adicional por extrato pedido)
+				        </p>
+			        </div>
+		        </div>
+                <!-- fim de aviso -->
+
+            </section>
+
+            <aside>
+                <p>121 movimentos encontrados</p>
+            </aside>
+
+            <table class="theme-default-table tabela-movimentos">
+                <thead>
+                    <tr>
+                        <th scope="col">Referência</th>
+                        <th scope="col" class="column767">Contrato</th>
+                        <th scope="col" class="column640">Ano</th>
+                        <th scope="col" class="column480">Mês</th>
+                        <th scope="col">Fatura</th>
+                        <th scope="col">Exportar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9876349786/06/2015</td>
+                        <td class="column767">98372459873</td>
+                        <td class="column640">2015</td>
+                        <td class="column480">Junho</td>
+                        <td><a href="#1" class="link-split-bill">Fatura</a></td>
+                        <td class="custom-tooltip tooltip-info">
+                            <span class="export-extrato">...</span>
+                            <span class="tooltip-message">
+                                <a class="export-format" href="#1">PDF</a>
+                                <a class="export-format" href="#1">XML</a>
+                                <br />
+                                <a class="export-format" href="#1">CSV</a>
+                                <a class="export-format" href="#1">HTML</a>
+                            </span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>9876349786/06/2015</td>
+                        <td class="column767">98372459873</td>
+                        <td class="column640">2015</td>
+                        <td class="column480">Março</td>
+                        <td><a href="#1" class="link-split-bill">Fatura</a></td>
+                        <td class="custom-tooltip tooltip-info">
+                            <span class="export-extrato">...</span>
+                            <span class="tooltip-message">
+                                <a class="export-format" href="#1">PDF</a>
+                                <a class="export-format" href="#1">XML</a>
+                                <br />
+                                <a class="export-format" href="#1">CSV</a>
+                                <a class="export-format" href="#1">HTML</a>
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>9876349786/06/2015</td>
+                        <td class="column767">98372459873</td>
+                        <td class="column640">2014</td>
+                        <td class="column480">Dezembro</td>
+                        <td><a href="#1" class="link-split-bill">Fatura</a></td>
+                        <td class="custom-tooltip tooltip-info">
+                            <span class="export-extrato">...</span>
+                            <span class="tooltip-message">
+                                <a class="export-format" href="#1">PDF</a>
+                                <a class="export-format" href="#1">XML</a>
+                                <br />
+                                <a class="export-format" href="#1">CSV</a>
+                                <a class="export-format" href="#1">HTML</a>
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>9876349786/06/2015</td>
+                        <td class="column767">98372459873</td>
+                        <td class="column640">2014</td>
+                        <td class="column480">Setembro</td>
+                        <td><a href="#1" class="link-split-bill">Fatura</a></td>
+                        <td class="custom-tooltip tooltip-info">
+                            <span class="export-extrato">...</span>
+                            <span class="tooltip-message">
+                                <a class="export-format" href="#1">PDF</a>
+                                <a class="export-format" href="#1">XML</a>
+                                <br />
+                                <a class="export-format" href="#1">CSV</a>
+                                <a class="export-format" href="#1">HTML</a>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <section class="column-body">
+                <p>21/121 movimentos</p>
+
+                <div class="form form-theme-default carregar-mais">
+                    <div class="form-button clearFloats">
+                        <button id="Button3" class="button button-border" type="submit">
+                            <span class="button-txt">CARREGAR MAIS</span>
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+
+        </section>
+        <!-- End Tab 2 -->
+    </div>
+
+</section>

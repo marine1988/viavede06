@@ -1,0 +1,251 @@
+    <!-- module ferramentas START -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false"></script>
+  
+   <script type="text/javascript">
+        function init() {
+        // init map options
+        var mapOptions = {
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            panControl: false,
+            scrollwheel: false,
+            mapTypeControl: false,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.SMALL,
+                position: google.maps.ControlPosition.RIGHT_BOTTOM
+            },
+            rotateControl: false
+        };
+
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        map.setOptions({ styles: mapStyles });
+
+        google.maps.event.addListener(map, "click", function (event) {
+        if (infowindow != null) {
+            infowindow.close();
+        }
+        });
+
+        //drawHighways();
+
+        google.maps.event.addListener(map, 'mousedown', function (event) {
+        this.setOptions({ scrollwheel: true });
+        });
+
+        google.maps.event.addListener(map, 'mouseout', function (event) {
+        this.setOptions({ scrollwheel: false });
+        });
+
+        //hideLoading();
+        }
+       
+        $(function () {
+            //showLoading();
+            google.maps.event.addDomListener(window, 'load', init);
+            google.maps.event.addDomListener(window, 'resize', init);
+        });
+
+    </script>
+    
+    
+    
+<!-- Titulo da pagina -->
+<header class="tools-header wrapper">
+	<h1 class="page-title">Todas as ferramentas num só sítio</h1>
+	<div class="page-lead">A sua nova marca também lhe disponibiliza uma série de ferramentas da Rede BRISA</div>
+</header>
+
+<section class="tools">
+    <div class="tools_wrapper">
+
+        <div class="services_box_wrapper tools_box">
+            <div class="box_slide clearFloats">
+                <h3>Serviços</h3>
+                <div class="btn_up"></div>
+            </div>
+            <div class="services_box_panel">
+
+                <div class="services_box clearfix clearFloats">
+                    <div class="parks_icon left"></div>
+                    <span class="left">Parques de Estacionamento</span>
+                    <div class="checkbox_wrapper right">
+                        <input type="checkbox" value="" id="parques-check"/>
+                        <label for="parques-check"></label>
+                    </div>
+                </div>
+
+                <div class="services_box clearfix clearFloats">
+                    <div class="galp_icon left"></div>
+                    <span class="left">Postos de Abastecimento</span>
+                    <div class="checkbox_wrapper right">
+                        <input type="checkbox" value="" id="galp-check"/>
+                        <label for="galp-check"></label>
+                    </div>
+                </div>
+
+                <div class="services_box clearfix clearFloats">
+                    <div class="ferries_icon left"></div>
+                    <span class="left">Ferries</span>
+                    <div class="checkbox_wrapper right">
+                        <input type="checkbox" value="" id="ferries-check"/>
+                        <label for="ferries-check"></label>
+                    </div>
+                </div>
+
+                <div class="services_box clearfix clearFloats">
+                    <div class="mcdrive_icon left"></div>
+                    <span class="left">McDrives</span>
+                    <div class="checkbox_wrapper right">
+                        <input type="checkbox" value="" id="mcdrives-check"/>
+                        <label for="mcdrives-check"></label>
+                    </div>
+                </div>
+
+                <div class="services_box clearfix clearFloats">
+                    <div class="viaverde_icon left"></div>
+                    <span class="left">Lojas Via Verde</span>
+                    <div class="checkbox_wrapper right">
+                        <input type="checkbox" value="" id="viaverde-check"/>
+                        <label for="viaverde-check"></label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="highways_box_wrapper tools_box">
+            <div class="box_slide clearFloats">
+                <h3>Auto-Estradas</h3>
+                <div class="btn_up"></div>
+            </div>
+            <div class="highways_box_panel">
+                <div class="scroll-pane">
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A2 </span>Auto-Estrada do Norte</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A2 </span>Auto-Estrada do Norte</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A2 </span>Auto-Estrada do Norte</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A2 </span>Auto-Estrada do Norte</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A2 </span>Auto-Estrada do Norte</a><div class="scroll_pane_arrow right"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cameras_box_wrapper tools_box c">
+            <div class="box_slide clearFloats">
+                <h3>Câmaras</h3>
+                <div class="btn_up"></div>
+            </div>
+            <div class="cameras_box_panel">
+                <div class="scroll-pane">
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A2 </span>Auto-Estrada do Norte</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A2 </span>Auto-Estrada do Norte</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A2 </span>Auto-Estrada do Norte</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A2 </span>Auto-Estrada do Norte</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a><div class="scroll_pane_arrow right"></div></div>
+                    <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A2 </span>Auto-Estrada do Norte</a><div class="scroll_pane_arrow right"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alerts_box_wrapper tools_box">
+            <div class="box_slide clearFloats">
+                <h3>Alertas</h3>
+                <div class="btn_up"></div>
+            </div>
+
+            <div class="alerts_box_panel">
+
+                <div class="alerts_box clearfix">
+                    <div class="red_alert_icon left"></div>
+                    <p><span>A5, </span>Congestionamento, km 3.9, sentido Cascais-Lisboa</p>
+                </div>
+
+                <div class="alerts_box clearfix">
+                    <div class="yellow_alert_icon left"></div>
+                    <p><span>A5, </span>Congestionamento, km 3.9, sentido Cascais-Lisboa</p>
+                </div>
+
+                <div class="alerts_box clearfix">
+                    <div class="green_alert_icon left"></div>
+                    <p><span>A9, </span>Manutenção da via, km 16.7, sentido Alverca-Estádio Nacional. Terminado às 16:09h.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="info_box_wrapper tools_box">
+            <div class="info_box">
+                <div class="info_box_top clearFloats">
+                    <a class="close_btn" href="#"></a>
+                </div>
+                <h3>A6 (Auto-Estrada da Marateca/Maia)</h3>
+                <img src="cms-images/video_pic.png" alt="" />
+
+            </div>
+        </div>
+
+        <div class="video_box_wrapper tools_box">
+            <div class="video_box">
+                <div class="video_box_top clearFloats">
+                    <a class="close_btn" href="#"></a>
+                </div>
+                <h3>Titulo</h3>
+                <p>Por não ter facultado o seu NIF,não pode beneficiar do acompanhamento online (track & trace) do seu pedido.</p>
+            </div>
+            <div class="video_box_bottom"></div>
+        </div>
+
+        <div class="description_box_wrapper tools_box">
+
+            <div class="description_tools_box">
+                <div class="box_slide clearFloats">
+                    <h3>Auto-Estradas</h3>
+                    <div class="btn_up right"></div>
+                </div>
+                <div class="highways_box_panel">
+                    <div class="scroll-pane">
+                        <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a></div>
+                        <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a></div>
+                        <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a></div>
+                        <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a></div>
+                        <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a></div>
+                        <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a></div>
+                        <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a></div>
+                        <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a></div>
+                        <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a></div>
+                        <div class="scroll_pane_link clearFloats"><a class="left" href="#"><span>A1 </span>Auto-Estrada do Sul</a></div>
+                    </div>
+                </div>
+
+                <div class="description_box">
+                    <div class="description_box_top clearFloats">
+                        <a class="close_btn" href="#"></a>
+                    </div>
+                    <h3>A6 (Auto-estrada da Marateca/Maia)</h3>
+                    <p><span>Operadora: </span>Brisa</p>
+                    <p><span>Extensão: </span>158km</p>
+                    <p><span>Conclusão: </span>1999</p>
+                    <p>&nbsp;</p>
+                    <p>É a principal ligação a Espanha, estabelecendo o eixo Lisboa-Madrid. Depois de uma boleia na A2 desde Almada, a auto-estrada inicia-se na Marateca, rumo à cidade histórica de Montemor-o-Novo. Daqui ruma para Évora e depois para a zonados mármores da Serra da Ossa, Estremoz e Borba.</p>
+                    <p>&nbsp;</p>
+                    <a href="#" target="_blank">Ver tarifário desta AE</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!--#include file="module-gm-maps.html" -->
+
+    <div id="highwayLoading" class="loading"></div>
+
+    </section>
+    <!-- module ferramentas END -->

@@ -1,0 +1,222 @@
+<!-- Module-support-main START -->
+<script type="text/javascript">
+    $(function () {
+        initTooltipster($('.custom-tooltip .tooltip-icon'), false);
+        
+        /* Funcionamento de Aside "Track & Trace" (Landing page - Centro de Apoio) em mobile */
+        $('.aside-track-trace h2, .aside-track-trace p:not(.darkgreen)').click(function () {
+            if ((window.innerWidth >= '768') && (window.innerWidth <= '1279')) {
+                if ($('.aside-track-trace').hasClass('active')) {
+                    $('.aside-track-trace').removeClass('active');
+                    $('.aside-track-trace').animate({ height: 101 });
+                } else {
+                    $('.aside-track-trace').addClass('active');
+                    $('.aside-track-trace').animate({ height: 501 });
+                }
+            };
+        });
+    })
+</script>
+
+<section class="column-section centro-apoio wrapper clearFloats">
+    <header class="column-header header-track-trace">
+        <h1>Apoio ao cliente</h1>
+        <p>Já está registado no site Via Verde? <a href="#1"><b>Faça login</b></a> para um atendimento mais eficiente.</p>
+    </header>
+
+    <!-- ASIDE Track & Trace -->
+    <aside class="aside-track-trace">
+        <h2>Track & Trace</h2>
+        <p>Tem um processo aberto e foi-lhe atribuído um número de tracking? Acompanhe o seu processo a partir daqui.</p>
+        <p class="darkgreen">Se já tiver uma conta Via Verde, aceda à sua <a href="#1">área pessoal</a>.</p>
+        <div class="form form-theme-default form-theme-sidebar">
+            <div class="form-input-wrapper">
+                <label for="aside-NIF">
+                    <span class="form-label">NIF</span>
+                    <span class="form-input custom-tooltip">
+                        <input id="aside-NIF" type="text" value="" class="Validator">
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-input-wrapper">
+                <label for="aside-processo">
+                    <span class="form-label">Nº de processo</span>
+                    <span class="form-input custom-tooltip">
+                        <input id="aside-processo" type="text" value="" class="Validator">
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-button clearFloats">
+                <button type="submit" class="button button-white track-trace-process-validate">
+                    <span class="button-txt">Consultar</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Podemos ajudar? -->
+    <section class="podemos-ajudar">
+        <h2>Em que podemos ajudar?</h2>
+
+        <a href="#1">“Fui indevidamente facturado.“</a>
+        <a href="#1">“O semáforo acendeu o sinal amarelo quando passei a portagem.”</a>
+        <a href="#1">“Quero aderir à Via verde.”</a>
+        <a href="#1">“Tenho um problema com o meu identificador.”</a>
+        <a href="#1">“Tenho uma dívida para paga.”</a>
+        <a href="#1">“Quero aderir à facturação repartida.”</a>
+        <a href="#1">“Teve um problema ao usar um serviço Via Verde (McDrive, Ferry, outros...).”</a>
+        <a href="#1">“Tenho um problema com a minha conta Via verde online.”</a>
+        <a href="#1">“Aenean euismod sodales orci ut interdum.”</a>
+
+    </section>
+
+    <!-- Perguntas frequentes (FAQs) -->
+    <section class="column-body faqs">
+        <h2>Perguntas frequentes</h2>
+        <a href="#1" class="link-add">Ver todas</a>
+
+        <div class="form form-theme-default">
+            <div class="form-input-wrapper">
+                <label for="pesquisar-faqs">
+                    <span class="form-input custom-tooltip tooltip-error">
+                        <input id="pesquisar-faqs" class="Validator" type="text" placeholder="Escreva uma palavra chave">
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-button clearFloats">
+                <button id="Button2" class="button btNext" type="submit">
+                    <span class="button-txt">Procurar</span>
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- Lista de categorias de FAQs -->
+        <ul class="faq-categories">
+            <li>
+                <h3>Adesão & Contratos</h3>
+                <ul>
+                    <li><a href="#1">Como posso aderir?</a></li>
+                    <li><a href="#1">Quanto custa a adesão?</a></li>
+                    <li><a href="#1">Estou de passagem a Portugal, posso aderir a Via Verde?</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+
+            <li>
+                <h3>Identificadores</h3>
+                <ul>
+                    <li><a href="#1">Como substituir as pilhas?</a></li>
+                    <li><a href="#1">Como utilizar o Identificador em motociclos?</a></li>
+                    <li><a href="#1">Como activar o Identificador?</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+
+            <li>
+                <h3>Extratos & Pagamentos</h3>
+                <ul>
+                    <li><a href="#1">Onde e como procedo ao pagamento?</a></li>
+                    <li><a href="#1">Saiba o que trazer, quando se dirige a uma loja Via Verde para efectuar a verificação de transacções e/ou débitos.</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+
+            <li>
+                <h3>Tarifários & Descontos</h3>
+                <ul>
+                    <li><a href="#1">Existe validade na atribuição dos descontos?</a></li>
+                    <li><a href="#1">A minha empresa terá acesso às minhas transacções Via Verde?</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+
+            <li>
+                <h3>Portagens & Auto-Estradas</h3>
+                <ul>
+                    <li><a href="#1">É verdade que se passar encostado à viatura da frente o meu Identificador não é lido?</a></li>
+                    <li><a href="#1">O que fazer quando o semáforo acende sinal amarelo?</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+
+            <li>
+                <h3>Facturação Repartida</h3>
+                <ul>
+                    <li><a href="#1">O que é a Facturação Repartida?</a></li>
+                    <li><a href="#1">Onde poderei aderir ao Serviço de Facturação Repartida?</a></li>
+                    <li><a href="#1">A minha empresa terá acesso às minhas transacções Via Verde?</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+
+            <li>
+                <h3>Via Verde Traveller</h3>
+                <ul>
+                    <li><a href="#1">O que é o serviço Via Verde Traveller?</a></li>
+                    <li><a href="#1">A quem devo endereçar o pedido de envio de recibos referente às passagens realizadas nas auto-estradas portuguesas?</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+
+            <li>
+                <h3>Serviços Via Verde</h3>
+                <ul>
+                    <li><a href="#1">É possível inibir o Serviço Via Verde no McDrive?</a></li>
+                    <li><a href="#1">Como posso marcar uma inspecção automóvel?</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+
+            <li>
+                <h3>Assistência & Emergência</h3>
+                <ul>
+                    <li><a href="#1">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</a></li>
+                    <li><a href="#1">Quisque fermentum nibh nec orci tempus commodo?</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+
+            <li>
+                <h3>A minha Conta</h3>
+                <ul>
+                    <li><a href="#1">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</a></li>
+                    <li><a href="#1">Quisque fermentum nibh nec orci tempus commodo?</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+
+            <li>
+                <h3>Via Verde Pontos</h3>
+                <ul>
+                    <li><a href="#1">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</a></li>
+                    <li><a href="#1">Quisque fermentum nibh nec orci tempus commodo?</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+
+            <li>
+                <h3>Atendimento</h3>
+                <ul>
+                    <li><a href="#1">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</a></li>
+                    <li><a href="#1">Quisque fermentum nibh nec orci tempus commodo?</a></li>
+                </ul>
+                <a class="link-add" href="#1">Ver todas</a>
+            </li>
+        </ul>
+
+        <!-- Fim de lista de categorias -->
+    </section>
+
+</section>
+<!-- Module-support-main END -->

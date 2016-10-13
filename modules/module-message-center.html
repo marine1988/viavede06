@@ -1,0 +1,1477 @@
+<!-- module-message-center START -->
+
+<script type="text/javascript">
+	$(function () {
+
+		$("#datepicker-from").datepicker({
+			dateFormat: "dd/mm/yy",
+			firstDay: 1,
+			minDate: "-6m",
+			showOtherMonths: true,
+			selectOtherMonths: true,
+			onClose: function (selectedDate) {
+				$("#datepicker-to2").datepicker("option", "minDate", selectedDate);
+			}
+		});
+		$("#datepicker-to").datepicker({
+			dateFormat: "dd/mm/yy",
+			firstDay: 1,
+			minDate: "-6m",
+			showOtherMonths: true,
+			selectOtherMonths: true,
+			onClose: function (selectedDate) {
+				$("#datepicker-from2").datepicker("option", "maxDate", selectedDate);
+			}
+		});
+
+	});
+</script>
+
+<section class="column-section">
+	<header class="column-header">
+		<h1 class="page-title">Centro de mensagens</h1>
+	</header>
+	<div class="column-body cleanBody">
+
+		<div class="form form-theme-default form-vehicle-identifiers-filter">
+			<script type="text/javascript">
+				$(function () {
+					/* Tooltipster */
+					/* 
+					Parametros:
+					- Selector
+					- É Modal
+					*/
+					initTooltipster($('.form-vehicle-identifiers-filter .custom-tooltip .tooltip-icon'), false);
+
+					/* CUSTOM SELECT */
+					/* Ver mais em: https://select2.github.io/ */
+					$('#Select1').select2({
+						minimumResultsForSearch: Infinity,
+						dropdownParent: '.form-vehicle-identifiers-filter'
+					}).on('change', function () {
+						var valueLang = $(this).attr('value');
+
+					});
+
+					$('#Select2').select2({
+						minimumResultsForSearch: Infinity,
+						dropdownParent: '.form-vehicle-identifiers-filter'
+					}).on('change', function () {
+						var valueLang = $(this).attr('value');
+
+					});
+				});
+			</script>
+
+			<fieldset>
+				<legend>
+					<span class="form-legend"></span>
+				</legend>
+
+				<div class="form-group form-group-4">
+					<div class="from-notify">
+						<span class="from-notify-numb">3</span><span class="from-notify-message">Mensagens por ler</span>
+					</div>
+
+					<div class="form-group-wrapper">
+						<div class="form-datepicker-wrapper">
+							<label for="datepicker-from">
+								<span class="form-label">Data:</span>
+								<span class="form-datepicker custom-tooltip">
+									<input id="datepicker-from2" type="text" value="" class="datepicker Validator">
+									<span class="datepicker-icon"></span>
+									<span class="tooltip-icon"></span>
+									<span class="tooltip-message">Campo obrigatório!</span>
+								</span>
+							</label>
+						</div>
+
+						<div class="form-datepicker-wrapper">
+							<label for="datepicker-to">
+								<span class="form-label">a:</span>
+								<span class="form-datepicker custom-tooltip">
+									<input id="datepicker-to2" type="text" value="" class="datepicker Validator">
+									<span class="datepicker-icon"></span>
+									<span class="tooltip-icon"></span>
+									<span class="tooltip-message">Campo obrigatório!</span>
+								</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="form-group-wrapper">
+						<div class="form-select-wrapper">
+							<label for="Select1">
+								<span class="form-label">Estado</span>
+								<select id="Select1">
+									<option value="0">Todos os estados</option>
+									<option value="1">Aberto</option>
+									<option value="2">Em tratamento</option>
+									<option value="3">Por regularizar</option>
+									<option value="4">Processado</option>
+									<option value="5">Fechado</option>
+								</select>
+							</label>
+						</div>
+
+						<div class="form-select-wrapper">
+							<label for="Select2">
+								<span class="form-label">Tipo</span>
+								<select id="Select2">
+									<option value="0">Todos os tipos</option>
+									<option value="1">Alerta</option>
+									<option value="2">Reclamação</option>
+									<option value="3">Informação</option>
+									<option value="4">Solicitação de informação</option>
+									<option value="5">Gestão Contratual</option>
+								</select>
+							</label>
+						</div>
+
+						<div class="form-input-wrapper">
+							<label for="txt-codpost">
+								<span class="form-label">Nº do processo</span>
+								<span class="form-input custom-tooltip">
+									<input id="txt-codpost" type="text" value="" class="Validator">
+									<span class="tooltip-icon"></span>
+									<span class="tooltip-message">Campo obrigatório!</span>
+								</span>
+							</label>
+						</div>
+
+					</div>
+				</div>
+
+			</fieldset>
+			
+			<div class="form-button filter-tools">
+				<div class="btPrev">
+					<button class="button" id="Button12" type="submit">
+						<span class="button-txt">Filtrar</span>
+					</button>
+					<button class="button button-border" id="BtnCancel" type="submit">
+						<span class="button-txt">Limpeza</span>
+					</button>
+				</div>
+			</div>
+			<div class="form-button filter-tools">
+                <div class="btPrev">
+                    <span class="totalRowsFound"><span id="dnn_ctr593_View_lbTotalRowsFound">16</span> viaturas encontradas</span>
+                </div>
+                <div class="btNext">
+                    <a class="link-excel" onclick="GetExcel();return false;" title="Exportar para Excel">Exportar para Excel</a>
+                </div> 
+            </div>
+
+		</div>
+
+		<div class="message-center-table-wrapper">
+
+			<script type="text/javascript">
+				function setHeightOfOpenMiddle() {
+					//Message Center Opem Middle Detail
+					$('.message-center-detail-content-right').each(function () {
+						var _contentRight = $(this).height();
+						var _contentLeft = $(this).prev('.message-center-detail-content-left').height();
+
+						if (($(this).parent().hasClass('message-center-accordion')) && (_contentRight > _contentLeft)) {
+							$(this).addClass('open-middle');
+							$(this).next('.bt-event').show();
+						} else {
+							$(this).next('.bt-event').hide();
+						}
+					});
+				}
+
+				function setDetailRowClick() {
+					//Message Center Table RowClick
+					if ($('.message-center-table').length) {
+						$('.message-center-table .row-header').click(function () {
+							if ($(this).hasClass('active')) {
+								$(this).next('.row-body').fadeOut('fast');
+								$(this).removeClass('active');
+							} else {
+								$('.message-center-table .row-body:visible').fadeOut('fast');
+								$(this).next('.row-body').fadeIn('fast');
+								$('.message-center-table .row-header').removeClass('active');
+								$(this).addClass('active');
+							}
+
+							$('.message-center-detail-content-right').removeClass('open-middle');
+
+							setHeightOfOpenMiddle();
+						});
+					}
+
+					if ($('.message-center-accordion').length) {
+						var _txtBTOpen = 'Abrir';
+						var _txtBTMinimize = 'Minimizar';
+
+						$('.message-center-accordion .bt-event').click(function () {
+							if ($(this).parent().hasClass('active')) {
+								$(this).parent().removeClass('active');
+								$(this).removeClass('bt-minimize').addClass('bt-open');
+								$(this).text(_txtBTOpen);
+							} else {
+								$('.message-center-accordion').removeClass('active');
+								$('.message-center-accordion .bt-event').removeClass('bt-minimize').addClass('bt-open');
+								$('.message-center-accordion .bt-event').text(_txtBTOpen);
+								$(this).parent().addClass('active');
+								$(this).removeClass('bt-open').addClass('bt-minimize');
+								$(this).text(_txtBTMinimize);
+							}
+						});
+					}
+				}
+
+				$(function () {
+					setDetailRowClick();
+				});
+			</script>
+
+			<table class="theme-default-table message-center-table">
+				<thead>
+					<tr>
+						<th scope="col" class="alignLeft">Tipo</th>
+						<th scope="col" class="alignLeft column480">Assunto</th>
+						<th scope="col" class="column640">Mensagens</th>
+						<th scope="col" class="">Número</th>
+						<th scope="col" class="column1279"><a href="#" class="order_down">Data</a></th>
+						<th scope="col" class="column1279">Estado</th>
+						<th scope="col">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="custom-tooltip tooltip-error">
+								<span class="tooltip-icon"></span>
+								<span class="tooltip-message">Alerta</span>
+							</span>
+						</th>
+						<td class="alignLeft column480">Sinal amarelo - Identificador mal colocado</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">24/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-anomaly">Por regularizar</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Regularize a situação</h2>
+											<div class="cleanStyle">
+												<p>
+													O que acontece se não resolver a situação?<br>
+													O Identificador deixa de registar as passagens e as passagens poderão ser consideradas infracções e consequentemente originar processos na Autoridade Tributária.
+												</p>
+											</div>
+											<div class="blue-alert">Após resolver a situação, não precisa de nos avisar, a sua situação será automaticamente re-avaliada da próxima vez que passe numa portagem.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="custom-tooltip tooltip-info">
+								<span class="tooltip-icon"></span>
+								<span class="tooltip-message">Informação</span>
+							</span>
+						</th>
+						<td class="alignLeft column480">Conheça a nova Via Verde</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">15/04/2015</td>
+						<td class="column1279">-</td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu tempor neque, non tristique ex. Duis sapien ex, aliquam in orci ut, lobortis condimentum risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ut ex ut ligula condimentum aliquam non vitae tortor. Donec in est nec ipsum varius feugiat. Etiam gravida convallis risus, a porta urna sodales sit amet. Phasellus leo ipsum, commodo vel orci a, accumsan viverra lectus. Pellentesque nunc dui, scelerisque eu eros vel, vulputate iaculis velit. Nullam interdum ut est ac vulputate. Praesent id justo a nunc convallis hendrerit. Vestibulum sit amet massa velit.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="custom-tooltip tooltip-edit">
+								<span class="tooltip-icon"></span>
+								<span class="tooltip-message">Reclamação</span>
+							</span>
+						</th>
+						<td class="alignLeft column480">Dúvida - Service traveller</td>
+						<td class="column640">1</td>
+						<td class="">728018310</td>
+						<td class="column1279">14/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-open">Aberto</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content message-center-accordion">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-user"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Nome utilizador</strong>
+											<time class="user-info-date">12/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Boa tarde,<br>
+												Eis o meu problema:<br>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu tempor neque, non tristique ex. Duis sapien ex, aliquam in orci ut, lobortis condimentum risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ut ex ut ligula condimentum aliquam non vitae tortor. Donec in est nec ipsum varius feugiat. Etiam gravida convallis risus, a porta urna sodales sit amet. Phasellus leo ipsum, commodo vel orci a, accumsan viverra lectus. Pellentesque nunc dui, scelerisque eu eros vel, vulputate iaculis velit. Nullam interdum ut est ac vulputate. Praesent id justo a nunc convallis hendrerit. Vestibulum sit amet massa velit.
+											</p>
+										</div>
+									</div>
+									<div class="bt-event bt-open">Abrir</div>
+								</div>
+
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="custom-tooltip tooltip-inquiry">
+								<span class="tooltip-icon"></span>
+								<span class="tooltip-message">Solicitação de informação</span>
+							</span>
+						</th>
+						<td class="alignLeft column480">Os seus dados de contactos estão actualizados?</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">12/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-anomaly">Por regularizar</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Verificou que os seus dados de contacto estão actualizados?</h2>
+
+											<div class="buttons">
+												<button class=""><span>Sim, confirmo que os meus dados de contactos estão actualizados</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="custom-tooltip tooltip-error_low">
+								<span class="tooltip-icon"></span>
+								<span class="tooltip-message">Alerta</span>
+							</span>
+						</th>
+						<td class="alignLeft column480">Saldo insuficiente na conta de pagamento CTT</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">26/08/2014</td>
+						<td class="column1279"><span class="form-message-status status-closed">Fechado</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Assunto fechado</h2>
+											<div class="cleanStyle">
+												<p>Pagamento no XXXXXX efectuado através do portal.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-error_low"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Sinal amarelo - Identificador mal colocado</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">24/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-closed">Fechado</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Regularize a situação</h2>
+											<div class="cleanStyle">
+												<p>
+													O que acontece se não resolver a situação?<br>
+													O Identificador deixa de registar as passagens e as passagens poderão ser consideradas infracções e consequentemente originar processos na Autoridade Tributária.
+												</p>
+											</div>
+											<div class="blue-alert">Após resolver a situação, não precisa de nos avisar, a sua situação será automaticamente re-avaliada da próxima vez que passe numa portagem.</div>
+										</div>
+
+										<div class="message-center-detail-status">
+											<h2 class="message-center-detail-status-tit">Assunto fechado</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-info"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Conheça a nova Via Verde</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">15/04/2015</td>
+						<td class="column1279">-</td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu tempor neque, non tristique ex. Duis sapien ex, aliquam in orci ut, lobortis condimentum risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ut ex ut ligula condimentum aliquam non vitae tortor. Donec in est nec ipsum varius feugiat. Etiam gravida convallis risus, a porta urna sodales sit amet. Phasellus leo ipsum, commodo vel orci a, accumsan viverra lectus. Pellentesque nunc dui, scelerisque eu eros vel, vulputate iaculis velit. Nullam interdum ut est ac vulputate. Praesent id justo a nunc convallis hendrerit. Vestibulum sit amet massa velit.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-edit_low"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Dúvida - Service traveller</td>
+						<td class="column640"><strong>1</strong> / 2</td>
+						<td class="">728018310</td>
+						<td class="column1279">14/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-closed">Fechado</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content message-center-accordion">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-user"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Nome utilizador</strong>
+											<time class="user-info-date">12/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Boa tarde,<br>
+												Gostava de asber quais são as condições de utilização do serviço Traveller? Será que posso usufruir do mesmo no estrangeiro?
+											</p>
+										</div>
+									</div>
+									<div class="bt-event bt-open">Abrir</div>
+								</div>
+
+								<div class="message-center-detail-content message-center-accordion">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">2</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">12/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Muito obrigado pela sua questão. Poderá encontrar as respostas às suas dúvidas no nosso site, consultando os seguintes links:
+											</p>
+
+											<ul>
+												<li><a href="">Como posso usar o serviço Via Verde Travellers?</a></li>
+												<li><a href="">Quem pode usar o serviço Via Verde Travellers?</a></li>
+												<li><a href="">Onde posso usar o serviço Via Verde Travellers?</a></li>
+											</ul>
+
+											<p>
+												Com os nossos melhores cumprimentos.
+											</p>
+										</div>
+									</div>
+									<div class="bt-event bt-open">Abrir</div>
+								</div>
+
+								<div class="message-center-detail-status">
+									<h2 class="message-center-detail-status-tit">Assunto fechado</h2>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-inquiry"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Os seus dados de contactos estão actualizados?</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">12/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-anomaly">Por regularizar</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Verificou que os seus dados de contacto estão actualizados?</h2>
+
+											<div class="buttons">
+												<button class=""><span>Sim, confirmo que os meus dados de contactos estão actualizados</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-error_low"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Saldo insuficiente na conta de pagamento CTT</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">26/08/2014</td>
+						<td class="column1279"><span class="form-message-status status-closed">Fechado</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Assunto fechado</h2>
+											<div class="cleanStyle">
+												<p>Pagamento no XXXXXX efectuado através do portal.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-error_low"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Sinal amarelo - Identificador mal colocado</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">24/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-closed">Fechado</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Regularize a situação</h2>
+											<div class="cleanStyle">
+												<p>
+													O que acontece se não resolver a situação?<br>
+													O Identificador deixa de registar as passagens e as passagens poderão ser consideradas infracções e consequentemente originar processos na Autoridade Tributária.
+												</p>
+											</div>
+											<div class="blue-alert">Após resolver a situação, não precisa de nos avisar, a sua situação será automaticamente re-avaliada da próxima vez que passe numa portagem.</div>
+										</div>
+
+										<div class="message-center-detail-status">
+											<h2 class="message-center-detail-status-tit">Assunto fechado</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-info"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Conheça a nova Via Verde</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">15/04/2015</td>
+						<td class="column1279">-</td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu tempor neque, non tristique ex. Duis sapien ex, aliquam in orci ut, lobortis condimentum risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ut ex ut ligula condimentum aliquam non vitae tortor. Donec in est nec ipsum varius feugiat. Etiam gravida convallis risus, a porta urna sodales sit amet. Phasellus leo ipsum, commodo vel orci a, accumsan viverra lectus. Pellentesque nunc dui, scelerisque eu eros vel, vulputate iaculis velit. Nullam interdum ut est ac vulputate. Praesent id justo a nunc convallis hendrerit. Vestibulum sit amet massa velit.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-edit"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Dúvida - Matrícula duplicada</td>
+						<td class="column640"><strong>1</strong> / 2</td>
+						<td class="">728018310</td>
+						<td class="column1279">14/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-open">Aberto</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content message-center-accordion">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-user"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Nome utilizador</strong>
+											<time class="user-info-date">12/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Boa tarde,<br>
+												Eis o meu problema:<br>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu tempor neque, non tristique ex. Duis sapien ex, aliquam in orci ut, lobortis condimentum risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ut ex ut ligula condimentum aliquam non vitae tortor. Donec in est nec ipsum varius feugiat. Etiam gravida convallis risus, a porta urna sodales sit amet. Phasellus leo ipsum, commodo vel orci a, accumsan viverra lectus. Pellentesque nunc dui, scelerisque eu eros vel, vulputate iaculis velit. Nullam interdum ut est ac vulputate. Praesent id justo a nunc convallis hendrerit. Vestibulum sit amet massa velit.
+											</p>
+										</div>
+									</div>
+									<div class="bt-event bt-open">Abrir</div>
+								</div>
+
+								<div class="message-center-detail-content message-center-accordion">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">2</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">12/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Para podermos confirmar a sua situação, precisamos que nos envie cópia do livrete ou DUA da viatura.<br>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu tempor neque, non tristique ex. Duis sapien ex, aliquam in orci ut, lobortis condimentum risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ut ex ut ligula condimentum aliquam non vitae tortor. Donec in est nec ipsum varius feugiat. Etiam gravida convallis risus, a porta urna sodales sit amet. Phasellus leo ipsum, commodo vel orci a, accumsan viverra lectus. Pellentesque nunc dui, scelerisque eu eros vel, vulputate iaculis velit. Nullam interdum ut est ac vulputate. Praesent id justo a nunc convallis hendrerit. Vestibulum sit amet massa velit.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-form">
+											<h2 class="message-center-detail-form-tit">Envie o documento pedido:</h2>
+										</div>
+									</div>
+									<div class="bt-event bt-open">Abrir</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-edit"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Dúvida - Matrícula duplicada</td>
+						<td class="column640">1</td>
+						<td class="">728018310</td>
+						<td class="column1279">14/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-standby">Em tratamento</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">12/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Para podermos confirmar a sua situação, precisamos que nos envie cópia do livrete ou DUA da viatura.<br>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu tempor neque, non tristique ex. Duis sapien ex, aliquam in orci ut, lobortis condimentum risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ut ex ut ligula condimentum aliquam non vitae tortor. Donec in est nec ipsum varius feugiat. Etiam gravida convallis risus, a porta urna sodales sit amet. Phasellus leo ipsum, commodo vel orci a, accumsan viverra lectus. Pellentesque nunc dui, scelerisque eu eros vel, vulputate iaculis velit. Nullam interdum ut est ac vulputate. Praesent id justo a nunc convallis hendrerit. Vestibulum sit amet massa velit.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-status">
+											<h2 class="message-center-detail-form-tit">Assunto em tratamento</h2>
+											<div class="cleanStyle">
+												<p>
+													Enviou o seguinte ficheiro a 20/05/2015<br>
+													livrete.pdf<br>
+													Daremos seguimento ao seu problema em breve.
+												<p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-inquiry"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Os seus dados de contactos estão actualizados?</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">12/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-anomaly">Por regularizar</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Verificou que os seus dados de contacto estão actualizados?</h2>
+
+											<div class="buttons">
+												<button class=""><span>Sim, confirmo que os meus dados de contactos estão actualizados</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-error_low"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Saldo insuficiente na conta de pagamento CTT</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">26/08/2014</td>
+						<td class="column1279"><span class="form-message-status status-closed">Fechado</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Assunto fechado</h2>
+											<div class="cleanStyle">
+												<p>Pagamento no XXXXXX efectuado através do portal.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-error_low"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Sinal amarelo - Identificador mal colocado</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">24/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-closed">Fechado</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Regularize a situação</h2>
+											<div class="cleanStyle">
+												<p>
+													O que acontece se não resolver a situação?<br>
+													O Identificador deixa de registar as passagens e as passagens poderão ser consideradas infracções e consequentemente originar processos na Autoridade Tributária.
+												</p>
+											</div>
+											<div class="blue-alert">Após resolver a situação, não precisa de nos avisar, a sua situação será automaticamente re-avaliada da próxima vez que passe numa portagem.</div>
+										</div>
+
+										<div class="message-center-detail-status">
+											<h2 class="message-center-detail-status-tit">Assunto fechado</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-info"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Conheça a nova Via Verde</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">15/04/2015</td>
+						<td class="column1279">-</td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu tempor neque, non tristique ex. Duis sapien ex, aliquam in orci ut, lobortis condimentum risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ut ex ut ligula condimentum aliquam non vitae tortor. Donec in est nec ipsum varius feugiat. Etiam gravida convallis risus, a porta urna sodales sit amet. Phasellus leo ipsum, commodo vel orci a, accumsan viverra lectus. Pellentesque nunc dui, scelerisque eu eros vel, vulputate iaculis velit. Nullam interdum ut est ac vulputate. Praesent id justo a nunc convallis hendrerit. Vestibulum sit amet massa velit.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-settings_low"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Desconto para Pesados #6539</td>
+						<td class="column640">1</td>
+						<td class="">14787830</td>
+						<td class="column1279">14/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-closed">Fechado</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-user"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Nome utilizador</strong>
+											<time class="user-info-date">12/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Pedido efetuado no dia 21-04-2015
+											</p>
+										</div>
+
+										<div class="message-center-detail-status">
+											<a href="">Comprovativo</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-settings_low"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Desconto para Pesados #6539</td>
+						<td class="column640">1</td>
+						<td class="">14787830</td>
+						<td class="column1279">14/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-closed">Fechado</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">2</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">12/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Ações a fazer:
+											</p>
+											<ul>
+												<li>Deverá imprimir o comprovativo de registo, assiná-lo e carimbá-lo</li>
+												<li>Enviar o original do pedido, juntamente com originais ou cópias certificadas dos documentos precisos</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-settings"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Desconto para Pesados #6539</td>
+						<td class="column640">1</td>
+						<td class="">14787830</td>
+						<td class="column1279">14/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-open">Aberto</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">3</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">12/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="message-center-detail-status">
+											<strong>Nº de pedido:</strong> #6539<br>
+											<strong>Data de Registo:</strong> 20/04/2015<br>
+											<strong>Origem:</strong> DirectMedia<br>
+											<strong>Estado:</strong> Processado<br>
+										</div>
+
+										<div class="buttons">
+											<a href="" class="button button-small"><span class="button-txt">Ver documentação</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-inquiry"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Os seus dados de contactos estão actualizados?</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">12/04/2015</td>
+						<td class="column1279"><span class="form-message-status status-anomaly">Por regularizar</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Verificou que os seus dados de contacto estão actualizados?</h2>
+
+											<div class="buttons">
+												<button class=""><span>Sim, confirmo que os meus dados de contactos estão actualizados</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+
+					<tr class="row-header">
+						<th scope="row" class="alignLeft">
+							<span class="tooltip-error_low"><span class="tooltip-icon"></span></span>
+						</th>
+						<td class="alignLeft column480">Saldo insuficiente na conta de pagamento CTT</td>
+						<td class="column640">1</td>
+						<td class="">72801831</td>
+						<td class="column1279">26/08/2014</td>
+						<td class="column1279"><span class="form-message-status status-closed">Fechado</span></td>
+						<td><span class="arrow"></span></td>
+					</tr>
+					<tr class="row-body">
+						<td colspan="7" class="alignLeft">
+
+							<div class="message-center-detail">
+								<div class="message-center-detail-content">
+									<div class="message-center-detail-content-left">
+										<span class="ic-notify">1</span>
+										<span class="ic-viaverde"></span>
+										<div class="user-info">
+											<strong class="user-info-name">Via Verde</strong>
+											<time class="user-info-date">02/04/2015</time>
+										</div>
+									</div>
+
+									<div class="message-center-detail-content-right">
+										<div class="cleanStyle">
+											<p>
+												Caro Tiago,<br>
+												Um dos seus indentificadores tem registos anómalos que poderão ter origem na colocação no vidro ou na forma de utilização.<br>
+												Por este motivo você recebe o sinal amarelo quando passa na Via Verde. Quando mais rápido corrigir este problema, mais rápido deixará de receber luz amarela.
+											</p>
+											<p>
+												<strong>Como resolver o problema?</strong><br>
+												Verifique se o seu Identificador se encontra devidamente afixado no vidro da viatura à qual foi associado e na zona apropriada do vidro, caso este tenha vidros atérmicos. Se a sua viatura é um motociclo, verifique se o Identificador se encontra dentro da bolsa que foi fornecida, com a zona autocolante voltada para a frente. Verifique também se coloca correctamente a braçadeira na bolsa, ou seja, se a mesma é colocada no braço esquerdo (acima do cotovelo) e voltada para fora.
+											</p>
+										</div>
+
+										<div class="message-center-detail-note">
+											<h2 class="message-center-detail-note-tit">Assunto fechado</h2>
+											<div class="cleanStyle">
+												<p>Pagamento no XXXXXX efectuado através do portal.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+					
+				</tbody>
+				<tfoot>
+                    <tr class="empty-list">
+                        <td colspan="7">A pesquisa não encontra movimentos para os critérios selecionados.</td>
+                    </tr>
+					<tr>
+						<td colspan="7" class="alignLeft page-counter">25/121 mensagens</td>
+					</tr>
+					<tr>
+						<td colspan="7">
+							<button id="btnMoreMessages" class="button button-border" type="submit">
+								<span class="button-txt">Carregar mais</span>
+							</button>
+							<div class="button-loader"></div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="7">
+							<asp:PlaceHolder ID="plhTabelFooter" runat="server">
+								<div class="blue-alert">Uma vez fechado, os processo estão guardados xxx dias no sistema.</div>
+							</asp:PlaceHolder>
+						</td>
+					</tr>
+				</tfoot>
+            </table>
+        </div>
+
+        <div class="lnk-back-top">
+            <a class="link" href="#top-page"><span class="link-txt">Voltar ao topo</span></a>
+        </div>
+	</div>
+</section>
+
+<script type="text/javascript">
+	$(function () {
+		/* Tooltipster */
+		/* 
+		Parametros:
+		- Selector
+		- É Modal
+		*/
+		initTooltipster($('.theme-default-table .custom-tooltip .tooltip-icon'), false, 'left');
+	});
+</script>
+
+<!-- module-message-center END -->

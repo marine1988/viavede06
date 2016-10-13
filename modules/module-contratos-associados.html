@@ -1,0 +1,115 @@
+<script type="text/javascript">
+    $(function () {
+
+            /* Multi-select */
+        $('#contractsList').select2({
+                minimumResultsForSearch: Infinity,
+                dropdownParent: '.existingContracts'
+            }).on('change', function () {
+
+            });
+
+            /* activar/desactivar table contracts */
+            $('.contracts .enable, .contracts .disable').click(function () {
+                openModal('modal-confirmation-modal', null, false);
+                //depois de confirmar a modal, o estado muda. Exemplo do que é suposto acontecer:
+                $(this).toggleClass('enable disable');
+                $(this).html($(this).text() == 'Desativado' ? 'Ativo' : 'Desativado');
+            });
+    });
+
+</script>
+
+<section class="column-section">
+    <!-- BACK BUTTON -->
+    <div class="back-button">
+	    <a href="#1" class="link">
+            <span class="link-txt">Voltar</span>
+	    </a>
+    </div>
+    <!-- END BACK BUTTON -->
+    <div class="newUsers existingContracts">
+    
+        <header class="column-header">
+            <h1 class="page-title">Contratos Associados</h1>
+        </header>
+
+        <section class="form form-theme-default user-data">
+            <div class="user-data-cell">
+                <span class="label">Utilizador:</span>
+                <span class="value">Nome do utilizador</span>
+            </div>
+            <div class="user-data-cell">
+                <span class="label">E-mail:</span>
+                <span class="value">email_da_conta@gmail.pt</span>
+            </div>
+            <div class="user-data-cell">
+                <span class="label">Estado:</span>
+                <span class="value">Activo</span>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group-wrapper">
+                    <div class="form-select-wrapper">
+                        <label for="contractsList">
+                            <span class="form-label">Contrato</span>
+                            <select id="contractsList">
+                                <option value="0" disabled="disabled" selected>(Selecionar)</option>
+                                <option value="1">Lorem ipsum</option>
+                                <option value="2">Dolor sit amet</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="link-add-wrapper">
+                        <a href="#1" class="link-add">Associar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <table class="theme-default-table contracts">
+            <thead>
+                <tr>
+                    <th scope="col">Alias do contrato</th>
+                    <th scope="col" class="column480">Nº de contrato</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nome do contrato 1</td>
+                    <td class="column480">213423452345</td>
+                    <td>Débito</td>
+                    <td><a href="#1" class="disable">Ativo</a></td>
+                </tr>
+                <tr>
+                    <td>Nome do contrato 2</td>
+                    <td class="column480">6745234532</td>
+                    <td>Débito</td>
+                    <td><a href="#1" class="disable">Ativo</a></td>
+                </tr>
+                <tr>
+                    <td>Nome do contrato 3</td>
+                    <td class="column480">12345124534554</td>
+                    <td>Débito</td>
+                    <td><a href="#1" class="disable">Ativo</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+		<div class="form-button user-data">
+			<button class="button button-border" type="button">
+				<span class="button-txt">Cancelar</span>
+			</button>
+			<button id="saveChanges" class="button btNext" type="submit">
+				<span class="button-txt">Gravar Mudanças</span>
+			</button>
+		</div>
+
+    </div>
+</section>
+
+

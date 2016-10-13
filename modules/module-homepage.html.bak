@@ -1,0 +1,293 @@
+<!-- module-homepageV2 START -->
+
+<div class="wrapper hp-summerfest">
+    <!-- HP HIGHLIGHT -->
+    <section class="gm-banner full-banner header-banner">
+	    <div class="gm-banner-img">
+		    <img alt="" src="cms-images/banner-homepage-01.jpg">
+	    </div>
+	    <div class="gm-banner-content">
+		    <h1 class="gm-banner-tit">Aproveite ainda mais os festivais com a <span>Via Verde</span></h1>
+            <h2 class="gm-banner-subtit">Saiba quais são os descontos exclusivos que o programa Viagens & Vantagens tem para si.</h2>
+                
+            <div class="gm-banner-button">
+                <a href="#1" class="button">
+                    <span class="button-txt">Ver Vantagens</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- END HP HIGHLIGHT -->
+</div>
+
+<!-- BANNER GREEN HOMEPAGE -->
+<section class="wrapper">
+    <article class="gm-banner banner-green-homepage">
+        <h3 class="title">Beneficie de vantagens exclusivas com a Via Verde</h3>
+        <div class="col5-wrapper">
+            <div class="col5-block ">
+                <img src="cms-images/ic-etapa-volta.png" alt="">
+                <p class="col5-block-description">Inscrição na Etapa da Volta</p>
+            </div>
+                <div class="col5-block">
+                <img src="cms-images/ic-jersey.png" alt="">
+                <p class="col5-block-description">Oferta Jersey Oficial</p>
+            </div>
+                <div class="col5-block">
+                <img src="cms-images/ic-toll-discount.png" alt="">
+                <p class="col5-block-description">Desconto de 25% em Portagem</p>
+            </div>
+                <div class="col5-block">
+                <img src="cms-images/ic-fuel-discount.png" alt="">
+                <p class="col5-block-description">Desconto em Combustível</p>
+            </div>
+            <div class="col5-block">
+                <img src="cms-images/ic-lodging.png" alt="">
+                <p class="col5-block-description">2 Noites de Alojamento em Viseu</p>
+            </div>
+        </div>
+    </article>
+</section>
+<!-- END BANNER GREEN HOMEPAGE -->
+
+<section class="wrapper col2-content">
+    <div class="col">
+        <img src="cms-images/col-img-01.png">
+        <h2 class="title">Adira online à Via Verde</h2>
+        <div class="text">
+            É mais rápido, cómodo e económico. Aproveite os <strong>10% desconto</strong> e entregas grátis, só até 28 de abril.
+        </div>
+        <a href="#1" class="button button-small">
+            <span class="button-txt">Aderir</span>
+        </a>
+    </div>
+    <div class="col">
+        <img src="cms-images/col-img-02.png">
+        <h2 class="title">Participe na volta a Portugal com a Via Verde</h2>
+        <div class="text">
+            Com o Viagens &amp; Vantagens, beneficie de descontos na inscrição <strong>na Etapa da Volta</strong> para amadores, na deslocação e na estadia em Viseu.
+        </div>
+        <a href="#1" class="button button-small">
+            <span class="button-txt">Saiba mais</span>
+        </a>
+    </div>
+</section>
+
+	<!-- BANNER -->
+<div class="wrapper hp-summerfest">
+	<section class="gm-banner full-banner">
+		<div class="gm-banner-img">
+			<img alt="" src="cms-images/banner-gestao-via-verde-01.jpg" />
+		</div>
+		<div class="gm-banner-content">
+			<h2 class="gm-banner-tit">A gestão da sua conta: fácil e cómoda</h2>
+			<div class="gm-banner-txt">
+				<p>Pretende atualizar os dados da sua conta?</p>
+                <p>Viu luz amarela ao passar na Via Verde?</p>
+                <p>Simplifique e trate de tudo a partir da sua área pessoal.</p>
+                <p class="strong-text">Se já é cliente, faça tudo na sua conta Via Verde.</p>
+			</div>
+
+            <div class="gm-banner-button">
+                <a href="#1" class="button button-small">
+                    <span class="button-txt">Ir para a minha via verde</span>
+                </a>
+            </div>
+		</div>
+	</section>
+	<!-- END BANNER -->
+</div>
+
+<section class="gm-out-margin app-vv">
+	<!-- BANNER -->
+	<article class="gm-banner banner-green">
+        <div class="wrapper absolute-img">
+		    <div class="gm-banner-img">
+			    <img alt="" src="cms-images/banner-app-viaverde-01.png">
+		    </div>
+		    <div class="gm-banner-content">
+                <div class="center-this">
+			        <h2 class="gm-banner-tit"><span>Nova aplicação mobile</span> App Via Verde</h2>
+			        <div class="gm-banner-txt">
+				        Faça já o download da  App Via Verde e comece a digerir todas as novidades que temos para si
+			        </div>
+			        <div class="gm-banner-button">
+				        <a href="https://itunes.apple.com/pt/app/via-verde/id674583357?mt=8" target="_blank" title="App Store"><span class="apps ios"></span></a>
+				        <a href="https://play.google.com/store/apps/details?id=pt.viaverde.clientes" target="_blank" title="Google play"><span class="apps android"></span></a>
+			        </div>
+                </div>
+		    </div>
+        </div>
+	</article>
+	<!-- END BANNER -->
+</section>
+
+<!-- HP LIST OFFER -->
+<section class="lp-list-offer wrapper">
+    <!-- List Intro -->
+    <header class="gm-list-intro">
+        <h2 class="gm-banner-tit"><strong>Via Verde</strong> Pontos</h2>
+
+        <div class="gm-list-intro-content">
+            <div class="gm-list-intro-txt">
+                <p>Com a nova marca criámos um programa de pontos para sí. Agora com a Via Verde quanto mais viaja mais pontos ganha. Aproveite para descobrir Portugal com os nossos parceiros.</p>
+            </div>
+
+            <a href="" class="button"><span class="button-txt">Aderir</span></a>
+        </div>
+    </header>
+    <!-- End List Intro -->
+
+    <!-- List -->
+    <div class="gm-list">
+        <div class="gm-box-element">
+            <article class="gm-box">
+                <a href="#1">
+                    <div class="gm-box-img">
+                        <!-- Marker -->
+                        <div class="gm-box-mark">
+                            <mark class="gm-box-mark-item gm-box-new">Novidade</mark><!-- MARKER NEW ITEM -->
+                        </div>
+                        <!-- End Marker -->
+                        <div class="gm-box-segment-list">
+                            <div class="gm-box-bg">
+                                <ul>
+                                    <li class="ic-gastronomy-wine">Gastronomia e Vinho</li>
+                                    <li class="ic-romance">Romance</li>
+                                    <li class="ic-welfare">Bem-estar</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img data-src-base="cms-images/article-01.jpg" data-src="<768:?w=570&amp;h=570, <1024:?w=395&amp;h=395, >1024:?w=360&amp;h=360" alt="" title="">
+                    </div>
+                    <div class="gm-box-content">
+                        <span class="gm-box-corner"></span>
+
+                        <div class="gm-box-content-header">
+                            <h3 class="gm-box-tit">Descubra os sabores do Alentejo</h3>
+                            <div class="gm-box-txt">
+                                <p>Desfrute de 1 noite no Convento do Espinheiro com bebida de boas vindas à chegada, prova de vinhos e jantar incluído no restaurante Cartuxa.</p>
+                            </div>
+                        </div>
+
+                        <div class="gm-box-content-footer">
+                            <div class="gm-box-offer">
+                                <ul>
+                                    <li class="ic-offer ic-offer-toll">30% Portagem</li>
+                                    <li class="ic-offer ic-offer-fuel">Vale 5&euro;</li>
+                                </ul>
+                            </div>
+                            <div class="gm-box-price">
+                                <p>
+                                    <span class="gm-box-price-value">270<sup>&euro;</sup> + 1600<sup>pts</sup><span class="hidden" hidden aria-hidden="false">.</span><br></span>
+                                    <small class="gm-box-price-note">Poupe até 35&euro;</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+
+        <div class="gm-box-element gm-box-big"><!-- BIG ELEMENT -->
+            <article class="gm-box">
+                <a href="">
+                    <div class="gm-box-img">
+                        <!-- Marker -->
+                        <div class="gm-box-mark">
+                            <mark class="gm-box-mark-item gm-box-last-day">Últimos dias</mark><!-- MARKER LAST DAY -->
+                        </div>
+                        <!-- End Marker -->
+                        <div class="gm-box-segment-list">
+                            <div class="gm-box-bg">
+                                <ul>
+                                    <li class="ic-gastronomy-wine">Gastronomia e Vinho</li>
+                                    <li class="ic-romance">Romance</li>
+                                    <li class="ic-welfare">Bem-estar</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img data-src-base="cms-images/article-02.jpg" data-src="<768:?w=570&amp;h=570, <1024:?w=395&amp;h=395, >1024:?w=640&amp;h=640" alt="" title="">
+                    </div>
+                    <div class="gm-box-content">
+                        <span class="gm-box-corner"></span>
+
+                        <div class="gm-box-content-header">
+                            <h3 class="gm-box-tit">Escapadinha relaxante em Suite de Luxo</h3>
+                            <div class="gm-box-txt">
+                                <p>Noite romântica para dois em Suite Villa Vista Mar no Algarve com pequeno almoço e 2 massagens de aromaterapia de 80 minutos.</p>
+                            </div>
+                        </div>
+
+                        <div class="gm-box-content-footer">
+                            <div class="gm-box-offer">
+                                <ul>
+                                    <li class="ic-offer ic-offer-toll">30% Portagem</li>
+                                </ul>
+                            </div>
+                            <div class="gm-box-price">
+                                <p>
+                                    <span class="gm-box-price-value">270<sup>&euro;</sup> + 1600<sup>pts</sup><span class="hidden" hidden aria-hidden="false">.</span><br></span>
+                                    <small class="gm-box-price-note">Poupe até 35&euro;</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+
+    </div>
+    <!-- End List -->
+</section>
+<!-- END HP LIST OFFER -->
+
+<!-- HP TOOLS -->
+<section class="hp-tools gm-out-margin">
+    <div class="wrapper">
+        <header class="accession-header">
+            <h2 class="page-title">Todas as ferramentas num só sítio</h2>
+            <div class="page-lead">A sua nova marca também lhe disponibiliza uma série de ferramentas da Rede BRISA</div>
+        </header>
+
+        <div class="tools-list">
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="ic ic-tool-toll-calc">
+                            <p><strong>Calcular portagens</strong></p>
+                            <p>Defina o seu percurso e calcule o valor gasto e portagens</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="ic ic-tool-highway">
+                            <p><strong>Rede de Auto-estradas</strong></p>
+                            <p>Conheça a rede de auto-estradas BRISA</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="ic ic-tool-transit">
+                            <p><strong>Trânsito</strong></p>
+                            <p>Recebe alertas de trânsito em directo no seu smartphone</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="ic ic-tool-services">
+                            <p><strong>Serviços Via Verde</strong></p>
+                            <p>Defina o seu percuso e calcule o valor gasto em portagens</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- END HP TOOLS -->
+
+<!-- module-homepageV2 END -->

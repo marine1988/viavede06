@@ -1,0 +1,156 @@
+<!-- Module-support START -->
+<script type="text/javascript">
+$(function () {
+
+	/* jQuery UI Accordion call */
+    //Centro de Apoio Situação
+	$("#accordion-situacao").accordion({
+	    active: 4,
+	    header: "h3",
+	    heightStyle: "content"
+	});
+})
+</script>
+
+<section class="column-section centro-apoio wrapper">
+    <header class="column-header">
+        <h1>Apoio ao cliente</h1>
+        <p>Já está registado no site Via Verde? <a href="#1">Faça login</a> para um atendimento mais eficiente.</p>
+    </header>
+
+    <section class="column-body o-seu-problema">
+        <h2>O seu Problema</h2>
+        <p>“Fui indevidamente faturado.”</p>
+        <a href="#1">Voltar aos tópicos de ajuda</a>
+    </section>
+
+    <section class="column-body centro-apoio-situacao">
+
+        <!-- jQuery UI Accordion -->
+        <section class="topicos-relacionados">
+            <h2>Veja os principais tópicos relacionados</h2>
+
+            <div class="accordion" id="accordion-situacao">
+                <article>
+                    <h3>Foi facturado 2 vezes por ter transportado dois Identificadores dentro da viatura em simultâneo?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>O seu desconto de mercadorias não está a ser aplicado?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Não está a ser aplicado o desconto de Monovolume?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Foi-lhe cobrado uma taxa de portagem que não corresponde à classe do seu veiculo?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Foi debitado um valor de transacções de classe superior à sua viatura?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                            <b>Verifique a classe do seu veículo</b>
+
+                            <!-- Tabela Classe do Veículo -->
+                            <table class="theme-default-table tabela-classes-veiculos">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Classe</th>
+                                        <th scope="col">Designação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Motociclos e veículos com uma altura, medida à vertical do primeiro eixo, inferior a 1,1 cm com ou sem reboque.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Veículos com dois eixos e uma altura, medida à vertical do primeiro eixo, igual ou superior a 1,1m.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Veículos com três eixos e uma altura, medida à vertical do primeiro eixo, igual ou superior a 1,1m.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Veículos com mais de três eixos e uma altura, medida à vertical do primeiro eixo, igual ou superior a 1,1m. </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- fim tabela -->
+
+                            <b>Poderá também ver o seguinte guia prático: <a href="#1">Conhecer a classe do seu veículo</a></b>
+
+                            <p class="envie-dados">Se a situação se confirmar, envie-nos os dados.</p>
+
+                            <div class="form form-theme-default">
+                                <div class="form-button clearFloats">
+                                    <button id="preencher-formulario" class="button btNext" type="submit">
+                                        <span class="button-txt">Preencher o Formulário</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <p class="resposta-util">
+                            Esta resposta foi útil? <b><a href="#1">SIM</a> - <a href="#1">NÃO</a></b>
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+            <!-- Fim #accordion-faqs -->
+
+        </section>
+    </section>
+
+</section>
+
+<!-- Botões "Encontrei a resposta" -->
+<section class="situacao-encontrei-resposta form form-theme-default">
+<!--
+    <div class="form-button clearFloats">
+        <button id="encontrei-resposta" class="button btNext" type="submit">
+            <span class="button-txt">ENCONTREI A RESPOSTA AO MEU PROBLEMA!</span>
+        </button>
+    </div>
+
+    <div class="form-button clearFloats">
+        <button id="Button3" class="button btPrev" type="submit">
+            <span class="button-txt">CONTINUA COM DÚVIDA? CONTACTE-NOS!</span>
+        </button>
+    </div>
+
+    <div class="obrigado-feedback">
+        <p>Ainda bem, obrigado pelo seu feedback!</p>
+        <a href="#1">Podemos ajudar em mais alguma coisa?</a>
+    </div>
+-->
+    <div class="form-button clearFloats">
+        <button id="encontrei-resposta" class="button button-simple-white" type="submit">
+            <span class="button-txt">ENCONTREI A RESPOSTA AO MEU PROBLEMA!</span>
+        </button>
+    </div>
+
+</section>
+<!-- Module-support END -->

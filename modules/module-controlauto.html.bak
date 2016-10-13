@@ -1,0 +1,183 @@
+<script type="text/javascript">
+    $(function () {
+        /* Autocomplete */
+        var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"];
+
+        $("#licence-ctrlauto").autocomplete({
+            source: availableTags,
+            appendTo: ".autocomplete-container",
+        });
+
+        $(function () {
+            /* Tooltipster */
+            /* 
+            Parametros:
+            - Selector
+            - É Modal
+            */
+            initTooltipster($('.modal .custom-tooltip .tooltip-icon'), true);
+
+        });
+    });
+</script>
+
+<section class="column-section ctrlauto">
+    <header class="column-header">
+        <h1>Inspeção Controlauto</h1>
+        <p>É fácil, conveniente e rápido!</p>
+        <p>Marque e desmarque inspeções e pode pagar com qualquer dos seus identificadores ou na loja.</p>
+    </header>
+
+<!-- O módulo seguinte ainda não está terminado porque vai sofrer alterações -->
+    <div class="ctrlauto-detail">
+        <div class="vehicle-detail">
+            <div class="vehicle-main">
+                <div class="vehicles-info">
+                    <span class="type ctrlauto"></span>
+                    <div class="type-info">
+                        <span class="name">Inspeção agendada</span>
+                    </div>
+                    <span class="vehicles-info-corner">
+					    <span class="vehicles-info-corner-left"></span>
+					    <span class="vehicles-info-corner-right"></span>
+				    </span>
+                </div>
+                <div class="vehicles-vv-info-wrapper">
+                    <div class="vehicle-info">
+                        <div class="vehicle-info-row">
+                            <div class="vehicle-info-cell">
+                                <span class="label">Data:</span>
+                                <span class="value">05/06/2015</span>
+                            </div>
+                            <div class="vehicle-info-cell">
+                                <span class="label">Hora:</span>
+                                <span class="value">12:15</span>
+                            </div>
+                            <div class="vehicle-info-cell">
+                                <span class="label">Centro:</span>
+                                <span class="value">Miraflores</span>
+                            </div>
+                            <div class="vehicle-info-cell">
+                                <span class="label">Viatura:</span>
+                                <span class="value">Alias do carro (12-AB-12)</span>
+                            </div>
+                            <div class="vehicle-info-cell">
+                                <span class="label">Referência:</span>
+                                <span class="value">987987987987</span>
+                            </div>
+                            <div class="vehicle-info-cell">
+                                <span class="label">Tipo de inspeção:</span>
+                                <span class="value">Periódica</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-controls">
+                        <button class="button button-small" type="button">
+			                <span class="button-txt locator">Como chegar</span>
+		                </button>
+                        <button class="button button-border button-small" id="Button3" type="submit">
+			                <span class="button-txt">Desmarcar</span>
+		                </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="booking-section">
+        <header class="booking-header">
+            <h2>Marcar Inspeção</h2>
+            <p class="intro">Escolha uma das suas viaturas e marque já a seguinte inspeção:</p>
+            <!-- adicionar a classe hidden no próximo div se houverem poucos veículos -->
+             <div class="form-group-wrapper ctrlauto-search clearFloats">
+                <div class="form-input-wrapper autocomplete-container">
+			        <label for="licence-ctrlauto">
+				        <span class="form-input custom-tooltip">
+					        <input id="licence-ctrlauto" type="text" class="Validator" placeholder="Pesquisar Matrícula">
+					        <span class="tooltip-icon"></span>
+					        <span class="tooltip-message">Campo obrigatório!</span>
+				        </span>
+			        </label>
+		        </div>
+            </div>
+        </header>
+
+        <div class="list-wrapper">
+                <ul>
+                    <li>
+                        <button type="button" class="class1 transitions">
+                            <span class="expendable">Alias BMW Sofia</span>
+                            <span class="licence transitions">87-TM-98</span>
+                            <span class="book-this slide-left transitions">Marcar</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="class2 transitions">
+                            <span class="expendable">Alias BMW Sofia</span>
+                            <span class="licence transitions">87-TM-98</span>
+                            <span class="book-this slide-left transitions">Marcar</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="class3 transitions">
+                            <span class="expendable">Alias BMW Sofia</span>
+                            <span class="licence transitions">87-TM-98</span>
+                            <span class="book-this slide-left transitions">Marcar</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="class4 transitions">
+                            <span class="expendable">Alias BMW Sofia</span>
+                            <span class="licence transitions">87-TM-98</span>
+                            <span class="book-this slide-left transitions">Marcar</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+        <div class="loader-wrapper">
+            <div class="button-loader" style="display: block;"></div>
+
+            <button class="button button-border" id="Button4" type="submit">
+			    <span class="button-txt transitions">Carregar mais</span>
+		    </button>
+        </div>
+
+    </section>
+
+    <article class="gm-banner small-banner left-banner">
+	    <div class="gm-banner-img">
+		    <img data-src-base="img-cms/banner-app-viaverde02.jpg" data-src="<768:?w=768&amp;h=317, <1024:?w=1024&amp;h=423, >1024:?w=470&amp;h=194" alt="" title=""/>
+	    </div>
+	    <div class="gm-banner-content">
+		    <h4 class="gm-banner-tit"><span>Desconto para Loyalty</span></h4>
+		    <div class="gm-banner-txt">
+			    <p>Desconto nas inspeções para aderentes à <strong>Via Verde Pontos.</strong></p>
+		    </div>
+	    </div>
+    </article>
+</section>
+

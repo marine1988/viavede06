@@ -1,0 +1,534 @@
+<!-- module-CO-forms.html START -->
+
+<script type="text/javascript">
+    $(function () {
+
+        /* Autocomplete */
+        var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"];
+
+        $("#autocomplete").autocomplete({
+            source: availableTags,
+            appendTo: ".autocomplete-container"
+        });
+
+        /* jQuery UI Datepicker */
+        $("#datepicker-from").datepicker({
+            dateFormat: "dd/mm/yy",
+            firstDay: 1,
+            minDate: "-6m",
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function (selectedDate) {
+                $("#datepicker-to").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        $("#datepicker-to").datepicker({
+            dateFormat: "dd/mm/yy",
+            firstDay: 1,
+            minDate: "-6m",
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function (selectedDate) {
+                $("#datepicker-from").datepicker("option", "maxDate", selectedDate);
+            }
+        });
+
+        /* Multi-select */
+        $('#Select1').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.classe-exemplo'
+        }).on('change', function () {
+
+        });
+
+        /* Multi-select */
+        $('#Select2').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.classe-exemplo'
+        }).on('change', function () {
+
+        });
+
+        /* Multi-select */
+        $('#Select3').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.classe-exemplo'
+        }).on('change', function () {
+
+        });
+
+        /* Radio Buttons */
+        $(".service-plan .service-plan-item label").click(function () {
+            $('.service-plan .service-plan-item input[type="radio"]').each(function () {
+                if ($(this).is(":checked")) {
+                    $(this).closest(".service-plan-item").addClass("active");
+                }
+                else {
+                    $(this).closest(".service-plan-item").removeClass("active");
+                }
+            });
+        });
+
+        /* Tooltips */
+        initTooltipster($('.classe-exemplo .custom-tooltip .tooltip-icon'), false);
+
+    });
+</script>
+
+<section class="column-section">
+    <header class="column-header">
+        <h1 class="page-title">Campos de Formulários</h1>
+
+        <div class="val-summary error">
+            <span class="close"></span>
+            <div class="val-summary-title">
+                Exemplo Validation Summary Error: Tem 2 vouchers a caducar daqui a 8 dias!
+            </div>
+            <div class="val-summary-message">
+                <p>
+                    -Circuito do vinho ><br />
+                    -Circuito do vinho >
+                </p>
+                <div class="val-summary-link">
+                    <a href="#">Vaja como não os perder</a>
+                </div>
+            </div>
+        </div>
+        <div class="val-summary success">
+            <span class="close"></span>
+            <div class="val-summary-title">
+                Exemplo Validation Summary Success: Tem 2 vouchers a caducar daqui a 8 dias!
+            </div>
+            <div class="val-summary-message">
+                <p>
+                    -Circuito do vinho ><br />
+                    -Circuito do vinho >
+                </p>
+                <div class="val-summary-link">
+                    <a href="#">Vaja como não os perder</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="column-body">
+
+        <section class="form form-theme-default classe-exemplo">
+
+            <div class="form-input-wrapper">
+                <label for="Text1">
+                    <span class="form-label">Exemplo Text</span>
+                    <span class="form-input custom-tooltip">
+                        <input id="Text1" type="text" value="" class="Validator">
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-input-wrapper">
+                <label for="Text2">
+                    <span class="form-label"></span>
+                    <span class="form-input custom-tooltip">
+                        <input id="Text2" type="text" value="" class="Validator" placeholder="Exemplo placeholder">
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-input-wrapper">
+                <label for="Text3">
+                    <span class="form-label">Exemplo Conteúdo</span>
+                    <span class="form-input custom-tooltip">
+                        <input id="Text3" type="text" value="Lorem ipsum" class="Validator">
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-input-wrapper">
+                <label for="Text4">
+                    <span class="form-label">Exemplo disabled</span>
+                    <span class="form-input custom-tooltip" disabled>
+                        <input id="Text4" type="text" value="" class="Validator" disabled>
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-input-wrapper form-textarea-wrapper">
+                <label for="textarea">
+                    <span class="form-label">Descrição </span>
+                    <span class="form-input custom-tooltip">
+                        <textarea class="Validator" id="textarea"></textarea>
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-input-wrapper autocomplete-container">
+                <label for="autocomplete">
+                    <span class="form-label">Exemplo autocomplete <b>JavaScript</b></span>
+                    <span class="form-input custom-tooltip">
+                        <input id="autocomplete" type="text" value="" class="Validator">
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-input-wrapper">
+                <label for="Text6">
+                    <span class="form-label">Exemplo Erro Tooltip <b>JavaScript</b></span>
+                    <span class="form-input custom-tooltip tooltip-error">
+                        <input id="Text6" type="text" value="" class="Validator">
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-select-wrapper">
+                <label for="Select1">
+                    <span class="form-label">Exemplo select <b>JavaScript</b></span>
+                    <select id="Select1">
+                        <option value="0">Todos os serviços</option>
+                        <option value="1">Lorem ipsum</option>
+                        <option value="2">Dolor sit amet</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-select-wrapper">
+                <label for="Select3">
+                    <span class="form-label">Exemplo select Erro Tooltip <b>JavaScript</b></span>
+                    <span class="form-select custom-tooltip tooltip-error">
+                        <select id="Select3">
+                            <option value="0">Todos os serviços</option>
+                            <option value="1">Lorem ipsum</option>
+                            <option value="2">Dolor sit amet</option>
+                        </select>
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-select-wrapper">
+                <label for="Select2">
+                    <span class="form-label">Exemplo select disabled <b>JavaScript</b></span>
+                    <select id="Select2" disabled>
+                        <option value="0">Todos os serviços</option>
+                        <option value="1">Lorem ipsum</option>
+                        <option value="2">Dolor sit amet</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-datepicker-wrapper">
+                <label for="datepicker-from">
+                    <span class="form-label">Exemplo Data de: <b>JavaScript</b></span>
+                    <span class="form-datepicker custom-tooltip">
+                        <input id="datepicker-from" type="text" value="" class="Validator">
+                        <span class="datepicker-icon"></span>
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-datepicker-wrapper">
+                <label for="datepicker-to">
+                    <span class="form-label">Exemplo Data até:<b>JavaScript</b></span>
+                    <span class="form-datepicker custom-tooltip">
+                        <input id="datepicker-to" type="text" value="" class="Validator">
+                        <span class="datepicker-icon"></span>
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-datepicker-wrapper">
+                <label for="datepicker-to2">
+                    <span class="form-label">Exemplo Data até: Erro Tooltip <b>JavaScript</b></span>
+                    <span class="form-datepicker custom-tooltip tooltip-error">
+                        <input id="datepicker-to2" type="text" value="" class="Validator">
+                        <span class="datepicker-icon"></span>
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-group-wrapper">
+
+                <div class="form-radiobox-wrapper">
+                    <label for="Radio1">
+                        <span class="form-radiobox">
+                            <input id="Radio1" type="radio" value="" name="uploadDUA2" rel="PanelE" checked="">
+                            <span class="form-radiobox-style"></span>
+                        </span>
+                        <span class="form-label">
+                            <strong>Radio 1</strong>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="form-radiobox-wrapper">
+                    <label for="Radio2">
+                        <span class="form-radiobox">
+                            <input id="Radio2" type="radio" value="" name="uploadDUA2" rel="PanelF">
+                            <span class="form-radiobox-style"></span>
+                        </span>
+                        <span class="form-label">
+                            <strong>Radio 2</strong>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="form-radiobox-wrapper">
+                    <label for="Radio3">
+                        <span class="form-radiobox">
+                            <input id="Radio3" type="radio" value="" name="uploadDUA2" rel="PanelF">
+                            <span class="form-radiobox-style"></span>
+                        </span>
+                        <span class="form-label">
+                            <strong>Radio 3</strong>
+                        </span>
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="form-group-wrapper custom-tooltip tooltip-error">
+
+                <div class="form-radiobox-wrapper">
+                    <label for="Radio4">
+                        <span class="form-radiobox">
+                            <input id="Radio4" type="radio" value="" name="uploadDUA3" rel="PanelG" checked="">
+                            <span class="form-radiobox-style"></span>
+                        </span>
+                        <span class="form-label">
+                            <strong>Radio 1</strong>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="form-radiobox-wrapper">
+                    <label for="Radio5">
+                        <span class="form-radiobox" disabled>
+                            <input id="Radio5" type="radio" value="" name="uploadDUA3" rel="PanelH" disabled>
+                            <span class="form-radiobox-style"></span>
+                        </span>
+                        <span class="form-label">
+                            <strong>Radio 2 disabled</strong>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="form-radiobox-wrapper">
+                    <label for="Radio6">
+                        <span class="form-radiobox">
+                            <input id="Radio6" type="radio" value="" name="uploadDUA3" rel="PanelI">
+                            <span class="form-radiobox-style"></span>
+                        </span>
+                        <span class="form-label">
+                            <strong>Radio 3</strong>
+                        </span>
+                    </label>
+                </div>
+
+                <span class="tooltip-icon"></span>
+                <span class="tooltip-message">Campo obrigatório!</span>
+
+            </div>
+
+            <div class="form-checkbox-wrapper">
+                <label for="ckeckbox1">
+                    <div class="form-checkbox-group custom-tooltip">
+                        <span class="form-checkbox">
+                            <input id="ckeckbox1" type="checkbox" value="">
+                            <span class="form-checkbox-style"></span>
+                        </span>
+                        <span class="form-label">
+                            <strong>Exemplo checkbox</strong>
+                        </span>
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="form-checkbox-wrapper">
+                <label for="ckeckbox1">
+                    <div class="form-checkbox-group custom-tooltip tooltip-error">
+                        <span class="form-checkbox">
+                            <input id="ckeckbox1" type="checkbox" value="">
+                            <span class="form-checkbox-style"></span>
+                        </span>
+                        <span class="form-label">
+                            <strong>Exemplo checkbox Erro Tooltip</strong>
+                        </span>
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="form-checkbox-wrapper">
+                <label for="ckeckbox2" class="">
+                    <div class="form-checkbox-group custom-tooltip">
+                        <span class="form-checkbox" disabled>
+                            <input id="ckeckbox2" type="checkbox" disabled value="">
+                            <span class="form-checkbox-style"></span>
+                        </span>
+                        <span class="form-label">
+                            <strong>Exemplo checkbox disabled</strong>
+                        </span>
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="block-error">
+                <div class="block-error-title">
+                    Exemplo erro: A ocorrência tem mais de 6 meses.
+                </div>
+                <div class="block-error-message">
+                    <p>Por isso, deve fornecer os extractos Via Verde comprovativos Por isso, deve fornecer os extractos Via Verde comprovativos 180 dias)</p>
+                </div>
+            </div>
+
+            <div class="block-info">
+                <div class="block-info-title">
+                    Exemplo info: A ocorrência tem mais de 6 meses.
+                </div>
+                <div class="block-info-message">
+                    <p>Por não ter facultado o seu NIF, não pode beneficiar do acompanhamento online (track & trace) do seu pedido</p>
+                </div>
+            </div>
+
+            <div class="fileUpload">
+                <span class="fileUpload-header custom-tooltip tooltip-inquiry">
+                    <span class="fileUpload-header-title">Documento de facturação</span>
+                    <span class="tooltip-icon"></span>
+                    <span class="tooltip-message">Bla bla bla</span>
+                </span>
+                <div class="fileUpload-body">
+
+                    <!-- Elemento a repetir -->
+                    <div class="fileUpload-control">
+                        <div class="fileUpload-wrapper">
+                            <div class="toUpload">
+                                <div class="fileUpload-control-wrapper">
+                                    <input type="file" name="datafile" />
+                                    <button class="button button-border" type="submit">
+                                        <span class="button-txt">Upload de Ficheiro</span>
+                                    </button>
+                                </div>
+                                <span class="max-size">5Mb máx</span>
+                            </div>
+                            <div class="uploaded">
+                                <span class="name">Nome_ficheiro.txt (345kb)</span>
+                                <span class="document-loading">25%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Elemento a repetir -->
+
+                    <!-- Elemento a repetir -->
+                    <div class="fileUpload-control">
+                        <div class="fileUpload-wrapper">
+                            <div class="toUpload">
+                                <div class="fileUpload-control-wrapper">
+                                    <input type="file" name="datafile" />
+                                    <button class="button button-border" type="submit">
+                                        <span class="button-txt">Upload de Ficheiro</span>
+                                    </button>
+                                </div>
+                                <span class="max-size">5Mb máx</span>
+                            </div>
+                            <div class="uploaded">
+                                <span class="name">Nome_ficheiro.txt (345kb)</span>
+                                <span class="document-loading">25%</span>
+                            </div>
+                        </div>
+                        <a href="#" class="link-remove">Remover ficheiro</a>
+                    </div>
+                    <!-- Fim Elemento a repetir -->
+
+                    <!-- Elemento a repetir -->
+                    <div class="fileUpload-control">
+                        <div class="fileUpload-wrapper">
+                            <div class="toUpload" style="display: none;">
+                                <div class="fileUpload-control-wrapper">
+                                    <input type="file" name="datafile" />
+                                    <button class="button button-border" type="submit">
+                                        <span class="button-txt">Upload de Ficheiro</span>
+                                    </button>
+                                </div>
+                                <span class="max-size">5Mb máx</span>
+                            </div>
+                            <div class="uploaded" style="display: block;">
+                                <span class="name">Nome_ficheiro.txt (345kb)</span>
+                                <span class="document-loading">25%</span>
+                            </div>
+                        </div>
+                        <a href="#" class="link-remove">Remover ficheiro</a>
+                    </div>
+                    <!-- Fim Elemento a repetir -->
+
+
+                    <div class="form-button fileUpload-button clearFloats">
+                        <a href="#" class="link-add">Adicionar ficheiro</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="form-button">
+                <button id="Button1" class="button" type="submit">
+                    <span class="button-txt">Exemplo button</span>
+                </button>
+            </div>
+
+            <div class="form-button">
+                <button id="Button2" class="button button-border" type="submit">
+                    <span class="button-txt">Exemplo button White</span>
+                </button>
+            </div>
+
+        </section>
+    </section>
+</section>
+
+<!-- module-CO-forms.html END -->

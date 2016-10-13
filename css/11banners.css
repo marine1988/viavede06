@@ -1,0 +1,812 @@
+       .big-g-banner {
+       	max-width: 1280px;
+       	width: 100%;
+       }
+       
+       .g-banner {
+       	position: relative;
+       	overflow: hidden;
+       	background: #ffffff;
+       	transform-style: preserve-3d;
+       }
+       
+       .g-banner.big-hp-banner {
+       	margin-top: 60px;
+       }
+       
+       .col2-content.h-banners .g-banner {
+       	display: table-cell;
+       	width: 50%;
+       	padding: 0;
+       	vertical-align: top;
+       }
+       
+       .col2-content.h-banners .spacer {
+       	display: table-cell;
+       	width: 2%;
+       }
+       
+       .col2-content.h-banners .g-banner .g-banner-content .btn {
+       	position: absolute;
+       	bottom: 0;
+       }
+       
+       .col2-content.h-banners .g-banner.b-fotos .g-banner-content .btn {
+       	bottom: 9%;
+       }
+       
+       .col2-content.h-banners .g-banner .g-banner-content {
+       	height: 82%;
+       }
+       
+       .g-banner.top-margin {
+       	margin-top: 50px;
+       }
+       
+       .g-banner.margin-content {
+       	margin-top: 20px;
+       }
+       
+       .g-banner .g-banner-img {
+       	position: absolute;
+       	z-index: 0;
+       	display: inline-block;
+       	overflow: hidden;
+       	width: 34%;
+       	height: 100%;
+       	vertical-align: middle;
+       }
+       
+       .g-banner .g-banner-img img {
+       	position: absolute;
+       	top: 0;
+       	right: 0;
+       	height: 100%;
+       }
+       
+       .g-banner .g-banner-content {
+       	display: inline-block;
+       	margin: 3% 0 3% 39%;
+       	width: 60%;
+       	height: 100%;
+       	vertical-align: middle;
+       }
+       
+       .g-banner .g-banner-content h1 {
+       	width: 460px;
+       	color: #02b245;
+       	font-weight: normal;
+       	font-size: 56px;
+       	font-family: 'PrometoMediumItalic';
+       	line-height: 1em;
+       }
+       
+       .g-banner.b-fotos .g-banner-content h1 {
+       	width: 105%;
+       }
+       
+       .g-banner .g-banner-content .txt {
+       	display: block;
+       	color: #838895;
+       	font-size: 20px;
+       	font-family: 'PrometoRegular';
+       }
+       
+       .g-banner.big-hp-banner .g-banner-content .txt {
+       	max-width: 60%;
+       }
+       
+       .g-banner .g-banner-content .link {
+       	display: block;
+       	color: #363c4c;
+       	text-decoration: none;
+       	text-transform: uppercase;
+       	font-family: 'PrometoMedium';
+       }
+       
+       aside .g-banner .g-banner-content .btn {
+       	float: none;
+       	margin-bottom: 20px;
+       }
+       
+       .g-banner .g-banner-content .btn {
+       	position: relative;
+       	bottom: 5%;
+       	left: 0;
+       	display: inline;
+       	display: inline-block;
+       	float: left;
+       	margin-top: 40px;
+       	padding: 20px;
+       	min-width: 130px;
+       	background: #02b245;
+       	background: -moz-linear-gradient(top, #02b245 0%, #02b245 50%, #009b3a 50%, #009b3a 100%);
+       	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #02b245), color-stop(50%, #02b245), color-stop(50%, #009b3a), color-stop(100%, #009b3a));
+       	background: -webkit-linear-gradient(top, #02b245 0%, #02b245 50%, #009b3a 50%, #009b3a 100%);
+       	background: -o-linear-gradient(top, #02b245 0%, #02b245 50%, #009b3a 50%, #009b3a 100%);
+       	background: -ms-linear-gradient(top, #02b245 0%, #02b245 50%, #009b3a 50%, #009b3a 100%);
+       	background: linear-gradient(to bottom, #02b245 0%, #02b245 50%, #009b3a 50%, #009b3a 100%);
+       	color: #fff;
+       	vertical-align: middle;
+       	text-align: center;
+       	text-decoration: none;
+       	text-transform: uppercase;
+       	font-weight: 400;
+       	font-size: 1.6rem;
+       	font-family: 'PrometoBold';
+       }
+       
+       .g-banner .g-banner-content .btn:hover {
+       	background: #009b3a;
+       }
+       
+       .g-banner .g-banner-content .link::after {
+       	margin-left: 10px;
+       	color: #0db04b;
+       	content: ">";
+       }
+       /*icons banner exeptions*/
+       
+       .g-banner.b-icons {
+       	background: #363c4c;
+       }
+       
+       .g-banner.b-icons .g-banner-img {
+       	padding-right: 10%;
+       	background: #495264;
+       }
+       
+       .g-banner.b-icons .g-banner-img::after {
+       	position: absolute;
+       	right: 0;
+       	z-index: -1;
+       	display: block;
+       	width: 99px;
+       	height: 100%;
+       	background: url("images/global-banners/divisor-icons.jpg") no-repeat;
+       	background-size: 100% 100%;
+       	content: "";
+       }
+       
+       .g-banner.b-icons .g-banner-img img {
+       	top: 20%;
+       	right: auto;
+       	left: 10%;
+       	max-height: 180px;
+       	height: 60%;
+       }
+       
+       .g-banner.b-icons .g-banner-content {
+       	margin: 3% 0 3% 44%;
+       	width: 56%;
+       }
+       
+       .g-banner.b-icons .g-banner-content h1 {
+       	color: #FFF;
+       }
+       
+       .g-banner.b-icons .g-banner-content .txt {
+       	color: #9a9da6;
+       }
+       
+       .g-banner.b-icons .g-banner-content .link {
+       	color: #FFF;
+       }
+       /*fotos banner exeptions*/
+       
+       .g-banner.b-fotos .g-banner-img {
+       	z-index: 0;
+       	width: 100%;
+       }
+       
+       .g-banner.b-fotos .g-banner-img .aside-img {
+       	display: none;
+       }
+       
+       .g-banner.b-fotos .g-banner-content {
+       	position: relative;
+       	z-index: 1;
+       	margin: 0;
+       	padding: 3% 0 3% 5%;
+       	width: 35%;
+       }
+       
+       .g-banner.b-fotos .g-banner-content:before {
+       	position: absolute;
+       	top: 0;
+       	left: 0;
+       	z-index: -1;
+       	width: 100%;
+       	height: 100%;
+       	background: url("images/global-banners/bg-fotos.png") repeat;
+       	content: "";
+       }
+       
+       .g-banner.b-fotos .g-banner-content::after {
+       	position: absolute;
+       	top: 0;
+       	right: -104px;
+       	z-index: -1;
+       	display: block;
+       	width: 104px;
+       	height: 100%;
+       	background: url("images/global-banners/divisor-fotos.png") no-repeat;
+       	background-size: 100% 100%;
+       	content: "";
+       }
+       
+       .g-banner.b-fotos .g-banner-content h1 {
+       	color: #fff;
+       	font-size: 50px;
+       }
+       
+       .g-banner.b-fotos .g-banner-content .txt {
+       	color: #fff;
+       }
+       
+       .g-banner.b-fotos .g-banner-content .link {
+       	color: #fff;
+       }
+       /*mid banner*/
+       
+       .threePosTemplate-section .mainContent .g-banner .g-banner-content h1 {
+       	width: 100%;
+       	font-size: 36px;
+       }
+       
+       .threePosTemplate-section .mainContent .g-banner.b-indet .g-banner-img {
+       	width: 35%;
+       }
+       
+       .threePosTemplate-section .mainContent .g-banner .g-banner-content {
+       	margin: 3% 5% 3% 39%;
+       	width: 45%;
+       }
+       
+       .threePosTemplate-section .mainContent .g-banner .g-banner-img img {
+       	right: initial;
+       	left: 0;
+       }
+       /*icons*/
+       
+       .threePosTemplate-section .mainContent .g-banner.b-icons .g-banner-content {
+       	margin: 3% 5% 3% 46%;
+       	width: 49%;
+       }
+       /*sml banner*/
+       
+       aside .g-banner.b-fotos .g-banner-img .g-img {
+       	display: none;
+       }
+       
+       aside .g-banner.b-fotos .g-banner-img .aside-img {
+       	display: block;
+       }
+       
+       aside .g-banner {
+       	min-height: 210px;
+       }
+       
+       aside .g-banner .g-banner-content h1 {
+       	font-size: 30px;
+       }
+       
+       aside .g-banner.b-fotos .g-banner-content h1 {
+       	margin-top: -30px;
+       	font-size: 30px;
+       }
+       
+       aside .g-banner .g-banner-content .txt {
+       	margin: auto;
+       	font-size: 16px;
+       }
+       
+       aside .g-banner .g-banner-img {
+       	position: relative;
+       	display: block;
+       	width: 100%;
+       	height: auto;
+       	text-align: center;
+       }
+       
+       aside .g-banner .g-banner-img img {
+       	position: relative;
+       	left: -15%;
+       	width: 100%;
+       	height: auto;
+       }
+       
+       aside .g-banner .g-banner-content {
+       	display: block;
+       	margin: 20px 5% 0 5%;
+       	padding-bottom: 15px;
+       	width: 90%;
+       	text-align: center;
+       }
+       
+       aside .g-banner.b-icons .g-banner-content {
+       	position: relative;
+       	z-index: 20;
+       	margin: -20px 5% 0 5%;
+       	width: 90%;
+       }
+       
+       aside .g-banner .g-banner-content h1 {
+       	width: 100%;
+       }
+       /*icons*/
+       
+       aside .g-banner.b-icons .g-banner-img {
+       	padding: 10% 0 83px;
+       }
+       
+       aside .g-banner.b-icons .g-banner-img img {
+       	top: 20%;
+       	right: auto;
+       	left: 25%;
+       	width: 50%;
+       	height: 60%;
+       }
+       
+       aside .g-banner.b-icons .g-banner-img:after {
+       	bottom: 0;
+       	width: 100%;
+       	height: 75px;
+       	background: url(images/global-banners/divisor-icons-m.jpg) no-repeat;
+       	background-size: 100% 100%;
+       }
+       /*fotos*/
+       
+       aside .g-banner.b-fotos .g-banner-img {
+       	position: absolute;
+       	height: 100%;
+       }
+       
+       aside .g-banner.b-fotos .g-banner-img img {
+       	left: 0;
+       	height: 100%;
+       }
+       
+       aside .g-banner.b-fotos .g-banner-content {
+       	margin-top: 225px;
+       	margin-left: 0;
+       	padding: 5%;
+       	width: 90%;
+       	background: none;
+       }
+       
+       aside .g-banner.b-fotos .g-banner-content:after {
+       	top: -104px;
+       	right: 0;
+       	width: 100%;
+       	height: 104px;
+       	background: url(images/global-banners/divisor-fotos-m.png) no-repeat;
+       	background-size: 100% 100%;
+       }
+       /*hp banners*/
+       
+       .h-banners .g-banner {
+       	border-radius: 0 0 50px 0;
+       }
+       
+       .h-banners .g-banner .g-banner-content {
+       	position: relative;
+       	min-height: 275px;
+       }
+       
+       .h-banners .g-banner .g-banner-content h1 {
+       	width: 100%;
+       	font-size: 30px;
+       }
+       /*icons*/
+       
+       .h-banners .g-banner.b-icons .g-banner-img img {
+       	width: auto;
+       	max-width: 65%;
+       }
+       
+       .h-banners .g-banner.b-icons .g-banner-content {
+       	margin: 5% 5% 5% 45%;
+       	width: 50%;
+       }
+       /*indet*/
+       
+       .h-banners .g-banner.b-indet .g-banner-img {
+       	width: 57%;
+       }
+       
+       .h-banners .g-banner.b-indet .g-banner-img img {
+       	width: auto;
+       }
+       
+       .h-banners .g-banner.b-indet .g-banner-content {
+       	margin: 5% 5% 5% 54%;
+       	width: 41%;
+       }
+       /*fotos*/
+       
+       .h-banners .g-banner.b-fotos .g-banner-content::after {
+       	left: -104px;
+       	background: url(images/global-banners/divisor-fotos-hp.png) no-repeat;
+       }
+       
+       .h-banners .g-banner.b-fotos .g-banner-content {
+       	float: right;
+       	padding: 5% 5% 5% 0;
+       }
+       /*hp big banner*/
+       
+       @media (min-width: 640px) {
+       	.big-hp-banner.g-banner .g-banner-content .txt {
+       		display: block;
+       	}
+       	/*fotos*/
+       	.big-hp-banner.g-banner.b-fotos .g-banner-img img {
+       		margin-right: 0;
+       		min-height: 483px;
+       	}
+       	.big-hp-banner.g-banner.b-fotos .g-banner-content:before {
+       		display: none;
+       	}
+       	.big-hp-banner.g-banner.b-fotos .g-banner-content {
+       		padding: 7.5% 0 7.5% 5%;
+       	}
+       	.big-hp-banner.g-banner.b-fotos.g-banner-right .g-banner-content {
+       		padding: 7.5% 5% 7.5% 50%;
+       	}
+       	.big-hp-banner.g-banner.b-fotos .g-banner-content::after {
+       		display: none;
+       	}
+       	/*indent*/
+       	.big-hp-banner.g-banner.b-indet .g-banner-content {
+       		position: relative;
+       		margin: 7.5% 0 7.5% 51%;
+       		width: 49%;
+       	}
+       	.big-hp-banner.g-banner.b-indet .g-banner-img {
+       		width: 46%;
+       	}
+       	.big-hp-banner.g-banner .g-banner-content .btn {
+       		position: relative;
+       		display: inline-block;
+       		float: left;
+       		margin-top: 40px;
+       	}
+       }
+       
+       @media (max-width: 639px) {
+       	.big-hp-banner.g-banner .g-banner-content .txt {
+       		display: block;
+       		margin: auto;
+       	}
+       	.big-hp-banner.g-banner .g-banner-content .btn {
+       		position: relative;
+       		display: inline-block;
+       		margin-top: 40px;
+       		text-align: center;
+       	}
+       }
+       /*media query's*/
+       
+       @media (min-width: 1280px) {
+       	.threePosTemplate-section .mainContent .g-banner {
+       		max-width: 934px;
+       		width: 100%;
+       	}
+       	aside .g-banner {
+       		margin-bottom: 20px;
+       		max-width: 320px;
+       		width: 100%;
+       	}
+       	.col2-content.h-banners .g-banner.b-icons .g-banner-content {
+       		margin: 5% 5% 5% 45%;
+       	}
+       }
+       
+       @media (max-width: 1280px) {
+       	.threePosTemplate-section .mainContent .g-banner .g-banner-content h1 {
+       		font-size: 40px;
+       	}
+       	.threePosTemplate-section .mainContent .g-banner.b-icons .g-banner-img img {
+       		top: 22%;
+       		height: 56%;
+       	}
+       	.g-banner.b-fotos .g-banner-img img {
+       		margin-right: -15%;
+       	}
+       }
+       
+       @media (max-width: 1279px) {
+       	.h-banners .g-banner {
+       		min-height: 583px;
+       	}
+       	.h-banners .g-banner .g-banner-img {
+       		position: relative;
+       		display: block;
+       		width: 100%;
+       		height: auto;
+       		text-align: center;
+       	}
+       	.h-banners .g-banner.b-icons .g-banner-img:after {
+       		bottom: 0;
+       		width: 100%;
+       		height: 75px;
+       		background: url(images/global-banners/divisor-icons-m.jpg) no-repeat;
+       		background-size: 100% 100%;
+       	}
+       	.h-banners .g-banner .g-banner-img img {
+       		position: relative;
+       		left: 0;
+       		width: 100%;
+       		height: auto;
+       	}
+       	.h-banners .g-banner.b-indet .g-banner-img img {
+       		width: 100%;
+       	}
+       	.h-banners .g-banner.b-icons .g-banner-img img {
+       		right: 0;
+       		left: 0;
+       		margin: 0 auto;
+       		width: 60%;
+       	}
+       	.h-banners .g-banner.b-indet .g-banner-img {
+       		width: 100%;
+       	}
+       	.h-banners .g-banner .g-banner-content {
+       		position: initial;
+       		display: block;
+       		float: left;
+       		margin: 20px 5% 0 5%;
+       		width: 90%;
+       		text-align: center;
+       	}
+       	.h-banners .g-banner.b-indet .g-banner-content {
+       		margin: 20px 5% 130px 5%;
+       		min-height: initial;
+       		width: 90%;
+       	}
+       	.h-banners .g-banner.b-icons .g-banner-content {
+       		z-index: 1;
+       		margin: 0 5% 130px 5%;
+       		min-height: initial;
+       		width: 90%;
+       	}
+       	.h-banners .g-banner .g-banner-content .btn {
+       		left: 50%;
+       		transform: translateX(-50%);
+       	}
+       	/*fotos*/
+       	.h-banners .g-banner.b-fotos .g-banner-img {
+       		position: absolute;
+       		z-index: 0;
+       		height: 100%;
+       	}
+       	.h-banners .g-banner.b-fotos .g-banner-img img {
+       		width: auto;
+       		height: 100%;
+       		left: 50%;
+       		transform: translate(-50%, 0);
+       	}
+       	.h-banners .g-banner.b-fotos .g-banner-content {
+       		position: relative;
+       		z-index: 1;
+       		margin: 303px 0 0 0;
+       		margin-left: 0;
+       		padding: 0 5% 5%;
+       		width: 90%;
+       		background: none;
+       	}
+       	.h-banners .g-banner.b-fotos .g-banner-content:after {
+       		top: -104px;
+       		right: 0;
+       		left: 0;
+       		width: 100%;
+       		height: 104px;
+       		background: url(images/global-banners/divisor-fotos-m.png) no-repeat;
+       		background-size: 100% 100%;
+       	}
+       	.col2-content.h-banners .g-banner .g-banner-content .btn {
+       		bottom: 4%;
+       	}
+       	.col2-content.h-banners .g-banner.b-icons .g-banner-img {
+       		padding: 97px 0;
+       	}
+       }
+       
+       @media (max-width: 1024px) {
+       	.g-banner .g-banner-content h1,
+       	.g-banner.b-fotos .g-banner-content h1 {
+       		font-size: 40px;
+       	}
+       	.threePosTemplate-section .mainContent .g-banner .g-banner-content h1 {
+       		font-size: 35px;
+       	}
+       	.g-banner .g-banner-content .txt {
+       		font-size: 18px;
+       	}
+       	.threePosTemplate-section .mainContent .g-banner {
+       		max-width: none;
+       	}
+       	.threePosTemplate-section .mainContent .g-banner.b-icons .g-banner-img img {
+       		top: 28%;
+       		height: 45%;
+       	}
+       	.threePosTemplate-section .mainContent .g-banner.b-icons .g-banner-content {
+       		position: relative;
+       		margin: 5% 5% 5% 42%;
+       		width: 49%;
+       	}
+       }
+       
+       @media (max-width: 1023px) {
+       	.threePosTemplate-section .mainContent .g-banner.b-icons .g-banner-img {
+       		width: 32%;
+       	}
+       	aside .g-banner {
+       		display: none;
+       	}
+       	.col2-content.h-banners .g-banner.b-icons .g-banner-img {
+       		padding: 10% 0 83px;
+       	}
+       	/*.h-banners .g-banner .g-banner-img img {
+               left: -32%;
+           }*/
+       }
+       
+       @media (max-width: 960px) {
+       	.g-banner .g-banner-content h1 {
+       		width: 100%;
+       	}
+       	.g-banner .g-banner-img {
+       		width: 39%;
+       	}
+       	.g-banner .g-banner-content {
+       		width: 55%;
+       	}
+       	/*icons*/
+       	.g-banner.b-icons .g-banner-content {
+       		margin: 5% 0 5% 51%;
+       		width: 49%;
+       	}
+       }
+       
+       @media (max-width: 768px) {
+       	.g-banner {
+       		min-height: 210px;
+       	}
+       	.g-banner .g-banner-content h1,
+       	.g-banner.b-fotos .g-banner-content h1 {
+       		font-size: 30px;
+       	}
+       	.g-banner .g-banner-content .txt {
+       		margin: auto;
+       		font-size: 16px;
+       	}
+       	.h-banners .g-banner .g-banner-img img {
+       		left: 0;
+       	}
+       	.main .wrapper.col2-content {
+       		display: block;
+       	}
+       	.col2-content.h-banners .g-banner {
+       		display: block;
+       		width: 100%;
+       	}
+       	.col2-content.h-banners .spacer {
+       		width: 100%;
+       		height: 20px;
+       		display: block;
+       	}
+       	.h-banners .g-banner {
+       		min-height: initial;
+       	}
+       }
+       
+       @media (max-width: 640px) {
+       	.threePosTemplate-section .mainContent .g-banner.b-icons .g-banner-img {
+       		width: 100%;
+       	}
+       	.g-banner .g-banner-img {
+       		position: relative;
+       		display: block;
+       		width: 100%;
+       		height: auto;
+       		text-align: center;
+       	}
+       	.threePosTemplate-section .mainContent .g-banner.b-icons .g-banner-content {
+       		margin: 0;
+       	}
+       	.threePosTemplate-section .mainContent .g-banner.b-indet .g-banner-img {
+       		width: 100%;
+       	}
+       	.g-banner .g-banner-img img {
+       		position: relative;
+       		width: 100%;
+       		height: auto;
+       	}
+       	.g-banner.b-indet .g-banner-img img {
+       		left: 0;
+       	}
+       	.g-banner .g-banner-content {
+       		display: block;
+       		margin: 20px 5% 0 5%;
+       		padding-bottom: 30px;
+       		width: 90%;
+       		text-align: center;
+       	}
+       	.threePosTemplate-section .mainContent .g-banner .g-banner-content {
+       		padding: 0 5% 5% 5%;
+       		width: 90%;
+       	}
+       	.threePosTemplate-section .mainContent .g-banner.b-indet .g-banner-content {
+       		margin: 20px 0 0 0;
+       	}
+       	.g-banner.b-icons .g-banner-content {
+       		margin: 20px 5% 0 5%;
+       		width: 90%;
+       	}
+       	.g-banner .g-banner-content h1 {
+       		width: 100%;
+       	}
+       	/*icons*/
+       	.g-banner.b-icons .g-banner-img {
+       		padding: 10% 0;
+       		padding: 10% 0 83px;
+       	}
+       	.g-banner.b-icons .g-banner-img img {
+       		top: 20%;
+       		right: auto;
+       		left: 25%;
+       		width: 50%;
+       		height: 60%;
+       	}
+       	.g-banner.b-icons .g-banner-img:after {
+       		bottom: 0;
+       		width: 100%;
+       		height: 75px;
+       		background: url(images/global-banners/divisor-icons-m.jpg) no-repeat;
+       		background-size: 100% 100%;
+       	}
+       	/*fotos*/
+       	.g-banner.b-fotos .g-banner-img {
+       		position: absolute;
+       		height: 100%;
+       	}
+       	.g-banner.b-fotos .g-banner-img img {
+       		width: 100%;
+       		height: 100%;
+       	}
+       	.g-banner.b-fotos .g-banner-content {
+       		margin-top: 290px;
+       		padding: 0 5% 5% 5%;
+       		width: 90%;
+       		background: none;
+       	}
+       	.g-banner.b-fotos .g-banner-content:after {
+       		top: -104px;
+       		right: 0;
+       		width: 100%;
+       		height: 104px;
+       		background: url(images/global-banners/divisor-fotos-m.png) no-repeat;
+       		background-size: 100% 100%;
+       	}
+       	.g-banner.b-fotos .g-banner-content h1 {
+       		width: 100%;
+       	}
+       	.threePosTemplate-section .mainContent .g-banner.b-icons .g-banner-content {
+       		margin: 0;
+       		width: 90%;
+       	}
+       	.g-banner .g-banner-content .btn {
+       		float: none;
+       	}
+       }
+       
+       @media (max-width: 560px) {
+       	.g-banner.b-fotos .g-banner-img img {
+       		width: auto;
+       		height: 100%;
+       		left: 50%;
+       		transform: translate(-50%, 0);
+       	}
+       }

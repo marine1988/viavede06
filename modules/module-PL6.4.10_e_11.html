@@ -1,0 +1,262 @@
+
+<section class="accession-wrapper">
+    <header class="accession-header">
+        <h1 class="page-title">Adicionar novo identificador</h1>
+    </header>
+    <div class="accession-panel">
+        <script type="text/javascript">
+
+            function gotoStep(step) {
+
+                startLoading($('.accession-panel'));
+
+                var currentNavItem = $(".accession-panel .wizardSteps a[rel='" + step + "']");
+
+                //Nav
+                currentNavItem.parent().removeClass().addClass("current");
+                currentNavItem.parent().prevAll("li").removeClass().addClass("completed");
+                currentNavItem.parent().nextAll().removeClass().addClass("disabled");
+
+                //Panels
+                $(".accession-panel .wizardStep").hide();
+                $(".accession-panel ." + step).show();
+
+                totalElemHeight('.accession-aside .' + step , '.article-block');
+
+                // Stop Loading after 1 second
+                setTimeout(function () {
+                    stopLoading($('.accession-panel'));
+                }, 500);
+
+                window.scrollTo(0, 0);
+            }
+
+            $(function () {
+
+                //Wizard Nav click
+                $(".wizardSteps a").click(function (e) {
+                    if (!$(this).hasClass("step-link"))
+                    {
+                        e.preventDefault();
+
+                        if (!$(this).parent().hasClass("disabled") && !$(this).parent().hasClass("current")) {
+                            gotoStep($(this).attr("rel"));
+                        }
+                    }
+                });
+
+                //Wizard First step
+                gotoStep("wizard-step-2");
+
+
+                /* Tooltipster */
+                /*
+                Parametros:
+                - Selector
+                - É Modal
+                */
+                initTooltipster($('.accession-panel .custom-tooltip .tooltip-icon'), false);
+
+
+                $(function () {
+                    $("select").selectric({
+                        disableOnMobile: false
+                    }).on('change', function () {
+                        getProcessState();
+                    });
+                });
+            });
+        </script>
+
+        <div class="accession-main">
+            <nav class="wizardSteps three-steps">
+                <ul>
+                    <li><a href="PL6.4.10.0.html" class="step-link" rel="wizard-step-1"><span><span>01. Identificador</span></span></a></li>
+                    <li><a href="#" rel="wizard-step-2"><span><span>02. Dados</span></span></a></li>
+                    <li><a href="#" rel="wizard-step-3"><span><span>03. Confirmação e Pagamento</span></span></a></li>
+                </ul>
+            </nav>
+
+            <!--wizard-step-1-->
+            <div class="wizardStep wizard-step-1">
+
+            </div>
+            <!--wizard-step-2-->
+            <div class="wizardStep wizard-step-2">
+                <div class="form form-theme-default">
+                    <script type="text/javascript">
+                        $(function () {
+                            $('.accession-main .wizard-step-2 .Validator').blur(function () {
+                                /*
+                                Parametros:
+                                - Selector do controlo
+                                - Nome do grupo de validação
+                                - Nome na class a colocar no pai em caso de erro
+                                - Selector da mensagem generica de erro a mostrar
+                                */
+                                SingleValidator($(this).attr("id"), 'WizardStep2', 'tooltip-error', null);
+
+
+                                /* Update Single Tooltipster Message */
+                                updateSingleTooltipster($(this));
+                            });
+
+                            $('#BtnStep3').click(function (e) {
+                                e.preventDefault();
+
+                                /* Validar Step 3 */
+                                //var pageIsValid = PageValidate(...);
+
+                                /* Ir para o passo 4 */
+                                gotoStep("wizard-step-3");
+                            });
+                        });
+                    </script>
+
+                    <fieldset class="InfoContractIdentifier">
+                        <legend class="clearFloats">
+                            <span class="form-legend">Contrato</span>
+                        </legend>
+
+                        <div class="form-description">
+                            <p>Escolha a que contrato quer adicionar o novo identificador</p>
+                        </div>
+                        <!--#include file="module-combo-contrato.html" -->
+
+                    </fieldset>
+
+                    <fieldset class="identifier-data-config">
+                        <legend class="clearFloats">
+                            <span class="form-legend">Dados da viatura</span>
+                            <span class="mandatory-fields">Todos os campos são obrigatórios</span>
+                        </legend>
+
+                        <!--#include file="module-adesao-dados-viatura.html" -->
+
+                    </fieldset>
+
+                    <!--#include file="module-adesao-2viatura.html" -->
+
+                    <div class="form-button clearFloats">
+                        <button class="button button-border btPrev" id="BtnStep6" type="submit">
+                            <span class="button-txt">< Passo Anterior</span>
+                        </button>
+
+                        <button class="button btNext" id="BtnStep3" type="submit">
+                            <span class="button-txt">Seguinte</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!--wizard-step-3-->
+            <div class="wizardStep wizard-step-3">
+
+                <div class="form form-theme-default identifier-data-conclusion">
+
+                    <fieldset>
+
+                        <legend class="clearFloats">
+                            <span class="form-legend">Rever dados e submeter</span>
+                        </legend>
+                        <div class="form-description-text">
+                            <p>Verifique se a informação submetida está correta.<br>Para mudar os dados, clique no botão <strong>“Alterar”</strong>.</p>
+                        </div>
+
+                        <div class="form-group form-group-resume">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <div class="form-group-resume-title">Dados do contrato</div>
+                                    <label for="Span2">
+                                        <span id="Span4" class="form-pre-filled-data"><strong>Nome Completo:</strong> Tiago Gomes</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span5" class="form-pre-filled-data"><strong>NIF:</strong> 98765423</span>
+                                    </label>
+
+                                    <span class="form-pre-filled-data"><br></span>
+
+                                    <label for="Span2">
+                                        <span id="Span7" class="form-pre-filled-data"><strong>Morada:</strong> Praça de alvalade 6</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span8" class="form-pre-filled-data"><strong>Código Postal:</strong> 2670-123</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span9" class="form-pre-filled-data"><strong>Localidade:</strong> Lisboa</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span9" class="form-pre-filled-data"><strong>Contacto telefónico:</strong> +351 987 543 126</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span9" class="form-pre-filled-data"><strong>Email contato:</strong> email@introduzido.com</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-input-wrapper">
+                                    <div class="form-group-resume-title">Dados da viatura</div>
+                                    <label for="Span2">
+                                        <span id="Span10" class="form-pre-filled-data"><strong>Modalidade do identificador:</strong> ALUGUER (6€/ano)</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span11" class="form-pre-filled-data"><strong>Matricula:</strong> 65-HG-23</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span12" class="form-pre-filled-data"><strong>Nº de Quadro:</strong> 908768276511233</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span13" class="form-pre-filled-data"><strong>Marca e Modelo:</strong> BMW, Série 3</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span14" class="form-pre-filled-data"><strong>Classe:</strong> 1</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-button clearFloats">
+                                <a href="#" class="link-edit">Alterar</a>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!--Só mostra em mobile-->
+                    <!--#include file="module-adesao-resumo-adesao.html" -->
+
+                    <!--#include file="module-adesao-opcoes-envio.html" -->
+
+                    <!--#include file="module-adesao-metodo-pagamento.html" -->
+
+                    <div class="form-button clearFloats">
+                        <button class="button button-border btPrev" id="BtnStep6" type="submit">
+                            <span class="button-txt">< Passo Anterior</span>
+                        </button>
+
+                        <button class="button btNext" id="BtnStep3" type="submit">
+                            <span class="button-txt">Concluir</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <aside class="accession-aside">
+            <div class="wizardStep wizard-step-1">
+
+            </div>
+
+            <div class="wizardStep wizard-step-2">
+                <!--#include file="module-adesao-informacao-relacionada.html" -->
+                <!--#include file="module-adesao-perguntas-frequentes.html" -->
+            </div>
+
+            <div class="wizardStep wizard-step-3">
+                <!--#include file="module-adesao-informacao-relacionada.html" -->
+                <!--#include file="module-adesao-perguntas-frequentes.html" -->
+                <!--#include file="module-adesao-resumo-adesao.html" -->
+            </div>
+        </aside>
+
+        <div class="loading"><span>A carregar...</span></div>
+    </div>
+</section>

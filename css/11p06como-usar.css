@@ -1,0 +1,317 @@
+.how-use {
+	margin-bottom: 20px;
+	padding: 20% 0 25% 0;
+	background: #FFF;
+}
+
+.how-use .row {
+	position: relative;
+}
+
+.how-use figure {
+	width: 100%;
+}
+
+.how-use figure img {
+	width: 100%;
+}
+
+.how-use .spacer-1,
+.how-use .spacer-2 {
+	display: none;
+}
+
+.how-use .txt-container {
+	margin: 20px 0 0;
+	padding: 0 20% 0 20%;
+}
+
+.how-use .txt-container .tit {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 2.6rem;
+	font-family: 'PrometoRegular';
+	text-decoration: none;
+	color: #363c4c;
+}
+
+.how-use .txt-container .txt {
+	display: block;
+	max-width: 200px;
+	line-height: 1.4;
+}
+
+.how-use .txt-container .tit:after {
+	position: absolute;
+	margin: 5px 0 0 15px;
+	content: url('images/comousar/arrow-tit.png');
+}
+
+.how-use .txt-container .tit:hover:after {
+	content: url('images/comousar/arrow-tit-on.png');
+}
+
+.how-use .bg-path {
+	width: 100%;
+}
+
+.how-use .type-container {
+	position: absolute;
+	width: 35%;
+}
+
+.how-use .auto-estrada {
+	top: -40%;
+	left: 8%;
+}
+
+.how-use .traveller {
+	top: -42%;
+	left: 55%;
+}
+
+.how-use .abastecimento {
+	top: 18%;
+	left: 8%;
+}
+
+.how-use .estacionamento {
+	top: 10%;
+	left: 55%;
+}
+
+.how-use .estacionamento .txt-container {
+	margin-top: 75px;
+}
+
+.how-use .abastecimento .txt-container {
+	margin-top: 35px;
+}
+
+.how-use .ferries {
+	top: 30%;
+	left: 8%;
+}
+
+.how-use .mc-drive {
+	top: 30%;
+	left: 55%;
+}
+
+
+/*links block*/
+
+.links-img-block {
+	display: table;
+	clear: both;
+	margin-bottom: 20px;
+	width: 100%;
+	white-space: nowrap;
+}
+
+.links-img-block .cont-wrapper {
+	display: inline-block;
+	width: 66%;
+	vertical-align: middle;
+	white-space: normal;
+}
+
+.links-img-block figure {
+	position: relative;
+	display: inline-block;
+	width: 34%;
+	vertical-align: middle;
+	white-space: normal;
+}
+
+.links-img-block figure.desktop {
+	display: inline-block;
+}
+
+.links-img-block figure.mobile {
+	display: none;
+}
+
+.links-img-block figure img {
+	float: right;
+	max-width: 180px;
+	width: 100%;
+}
+
+.links-img-block .link-content {
+	position: relative;
+	display: table-cell;
+	padding: 35px 3%;
+	width: 100%;
+	background: #FFF;
+	text-decoration: none;
+}
+
+.links-img-block figure:after {
+	position: absolute;
+	right: 10%;
+	bottom: 2%;
+	display: block;
+	width: 35px;
+	height: 35px;
+	background: url('images/arrow-link-block.png') no-repeat;
+	content: '';
+}
+
+.links-img-block .link-content:hover figure:after {
+	background: url('images/arrow-link-block-on.png') no-repeat;
+}
+
+.links-img-block .link-content.half {
+	width: 50%;
+}
+
+.links-img-block .spacer {
+	display: table-cell;
+	width: 2%;
+}
+
+.links-img-block a:first-child {
+	margin-right: 2%;
+}
+
+.links-img-block h4 {
+	margin-bottom: 24px;
+	color: #363c4c;
+	font-weight: 100;
+	font-size: 2.6rem;
+	font-family: 'PrometoRegular';
+}
+
+.links-img-block p {
+	max-width: 70%;
+	color: #495264;
+	font-weight: 100;
+	font-size: 1.6rem;
+	line-height: 1.4;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 1023px) {
+	.how-use .spacer-1,
+	.how-use .spacer-2 {
+		display: block;
+	}
+	.how-use .txt-container {
+		padding: 0 10%;
+	}
+	.how-use .estacionamento .txt-container {
+		margin-top: 42px;
+	}
+	.links-img-block {
+		display: block;
+	}
+	.links-img-block .link-content.half {
+		display: block;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	.links-img-block figure {
+		width: 30%;
+	}
+	.how-use .txt-container .tit {
+		font-size: 2.2rem;
+	}
+	.how-use .txt-container .txt {
+		font-size: 1.4rem;
+	}
+	.how-use .abastecimento .txt-container {
+		margin-top: 22.5px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.how-use {
+		padding: 10% 0;
+	}
+	.how-use .row .bg-path {
+		display: none;
+	}
+	.how-use .row {
+		min-height: 215px;
+	}
+	.how-use .spacer-1,
+	.how-use .spacer-2 {
+		height: 28px;
+		min-height: inherit;
+	}
+	.how-use .type-container {
+		top: 0!important;
+	}
+	.how-use .estacionamento .txt-container {
+		margin-top: 20px;
+	}
+	.how-use .abastecimento .txt-container {
+		margin-top: 20px;
+	}
+	.how-use .txt-container {
+		padding: 0 5%;
+	}
+	.how-use .txt-container .tit {
+		font-size: 2.1rem;
+		line-height: 36px;
+	}
+	.how-use .txt-container .t.gm-banner-img,
+	.gm-banner-header,
+	.gm-banner-content {
+		font-size: 1.2rem;
+	}
+}
+
+@media only screen and (max-width: 639px) {
+	.how-use .type-container {
+		position: initial;
+		margin-bottom: 50px;
+		width: 100%;
+		text-align: center;
+	}
+	.how-use figure {
+		margin: auto;
+		width: 80%;
+	}
+	.how-use .txt-container .txt {
+		max-width: none;
+		font-size: 1.6rem;
+	}
+	.how-use .txt-container {
+		padding: 0 20%;
+	}
+	.links-img-block {
+		display: block;
+		clear: none;
+		white-space: initial;
+		overflow: hidden;
+	}
+	.links-img-block .link-content {
+		overflow: hidden;
+		padding: 25px 10%;
+	}
+	.links-img-block .cont-wrapper {
+		display: block;
+		width: 100%;
+		float: right;
+		text-align: center;
+	}
+	.links-img-block p {
+		max-width: none;
+	}
+	.links-img-block figure {
+		display: block;
+		width: 180px;
+		overflow: hidden;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+	.links-img-block figure.desktop {
+		display: none;
+	}
+	.links-img-block figure.mobile {
+		display: block;
+	}
+}

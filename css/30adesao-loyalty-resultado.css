@@ -1,0 +1,144 @@
+/**
+* Onboarding Result
+*/
+.onboarding-result {
+    font-size: 0;
+    width: 100%;
+}
+.onboarding-result .onboarding-loyalty {
+    vertical-align: top;
+    display: inline-block;
+    width: calc(100% - 356px);
+    height: 100%;
+}
+.onboarding-result .onboarding-loyalty-background {
+    height: 100%;
+}
+.onboarding-result .onboarding-loyalty-text {
+    width: 90%;
+}
+.onboarding-result .onboarding-loyalty-text h2 {
+    color: #ffffff;
+    font-family: 'PrometoMediumItalic';
+    font-size: 3.2rem;
+}
+.onboarding-result .onboarding-text {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    vertical-align: top;
+    display: inline-block;
+    padding: 2.8%;
+    width: 356px;
+    min-height: 512px;
+    background-color: #ffffff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.onboarding-result .onboarding-text h3 {
+    font-size: 2.4rem;
+    font-family: 'PrometoMediumItalic';
+}
+.onboarding-result .onboarding-text p:last-child {margin-bottom: 0;}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .onboarding-result .onboarding-loyalty-text {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1151px) {
+    .onboarding-result .onboarding-loyalty-controlls-wrapper {
+        margin: 2% 0;
+        width: 100%;
+    }
+    .onboarding-result .onboarding-loyalty-controlls-wrapper .form-theme-default .form-checkbox-wrapper {
+        margin-top: 4%;
+    }
+    .onboarding-result .onboarding-loyalty-text ul,
+    .onboarding-result .onboarding-loyalty-text p {
+        margin-bottom: 1%;
+    }
+    .onboarding-result .onboarding-loyalty-text.static-element {
+        line-height: 1.2;
+    }
+    .onboarding-result .onboarding-loyalty-text.static-element small {
+        font-size: 80%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .onboarding-result {
+        display: table;
+        table-layout: fixed;
+    }
+    .onboarding-result .accession-panel-row {
+        display: table-row;
+    }
+    .onboarding-result .accession-panel-cell {
+        display: table-cell;
+    }
+    .onboarding-result .accession-panel-cell .onboarding-loyalty {
+        width: 100%;
+    }
+    .onboarding-result .accession-panel-cell:last-child .onboarding-loyalty-background > img {
+        height: 100%;
+    }
+    .onboarding-result .accession-panel-cell:first-child {
+        width: 356px;
+    }
+    .onboarding-result .accession-panel-cell:first-child .onboarding-text {
+        padding: 10.1%;
+    }
+    .onboarding-result .onboarding-loyalty-background {
+        float: right;
+    }
+    .onboarding-result .onboarding-loyalty-background > img {
+        margin-right: -70px;
+        max-width: none;
+        min-width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .onboarding-result .onboarding-loyalty-background.img-overlayer:after {
+        display: none;
+    }
+    .onboarding-result .onboarding-loyalty-absolute-wrapper.img-overlayer:after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
+        background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        background: -o-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        background: -ms-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .onboarding-result .onboarding-loyalty,
+    .onboarding-result .onboarding-text {
+        width: 100%;
+    }
+    .onboarding-result .onboarding-text {
+        padding: 3% 3.5%;
+        min-height: 0;
+    }
+    .onboarding-result .onboarding-loyalty-text.absolute-element {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .onboarding-result .onboarding-loyalty-text h2 {
+        color: #02b245;
+    }
+}

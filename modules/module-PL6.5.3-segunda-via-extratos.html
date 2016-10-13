@@ -1,0 +1,136 @@
+<script type="text/javascript">
+    $(function () {
+
+        /* Autocomplete */
+        var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"];
+
+        $("#matricula-identificador-contrato").autocomplete({
+            source: availableTags,
+            appendTo: ".autocomplete-container"
+        });
+
+        /* jQuery UI Datepicker */
+        $("#datepicker-from").datepicker({
+            dateFormat: "dd/mm/yy",
+            firstDay: 1,
+            minDate: "-6m",
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function (selectedDate) {
+                $("#datepicker-to").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        $("#datepicker-to").datepicker({
+            dateFormat: "dd/mm/yy",
+            firstDay: 1,
+            minDate: "-6m",
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            onClose: function (selectedDate) {
+                $("#datepicker-from").datepicker("option", "maxDate", selectedDate);
+            }
+        });
+
+        /* Tooltips */
+        initTooltipster($('.custom-tooltip .tooltip-icon'), false);
+
+        /* Open Modal */
+        $('.btNext').click(function (e) {
+            e.preventDefault();
+            openModal('modal-confirmation-modal', null, false);
+        });
+    });
+</script>
+
+<section class="column-section">
+    <header class="column-header">
+        <h1 class="page-title">Pedido 2ª Via de Extratos</h1>
+    </header>
+
+    <section class="column-body form form-theme-default segunda-via-extratos">
+
+        <p>Os pedidos de 2ª Via tem um custo de 2,70€ por extrato gerado.
+        <br />O preço total do pedido será debitado no identificador do contrato.</p>
+        <p>Pode pedir 2ª vias para um identificador ou para todos os identificadores de um contrato.
+        <br />Introduza o número de Identificador ou Nº de Contrato, defina as datas entre as quais quer extratos.</p>
+
+        <div class="form-group">
+            <div class="form-group-wrapper">
+
+                <div class="form-input-wrapper autocomplete-container">
+                    <label for="matricula-identificador-contrato">
+                        <span class="form-label">Matrícula / Identificador / Contrato</span>
+                        <span class="form-input custom-tooltip">
+                            <input id="matricula-identificador-contrato" type="text" value="" class="Validator">
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group-wrapper">
+
+                <div class="form-datepicker-wrapper">
+                    <label for="datepicker-from">
+                        <span class="form-label">Data:</span>
+                        <span class="form-datepicker custom-tooltip">
+                            <input id="datepicker-from" type="text" value="" class="Validator">
+                            <span class="datepicker-icon"></span>
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="form-datepicker-wrapper">
+                    <label for="datepicker-to">
+                        <span class="form-label">a:</span>
+                        <span class="form-datepicker custom-tooltip">
+                            <input id="datepicker-to" type="text" value="" class="Validator">
+                            <span class="datepicker-icon"></span>
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-button">
+            <button id="filtrar" class="button btNext" type="submit">
+                <span class="button-txt">Gerar 2ª via</span>
+            </button>
+
+            <button id="limpar" class="button button-border btPrev" type="submit">
+                <span class="button-txt">LIMPAR</span>
+            </button>
+        </div>
+
+    </section>
+
+</section>

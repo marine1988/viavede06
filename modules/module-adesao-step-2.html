@@ -1,0 +1,658 @@
+<!-- module-adesao-step-2.html START -->
+
+<section class="accession-wrapper">
+    <header class="accession-header">
+        <h1 class="page-title">Aderir à Via Verde</h1>
+    </header>
+    <div class="accession-panel">
+        <script type="text/javascript">
+
+            function gotoStep(step) {
+
+                startLoading($('.accession-panel'));
+
+                var currentNavItem = $(".accession-panel .wizardSteps a[rel='" + step + "']");
+
+                //Nav
+                currentNavItem.parent().removeClass().addClass("current");
+                currentNavItem.parent().prevAll("li").removeClass().addClass("completed");
+                currentNavItem.parent().nextAll().removeClass().addClass("disabled");
+
+                //Panels
+                $(".accession-panel .wizardStep").hide();
+                $(".accession-panel ." + step).show();
+
+                totalElemHeight('.accession-aside .' + step , '.article-block');
+
+                // Stop Loading after 1 second
+                setTimeout(function () {
+                    stopLoading($('.accession-panel'));
+                }, 500);
+
+                window.scrollTo(0, 0);
+            }
+
+            $(function () {
+
+                //Wizard Nav click
+                $(".wizardSteps a").click(function (e) {
+                    if (!$(this).hasClass("step-link"))
+                    {
+                        e.preventDefault();
+
+                        if (!$(this).parent().hasClass("disabled") && !$(this).parent().hasClass("current")) {
+                            gotoStep($(this).attr("rel"));
+                        }
+                    }
+                });
+
+                //Wizard First step
+                gotoStep("wizard-step-2");
+
+
+
+                /* Tooltipster */
+                /* 
+                Parametros:
+                - Selector
+                - É Modal
+                */
+                initTooltipster($('.accession-panel .custom-tooltip .tooltip-icon'), false);
+            });
+        </script>
+
+        <div class="accession-main">
+            <nav class="wizardSteps">
+                <ul>
+                    <li><a href="PL9.7_Adesao.html" class="step-link" rel="wizard-step-1"><span><span>01. Identificador</span></span></a></li>
+                    <li><a href="#" rel="wizard-step-2"><span><span>02. Dados do Contrato</span></span></a></li>
+                    <li><a href="#" rel="wizard-step-3"><span><span>03. Associar Viatura</span></span></a></li>
+                    <li><a href="#" rel="wizard-step-4"><span><span>04. Confirmação e Pagamento</span></span></a></li>
+                </ul>
+            </nav>
+
+            <!-- wizard-step-2 -->
+            <div class="wizardStep wizard-step-2">
+                <div class="form form-theme-default">
+                    <script type="text/javascript">
+                        $(function () {
+                            $('.accession-main .wizard-step-2 .Validator').blur(function () {
+                                /* 
+                                Parametros:
+                                - Selector do controlo
+                                - Nome do grupo de validação
+                                - Nome na class a colocar no pai em caso de erro
+                                - Selector da mensagem generica de erro a mostrar
+                                */
+                                SingleValidator($(this).attr("id"), 'WizardStep2', 'tooltip-error', null);
+
+
+                                /* Update Single Tooltipster Message */
+                                updateSingleTooltipster($(this));
+                            });
+
+                            /* CUSTOM SELECT */
+                            /* Ver mais em: https://select2.github.io/ */
+                            $('#Select3').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-2 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+
+                            $('#Select4').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-2 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+
+                            $('#Button5').click(function (e) {
+                                e.preventDefault();
+
+                                /* Validar Step 2 */
+                                //var pageIsValid = PageValidate(...);
+
+                                /* Ir para o passo 3 */
+                                gotoStep("wizard-step-3");
+                            });
+
+                        });
+                    </script>
+                
+                    <fieldset>
+                        <legend class="clearFloats">
+                            <span class="form-legend">Dados do contrato</span>
+                            <span class="mandatory-fields">Todos os campos são obrigatórios</span>
+                        </legend>
+
+                        <div class="form-group form-group-3">
+
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <label for="form-nif">
+                                        <span class="form-label">NIF (do titular do contrato)</span>
+                                        <span class="form-input custom-tooltip inline-message-error">
+                                            <input id="form-nif" type="text" value="" class="Validator">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                        </span>
+                                        <div class="inline-message ng-active" ng-messages="contractDataForm.fiscalNumber.$error" aria-hidden="true">
+                                            <!-- ngMessage: required -->
+                                            <!-- ngMessage: customerExistsValidator -->
+                                            <span ng-message="customerExistsValidator" class="ng-scope">NIF já associado a uma conta Via Verde. Crie o seu <a href="">Registo</a>.</span>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="form-select-wrapper">
+                                    <span class="form-label">País</span>
+                                    <span class="form-select custom-tooltip tooltip-error">
+                                        <select id="Select4">
+                                            <option value="0">Portugal</option>
+                                            <option value="1">Espanha</option>
+                                            <option value="2">...</option>
+                                        </select>
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <label for="form-email-registo">
+                                        <span class="form-label">E-mail</span>
+                                        <span class="form-input custom-tooltip">
+                                            <input id="form-email-registo" type="email" value="" class="Validator">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatorio!</span>
+                                        </span>
+                                        <div class="inline-message" ng-messages="contractDataForm.email.$error">
+                                            <!-- ngMessage: required -->
+                                            <!-- ngMessage: customerExistsValidator -->
+                                            <span ng-message="customerExistsValidator">E-mail já associado a uma conta Via Verde. Crie o seu <a href="">Registo</a>.</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div id="bloco-information-1" class="block-info">
+                                <div class="block-info-message">
+                                    <p>
+                                        Este email será utilizado para aceder à sua conta online Via Verde.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+                    <div class="billing-data">
+                        <fieldset>
+                            <legend class="clearFloats">
+                                <span class="form-legend">Dados de faturação</span>
+                                <span class="mandatory-fields">Todos os campos são obrigatórios</span>
+                            </legend>
+
+                            <div class="form-input-wrapper form-75-percent">
+                                <label for="form-name">
+                                    <span class="form-label">Nome completo</span>
+                                    <span class="form-input custom-tooltip">
+                                        <input id="form-name" type="text" value="" class="Validator">
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-input-wrapper">
+                                <label for="form-adress">
+                                    <span class="form-label">Morada de faturação</span>
+                                    <span class="form-input custom-tooltip">
+                                        <input id="form-adress" type="text" value="" class="Validator">
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-group form-group-3">
+
+                                <div class="form-group-wrapper">
+                                    <div class="form-input-wrapper">
+                                        <label for="txtPostalCode1">
+                                            <span class="form-label">Código Postal</span>
+                                            <span class="zipCodeWrapper custom-tooltip">
+                                                <span class="zipCode">
+                                                    <span class="form-input zipCodeLeft">
+                                                        <input type="text" id="txtPostalCode1" value="" class="Validator">
+                                                    </span>
+                                                    <span class="zipCodeSplitter">-</span>
+                                                    <span class="form-input zipCodeRight">
+                                                        <input type="text" id="txtPostalCode2" value="" class="Validator">
+                                                    </span>
+                                                </span>
+                                                <span class="tooltip-icon tooltipstered"></span>
+                                                <span class="tooltip-message">
+                                                    <span id="rfvStep1ContractPostalCode">Campo obrigatório</span>
+                                                    <span id="cvStep1PostalCode">Campo invádo</span>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-input-wrapper">
+                                        <label for="form-local">
+                                            <span class="form-label">Localidade</span>
+                                            <span class="form-input custom-tooltip">
+                                                <input id="form-local" type="text" value="" class="Validator">
+                                                <span class="tooltip-icon"></span>
+                                                <span class="tooltip-message">Campo obrigatório!</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="form-group-wrapper">
+                                    <div class="form-select-wrapper">
+                                        <span class="form-label">País</span>
+                                        <span class="form-select custom-tooltip tooltip-error">
+                                            <select id="Select3">
+                                                <option value="0">Portugal</option>
+                                                <option value="1">Espanha</option>
+                                                <option value="2">...</option>
+                                            </select>
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group form-group-4">
+
+                                <div class="form-group-wrapper">
+                                    <div class="form-input-wrapper">
+                                        <label for="form-phone">
+                                            <span class="form-label">Contacto telefónico</span>
+                                            <span class="form-input custom-tooltip">
+                                                <input id="form-phone" type="text" maxlength="9" value="" class="Validator">
+                                                <span class="tooltip-icon tooltipstered"></span>
+                                                <span class="tooltip-message">
+                                                    <span id="rfvStep1ContractContact">Campo brigatório</span>
+                                                    <span id="revStep1ContractContact" style="display: none;">Campo inválido</span>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group form-group-3">
+
+                                <div class="form-group-wrapper">
+                                    <div class="form-input-wrapper">
+                                        <label for="form-email">
+                                            <span class="form-label">E-mail</span>
+                                            <span class="form-input custom-tooltip">
+                                                <input id="form-email" type="email" value="" class="Validator">
+                                                <span class="tooltip-icon"></span>
+                                                <span class="tooltip-message">Campo obrigatorio!</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="bloco-information-2" class="block-info">
+                                <div class="block-info-message">
+                                    <p>
+                                        Neste email, irá receber o extrato mensal da sua conta Via Verde.<br>
+                                        Poderá depois alterar a periodicidade e o formato do extrato na sua área reservada.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                    <!--#include file="module-adesao-opcoes-envio.html" -->
+
+                    <div class="form-button clearFloats">
+                        <button class="button button-border btPrev" id="Button4" type="submit">
+                            <span class="button-txt">< Passo Anterior</span>
+                        </button>
+
+                        <button class="button btNext" id="Button5" type="submit">
+                            <span class="button-txt">Seguinte</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- wizard-step-3 -->
+            <div class="wizardStep wizard-step-3">
+                <div class="form form-theme-default">
+                    <script type="text/javascript">
+                        $(function () {
+                            $('.accession-main .wizard-step-3 .Validator').blur(function () {
+                                /* 
+                                Parametros:
+                                - Selector do controlo
+                                - Nome do grupo de validação
+                                - Nome na class a colocar no pai em caso de erro
+                                - Selector da mensagem generica de erro a mostrar
+                                */
+                                SingleValidator($(this).attr("id"), 'WizardStep3', 'tooltip-error', null);
+
+
+                                /* Update Single Tooltipster Message */
+                                updateSingleTooltipster($(this));
+                            });
+
+                            $('#BtnStep6').click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 2 */
+                                gotoStep("wizard-step-2");
+                            });
+
+                            $('#BtnStep7').click(function (e) {
+                                e.preventDefault();
+
+                                /* Validar Step 3 */
+                                //var pageIsValid = PageValidate(...);
+
+                                /* Ir para o passo 4 */
+                                gotoStep("wizard-step-4");
+                            });
+                        });
+                    </script>
+
+
+                    <fieldset>
+                        <legend class="clearFloats">
+                            <span class="form-legend">Dados da viatura</span>
+                            <span class="mandatory-fields">Todos os campos são obrigatórios</span>
+                        </legend>
+
+                        <!--#include file="module-adesao-dados-viatura.html" -->
+                    </fieldset>
+
+                    <!--#include file="module-adesao-2viatura.html" -->
+
+                    <div class="payment-references clearFloats">
+                        <fieldset>
+                            <legend>
+                                <span class="form-legend">Referência de pagamento</span>
+                            </legend>
+
+                            <div class="payment-references-controls">
+                                <div>
+                                    Escolha como pretende configurar o pagamento de cada identificador
+                                </div>
+                                <div class="form-radiobox-wrapper">
+                                    <label for="refforcar" class="form-radiobox-group-wrapper custom-tooltip tooltip-info">
+                                        <div class="form-radiobox-group">
+                                            <span class="form-radiobox">
+                                                <input id="refforcar" type="radio" value="" name="carReference" checked="">
+                                                <span class="form-radiobox-style"></span>
+                                            </span>
+                                            <span class="form-label">
+                                                <strong>Referência única para todos os identificadores</strong>
+                                            </span>
+                                        </div>
+                                        <span class="tooltip-icon tooltipstered"></span>
+                                        <span class="tooltip-message">O pagamento das transações de todas as viaturas associadas ao contrato é feito com apenas uma referência</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-radiobox-wrapper">
+                                    <label for="refunique" class="form-radiobox-group-wrapper custom-tooltip tooltip-info">
+                                        <div class="form-radiobox-group">
+                                            <span class="form-radiobox">
+                                                <input id="refunique" type="radio" value="" name="carReference">
+                                                <span class="form-radiobox-style"></span>
+                                            </span>
+                                            <span class="form-label">
+                                                <strong>Referência diferente por cada identificador</strong>
+                                            </span>
+                                        </div>
+                                        <span class="tooltip-icon tooltipstered"></span>
+                                        <span class="tooltip-message">Cada viatura do seu contrato terá uma referência própria para o pagamento das respectivas transações</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-button clearFloats">
+                        <button class="button button-border btPrev" id="BtnStep6" type="submit">
+                            <span class="button-txt">< Passo Anterior</span>
+                        </button>
+
+                        <button class="button btNext" id="BtnStep7" type="submit">
+                            <span class="button-txt">Seguinte</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- wizard-step-4 -->
+            <div class="wizardStep wizard-step-4">
+                
+                <div class="form form-theme-default">
+                    <script type="text/javascript">
+                        $(function () {
+                            $('.accession-main .wizard-step-4 .Validator').blur(function () {
+                                /* 
+                                Parametros:
+                                - Selector do controlo
+                                - Nome do grupo de validação
+                                - Nome na class a colocar no pai em caso de erro
+                                - Selector da mensagem generica de erro a mostrar
+                                */
+                                SingleValidator($(this).attr("id"), 'WizardStep4', 'tooltip-error', null);
+
+
+                                /* Update Single Tooltipster Message */
+                                updateSingleTooltipster($(this));
+                            });
+
+
+                            $('#BtnStep9').click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 3 */
+                                gotoStep("wizard-step-3");
+                            });
+
+                            $('#btnSubmit').click(function (e) {
+                                e.preventDefault();
+
+                                /* Validar Step 3 */
+                                //var pageIsValid = PageValidate(...);
+
+                                /* Submit Form */
+                            });
+
+                            $("#BtnEditStep1").click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 1 */
+                                gotoStep("wizard-step-1");
+                            });
+
+                            $("#BtnEditStep2").click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 2 */
+                                gotoStep("wizard-step-2");
+                            });
+
+                            $("#BtnEditStep3").click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 3 */
+                                gotoStep("wizard-step-3");
+                            });
+
+                        });
+                    </script>
+
+                    <fieldset>
+                        <legend class="clearFloats">
+                            <span class="form-legend">Rever dados e submeter</span>
+                        </legend>
+                        <div class="form-description-text">
+                            <p>Verifique se a informação submetida está correta.<br>Para mudar os dados, clique no botão <strong>“Alterar”</strong>.</p>
+                        </div>
+
+                        <div class="form-group form-group-resume">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <div class="form-group-resume-title">Dados do contrato</div>
+                                    <label for="Span2">
+                                        <span id="Span5" class="form-pre-filled-data"><strong>NIF:</strong> 98765423</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span3" class="form-pre-filled-data"><strong>Sede Fiscal:</strong> Portugal</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span12" class="form-pre-filled-data"><strong>Email de registo:</strong> email@gmail.com</span>
+                                    </label>
+
+                                    <span class="form-pre-filled-data"><br></span>
+
+                                    <label for="Span2">
+                                        <span id="Span4" class="form-pre-filled-data"><strong>Nome Completo:</strong> Tiago Gomes</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span6" class="form-pre-filled-data"><strong>Morada:</strong> Praça de alvalade 6</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span7" class="form-pre-filled-data"><strong>Código Postal:</strong> 2670-123</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span8" class="form-pre-filled-data"><strong>Localidade:</strong>Lisboa</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span9" class="form-pre-filled-data"><strong>País:</strong> Portugal</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span10" class="form-pre-filled-data"><strong>Contato telefónico:</strong> 987543126</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span11" class="form-pre-filled-data"><strong>Email de faturação:</strong> email@introduzido.com</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-input-wrapper">
+                                    <div class="form-group-resume-title">Dados da envio</div>
+                                    <label for="Span2">
+                                        <span id="Span14" class="form-pre-filled-data"><strong>Método de envio:</strong> Recolha em rede pick-up</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span15" class="form-pre-filled-data"><strong>Preço:</strong> Gratuito</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span16" class="form-pre-filled-data"><strong>Endereço:</strong>
+                                            <br>
+                                            Tiago Gomes<br>
+                                            Praça de alvalade 6, 2670-123, Lisboa, Portugal
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-button clearFloats">
+                                <a href="#" class="link-edit">Alterar</a>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-resume">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <div class="form-group-resume-title">Dados da viatura</div>
+                                    <label for="Span2">
+                                        <span id="Span10" class="form-pre-filled-data"><strong>Modalidade do identificador:</strong> ALUGUER (6€/ano)</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span11" class="form-pre-filled-data"><strong>Matricula:</strong> 65-HG-23</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span12" class="form-pre-filled-data"><strong>Nº de Quadro:</strong> 908768276511233</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span13" class="form-pre-filled-data"><strong>Marca e Modelo:</strong> BMW, Série 3</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span14" class="form-pre-filled-data"><strong>Classe:</strong> 1</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-button clearFloats">
+                                <a href="#" class="link-edit">Alterar</a>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!--Só mostra em mobile-->
+                    <!--#include file="module-adesao-resumo-adesao.html" -->
+
+                    <!--#include file="module-adesao-metodo-pagamento.html" -->
+
+                    <div class="form-button clearFloats">
+                        <button class="button button-border btPrev" id="BtnStep9" type="submit">
+                            <span class="button-txt">< Passo Anterior</span>
+                        </button>
+
+                        <button class="button btNext" id="btnSubmit" type="submit">
+                            <span class="button-txt">Submeter</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <aside class="accession-aside">
+
+            <div class="wizardStep wizard-step-2">
+
+                <!--#include file="module-adesao-informacao-relacionada.html" -->
+
+                <!--#include file="module-adesao-perguntas-frequentes.html" -->
+
+            </div>
+
+            <div class="wizardStep wizard-step-3">
+
+                <!--#include file="module-adesao-informacao-relacionada.html" -->
+
+                <!--#include file="module-adesao-perguntas-frequentes.html" -->
+
+            </div>
+
+            <div class="wizardStep wizard-step-4">
+
+                <!--#include file="module-adesao-resumo-adesao.html" -->
+
+            </div>
+        </aside>
+
+        <div class="loading"><span>A carregar...</span></div>
+    </div>
+</section>
+
+<!-- module-adesao-step-2.html END -->

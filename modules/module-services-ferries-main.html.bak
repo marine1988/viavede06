@@ -1,0 +1,76 @@
+<!-- module-services-ferries-main START -->
+
+<section class="services_info">
+    <header class="services_info_header">
+        <h3 class="services_info_title">Como usar a Via Verde no Ferry</h3>
+    </header>
+
+    <div class="info_steps_wrapper">
+        <div class="info_steps">
+            <figure class="info_steps_figure">
+                <img src="cms-images/ferries_step1.png" alt="" />
+            </figure>
+            <div class="info_steps_text cleanStyle">
+                <p>Na máquina de acesso ao Ferry, indique a categoria do seu veículo.</p>
+            </div>
+        </div>
+        <div class="info_steps">
+            <figure class="info_steps_figure">
+                <img src="cms-images/ferries_step2.png" alt="" />
+            </figure>
+            <div class="info_steps_text cleanStyle">
+                <p>Selecione o número de passageiros (exceto o condutor).</p>
+            </div>
+        </div>
+        <div class="info_steps">
+            <figure class="info_steps_figure">
+                <img src="cms-images/ferries_step3.png" alt="" />
+            </figure>
+            <div class="info_steps_text cleanStyle">
+                <p>Pressione o botão e retire o bilhete. O valor será debitado através da sua conta Via Verde.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="services_locations">
+
+    <header class="services_locations_header">
+        <h3 class="services_locations_title">Onde estão estes e outros serviços Via Verde</h3>
+    </header>
+
+    <div class="services_locations_map">
+        <!--#include file="module-gm-maps.html" -->
+    </div>
+
+    <header class="services_locations_header">
+        <h3 class="services_locations_title">Tarifas e horários ao minuto</h3>
+    </header>
+    <div class="services_locations_text cleanStyle">
+        <p>Para uma informação atualizada, por favor consulte o site do nosso parceiro Atlantic Ferries:</p>
+        <p><a href="http://www.atlanticferries.pt" target="_blank">www.atlanticferries.pt</a></p>
+    </div>
+
+</section>
+
+
+<!-- Small Banner -->
+<article class="gm-banner small-banner fix-gm-img left-banner">
+    <div class="gm-banner-img">
+        <img data-src-base="cms-images/banner-aderir-viaverde02.jpg" data-src="<768:?w=768&amp;h=317, <1024:?w=1024&amp;h=423, >1024:?w=470&amp;h=194" alt="">
+    </div>
+    <div class="gm-banner-content">
+        <h4 class="gm-banner-tit"><strong>Adira já</strong></h4>
+        <div class="gm-banner-txt">
+            <p>Torne-se cliente Via Verde e tenha acesso exclusivo às vantagens de circular sem limites.</p>
+        </div>
+        <div class="gm-banner-button">
+            <a href="" class="button button-small"><span class="button-txt">Aderir</span></a>
+        </div>
+    </div>
+</article>
+<!-- Small Banner -->
+
+<!-- module-services-ferries-main END -->

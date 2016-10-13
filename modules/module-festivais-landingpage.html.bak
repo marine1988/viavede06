@@ -1,0 +1,434 @@
+<!-- module-festivais-landingpage.html START -->
+
+<section class="wrapper">
+    <div class="back-button">
+        <a href="https://www.viaverde.pt/viagens-vantagens/programas-de-lazer" id="A1" class="link"><span id="Span1" class="link-txt">Voltar</span></a>
+    </div>
+
+    <article class="gm-banner left-banner">
+        <div class="gm-banner-img">
+            <img data-src-base="cms-images/banner-service-controlauto.jpg" data-src="<768:?w=768&amp;h=320, <1024:?w=1024&amp;h=425, >1024:?w=770&amp;h=320" alt="">
+        </div>
+        <div class="gm-banner-content">
+            <h2 class="gm-banner-tit">Na Controlauto, é mais fácil e cómodo fazer a inspeção</h2>
+            <div class="gm-banner-txt">
+                <p>A Controlauto disponibiliza 46 centros de inspeção, todos abertos à hora de almoço e ao sábado.</p>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+
+<section class="list-offer wrapper">
+    <!-- List Intro -->
+    <header class="gm-list-intro">
+        <h2 class="gm-list-intro-tit">
+            Os nossos<span>Passes e Packs</span>
+        </h2>
+        <div class="gm-list-intro-content">
+            <div class="gm-list-intro-txt">
+                <p>Veja os programas que temos para si, faça a inscrição e reserve já o seu lugar na Etapa da Volta.</p>
+            </div>
+        </div>
+    </header>
+    <!-- End List Intro -->
+
+    <!-- List -->
+    <div class="gm-list">
+        <div class="gm-box-element">
+            <article class="gm-box">
+                <a href="#1">
+                    <div class="gm-box-img">
+                        <div class="gm-box-mark">
+                            <mark class="gm-box-mark-item gm-box-new">Novidade</mark>
+                        </div>          
+                        <div class="gm-box-segment-list">
+                            <div class="gm-box-bg">
+                                <ul>
+                                    <li class="ic-fairs-events">Festivais e Eventos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img src="http://placehold.it/360x360" alt="">
+                    </div>
+                    <div class="gm-box-content">
+                        <span class="gm-box-corner"></span>
+					    <div class="gm-box-content-header">
+                            <h3 class="gm-box-tit">Etapa da Volta Viseu - Hotel José Alberto</h3>
+                            <div class="gm-box-txt">
+                                <p>2 noites para 2 pessoas com pequeno almoço. Inclui até 2 inscrições para a Etapa da Volta e a Jersey oficial da prova.</p>
+                            </div>
+                        </div>
+                  
+                        <div class="gm-box-content-footer">
+                            <div class="gm-box-offer">
+                                <ul>
+                                    <li><span class="ic-offer ic-offer-toll">25% Portagem</span></li>
+                                    <li><span class="ic-offer ic-offer-fuel">8€ Combustível</span></li>
+                                </ul>
+                            </div>
+                            <div class="gm-box-price">
+                                <p>
+                                    <span class="gm-box-price-value">123,00<sup>€</sup> + 1680<sup>pts</sup>
+                                        <span class="hidden" aria-hidden="false" hidden="">.</span><br>
+                                    </span>
+                                    <small class="gm-box-price-note">Poupe até 88€</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="gm-box">
+                <a href="#1">
+                    <div class="gm-box-img">
+                        <div class="gm-box-mark">
+                            <mark class="gm-box-mark-item gm-box-new">Novidade</mark>
+                        </div>          
+                        <div class="gm-box-segment-list">
+                            <div class="gm-box-bg">
+                                <ul>
+                                    <li class="ic-fairs-events">Festivais e Eventos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img src="http://placehold.it/360x360" alt="">
+                    </div>
+                    <div class="gm-box-content">
+                        <span class="gm-box-corner"></span>
+					    <div class="gm-box-content-header">
+                            <h3 class="gm-box-tit">Etapa da Volta Viseu - Hotel José Alberto</h3>
+                            <div class="gm-box-txt">
+                                <p>2 noites para 2 pessoas com pequeno almoço. Inclui até 2 inscrições para a Etapa da Volta e a Jersey oficial da prova.</p>
+                            </div>
+                        </div>
+                  
+                        <div class="gm-box-content-footer">
+                            <div class="gm-box-offer">
+                                <ul>
+                                    <li><span class="ic-offer ic-offer-toll">25% Portagem</span></li>
+                                    <li><span class="ic-offer ic-offer-fuel">8€ Combustível</span></li>
+                                </ul>
+                            </div>
+                            <div class="gm-box-price">
+                                <p>
+                                    <span class="gm-box-price-value">123,00<sup>€</sup> + 1680<sup>pts</sup>
+                                        <span class="hidden" aria-hidden="false" hidden="">.</span><br>
+                                    </span>
+                                    <small class="gm-box-price-note">Poupe até 88€</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+        <div class="gm-box-element">
+            <article class="gm-box">
+                <a href="#1">
+                    <div class="gm-box-img">
+                        <div class="gm-box-mark">
+                            <mark class="gm-box-mark-item gm-box-new">Novidade</mark>
+                        </div>          
+                        <div class="gm-box-segment-list">
+                            <div class="gm-box-bg">
+                                <ul>
+                                    <li class="ic-fairs-events">Festivais e Eventos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img src="http://placehold.it/360x360" alt="">
+                    </div>
+                    <div class="gm-box-content">
+                        <span class="gm-box-corner"></span>
+					    <div class="gm-box-content-header">
+                            <h3 class="gm-box-tit">Etapa da Volta Viseu - Hotel José Alberto</h3>
+                            <div class="gm-box-txt">
+                                <p>2 noites para 2 pessoas com pequeno almoço. Inclui até 2 inscrições para a Etapa da Volta e a Jersey oficial da prova.</p>
+                            </div>
+                        </div>
+                  
+                        <div class="gm-box-content-footer">
+                            <div class="gm-box-offer">
+                                <ul>
+                                    <li><span class="ic-offer ic-offer-toll">25% Portagem</span></li>
+                                    <li><span class="ic-offer ic-offer-fuel">8€ Combustível</span></li>
+                                </ul>
+                            </div>
+                            <div class="gm-box-price">
+                                <p>
+                                    <span class="gm-box-price-value">123,00<sup>€</sup> + 1680<sup>pts</sup>
+                                        <span class="hidden" aria-hidden="false" hidden="">.</span><br>
+                                    </span>
+                                    <small class="gm-box-price-note">Poupe até 88€</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="gm-box">
+                <a href="#1">
+                    <div class="gm-box-img">
+                        <div class="gm-box-mark">
+                            <mark class="gm-box-mark-item gm-box-new">Novidade</mark>
+                        </div>          
+                        <div class="gm-box-segment-list">
+                            <div class="gm-box-bg">
+                                <ul>
+                                    <li class="ic-fairs-events">Festivais e Eventos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img src="http://placehold.it/360x360" alt="">
+                    </div>
+                    <div class="gm-box-content">
+                        <span class="gm-box-corner"></span>
+					    <div class="gm-box-content-header">
+                            <h3 class="gm-box-tit">Etapa da Volta Viseu - Hotel José Alberto</h3>
+                            <div class="gm-box-txt">
+                                <p>2 noites para 2 pessoas com pequeno almoço. Inclui até 2 inscrições para a Etapa da Volta e a Jersey oficial da prova.</p>
+                            </div>
+                        </div>
+                  
+                        <div class="gm-box-content-footer">
+                            <div class="gm-box-offer">
+                                <ul>
+                                    <li><span class="ic-offer ic-offer-toll">25% Portagem</span></li>
+                                    <li><span class="ic-offer ic-offer-fuel">8€ Combustível</span></li>
+                                </ul>
+                            </div>
+                            <div class="gm-box-price">
+                                <p>
+                                    <span class="gm-box-price-value">123,00<sup>€</sup> + 1680<sup>pts</sup>
+                                        <span class="hidden" aria-hidden="false" hidden="">.</span><br>
+                                    </span>
+                                    <small class="gm-box-price-note">Poupe até 88€</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </div>
+    <!-- End List -->
+</section>
+
+
+
+<section class="lodging wrapper">
+        <!-- Intro -->
+        <header class="gm-list-intro">
+            <h2 class="gm-list-intro-tit">
+                Saiba qual a nossa<span>Localização e Alojamento</span>
+            </h2>
+            <div class="gm-list-intro-content">
+                <div class="gm-list-intro-txt">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis aliquam lorem sed volutpat. Praesent vel orci nec risus pulvinar tristique ultrices vitae sem.</p>
+                </div>
+            </div>
+        </header>
+        <!-- List Intro -->
+        <!-- Map POIs View MODE -->
+        <!--#include file="module-gm-maps.html" -->
+        <!-- END Map POIs View MODE -->
+</section>
+
+<!-- BANNER CARTAZ -->
+<section class="gm-out-margin detail-summerfest">
+    <article class="gm-banner full-banner banner-green-summerfest">
+        <div class="gm-banner-content wrapper">
+            <h2 class="gm-banner-tit">Cabeças de Cartaz</h2>
+            <div class="gm-banner-festivals">
+                <div class="green-fest-block">
+                    <div class="img-wrapper">
+                        <img alt="" src="cms-images/summerfest/artist-1.jpg">
+                    </div>
+                    <p class="green-fest-description">Massive Attack</p>
+                </div>
+                <div class="green-fest-block">
+                    <div class="img-wrapper">
+                        <img alt="" src="cms-images/summerfest/artist-2.jpg">
+                    </div>
+                    <p class="green-fest-description">The National</p>
+                </div>
+                <div class="green-fest-block">
+                    <div class="img-wrapper">
+                        <img alt="" src="cms-images/summerfest/artist-3.jpg">
+                    </div>
+                    <p class="green-fest-description">Kendrick Lammar</p>
+                </div>
+                <div class="green-fest-block">
+                    <div class="img-wrapper">
+                        <img alt="" src="cms-images/summerfest/artist-4.jpg">
+                    </div>
+                    <p class="green-fest-description">Block Party</p>
+                </div>
+            </div>
+            <div class="gm-banner-festivals">
+                <h2 class="gm-banner-tit">Lineup</h2>
+                <p class="lineup-confirmed">Confirmados</p>
+                <div class="lineup">
+                    <ul class="headliners">
+                        <li>Massive attack</li>
+                        <li>Brian Wilson<span class="xs">performing pet sounds</span></li>
+                        <li>The national</li>
+                        <li>Kendrick Lammar</li>
+                        <li>Block Party</li>
+                    
+                    </ul>
+                    <ul class="headliners small">
+                        <li>JAMIE XX</li>
+                        <li>kurt vile</li>
+                        <li>Villagers</li>
+                        <li>Kwabs</li>
+                        <li>MARCO DEMARCO</li>
+                        <li>Petite Noir</li>
+                        <li>RHYE</li>
+                        <li>Fidlar</li>
+                    </ul>
+                    <ul class="headliners xs">
+                        <li>Lion Babe</li>
+                        <li>kurt vile</li>
+                        <li>Villagers</li>
+                        <li>Kwabs</li>
+                        <li>MARCO DEMARCO</li>
+                        <li>Petite Noir</li>
+                        <li>RHYE</li>
+                        <li>Fidlar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#1" class="more-info-festivals">Para mais informações: suberbocksuperrock.com</a>
+        </div>
+    </article>
+</section>
+<!-- END BANNER CARTAZ -->
+
+<!-- Sugestões -->
+<section class="list-suggestion wrapper">
+    <!-- List Intro -->
+    <header class="gm-list-intro">
+        <h2 class="gm-list-intro-tit">
+            As nossas<span>Sugestões</span>
+        </h2>
+        <div class="gm-list-intro-content">
+            <div class="gm-list-intro-txt">
+                Aproveita a sua participação na Etapa da Volta e descubra <br>
+                Portugal. Siga as nossas sugestões.
+            </div>
+        </div>
+    </header>
+    <!-- End List Intro -->
+
+    <!-- List -->
+    <div class="gm-list">
+        <article class="gm-box">
+	        <a href="#1">
+		        <div class="gm-box-img">
+                    <div class="gm-box-segment-list">
+                         <div class="gm-box-bg">
+                             <ul>
+                                 <li class="ic-gastronomy-wine">Gastronomia e Vinhos</li>
+                                 <li class="ic-history">História e Cultura</li>
+                                 <li class="ic-nature">Natureza e Ar Livre</li>
+                             </ul>
+                         </div>
+                     </div>
+                    <img alt="" data-src-base="cms-images/ArrabidaPraia.jpg" data-src="<768:?w=570&amp;h=270,<1024:?w=720&amp;h=320,>1024:?w=675&amp;h=320">
+		        </div>
+
+		        <div class="gm-box-content">
+				    <div class="gm-box-content-wrapper">
+					    <div class="gm-box-content-center">
+						    <span class="gm-box-corner"></span>
+						    <mark class="gm-box-mark ic-top-sugestion">TOP</mark>
+						    <div class="gm-box-txt">
+							    <h3>Indo Eu, Indo Eu... a Caminho de Viseu!</h3>
+                                <p>
+                                    <span>E quando lá chegar a única dificuldade que vai ter é escolher o que fazer, tantos são os locais a visitar e as experiências para viver. Siga a nossa proposta de dez atividades que vão deixar Viseu no topo das suas preferências.</span>
+                                </p>
+						    </div>
+					    </div>
+				    </div>
+		        </div>
+	        </a>
+        </article>
+
+        <article class="gm-box">
+	        <a href="#1">
+		        <div class="gm-box-img">
+                    <div class="gm-box-segment-list">
+                         <div class="gm-box-bg">
+                             <ul>
+                                 <li class="ic-gastronomy-wine">Gastronomia e Vinhos</li>
+                                 <li class="ic-history">História e Cultura</li>
+                                 <li class="ic-nature">Natureza e Ar Livre</li>
+                             </ul>
+                         </div>
+                     </div>
+                    <img alt="" data-src-base="cms-images/ArrabidaPraia.jpg" data-src="<768:?w=570&amp;h=270,<1024:?w=720&amp;h=320,>1024:?w=675&amp;h=320">
+		        </div>
+
+		        <div class="gm-box-content">
+				    <div class="gm-box-content-wrapper">
+					    <div class="gm-box-content-center">
+						    <span class="gm-box-corner"></span>
+						    <mark class="gm-box-mark ic-top-sugestion">TOP</mark>
+						    <div class="gm-box-txt">
+							    <h3>Indo Eu, Indo Eu... a Caminho de Viseu!</h3>
+                                <p style="text-align: justify;">
+                                    <span>E quando lá chegar a única dificuldade que vai ter é escolher o que fazer, tantos são os locais a visitar e as experiências para viver. Siga a nossa proposta de dez atividades que vão deixar Viseu no topo das suas preferências.</span>
+                                </p>
+						    </div>
+					    </div>
+				    </div>
+		        </div>
+	        </a>
+        </article>   
+    </div>   
+    <!-- End List -->
+    <div class="list-button">
+        <a id="dnn_ctr2105_View_lnkAllSuggs" class="button" href="#1"><span class="button-txt">Ver Mais</span></a>
+    </div>
+</section>
+<!-- END Sugestões -->
+
+<!-- Missão criativa -->
+<section class="mission wrapper">
+    <!-- List Intro -->
+    <header class="gm-list-intro">
+        <h2 class="gm-list-intro-tit">As nossas <span>Missões</span></h2>
+        <div class="gm-list-intro-content">
+            <div class="gm-list-intro-txt">
+                <p>Este país é feito de histórias e lugares mágicos. Comece a Descobrir Portugal e descubra também todos os Desafios em que pode participar.</p>
+            </div>
+        </div>
+    </header>
+    <!-- End List Intro -->
+    <article class="gm-banner right-banner">
+	    <div class="gm-banner-img">
+		    <img data-src-base="cms-images/ArrabidaPraia.jpg" data-src="<768:?w=570&amp;h=270,<1024:?w=720&amp;h=320,>1024:?w=675&amp;h=320" alt="">
+	    </div>
+	    <div class="gm-banner-content">
+		    <h1 class="gm-banner-tit">Via Verde Pontos</h1>
+		    <div class="gm-banner-txt">
+			    <p>Ganhe pontos ao usar a Via Verde e descubra Portugal com os nossos parceiros.</p>
+		    </div>
+		    <div class="gm-banner-button">
+			    <a href="#1" class="button"><span class="button-txt">Começar a usar os pontos</span></a>
+			    <a href="#1" class="link"><span class="link-txt">Como funciona</span></a>
+		    </div>
+	    </div>
+    </article>
+
+</section>
+<!-- END Missão criativa -->
+
+<!-- module-festivais-landingpage.html END -->

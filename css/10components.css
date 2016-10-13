@@ -1,0 +1,67 @@
+/* COMPONENTS START */
+/* SLICK ELEMENTS */
+
+.slick-arrow {
+    position:absolute;
+    background:url(images/slider-arrows.png) no-repeat;
+    background-size:cover;
+    background-position:0 0;
+    top:50%;
+    opacity: 0.5;
+    border:none;
+    height:38px;
+    width:23px;
+    font-size:0;
+    cursor:pointer;
+    padding:0;
+    z-index: 1;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.slick-arrow:hover {
+    opacity: 1;
+}
+
+.slick-arrow.slick-next {
+    right:20px;
+    background-position:-23px 0;
+}
+
+.slick-arrow.slick-prev {
+    left:20px;
+}
+
+/* DISABLED OFFER BUTTON */
+.button.button-white.offer-disabled .button-txt,
+.button.button-white.offer-disabled:hover .button-txt {
+    background: #1b8539;
+    color: #02b245 !important;
+    cursor:default;
+}
+
+/* COMPONENTS END */
+
+@media screen and (max-width: 767px) {
+
+    .slick-arrow {
+        height: 25px;
+        width: 14px;
+    }
+    
+    .slick-arrow.slick-next {
+        right:15px;
+        background-position: -15px 0;
+    }
+
+    .slick-arrow.slick-prev {
+        left:15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .button.button-white.offer-disabled .button-txt  {
+        font-size: 13px;
+        padding: 15px 5px;
+    }
+}

@@ -1,0 +1,184 @@
+/* TEMPLATE PAGE WITH 2COL START */
+
+.two-cols-left {
+    overflow: hidden;
+    width: 92%;
+    padding: 0 4%;
+}
+
+.two-cols-left-section aside {
+    float: left;
+    width: 27.34%;
+}
+
+.two-cols-left-section .mainContent {
+    display: block;
+    float: right;
+    width: 70.31%;
+}
+
+
+/* TEMPLATE PAGE WITH 2COL END */
+
+
+/* GENERIC CSS TABLE START */
+.table {
+    display:table;
+    width:100%;
+    margin:0;
+}
+.table-row {
+    display:table-row;
+}
+.table-cell {
+    display:table-cell;
+}
+.table * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.table:before,
+.table-row:before {
+    display: table;
+    content: " ";
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.table:after,
+.table-row:after {
+    clear: both;
+}
+
+
+/* GENERIC CSS TABLE END */
+
+
+/* GENERIC TAG ELEMENT */
+
+.tag-wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 0;
+}
+
+.tag-wrapper .mark-wrapper{
+    display: block;
+}
+
+.tag-wrapper mark {
+    display: inline-block;
+    background: #02b245;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1;
+    margin-bottom: 10px;
+    padding: 7px 10px;
+    height: 28px;
+    margin-right: 30px;
+    position: relative;
+    font-family: 'PrometoRegular', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tag-wrapper mark:after {
+    content: '';
+    /* Fallback to fail SVG read */
+    background: url(images/mark-sprite.png) no-repeat 0 0;
+    background: url(images/mark-sprite.svg) no-repeat 0 0;
+    width: 20px;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: -18px;
+}
+
+.tag-wrapper mark.gm-box-sold-out {
+    background: #e74f50
+}
+
+.tag-wrapper mark.gm-box-sold-out:after {
+    background-position: -21px 0;
+}
+
+
+/* END GENERIC TAG ELEMENT */
+
+
+/* ------------------------------------------------------------------------- */
+
+
+/* MEDIA QUERIES */
+
+
+/* ------------------------------------------------------------------------- */
+@media screen and (max-width:1023px) {
+.tag-wrapper mark {
+        font-size: 14px;
+        font-size: 1.4rem;
+        padding: 7px 10px;
+        height: 28px;
+    }
+    .suggestion-detail .gm-maps {
+        height:400px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    /* GENERIC TAG ELEMENT */
+    .suggestion-detail .gm-maps {height: 200px;}
+    .tag-wrapper {
+        top: 10px;
+    }
+    /*.tag-wrapper mark {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1;
+        margin-bottom: 10px;
+        padding: 5px 0 5px 10px;
+        height: 20px;
+        margin-right: 20px;
+    }
+    .tag-wrapper mark:after {
+        width: 13px;
+        right: -13px;
+    }
+    .tag-wrapper mark.gm-box-sold-out:after {
+        background-position: -20px 0;
+    }*/
+    /* END GENERIC TAG ELEMENT */
+}
+@media screen and (max-width:480px) {
+    /*.tag-wrapper mark {
+        font-size: 14px;
+        font-size: 1.4rem;
+        padding: 6px 15px;
+        height: 25px;
+    }
+    .tag-wrapper mark:after {
+        width: 17px;
+        right: -17px;
+    }*/
+}
+
+
+
+@media screen and (max-width:1228px) {
+    .two-cols-left-section .mainContent {
+        width: calc(100% - 330px);
+    }
+}
+
+
+/* END MEDIA QUERIES*/

@@ -1,0 +1,372 @@
+<div class="form-group">
+    <div class="form-group-wrapper">
+
+        <div class="form-select-wrapper">
+            <span class="form-select custom-tooltip">
+                <script type="text/javascript">
+                    function initPersonalCombo(selector) {
+                        //Get First Element
+                        var firstElement = selector.find("dd ul li .selectable.selected");
+                        if (!firstElement.length) {
+                            firstElement = selector.find("dd ul li:first-child .selectable");
+                        }
+
+                        selector.find("dd ul li .selectable").removeClass("selected");
+                        firstElement.addClass("selected");
+                        selector.find("dt .selectable").html(firstElement.html());
+                        selector.find("dt .selectable").attr("value", firstElement.attr("value"));
+
+                        //Click Event for Label
+                        selector.find("dt .selectable").click(function () {
+                            selector.toggleClass("open");
+                            selector.find("dd ul").toggle();
+                        });
+
+                        //Click Event for Options
+                        selector.find("dd ul li .selectable").click(function () {
+                            selector.find("dd ul li .selectable").removeClass("selected");
+                            $(this).addClass("selected");
+
+                            var text = $(this).html();
+                            var value = $(this).attr("value");
+
+                            selector.find("dt .selectable").html(text);
+                            selector.find("dt .selectable").attr("value", firstElement.attr("value"));
+                            selector.find("dd ul").hide();
+                        });
+                    }
+
+                    function getSelectedValue(selector) {
+                        return selector.find("dt .selectable").attr("value");
+                    }
+
+                    function setSelectedValue(selector, newValue) {
+                        var elementToSelect = selector.find("dd ul li .selectable[value='" + newValue + "']");
+
+                        if (elementToSelect.length) {
+                            selector.find("dd ul li .selectable").removeClass("selected");
+                            elementToSelect.addClass("selected");
+
+                            selector.find("dt .selectable").html(elementToSelect.html());
+                            selector.find("dt .selectable").attr("value", elementToSelect.attr("value"));
+                        }
+                    }
+
+                    $(function () {
+                        initPersonalCombo($(".personalCombo"));
+
+                        $(document).click(function (e) {
+                            var $clicked = $(e.target);
+                            if (!$clicked.parents().hasClass("personalCombo")) {
+                                $(".personalCombo dd ul").hide();
+                            }
+
+                            $('#ddlContractExtractType').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-2 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+                        });
+                    })
+                </script>
+                <dl id="personalCombo" class="personalCombo">
+                    <dt><div class="selectable"></div></dt>
+                    <dd>
+                        <ul>
+                            <li><div class="selectable" value="0">Selecionar contrato</div></li>
+                            <li><div class="selectable" value="1">Criar novo contrato</div></li>
+                            <li>
+                                <div class="selectable" value="2">
+                                    <div class="contract"><strong>Contrato:</strong>345678909</div>
+                                    <div class="address"><strong>Morada:</strong><span>Praça de Alvalade 6</span></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <span class="tooltip-icon"></span>
+                <span class="tooltip-message">
+                    Mensagem de erro...
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- Visulization Mode -->
+<div class="visualization-mode">
+    <div class="form-input-wrapper">
+        <label for="lblStep1ContractVisualizeName">
+            <span class="form-pre-filled-data">
+                <strong>
+                    Nome completo:
+                </strong> <span id="lblStep1ContractVisualizeName">PEDRO ALCADA ROSA PRESADO ALVES</span>
+            </span>
+        </label>
+        <label for="lblStep1ContractVisualizeFiscalNumber">
+            <span class="form-pre-filled-data">
+                <strong>
+                    NIF:
+                </strong> <span id="lblStep1ContractVisualizeFiscalNumber">205695361(Portugal)</span>
+            </span>
+        </label>
+        <label for="lblStep1ContractVisualizeAddress">
+            <span class="form-pre-filled-data">
+                <strong>
+                    Morada de faturação:
+                </strong> <span id="lblStep1ContractVisualizeAddress">AVENIDA DE ROMA, 121 - 2 DTO</span>
+            </span>
+        </label>
+        <label for="lblStep1ContractVisualizePostalCode">
+            <span class="form-pre-filled-data">
+                <strong>
+                    Código postal:
+                </strong> <span id="lblStep1ContractVisualizePostalCode">1700-346</span>
+            </span>
+        </label>
+        <label for="lblStep1ContractVisualizeEmail">
+            <span class="form-pre-filled-data">
+                <strong>
+                    Email:
+                </strong> <span id="lblStep1ContractVisualizeEmail">palcada@gmail.com</span>
+            </span>
+        </label>
+        <label for="lblStep1ContractVisualizeExtractType">
+            <span id="Span31" class="form-pre-filled-data">
+                <strong>
+                    Extrato:
+                </strong> <span id="lblStep1ContractVisualizeExtractType">Extrato Eletrónicoo</span>
+            </span>
+        </label>
+        <label for="lblStep1ContractVisualizeCountry">
+            <span id="Span32" class="form-pre-filled-data">
+                <strong>
+                    País
+                </strong> <span id="lblStep1ContractVisualizeCountry">Portugal</span>
+            </span>
+        </label>
+        <label for="lblStep1ContractVisualizePlace">
+            <span id="Span33" class="form-pre-filled-data">
+                <strong>
+                    Localidade:
+                </strong> <span id="lblStep1ContractVisualizePlace">Lisboa</span>
+            </span>
+        </label>
+        <label for="lblStep1ContractVisualizePhoneContact">
+            <span id="Span34" class="form-pre-filled-data">
+                <strong>
+                    Contacto telefónico:
+                </strong> <span id="lblStep1ContractVisualizePhoneContact"></span>
+            </span>
+        </label>
+    </div>
+
+    <div class="form-group form-group-2 form-group-registration">
+        <div class="form-group-wrapper">
+            <div class="form-select-wrapper">
+                <label for="ddlContractExtractType">
+                    <span class="form-select custom-tooltip">
+                        <select id="ddlContractExtractType">
+                            <option value="3">Extrato Eletr&#243;nico</option>
+                            <option value="2">Extrato Eletr&#243;nico - Consulta no Portal</option>
+                            <option value="4">Extrato Eletr&#243;nico - Via e-mail (XML)</option>
+                            <option value="6">Extrato em papel - Fatura/Recibo</option>
+                            <option value="9">Extrato em papel - Fatura/Recibo e detalhe cont&#237;nuo</option>
+                            <option value="10">Extrato em papel - Fatura/Recibo e detalhe dividido</option>
+                            <option value="1">Sem Extrato</option>
+                        </select>
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Editable Mode -->
+<div class="editable-mode new-contract" style="display: block;">
+    <div class="form-group form-group-3">
+        <div class="form-group-wrapper">
+            <div class="form-input-wrapper">
+                <label for="form-compleate-name">
+                    <span class="form-label">
+                        Nome
+                    </span>
+                    <span id="form-compleate-name" class="form-pre-filled"><strong><span id="lblStep1ContractName">Tiago Gomes</span></strong></span>
+                </label>
+            </div>
+            <div class="form-input-wrapper">
+                <label for="form-nif">
+                    <span class="form-label">
+                        NIF
+                    </span>
+                    <span id="form-nif" class="form-pre-filled"><strong><span id="lblStep1ContractFiscalNumber">205695361</span></strong></span>
+                </label>
+            </div>
+            <div class="form-input-wrapper">
+                <label for="form-contry">
+                    <span class="form-label">
+                        País
+                    </span>
+                    <span id="form-contry" class="form-pre-filled"><strong><span id="lblStep1ContractCountry">Portugal</span></strong></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-input-wrapper">
+        <label for="txtStep1Address">
+            <span class="form-label">
+                Morada de faturação
+            </span>
+            <span class="form-input custom-tooltip">
+                <input name="dnn$ctr594$View$ctl00$txtStep1Address" type="text" maxlength="60" id="txtStep1Address" class="Validator">
+                <span class="tooltip-icon tooltipstered"></span>
+                <span class="tooltip-message">
+                    <span id="rfvStep1Address" style="display: inline;">Campo obrigatório</span>
+                </span>
+            </span>
+        </label>
+    </div>
+    <div class="form-group form-group-3">
+        <div class="form-group-wrapper">
+            <div class="form-input-wrapper">
+                <label>
+                    <span class="form-label">Código Postal</span>
+                    <span class="zipCodeWrapper custom-tooltip tooltip-error">
+                        <span class="zipCode">
+                            <span class="form-input zipCodeLeft">
+                                <input type="text" id="txtPostalCode1" class="Validator">
+                            </span>
+                            <span class="zipCodeSplitter">-</span>
+                            <span class="form-input zipCodeRight">
+                                <input type="text" id="txtPostalCode2" class="Validator">
+                            </span>
+                        </span>
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">
+                            <span id="rfvStep1ContractPostalCode">Campo obrigatório</span>
+                            <span id="cvStep1PostalCode">Campo invádo</span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+            <div class="form-input-wrapper">
+                <label for="txtStep1Place">
+                    <span class="form-label">
+                        Localidade
+                    </span>
+                    <span class="form-input custom-tooltip">
+                        <input name="dnn$ctr594$View$ctl00$txtStep1Place" type="text" id="txtStep1Place" class="Validator">
+                        <span class="tooltip-icon tooltipstered"></span>
+                        <span class="tooltip-message">
+                            <span id="rfvStep1ContractPlace">Campo obrigatório</span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group form-group-3">
+        <div class="form-group-wrapper">
+            <div class="form-select-wrapper">
+                <label>
+                    <span class="form-label">País</span>
+                    <span class="form-select">
+                        <select id="ddlStep1Country" class="Validator">
+                            <option value=""></option>
+                            <option value="DE">Alemanha</option>
+                            <option value="BE">Bꭧica</option>
+                            <option value="BY">Bielo-R򳳩a</option>
+                            <option value="BG">Bulg⳩a</option>
+                            <option value="CY">Chipre</option>
+                            <option value="HR">Cro⤩a</option>
+                            <option value="DK">Dinamarca</option>
+                            <option value="SK">Eslovⲵia</option>
+                            <option value="SI">Eslov믩a</option>
+                            <option value="ES">Espanha</option>
+                            <option value="EE">Est𮩡</option>
+                            <option value="FI">Finl㯤ia</option>
+                            <option value="FR">Fran衼/option>
+                            <option value="GI">Gibraltar</option>
+                            <option value="GR">Grꤩa</option>
+                            <option value="NL">Holanda</option>
+                            <option value="HU">Hungria</option>
+                            <option value="IE">Irlanda</option>
+                            <option value="IS">Isl㯤ia</option>
+                            <option value="IT">It⭩a</option>
+                            <option value="LV">Let𮩡</option>
+                            <option value="LI">Liechtenstein</option>
+                            <option value="LT">Litu㯩a</option>
+                            <option value="LU">Luxemburgo</option>
+                            <option value="MK">Maced𮩡</option>
+                            <option value="MT">Malta</option>
+                            <option value="MD">Moldavia</option>
+                            <option value="NO">Noruega</option>
+                            <option value="PL">Polonia</option>
+                            <option selected="selected" value="PT">Portugal</option>
+                            <option value="GB">Reino Unido</option>
+                            <option value="CZ">Rep򢬩caTcheca</option>
+                            <option value="RO">Romenia</option>
+                            <option value="RU">Russia</option>
+                            <option value="SM">San Marino</option>
+                            <option value="CS">S곶ia/Montngro</option>
+                            <option value="SE">Suꤩa</option>
+                            <option value="CH">Su</option>
+                            <option value="UA">Ucr㯩a</option>
+                        </select>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group form-group-4">
+        <div class="form-group-wrapper">
+            <div class="form-input-wrapper">
+                <label for="txtStep1Contact">
+                    <span class="form-label">
+                        Contacto telefónico
+                    </span>
+                    <span class="form-input custom-tooltip">
+                        <input name="dnn$ctr594$View$ctl00$txtStep1Contact" type="text" maxlength="9" id="txtStep1Contact" class="Validator">
+                        <span class="tooltip-icon tooltipstered"></span>
+                        <span class="tooltip-message">
+                            <span id="rfvStep1ContractContact">Campo obrigatório</span>
+                            <span id="revStep1ContractContact" style="display: none;">Campo inválido</span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group form-group-3">
+        <div class="form-group-wrapper">
+            <div class="form-input-wrapper">
+                <label for="txtStep1Email">
+                    <span class="form-label">
+                        Email
+                    </span>
+                    <span class="form-input custom-tooltip">
+                        <input name="dnn$ctr594$View$ctl00$txtStep1Email" type="text" id="txtStep1Email" class="Validator">
+                        <span class="tooltip-icon tooltipstered"></span>
+                        <span class="tooltip-message">
+                            <span id="rfvStep1ContractEmail">Campo obrigatório</span>
+                            <span id="revStep1ContractEmail">Email inválido</span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="block-info">
+        <div class="block-info-message">
+            <p>Neste email, irá receber o extrato mensal da sua conta Via Verde.</p>
+            <p>Poderá depois alterar a periodicidade e o formato do extrato na sua área reservada.</p>
+        </div>
+    </div>
+</div>

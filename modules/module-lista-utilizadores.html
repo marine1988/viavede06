@@ -1,0 +1,126 @@
+<script type="text/javascript">
+    $(function () {
+
+        /* Autocomplete */
+        var availableTags = [
+        "utilizador 1 (endereco@email.com)",
+        "utilizador 2 (endereco@email.com)",
+        "utilizador 3 (endereco@email.com)",
+        "utilizador 4 (endereco@email.com)",
+        "utilizador 5 (endereco@email.com)",
+        "utilizador 6 (endereco@email.com)"
+        ];
+
+        $("#usernameList").autocomplete({
+            source: availableTags,
+            appendTo: ".autocomplete-container"
+        });
+
+        /* Multi-select */
+        $('#all-contracts').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.usersList .form-theme-default'
+        }).on('change', function () {
+        });
+
+        /* activar/desactivar table contracts */
+        $('.contracts .enable, .contracts .disable').click(function () {
+            openModal('modal-confirmation-modal', null, false);
+            //depois de confirmar a modal, o estado muda. Exemplo do que é suposto acontecer:
+            $(this).toggleClass('enable disable');
+            $(this).html($(this).text() == 'Desativado' ? 'Ativo' : 'Desativado');
+        });
+
+    });
+</script>
+
+<section class="column-section usersList">
+    <header class="column-header">
+        <h1 class="page-title">Lista de utilizadores</h1>
+    </header>
+
+    <section class="column-body">
+        <section class="form form-theme-default">
+            <div class="form-group form-group-2x1">
+                <div class="form-group-wrapper">
+                    <div class="form-input-wrapper autocomplete-container">
+                        <label for="usernameList">
+                            <span class="form-input custom-tooltip">
+                                <input id="usernameList" type="text" value="" class="Validator" placeholder="e-mail, nome do utilizador">
+                                <span class="tooltip-icon"></span>
+                                <span class="tooltip-message">Campo obrigatório!</span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="form-select-wrapper">
+                        <label for="all-contracts">
+                            <select id="all-contracts">
+                                <option value="0">Contratos (todos)</option>
+                                <option value="1">Lorem ipsum</option>
+                                <option value="2">Dolor sit amet</option>
+                            </select>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-button">
+                <button id="filtrar" class="button btNext" type="submit">
+                    <span class="button-txt">FILTRAR</span>
+                </button>
+
+                <button class="button button-border" type="reset">
+                    <span class="button-txt">LIMPAR</span>
+                </button>
+            </div>
+        </section>
+
+        <div class="link-add-wrapper">
+            <a href="#" class="link-add">Novo utilizador</a>
+        </div>
+    </section>
+
+    <table class="theme-default-table contracts">
+        <thead>
+            <tr>
+                <th scope="col">Utilizador</th>
+                <th scope="col" class="column767">E-mail</th>
+                <th scope="col">Contratos</th>
+                <th scope="col">Ativo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nome Completo do utilizador</td>
+                <td class="column767">emailutilizador@mail.com</td>
+                <td class="noPadding"><a href="#1" class="contractSettingsIcon"></a></td>
+                <td><a href="#1" class="disable">Ativo</a></td>
+            </tr>
+            <tr>
+                <td>Nome Completo do utilizador</td>
+                <td class="column767">emailutilizador@mail.com</td>
+                <td class="noPadding"><a href="#1" class="contractSettingsIcon"></a></td>
+                <td><a href="#1" class="disable">Ativo</a></td>
+            </tr>
+            <tr>
+                <td>Nome Completo do utilizador</td>
+                <td class="column767">emailutilizador@mail.com</td>
+                <td class="noPadding"><a href="#1" class="contractSettingsIcon"></a></td>
+                <td><a href="#1" class="enable">Desativado</a></td>
+            </tr>
+            <tr>
+                <td>Nome Completo do utilizador</td>
+                <td class="column767">emailutilizador@mail.com</td>
+                <td class="noPadding"><a href="#1" class="contractSettingsIcon"></a></td>
+                <td><a href="#1" class="disable">Ativo</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <aside class="column-body">
+        <p>12 utilizadores</p>
+    </aside>
+
+</section>

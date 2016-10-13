@@ -1,0 +1,160 @@
+<script type="text/javascript">
+    $(function () {
+        /* Multi-select */
+        $('#contractsList').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: '.contract-container'
+        });
+
+        /* Tooltips */
+        initTooltipster($('.form-theme-default .custom-tooltip .tooltip-icon'), false);
+
+        /* activar/desactivar table contracts */
+        $('.contracts .enable, .contracts .disable').click(function () {
+            openModal('modal-confirmation-modal', null, false);
+            //depois de confirmar a modal, o estado muda. Exemplo do que é suposto acontecer:
+            $(this).toggleClass('enable disable');
+            $(this).html($(this).text() == 'Desativado' ? 'Ativo' : 'Desativado');
+        });
+    });
+
+</script>
+
+<section class="column-section newUsers">
+    <header class="column-header">
+        <h1 class="page-title">Novo utilizador</h1>
+    </header>
+
+        <section class="form form-theme-default user-data">
+            <fieldset class="fieldset65">
+                <legend></legend>
+                <div class="form-input-wrapper">
+                    <label>
+                        <span class="form-label">Nome</span>
+                        <span class="form-input custom-tooltip">
+                            <input id="username" type="text" value="" class="Validator">
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+                
+            <fieldset class="fieldset65">
+
+                <div class="form-input-wrapper">
+                    <label>
+                        <span class="form-label">Código de Utilizador
+                            <span class="additional-info">(Endereço de e-mail válido)</span>
+                        </span>
+                    
+                        <span class="form-input custom-tooltip">
+                            <input type="text" id="usercode" value="" class="Validator" placeholder="novo.utilizador@email.com">
+                            <span class="tooltip-icon"></span>
+                            <span class="tooltip-message">Campo obrigatório!</span>
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+            
+            
+            <fieldset class="fieldset65">
+                <div class="form-group">
+                    
+                    <div class="form-group-wrapper">
+                        <div class="form-input-wrapper">
+                            <label>
+                                <span class="form-label">Código de acesso</span>
+                                <span class="form-input custom-tooltip">
+                                    <input type="text" id="accessCode" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-input-wrapper">
+                            <label>
+                                <span class="form-label">Confirmar código de acesso</span>
+                                <span class="form-input custom-tooltip">
+                                    <input type="text" id="usercodeConfirm" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group-wrapper">
+                        <div class="form-select-wrapper contract-container">
+                            <label>
+                                <span class="form-label">Contrato</span>
+                                <select id="contractsList">
+                                    <option value="-1" disabled="disabled" selected="selected">(Selecionar)</option>
+                                    <option value="1">Lorem ipsum</option>
+                                    <option value="2">Dolor sit amet</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="link-add-wrapper">
+                            <a href="#1" class="link-add">Associar</a>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </section>
+
+        <table class="theme-default-table contracts">
+            <thead>
+                <tr>
+                    <th scope="col">Alias do contrato</th>
+                    <th scope="col" class="column480">Nº de contrato</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nome do contrato 1</td>
+                    <td class="column480">213423452345</td>
+                    <td>Débito</td>
+                    <td><a href="#1" class="disable">Ativo</a></td>
+                </tr>
+                <tr>
+                    <td>Nome do contrato 2</td>
+                    <td class="column480">6745234532</td>
+                    <td>Débito</td>
+                    <td><a href="#1" class="disable">Ativo</a></td>
+                </tr>
+                <tr>
+                    <td>Nome do contrato 3</td>
+                    <td class="column480">12345124534554</td>
+                    <td>Débito</td>
+                    <td><a href="#1" class="disable">Ativo</a></td>
+                </tr>
+            </tbody>
+        </table>
+		
+        <div class="form-button user-data">
+			<button class="button button-border button-small" type="button">
+				<span class="button-txt">Cancelar</span>
+			</button>
+			<button id="criarUser" class="button btNext button-small" type="submit">
+				<span class="button-txt">Criar Utilizador</span>
+			</button>
+		</div>
+
+
+</section>
+
+
+
+
+
+
+
+

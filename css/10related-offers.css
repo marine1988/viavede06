@@ -1,0 +1,300 @@
+/* RELATED-OFFERS START */
+.homepage .related-offers{margin-bottom: 50px;}
+
+.related-offers {
+    position:relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.related-offers * {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.related-offers a {text-decoration:none;}
+.related-offers .wrapper {font-size:0;margin-top:0;}
+.related-offers .col {
+    display:inline-block;
+    vertical-align:top;
+    width:49%;
+    margin-bottom:0px;
+}
+.related-offers .col:nth-child(odd) {
+    margin-right:1%;
+}
+.related-offers .col:nth-child(even) {
+    margin-left:1%;
+}
+
+/* CUSTOM LISTS */
+.related-offers a {display:block;}
+.related-offers .col .lists {
+    max-width:none;
+    float:none;
+    width:100%;
+}
+.related-offers .col .lists a.container:nth-last-child(1),
+.related-offers .col .lists a.container:nth-last-child(2){
+    margin-bottom: 0;
+}
+.related-offers .lists .img-column {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-height:350px;
+    overflow:hidden;
+    height:auto;
+    min-width:0;
+    max-width:none;
+    border-radius: 0;
+}
+.related-offers .lists .img-column:before {
+    content:'';
+    width: 100%;
+    height: 30%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    top:auto;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+    border-bottom-color: #FFFFFF;
+    border-width:0;
+    border-bottom-width:1px;
+    border-style: inset;
+    border-bottom-right-radius: 20px;
+}
+.related-offers .lists .img-column img {
+    min-width:100%;
+    max-width:100%;
+    position: static;
+    top: 0;
+    left: 0;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+    width: 100%;
+    height: auto;
+    border-bottom-color: #FFFFFF;
+    border-width:0;
+    border-bottom-width:1px;
+    border-style: inset;
+}
+
+.related-offers .lists .img-column:hover img {
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+
+.related-offers .lists .img-column .categories {
+    text-align: right;
+    overflow: hidden;
+    right: 10px;
+}
+
+.related-offers .lists .img-column [class*="ic-"] {
+    display:inline-block;
+    line-height:25px;
+    vertical-align:top;
+    padding: 0 0 0 5px;
+    background-image:none;
+    background:none;
+    width: auto;
+    height: 25px;
+}
+
+.related-offers .lists .img-column [class*="ic-"]:before {
+    content:'';
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    width: 27px;
+    height: 23px;
+    background-size: cover;
+    margin: 0 1px;
+}
+
+.related-offers .lists .ic-sun-beach:before {background: url('images/ic-sun-beach_shadow.png') no-repeat center center;}
+.related-offers .lists .ic-fairs-events:before {background: url('images/ic-fairs-event_shadow.png') no-repeat center center;}
+.related-offers .lists .ic-family:before {background: url('images/ic-family_shadow.png') no-repeat center center;}
+.related-offers .lists .ic-gastronomy-wine:before {background: url('images/ic-gastronomy-wine_shadow.png') no-repeat center center;}
+.related-offers .lists .ic-golf:before {background: url('images/ic-golf_shadow.png') no-repeat center center;}
+.related-offers .lists .ic-history:before {background: url('images/ic-history_shadow.png') no-repeat center center;}
+.related-offers .lists .ic-location:before {background: url('images/categories-sprite.png') no-repeat; background-position:0 -150px;}
+.related-offers .lists .ic-nature:before {background: url('images/ic-nature_shadow.png') no-repeat center center;}
+.related-offers .lists .ic-romance:before {background: url('images/ic-romance_shadow.png') no-repeat center center;}
+.related-offers .lists .ic-surf:before {background: url('images/ic-surf_shadow.png') no-repeat center center;}
+.related-offers .lists .ic-welfare:before {background: url('images/ic-welfare_shadow.png') no-repeat center center;}
+
+.related-offers .img-column .img-partner img{border: 0;}
+.related-offers .lists .img-column .img-partner img{
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.related-offers .lists .txt-columm-offers {
+    display: block;
+    margin:0;
+    padding: 15px 15px 80px 15px;
+    max-width: none;
+    width: 100%;
+}
+.related-offers .lists .txt-columm-offers .since {
+    display:inline-block;
+    padding-bottom: 20px;
+}
+.related-offers .lists .txt-columm-offers .bottom{
+    border-top: 1px dashed #a9abb1;
+    position: absolute;
+    bottom: 15px;
+    width: 95%;
+}
+.related-offers .lists .txt-columm-offers .bottom:after{
+    content: '';
+    display: table;
+    clear: both;
+
+}
+.related-offers .lists .txt-columm-offers .bottom .disc-cont {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 0;
+    max-width: none;
+    width:40%;
+    border-right: 1px dashed #a9abb1;
+    border-bottom:none;
+}
+.related-offers .lists .txt-columm-offers .bottom .price-cont {
+    vertical-align: top;
+    margin: 5px 0 0 0;
+    width:auto;
+    border: 0;
+}
+
+.related-offers .lists .txt-columm-offers .bottom .price-cont .price {
+    font-size:34px;
+    font-size:3.4rem;
+}
+.related-offers .lists .txt-columm-offers .bottom .price-cont .points {
+    font-family:'PrometoRegular', sans-serif;
+    font-size:24px;
+    font-size:2.4rem;
+}
+.related-offers .old-price {
+    height:15px;
+}
+.related-offers .lists .price sup {
+    font-size: 60%;
+}
+.related-offers .lists .wrapper div.container {width:100%;padding:0;margin:0;max-width:none}
+.related-offers .wrapper .lists .wrapper {margin:0;padding:0;max-width:none;width:auto;}
+
+.related-offers .lists .wrapper .container {width:100%;max-width:auto;}
+
+.related-offers .list-button a{display: inline-block;}
+
+/*  BOX CORNER */
+
+.related-offers .lists .img-column > .box-corner{
+    top: auto;
+    bottom: 0;
+    right: 0;
+}
+.related-offers .lists .img-column > .box-corner:before{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 60px solid #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    top: -90px;
+    right: -60px;
+}
+
+/* MEDIA QUERIES START */
+
+@media screen and (max-width:1023px) {
+    .related-offers .col {
+        width:100%;
+        margin:0;
+    }
+    .related-offers .col:nth-child(odd),
+    .related-offers .col:nth-child(even){
+        margin-right:0;
+        margin-left:0;
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .related-offers .lists .txt-columm-offers{
+       padding: 15px;
+    }
+    .related-offers .lists .txt-columm-offers .content-text,
+    .related-offers .lists .txt-columm-offers .bottom
+    {
+        width: 50%;
+        display: inline-block;
+    }
+    .related-offers .lists .txt-columm-offers .bottom
+    {
+        border-top: 0;
+        border-left: 1px dashed #a9abb1;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .related-offers .lists .txt-columm-offers{
+        padding: 15px;
+    }
+    .related-offers .lists .txt-columm-offers .bottom .disc-cont {
+        display:block;
+        width:100%;
+        border-right:none;
+        border-bottom: 1px dashed #a9abb1;
+    }
+    .related-offers .lists .txt-columm-offers .bottom .disc-cont .v-discaunt {width:50%}
+    .related-offers .lists .txt-columm-offers .bottom .price-cont {padding-top:20px}
+    .related-offers .lists .txt-columm-offers .bottom .price-cont .price {
+        font-size:26px;
+        font-size:2.6rem;
+    }
+    .related-offers .lists .txt-columm-offers .bottom .price-cont .points {
+        font-size:18px;
+        font-size:1.8rem;
+    }
+    .related-offers .lists .txt-columm-offers h2 {margin-top: 5px;font-size:20px;}
+    .related-offers .lists figure .region {
+            bottom: 12px !important;
+            left: 12px !important;
+            font-size:13px !important;
+        }
+    .related-offers .lists figure .mark {top:12px;}
+    .related-offers .lists .txt-columm-offers .bottom {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+/* RELATED-OFFERS END */

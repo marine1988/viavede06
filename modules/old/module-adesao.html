@@ -1,0 +1,1664 @@
+<!-- module-adesao.html START -->
+
+<section class="accession-wrapper">
+    <header class="accession-header">
+        <h1 class="page-title">Formulário de adesão</h1>
+        <div class="page-lead">Crie um novo contrato em quatro passos</div>
+    </header>
+    <div class="accession-panel">
+        <script type="text/javascript">
+
+            function gotoStep(step) {
+
+                startLoading($('.accession-panel'));
+
+
+
+                var currentNavItem = $(".accession-panel .wizardSteps a[rel='" + step + "']");
+
+                //Nav
+                currentNavItem.parent().removeClass().addClass("current");
+                currentNavItem.parent().prevAll("li").removeClass().addClass("completed");
+                currentNavItem.parent().nextAll().removeClass().addClass("disabled");
+
+                //Panels
+                $(".accession-panel .wizardStep").hide();
+                $(".accession-panel ." + step).show();
+
+                // Stop Loading after 1 second
+                setTimeout(function () {
+                    stopLoading($('.accession-panel'));
+                }, 500);
+
+                window.scrollTo(0, 0);
+            }
+
+            $(function () {
+
+                //Wizard Nav click
+                $(".wizardSteps a").click(function (e) {
+                    e.preventDefault();
+
+                    if (!$(this).parent().hasClass("disabled") && !$(this).parent().hasClass("current")) {
+                        gotoStep($(this).attr("rel"));
+                    }
+                });
+
+                //Wizard First step
+                gotoStep("wizard-step-1");
+
+
+
+                /* Tooltipster */
+                /* 
+                Parametros:
+                - Selector
+                - É Modal
+                */
+                initTooltipster($('.accession-panel .custom-tooltip .tooltip-icon'), false);
+            });
+        </script>
+
+        <div class="accession-main">
+            <nav class="wizardSteps">
+                <ul>
+                    <li><a href="#" rel="wizard-step-1" class="disabled">01. Dispositivo</a></li>
+                    <li><a href="#" rel="wizard-step-2" class="disabled">02. Dados do Contrato</a></li>
+                    <li><a href="#" rel="wizard-step-3" class="disabled">03. Associar Carro</a></li>
+                    <li><a href="#" rel="wizard-step-4" class="disabled">04. Submeter</a></li>
+                </ul>
+            </nav>
+
+            <!-- wizard-step-1 -->
+            <div class="wizardStep wizard-step-1">
+                
+                <div class="form form-theme-default">
+                    <script type="text/javascript">
+                        $(function () {
+                            $('.accession-main .wizard-step-1 .Validator').blur(function () {
+                                /* 
+                                Parametros:
+                                - Selector do controlo
+                                - Nome do grupo de validação
+                                - Nome na class a colocar no pai em caso de erro
+                                - Selector da mensagem generica de erro a mostrar
+                                */
+                                SingleValidator($(this).attr("id"), 'WizardStep1', 'tooltip-error', null);
+
+
+                                /* Update Single Tooltipster Message */
+                                updateSingleTooltipster($(this));
+                            });
+
+
+                            /* CUSTOM SELECT */
+                            /* Ver mais em: https://select2.github.io/ */
+                            $('#Select1').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-1 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+
+                            $('#Select2').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-1 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+
+                            $('#BtnStep2').click(function (e) {
+                                e.preventDefault();
+
+                                /* Validar Step 1 */
+                                //var pageIsValid = PageValidate(...);
+
+                                /* Ir para o passo 2 */
+                                gotoStep("wizard-step-2");
+                            });
+
+                            //Service Plan Select
+                            $(".service-plan .service-plan-item label").click(function () {
+                                $('.service-plan .service-plan-item input[type="radio"]').each(function () {
+                                    if ($(this).is(":checked")) {
+                                        $(this).closest(".service-plan-item").addClass("active");
+                                    }
+                                    else {
+                                        $(this).closest(".service-plan-item").removeClass("active");
+                                    }
+                                });
+                            });
+
+                            $(".service-plan .service-plan-item .collaps-arrow").click(function () {
+                                $(this).toggleClass("open");
+                                $(this).parent().find(".collaps-content").slideToggle("fast");
+
+                            });
+                        });
+                    </script>
+                    <fieldset>
+                        <legend><span class="form-legend">Escolha um plano para os serviços Via Verde</span></legend>
+
+                        <div class="service-plan">
+                            <div class="service-plan-item-wrapper">
+                                <div class="service-plan-item">
+                                    <label for="radio1">
+                                        <div class="card-wrapper">
+                                            <div class="card-row">
+                                                <div class="card-cell">
+                                                    <div class="plan-name">Dispositivo de Compra</div>
+                                                    <div class="plan-cost">25<sup>€</sup></div>
+                                                    <div class="plan-feed">Pagamento único</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="collaps-content">
+                                            <ul>
+                                                <li>Exclusivo Online</li>
+                                                <li class="send">Envio Gratuito</li>
+                                                <li class="warranty">2 anos de garantia</li>
+                                            </ul>
+                                        </div>
+
+                                        <input id="radio1" name="PlanRadio" type="radio" />
+                                    </label>
+                                    <span class="collaps-arrow"></span>
+                                </div>
+
+                                <a href="" class="link"><span class="link-txt">Condições de compra</span></a>
+                            </div>
+
+                            <div class="service-plan-item-wrapper">
+                                <div class="service-plan-item">
+                                    <div class="popular">Mais Popular</div>
+                                    <label for="radio2">
+                                        <div class="card-wrapper">
+                                            <div class="card-row">
+                                                <div class="card-cell">
+                                                    <div class="plan-name">Dispositivo de Aluguer</div>
+                                                    <div class="plan-cost">7<sup>€</sup><span class="feed">/ANO</span></div>
+                                                    <div class="plan-feed">Periodo mínimo de 3 anos</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="collaps-content">
+                                            <ul>
+                                                <li>Exclusivo Online</li>
+                                                <li class="send">Envio Gratuito</li>
+                                                <li class="warranty">Garantia Vitalícia</li>
+                                            </ul>
+                                        </div>
+
+                                        <input id="radio2" name="PlanRadio" type="radio" />
+                                    </label>
+                                    <span class="collaps-arrow"></span>
+                                </div>
+
+                                <a href="" class="link"><span class="link-txt">Condições de aluguer</span></a>
+                            </div>
+
+                            <div class="service-plan-item-wrapper">
+                                <div class="service-plan-item">
+                                    <label for="radio3">
+                                        <div class="card-wrapper">
+                                            <div class="card-row">
+                                                <div class="card-cell">
+                                                    <div class="plan-name">Reativação</div>
+                                                    <div class="plan-cost">0<sup>€</sup></div>
+                                                    <div class="plan-feed">Alta gratuita</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="collaps-content">
+                                            <div class="block-collaps-content">
+                                                <span class="block-collaps-title">Já tem um dispositivo?</span>
+                                                <div class="block-collaps-text">
+                                                    <p>Se já tem um dispositivo ViaVerde pode reativáloe associálo a um novo contrato.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input id="radio3" name="PlanRadio" type="radio" />
+                                    </label>
+                                    <span class="collaps-arrow"></span>
+                                </div>
+
+                                <a href="" class="link"><span class="link-txt">Condições de reactivação</span></a>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <fieldset>
+                        <legend><span class="form-legend">Escolha o tipo de extrato que vai desejar</span></legend>
+
+                        <div class="form-group">
+                            <div class="form-group-wrapper">
+                                <div class="column68">
+                                    <div class="form-select-wrapper">
+                                        <select id="Select1">
+                                            <option value="0">Extracto Electrónico - Consulta no Portal</option>
+                                            <option value="1">Extracto Electrónico - Via e-mail (CSV)</option>
+                                            <option value="2">Extracto Electrónico - Via e-mail (XML)</option>
+                                            <option value="3">Extracto em papel - Factura/Recibo e Detalhe Contínuo</option>
+                                            <option value="4">Extracto em papel - Factura/Recibo Resumo</option>
+                                            <option value="5">Sem Extracto</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="column30">
+                                    <div class="form-select-wrapper">
+                                        <select id="Select2">
+                                            <option value="0">Mensal</option>
+                                            <option value="1">Mensal</option>
+                                            <option value="2">Mensal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="additionalCost">
+                            <p>Custo adicional Fatura em papel: <span class="cost">+2,5<sup>€</sup></span></p>
+                            <p>Custo adicional Fatura em papel: <span class="cost">1<sup>€</sup></span><span class="feed">/ANO</span></p>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="form-button clearFloats">
+                        <button class="button  button-border btPrev" id="BtnCancel" type="submit">
+                            <span class="button-txt">Cancelar</span>
+                        </button>
+
+                        <button class="button btNext" id="BtnStep2" type="submit">
+                            <span class="button-txt">Seguinte</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- wizard-step-2 -->
+            <div class="wizardStep wizard-step-2">
+                <div class="form form-theme-default">
+                    <script type="text/javascript">
+                        $(function () {
+                            $('.accession-main .wizard-step-2 .Validator').blur(function () {
+                                /* 
+                                Parametros:
+                                - Selector do controlo
+                                - Nome do grupo de validação
+                                - Nome na class a colocar no pai em caso de erro
+                                - Selector da mensagem generica de erro a mostrar
+                                */
+                                SingleValidator($(this).attr("id"), 'WizardStep2', 'tooltip-error', null);
+
+
+                                /* Update Single Tooltipster Message */
+                                updateSingleTooltipster($(this));
+                            });
+
+                            /* CUSTOM SELECT */
+                            /* Ver mais em: https://select2.github.io/ */
+                            $('#Select3').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-2 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+
+                            $('#Select4').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-2 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+
+                            $('#Button4').click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 1 */
+                                gotoStep("wizard-step-1");
+                            });
+
+                            $('#Button5').click(function (e) {
+                                e.preventDefault();
+
+                                /* Validar Step 2 */
+                                //var pageIsValid = PageValidate(...);
+
+                                /* Ir para o passo 3 */
+                                gotoStep("wizard-step-3");
+                            });
+                        });
+                    </script>
+                
+                    <fieldset>
+                        <legend class="clearFloats">
+                            <span class="form-legend">Dados do contrato</span>
+                            <span class="mandatory-fields">Todos os campos são obrigatórios</span>
+                        </legend>
+
+                        <div class="form-group form-group-nif-country">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <label for="nif">
+                                        <span id="nif" class="form-pre-filled"><strong>NIF:</strong> 09872369878 (Portugal)</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-select-wrapper">
+                                    <span class="form-label">Pais</span>
+                                    <span class="form-select custom-tooltip tooltip-error">
+                                        <select id="Select4">
+                                            <option value="0">Portugal</option>
+                                            <option value="1">Espanha</option>
+                                            <option value="2">...</option>
+                                        </select>
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-input-wrapper">
+                            <label for="form-name">
+                                <span class="form-label">Nome completo</span>
+                                <span class="form-input custom-tooltip">
+                                    <input id="form-name" type="text" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-input-wrapper">
+                            <label for="form-adress">
+                                <span class="form-label">Morada de faturação</span>
+                                <span class="form-input custom-tooltip">
+                                    <input id="form-adress" type="text" value="" class="Validator">
+                                    <span class="tooltip-icon"></span>
+                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-group form-group-3">
+
+                            <div class="form-group-wrapper">
+            
+                                <div class="form-input-wrapper">
+                                    <label for="form-cod-post">
+                                        <span class="form-label">Código Postal</span>
+                                        <span class="form-input custom-tooltip">
+                                            <input id="form-cod-post" type="text" value="" class="Validator">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatorio!</span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="form-input-wrapper">
+                                    <label for="form-local">
+                                        <span class="form-label">Localidade</span>
+                                        <span class="form-input custom-tooltip">
+                                            <input id="form-local" type="text" value="" class="Validator">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="form-select-wrapper">
+                                    <span class="form-label">Pais</span>
+                                    <span class="form-select custom-tooltip tooltip-error">
+                                        <select id="Select3">
+                                            <option value="0">Portugal</option>
+                                            <option value="1">Espanha</option>
+                                            <option value="2">...</option>
+                                        </select>
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group form-group-3">
+
+                            <div class="form-group-wrapper">
+            
+                                <div class="form-input-wrapper">
+                                    <label for="form-mail">
+                                        <span class="form-label">E-mail</span>
+                                        <span class="form-input custom-tooltip">
+                                            <input id="form-mail" type="email" value="" placeholder="preencher@email-registo.com" class="Validator">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatorio!</span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="form-input-wrapper">
+                                    <label for="form-phone">
+                                        <span class="form-label">Contato telefónico</span>
+                                        <span class="form-input custom-tooltip">
+                                            <input id="form-phone" type="text" value="" class="Validator">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </div>
+ 
+
+                    </fieldset>
+
+                    <fieldset class="data-send">
+                        <legend class="clearFloats">
+                            <span class="form-legend">Dados envio</span>
+                        </legend>
+
+                        <div class="data-send-wrapper">
+                            <div class="data-send-body">
+                                <script type="text/javascript">
+                                    $(function () {
+                                        //Check for cheked input at load and go to the current div
+                                        var firtPanelShow = $('.data-send-controls .form-radiobox-wrapper input[type="radio"]:checked').attr("rel");
+                                        $("#" + firtPanelShow).show();
+
+                                        //Register events for change divs
+                                        $('.data-send-controls .form-radiobox-wrapper input[type="radio"]').change(function () {
+                                            if (this.checked) {
+                                                var panelShow = $(this).attr("rel");
+
+                                                $('#' + panelShow).show();
+
+                                                $('#' + panelShow).prevAll(".data-send-panel").hide();
+                                                $('#' + panelShow).nextAll(".data-send-panel").hide();
+                                            }
+                                        });
+
+
+                                        $('#DDLAddressTypes').select2({
+                                            minimumResultsForSearch: Infinity,
+                                            dropdownParent: '.wizard-step-2 .form-theme-default'
+                                        }).on('change', function () {
+                                            var value = $(this).attr('value');
+                                            console.log(value);
+                                            if (value == 1) {
+                                                $("#AnotherAddress").show();
+                                            }
+                                            else {
+                                                $("#AnotherAddress").hide();
+                                            }
+
+                                        });
+
+                                    });
+                                </script>
+                                <div class="data-send-controls">
+                                    <div class="form-radiobox-wrapper">
+                                        <label for="form-send-by-email">
+                                            <span class="form-radiobox">
+                                                <input id="form-send-by-email" type="radio" value="" name="sendData" rel="PanelA" checked>
+                                                <span class="form-radiobox-style"></span>
+                                            </span>
+                                            <span class="form-label">
+                                                <strong>Envío por correio</strong>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-radiobox-wrapper">
+                                        <label for="form-get-store">
+                                            <span class="form-radiobox">
+                                                <input id="form-get-store" type="radio" value="" name="sendData" rel="PanelB">
+                                                <span class="form-radiobox-style"></span>
+                                            </span>
+                                            <span class="form-label">
+                                                <strong>Recolher em loja *</strong>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                        
+                                <div id="PanelA" class="data-send-panel">
+                                    <div class="data-send-header clearFloats">
+                                        <span class="title">Morada para o envío</span>
+                                        <div class="form-checkbox-wrapper">
+                                            <label for="form-urgent-shipment">
+                                                <span class="form-checkbox">
+                                                    <input id="form-urgent-shipment" type="checkbox" value="">
+                                                    <span class="form-checkbox-style"></span>
+                                                </span>
+                                                <span class="form-label">
+                                                    <strong>Envío Urgente (+2€)</strong>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-select-wrapper">
+                                        <span class="form-select">
+                                            <select id="DDLAddressTypes">
+                                                <option value="0">Mesma que a morada de Faturação</option>
+                                                <option value="1">Morada Diferente</option>
+                                            </select>
+                                        </span>
+                                    </div>
+
+                                    <div id="AnotherAddress" style="display: none;">
+
+                                        <div class="form-input-wrapper">
+                                            <label for="form-destinatario">
+                                                <span class="form-label">Destinatário</span>
+                                                <span class="form-input custom-tooltip">
+                                                    <input id="form-destinatario" type="text" value="" class="Validator">
+                                                    <span class="tooltip-icon"></span>
+                                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-input-wrapper">
+                                            <label for="form-destinatario">
+                                                <span class="form-label">Morada</span>
+                                                <span class="form-input custom-tooltip">
+                                                    <input id="Text1" type="text" value="" class="Validator">
+                                                    <span class="tooltip-icon"></span>
+                                                    <span class="tooltip-message">Campo obrigatório!</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-group-wrapper">
+
+                                                <div class="form-input-wrapper">
+                                                    <label for="form-destinatario">
+                                                        <span class="form-label">CP</span>
+                                                        <span class="form-input custom-tooltip">
+                                                            <input id="Text2" type="text" value="" class="Validator">
+                                                            <span class="tooltip-icon"></span>
+                                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-input-wrapper">
+                                                    <label for="form-destinatario">
+                                                        <span class="form-label">Cidade</span>
+                                                        <span class="form-input custom-tooltip">
+                                                            <input id="Text3" type="text" value="" class="Validator">
+                                                            <span class="tooltip-icon"></span>
+                                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-input-wrapper">
+                                            <label for="contry">
+                                                <span class="form-label">Pais</span>
+                                                <span id="contry" class="form-pre-filled">Portugal</span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div id="PanelB" class="data-send-panel">
+                                    <div class="data-send-text cleanStyle">
+                                        <p><strong><s>20€</s>  25€</strong></p>
+                                        <p>* Se escolher levantar o dispositivo numa loja, não poderá beneficiar-se do desconto "Adesão online" na compra/primeira anuidade do identificador.</p>
+                                        <p>Poderá ir a qualquer das lojas Via Verde para recolher o identificador já configurado, uma vez finalize o pago on-line</p>
+                                        <ul>
+                                            <li>Almada</li>
+                                            <li>Almodóvar</li>
+                                            <li>Aveiro</li>
+                                            <li>Braga</li>
+                                            <li>Carregado</li>
+                                            <li>...</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+
+                    <div class="form-button clearFloats">
+                        <button class="button button-border btPrev" id="Button4" type="submit">
+                            <span class="button-txt">< Passo Anterior</span>
+                        </button>
+
+                        <button class="button btNext" id="Button5" type="submit">
+                            <span class="button-txt">Seguinte</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- wizard-step-3 -->
+            <div class="wizardStep wizard-step-3">
+                <div class="form form-theme-default">
+                    <script type="text/javascript">
+                        $(function () {
+                            $('.accession-main .wizard-step-3 .Validator').blur(function () {
+                                /* 
+                                Parametros:
+                                - Selector do controlo
+                                - Nome do grupo de validação
+                                - Nome na class a colocar no pai em caso de erro
+                                - Selector da mensagem generica de erro a mostrar
+                                */
+                                SingleValidator($(this).attr("id"), 'WizardStep3', 'tooltip-error', null);
+
+
+                                /* Update Single Tooltipster Message */
+                                updateSingleTooltipster($(this));
+                            });
+
+                            /* CUSTOM SELECT */
+                            /* Ver mais em: https://select2.github.io/ */
+                            $('#DDLMarca').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-3 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                                //Enable ddlmodelo
+                                if (valueLang == 0) {
+                                    $('#DDLModelo').prop("disabled", true);
+                                }
+                                else {
+                                    $('#DDLModelo').prop("disabled", false);
+                                }
+
+
+                            });
+
+                            $('#DDLModelo').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-3 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+
+
+                            $('#DDLMarca2').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-3 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                                //Enable ddlmodelo
+                                if (valueLang == 0) {
+                                    $('#DDLModelo2').prop("disabled", true);
+                                }
+                                else {
+                                    $('#DDLModelo2').prop("disabled", false);
+                                }
+
+
+                            });
+
+                            $('#DDLModelo2').select2({
+                                minimumResultsForSearch: Infinity,
+                                dropdownParent: '.wizard-step-3 .form-theme-default'
+                            }).on('change', function () {
+                                var valueLang = $(this).attr('value');
+
+                            });
+
+                            $('#BtnStep6').click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 2 */
+                                gotoStep("wizard-step-2");
+                            });
+
+                            $('#BtnStep7').click(function (e) {
+                                e.preventDefault();
+
+                                /* Validar Step 3 */
+                                //var pageIsValid = PageValidate(...);
+
+                                /* Ir para o passo 4 */
+                                gotoStep("wizard-step-4");
+                            });
+                        });
+                    </script>
+                
+                    <fieldset>
+                        <legend class="clearFloats">
+                            <span class="form-legend">Dados da viatura</span>
+                            <span class="mandatory-fields">Todos os campos são obrigatórios</span>
+                        </legend>
+
+                        
+                        <div class="form-input-wrapper">
+                            <label for="nif">
+                                <span id="Span1" class="form-pre-filled"><strong>Identificador escolhido:</strong> Aluguer (7€/Ano)</span>
+                            </label>
+                        </div>
+
+
+                        <div class="form-group form-group-3 form-group-registration">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <label for="form-registration">
+                                        <span class="form-label">Matrícula</span>
+                                        <span class="form-input custom-tooltip">
+                                            <input id="form-registration" type="text" value="" class="Validator" placeholder="12-AB-34 (separado por hifens)">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="form-checkbox-wrapper">
+                                    <label for="international-registration" class="form-checkbox-group-wrapper custom-tooltip tooltip-info">
+                                        <div class="form-checkbox-group">
+                                            <span class="form-checkbox">
+                                                <input id="international-registration" type="checkbox" value="">
+                                                <span class="form-checkbox-style"></span>
+                                            </span>
+                                            <span class="form-label">
+                                                <strong>Matricula estrangeira</strong>
+                                            </span>
+                                        </div>
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Veículo registado fora do território nacional...</span>
+
+                                    </label>
+                                </div>
+                            </div>
+                        
+                            
+                            <div id="bloco-exclamation-1" class="block-exclamation">
+                                <div class="block-exclamation-title">
+                                    Matrícula ativa na Via Verde
+                                </div>
+                                <div class="block-exclamation-message">
+                                    <p>
+                                        A matrícula introduzida está actualmente ligada a outra conta Via Verde.<br />
+                                        Precisamos verificar que você o proprietário actual da viatura.<br />
+                                        Para proceder com esta matricula, pedimos que nos mostre o documento único do carro.
+                                    </p>
+                                </div>
+
+                                <div class="block-exclamation-upload">
+                                    <script type="text/javascript">
+                                        $(function () {
+                                            //Check for cheked input at load and go to the current div
+                                            var firtPanelShow = $('#bloco-exclamation-1 .file-upload-controls .form-radiobox-wrapper input[type="radio"]:checked').attr("rel");
+                                            $("#" + firtPanelShow).show();
+
+                                            //Register events for change divs
+                                            $('#bloco-exclamation-1 .file-upload-controls .form-radiobox-wrapper input[type="radio"]').change(function () {
+                                                if (this.checked) {
+                                                    var panelShow = $(this).attr("rel");
+
+                                                    $('#' + panelShow).show();
+
+                                                    $('#' + panelShow).prevAll(".block-exclamation-panel").hide();
+                                                    $('#' + panelShow).nextAll(".block-exclamation-panel").hide();
+                                                }
+                                            });
+
+                                        });
+                                    </script>
+                                    <div class="file-upload-controls">
+                                        <div class="form-radiobox-wrapper">
+                                            <label for="Radio4">
+                                                <span class="form-radiobox">
+                                                    <input id="Radio4" type="radio" value="" name="uploadDUA2" rel="PanelE" checked="">
+                                                    <span class="form-radiobox-style"></span>
+                                                </span>
+                                                <span class="form-label">
+                                                    <strong>Upload Documento</strong>
+                                                </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-radiobox-wrapper">
+                                            <label for="Radio5">
+                                                <span class="form-radiobox">
+                                                    <input id="Radio5" type="radio" value="" name="uploadDUA2" rel="PanelF">
+                                                    <span class="form-radiobox-style"></span>
+                                                </span>
+                                                <span class="form-label">
+                                                    <strong>Entregar documento numa loja</strong>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="PanelE" class="block-exclamation-panel">
+                                    <div class="fileUpload">
+                                        <span class="fileUpload-header custom-tooltip tooltip-inquiry">
+                                            <span class="fileUpload-header-title">Documento de facturação</span>
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Bla bla bla</span>
+                                        </span>
+                                        <div class="fileUpload-body">
+
+                                            <!-- Elemento a repetir -->
+                                            <div class="fileUpload-control">
+                                                <div class="fileUpload-wrapper">
+                                                    <div class="toUpload">
+                                                        <div class="fileUpload-control-wrapper">
+                                                            <input type="file" name="datafile"  />
+                                                            <button class="button button-border" type="submit">
+                                                                <span class="button-txt">Upload de Ficheiro</span>
+                                                            </button>
+                                                        </div>
+                                                        <span class="max-size">5Mb máx</span>
+                                                    </div>
+                                                    <div class="uploaded">
+                                                        <span class="name">Nome_ficheiro.txt (345kb)</span>
+                                                        <span class="document-loading">25%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fim Elemento a repetir -->
+
+                                            <!-- Elemento a repetir -->
+                                            <div class="fileUpload-control">
+                                                <div class="fileUpload-wrapper">
+                                                    <div class="toUpload">
+                                                        <div class="fileUpload-control-wrapper">
+                                                            <input type="file" name="datafile"  />
+                                                            <button class="button button-border" type="submit">
+                                                                <span class="button-txt">Upload de Ficheiro</span>
+                                                            </button>
+                                                        </div>
+                                                        <span class="max-size">5Mb máx</span>
+                                                    </div>
+                                                    <div class="uploaded">
+                                                        <span class="name">Nome_ficheiro.txt (345kb)</span>
+                                                        <span class="document-loading">25%</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="link-remove">Remover ficheiro</a>
+                                            </div>
+                                            <!-- Fim Elemento a repetir -->
+
+                                            <!-- Elemento a repetir -->
+                                            <div class="fileUpload-control">
+                                                <div class="fileUpload-wrapper">
+                                                    <div class="toUpload" style="display: none;">
+                                                        <div class="fileUpload-control-wrapper">
+                                                            <input type="file" name="datafile"  />
+                                                            <button class="button button-border" type="submit">
+                                                                <span class="button-txt">Upload de Ficheiro</span>
+                                                            </button>
+                                                        </div>
+                                                        <span class="max-size">5Mb máx</span>
+                                                    </div>
+                                                    <div class="uploaded" style="display: block;">
+                                                        <span class="name">Nome_ficheiro.txt (345kb)</span>
+                                                        <span class="document-loading">25%</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="link-remove">Remover ficheiro</a>
+                                            </div>
+                                            <!-- Fim Elemento a repetir -->
+                                            
+
+                                            <div class="form-button fileUpload-button clearFloats">
+                                                <a href="#" class="link-add">Adicionar ficheiro</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+                                <div id="PanelF" class="block-exclamation-panel">
+                                    <div class="block-exclamation-collaps cleanStyle">
+                                        <p>A sua adesão está guardada até este passo. Se optar por entregar uma cópia do documento numa loja, pode repreender a adesão actuar da viatura.</p>
+                                        <p>Poderá ir a qualquer das lojas Via Verde</p>
+                                        <ul>
+                                            <li>Almada</li>
+                                            <li>Almodôvar</li>
+                                            <li>Aveiro</li>
+                                            <li>Braga</li>
+                                            <li>Carregado</li>
+                                            <li>...</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        
+                        </div>
+
+                        <div class="form-group form-group-3">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <label for="form-chassi-number">
+                                        <span class="form-label">Número de quadro</span>
+                                        <span class="form-input custom-tooltip">
+                                            <input id="form-chassi-number" type="text" value="" class="Validator" placeholder="12 dígitos e uma letra">
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Campo obrigatório!</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group form-group-3">
+                            <span class="group-label">Marca e modelo da viatura</span>
+                            <div class="form-group-wrapper">
+
+                                <div class="form-select-wrapper">
+                                    <span class="form-select custom-tooltip">
+                                        <select id="DDLMarca">
+                                            <option value="0">Seleccionar Marca</option>
+                                            <option value="1">Peugeot</option>
+                                            <option value="2">...</option>
+                                        </select>
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </div>
+
+                                <div class="form-select-wrapper">
+                                    <span class="form-select custom-tooltip">
+                                        <select id="DDLModelo" disabled>
+                                            <option value="0">Seleccionar Modelo</option>
+                                            <option value="1">206</option>
+                                            <option value="2">...</option>
+                                        </select>
+                                        <span class="tooltip-icon"></span>
+                                        <span class="tooltip-message">Campo obrigatório!</span>
+                                    </span>
+                                </div>
+
+                                <div class="form-vehicle-wrapper">
+                                    <div class="vehicle-type classe2">Classe 2</div>
+                                    <div class="form-checkbox-wrapper">
+                                        <label for="chkMonovolume">
+                                            <span class="form-checkbox">
+                                                <input id="chkMonovolume" type="checkbox" value="">
+                                                <span class="form-checkbox-style"></span>
+                                            </span>
+                                            <span class="form-label">
+                                                <strong>É um monovolume?</strong>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div id="bloco-exclamation-2" class="block-exclamation">
+                                <div class="block-exclamation-title">
+                                    Monovolumes
+                                </div>
+                                <div class="block-exclamation-message">
+                                    <p>
+                                        É preciso verificar a homologação do monovolume para este ser considerado de Classe 1. Caso não portar a documentaão (DUA) ou esta seja errada ou incompleta será emitido com Classe 2.
+                                    </p>
+                                </div>
+                                <div class="block-exclamation-upload">
+                                    <script type="text/javascript">
+                                        $(function () {
+                                            //Check for cheked input at load and go to the current div
+                                            var firtPanelShow = $('#bloco-exclamation-2 .file-upload-controls .form-radiobox-wrapper input[type="radio"]:checked').attr("rel");
+                                            $("#" + firtPanelShow).show();
+
+                                            //Register events for change divs
+                                            $('#bloco-exclamation-2 .file-upload-controls .form-radiobox-wrapper input[type="radio"]').change(function () {
+                                                if (this.checked) {
+                                                    var panelShow = $(this).attr("rel");
+
+                                                    $('#' + panelShow).show();
+
+                                                    $('#' + panelShow).prevAll(".block-exclamation-panel").hide();
+                                                    $('#' + panelShow).nextAll(".block-exclamation-panel").hide();
+                                                }
+                                            });
+
+                                        });
+                                    </script>
+                                    <div class="file-upload-controls">
+                                        <div class="form-radiobox-wrapper">
+                                            <label for="DocUpload">
+                                                <span class="form-radiobox">
+                                                    <input id="DocUpload" type="radio" value="" name="uploadDUA" rel="PanelC" checked="">
+                                                    <span class="form-radiobox-style"></span>
+                                                </span>
+                                                <span class="form-label">
+                                                    <strong>Upload Documento</strong>
+                                                </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-radiobox-wrapper">
+                                            <label for="DeliverInStore">
+                                                <span class="form-radiobox">
+                                                    <input id="DeliverInStore" type="radio" value="" name="uploadDUA" rel="PanelD">
+                                                    <span class="form-radiobox-style"></span>
+                                                </span>
+                                                <span class="form-label">
+                                                    <strong>Entregar documento numa loja</strong>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="PanelC" class="block-exclamation-panel">
+                                    
+                                    <div class="fileUpload">
+                                        <span class="fileUpload-header custom-tooltip tooltip-inquiry">
+                                            <span class="fileUpload-header-title">Documento de facturação</span>
+                                            <span class="tooltip-icon"></span>
+                                            <span class="tooltip-message">Bla bla bla</span>
+                                        </span>
+                                        <div class="fileUpload-body">
+
+                                            <!-- Elemento a repetir -->
+                                            <div class="fileUpload-control">
+                                                <div class="fileUpload-wrapper">
+                                                    <div class="toUpload">
+                                                        <div class="fileUpload-control-wrapper">
+                                                            <input type="file" name="datafile"  />
+                                                            <button class="button button-border" type="submit">
+                                                                <span class="button-txt">Upload de Ficheiro</span>
+                                                            </button>
+                                                        </div>
+                                                        <span class="max-size">5Mb máx</span>
+                                                    </div>
+                                                    <div class="uploaded">
+                                                        <span class="name">Nome_ficheiro.txt (345kb)</span>
+                                                        <span class="document-loading">25%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fim Elemento a repetir -->
+
+                                            <!-- Elemento a repetir -->
+                                            <div class="fileUpload-control">
+                                                <div class="fileUpload-wrapper">
+                                                    <div class="toUpload">
+                                                        <div class="fileUpload-control-wrapper">
+                                                            <input type="file" name="datafile"  />
+                                                            <button class="button button-border" type="submit">
+                                                                <span class="button-txt">Upload de Ficheiro</span>
+                                                            </button>
+                                                        </div>
+                                                        <span class="max-size">5Mb máx</span>
+                                                    </div>
+                                                    <div class="uploaded">
+                                                        <span class="name">Nome_ficheiro.txt (345kb)</span>
+                                                        <span class="document-loading">25%</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="link-remove">Remover ficheiro</a>
+                                            </div>
+                                            <!-- Fim Elemento a repetir -->
+
+                                            <!-- Elemento a repetir -->
+                                            <div class="fileUpload-control">
+                                                <div class="fileUpload-wrapper">
+                                                    <div class="toUpload" style="display: none;">
+                                                        <div class="fileUpload-control-wrapper">
+                                                            <input type="file" name="datafile"  />
+                                                            <button class="button button-border" type="submit">
+                                                                <span class="button-txt">Upload de Ficheiro</span>
+                                                            </button>
+                                                        </div>
+                                                        <span class="max-size">5Mb máx</span>
+                                                    </div>
+                                                    <div class="uploaded" style="display: block;">
+                                                        <span class="name">Nome_ficheiro.txt (345kb)</span>
+                                                        <span class="document-loading">25%</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="link-remove">Remover ficheiro</a>
+                                            </div>
+                                            <!-- Fim Elemento a repetir -->
+                                            
+
+                                            <div class="form-button fileUpload-button clearFloats">
+                                                <a href="#" class="link-add">Adicionar ficheiro</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+                                <div id="PanelD" class="block-exclamation-panel">
+                                    <div class="block-exclamation-collaps cleanStyle">
+                                        <p>A sua adesão está guardada até este passo. Se optar por entregar uma cópia do documento numa loja, pode repreender a adesão actuar da viatura.</p>
+                                        <p>Poderá ir a qualquer das lojas Via Verde</p>
+                                        <ul>
+                                            <li>Almada</li>
+                                            <li>Almodôvar</li>
+                                            <li>Aveiro</li>
+                                            <li>Braga</li>
+                                            <li>Carregado</li>
+                                            <li>...</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        
+
+                        </div>
+
+                    </fieldset>
+         
+                    <fieldset>
+                        <!--#include file="module-adesao-2viatura.html" -->
+
+                        <div class="form-button clearFloats">
+                            <a href="#" class="link-add">Adicionar Viatura</a>
+                        </div>
+
+                    </fieldset>
+         
+                    <fieldset>
+                        <div class="payment-references clearFloats">
+                            <div class="left">
+                                <legend>
+                                    <span class="form-legend">Carros adicionais:</span>
+                                    <span class="form-sub-legend">Referências de Pagamento</span>
+                                </legend>
+                            </div>
+                            <div class="right">
+                                <div class="payment-references-controls">
+                                    <div class="form-radiobox-wrapper">
+                                        <label for="refforcar" class="form-radiobox-group-wrapper custom-tooltip tooltip-info">
+                                            <div class="form-radiobox-group">
+                                                <span class="form-radiobox">
+                                                    <input id="refforcar" type="radio" value="" name="carReference" checked="">
+                                                    <span class="form-radiobox-style"></span>
+                                                </span>
+                                                <span class="form-label">
+                                                    <strong>Uma referência para cada carro</strong>
+                                                </span>
+                                            </div>
+                                            <span class="tooltip-icon tooltipstered"></span>
+                                            <span class="tooltip-message">Texto a colocar...</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-radiobox-wrapper">
+                                        <label for="refunique"class="form-radiobox-group-wrapper custom-tooltip tooltip-info">
+                                            <div class="form-radiobox-group">
+                                                <span class="form-radiobox">
+                                                    <input id="refunique" type="radio" value="" name="carReference">
+                                                    <span class="form-radiobox-style"></span>
+                                                </span>
+                                                <span class="form-label">
+                                                    <strong>Uma referência única</strong>
+                                                </span>
+                                            </div>
+                                            <span class="tooltip-icon tooltipstered"></span>
+                                            <span class="tooltip-message">Texto a colocar...</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-button clearFloats">
+                        <button class="button button-border btPrev" id="BtnStep6" type="submit">
+                            <span class="button-txt">< Passo Anterior</span>
+                        </button>
+
+                        <button class="button btNext" id="BtnStep7" type="submit">
+                            <span class="button-txt">Seguinte</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- wizard-step-4 -->
+            <div class="wizardStep wizard-step-4">
+                
+                <div class="form form-theme-default">
+                    <script type="text/javascript">
+                        $(function () {
+                            $('.accession-main .wizard-step-4 .Validator').blur(function () {
+                                /* 
+                                Parametros:
+                                - Selector do controlo
+                                - Nome do grupo de validação
+                                - Nome na class a colocar no pai em caso de erro
+                                - Selector da mensagem generica de erro a mostrar
+                                */
+                                SingleValidator($(this).attr("id"), 'WizardStep4', 'tooltip-error', null);
+
+
+                                /* Update Single Tooltipster Message */
+                                updateSingleTooltipster($(this));
+                            });
+
+
+                            $('#BtnStep9').click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 3 */
+                                gotoStep("wizard-step-3");
+                            });
+
+                            $('#btnSubmit').click(function (e) {
+                                e.preventDefault();
+
+                                /* Validar Step 3 */
+                                //var pageIsValid = PageValidate(...);
+
+                                /* Submit Form */
+                            });
+
+                            $("#BtnEditStep1").click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 1 */
+                                gotoStep("wizard-step-1");
+                            });
+
+                            $("#BtnEditStep2").click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 2 */
+                                gotoStep("wizard-step-2");
+                            });
+
+                            $("#BtnEditStep3").click(function (e) {
+                                e.preventDefault();
+
+                                /* Ir para o passo 3 */
+                                gotoStep("wizard-step-3");
+                            });
+
+                        });
+                    </script>
+
+                    <fieldset>
+                        <legend class="clearFloats">
+                            <span class="form-legend legend-final">Rever dados e submeter</span>
+                        </legend>
+                        <div class="form-description">
+                            <p>Reveja os dados e verifique se estão corretos. Pode mudar a informação carregando no botão</p>
+                        </div>
+
+                        <div class="form-group form-group-resume">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <div class="form-group-resume-title"><span>1.</span> Identificador escolhido</div>
+                                    <label for="Span2">
+                                        <span id="Span2" class="form-pre-filled">Alugar o novo identificador por 7€/ano</span>
+                                    </label>
+                                    <label for="Span3">
+                                        <span id="Span3" class="form-pre-filled">Extrato eletrónico, mansal, para consultar no portal</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-button clearFloats">
+                                <button class="button btnChange" id="BtnEditStep1" type="submit">
+                                    <span class="button-txt"><span class="button-icon">Alterar</span></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-resume">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <div class="form-group-resume-title"><span>2.</span> Dados do contrato</div>
+                                    <label for="Span2">
+                                        <span id="Span4" class="form-pre-filled"><strong>Nome:</strong> Tiago Gomes</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span5" class="form-pre-filled"><strong>NIF:</strong> 98765423</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span6" class="form-pre-filled"><strong>Sede Fiscal (pais):</strong> Portugal</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span7" class="form-pre-filled"><strong>Morada:</strong> Praça de alvalade 6</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span8" class="form-pre-filled"><strong>Código Postal:</strong> 2670-123, Lisboa</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span9" class="form-pre-filled"><strong>Contacto telefónico:</strong> +351 987 543 126</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-input-wrapper">
+                                    <div class="form-group-resume-title">Dados de envio</div>
+                                    <label for="Span2">
+                                        <span id="Span10" class="form-pre-filled"><strong>Nome:</strong> YUNIT Ida. - Tiago</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span11" class="form-pre-filled"><strong>Morada:</strong> Praça de alvalade 6</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span12" class="form-pre-filled"><strong>Código Postal:</strong> 2670-123</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span13" class="form-pre-filled"><strong>Cidade:</strong> Lisboa</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-button clearFloats">
+                                <button class="button btnChange" id="BtnEditStep2" type="submit">
+                                    <span class="button-txt"><span class="button-icon">Alterar</span></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-resume">
+                            <div class="form-group-wrapper">
+                                <div class="form-input-wrapper">
+                                    <div class="form-group-resume-title"><span>3.</span> Carro a associar</div>
+                                    <label for="Span2">
+                                        <span id="Span14" class="form-pre-filled"><strong>Nome:</strong> Tiago Gomes</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span15" class="form-pre-filled"><strong>Matrícula:</strong> 65-HG-23</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span16" class="form-pre-filled"><strong>Nº de Quadro:</strong> 908768276511233</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span17" class="form-pre-filled"><strong>Marca e Modelo:</strong> BMW, Serie 3</span>
+                                    </label>
+                                    <label for="Span2">
+                                        <span id="Span18" class="form-pre-filled"><strong>Classe:</strong> 1</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-button clearFloats">
+                                <button class="button btnChange" id="BtnEditStep3" type="submit">
+                                    <span class="button-txt"><span class="button-icon">Alterar</span></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- So' mostra em mobile -->
+                        <table class="article-block-table">
+                            <caption>Resumo</caption>
+                            <tbody>
+                                <tr>
+                                    <th>Id. compra online</th>
+                                    <td>€20.00</td>
+                                </tr>
+                                <tr>
+                                    <th>Id. compra online</th>
+                                    <td>€20.00</td>
+                                </tr>
+                                <tr>
+                                    <th>Id. compra online</th>
+                                    <td>€20.00</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total</th>
+                                    <td>€60.00</td>
+                                </tr>
+                            
+                            </tfoot>
+                        </table>
+                
+                        
+                        <div id="block-payment-1" class="block-payment">
+                            <div class="block-payment-title">
+                                Escolha método de pagamento
+                            </div>
+
+                            <div class="block-payment-controls">
+                                <script type="text/javascript">
+                                    $(function () {
+                                        //Check for cheked input at load and go to the current div
+                                        var firtPanelShow = $('#block-payment-1 .block-payment-controls .form-radiobox-wrapper input[type="radio"]:checked').attr("rel");
+                                        $("#" + firtPanelShow).show();
+
+                                        //Register events for change divs
+                                        $('#block-payment-1 .block-payment-controls .form-radiobox-wrapper input[type="radio"]').change(function () {
+                                            if (this.checked) {
+                                                var panelShow = $(this).attr("rel");
+
+                                                $('#' + panelShow).show();
+
+                                                $('#' + panelShow).prevAll(".block-payment-panel").hide();
+                                                $('#' + panelShow).nextAll(".block-payment-panel").hide();
+                                            }
+                                        });
+
+                                    });
+                                </script>
+                                <div class="form-radiobox-wrapper">
+                                    <label for="creditcard">
+                                        <span class="netcaixa-online"></span>
+                                        <span class="form-radiobox">
+                                            <input id="creditcard" type="radio" value="" name="blockPayment" rel="PanelTT" checked="">
+                                            <span class="form-radiobox-style"></span>
+                                        </span>
+                                        <span class="form-label">
+                                            <strong>Carão de Crédito</strong>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="form-radiobox-wrapper">
+                                    <label for="mbmb">
+                                        <span class="mb-multibanco"></span>
+                                        <span class="form-radiobox">
+                                            <input id="mbmb" type="radio" value="" name="blockPayment" rel="PanelYY">
+                                            <span class="form-radiobox-style"></span>
+                                        </span>
+                                        <span class="form-label">
+                                            <strong>Multibanco</strong>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="PanelTT" class="block-payment-panel">
+                                <div class="cleanStyle">
+                                    <p>Será encaminhado a uma gateway de pagamento, e uma vez finalizado será reencaminhado para a confirmação neste site.</p>
+                                    
+                                </div>
+                            </div>
+
+                            <div id="PanelYY" class="block-payment-panel">
+                                <div class="cleanStyle">
+                                    <p>Será encaminhado a uma gateway de pagamento, e uma vez finalizado será reencaminhado para a confirmação neste site.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                                
+
+
+                        <div class="form-checkbox-wrapper">
+                            <label for="form-login-remember">
+                                <span class="form-checkbox">
+                                    <input id="form-login-remember" type="checkbox" value="">
+                                    <span class="form-checkbox-style"></span>
+                                </span>
+                                <span class="form-label">
+                                    Li e concordo com os <a href="#">Termos e condições</a>
+                                </span>
+                            </label>
+                        </div>
+
+
+                        <div class="block-payment-logos">
+                            <img src="images/ic-netcaixa-online_2.png" alt="netcaixa@online" title="">
+                            <a href="http://www.visa.pt/pt/about_us/o_que_fazemos/seguran%C3%A7a_nos_pagamentos/verified_by_visa.aspx" target="_blank"><img src="images/ic-verified-visa.jpg" alt="Verified by Visa" title="learn more"></a>
+                            <a href="http://www.MasterCardbusiness.com/mcbiz/index.jsp?template=/orphans&content=securecodepopup" target="_blank"><img src="images/ic-mastercard-securecode.jpg" alt="MasterCard SecureCode" title="learn more"></a>
+                        </div>
+
+
+                    </fieldset>
+
+
+                    <div class="form-button clearFloats">
+                        <button class="button button-border btPrev" id="BtnStep9" type="submit">
+                            <span class="button-txt">< Passo Anterior</span>
+                        </button>
+
+                        <button class="button btNext" id="btnSubmit" type="submit">
+                            <span class="button-txt">Submeter</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <aside class="accession-aside">
+            <div class="wizardStep wizard-step-1">
+
+                <article class="article-block">
+                    <header class="info">
+                        <h3>Informação Relacionada</h3>
+                    </header>
+                    <h4>Reactivar dispositivo</h4>
+                    <div class="article-block-text">
+                        <p>Para dar de alta um contrato com um dispositivo previamente usado, vai precisar do número de identificador.</p>
+                    </div>
+                    <h4>Extrato electrónico no portal</h4>
+                    <div class="article-block-text">
+                        <p>Poderá consultar os extratos na area de cliente Via Verde.</p>
+                    </div>
+                </article>
+
+                <article class="article-block">
+                    <header class="question">
+                        <h3>Perguntas Frequentes</h3>
+                    </header>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso ir a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="wizardStep wizard-step-2">
+                
+                <article class="article-block">
+                    <header class="info">
+                        <h3>Informação Relacionada</h3>
+                    </header>
+                    <h4>Reactivar dispositivo</h4>
+                    <div class="article-block-text">
+                        <p>Para dar de alta um contrato com um dispositivo previamente usado, vai precisar do número de identificador.</p>
+                    </div>
+                    <h4>Extrato electrónico no portal</h4>
+                    <div class="article-block-text">
+                        <p>Poderá consultar os extratos na area de cliente Via Verde.</p>
+                    </div>
+                </article>
+
+                <article class="article-block">
+                    <header class="question">
+                        <h3>Perguntas Frequentes</h3>
+                    </header>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso ir a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="wizardStep wizard-step-3">
+                
+                <article class="article-block">
+                    <header class="info">
+                        <h3>Informação Relacionada</h3>
+                    </header>
+                    <h4>Reactivar dispositivo</h4>
+                    <div class="article-block-text">
+                        <p>Para dar de alta um contrato com um dispositivo previamente usado, vai precisar do número de identificador.</p>
+                    </div>
+                    <h4>Extrato electrónico no portal</h4>
+                    <div class="article-block-text">
+                        <p>Poderá consultar os extratos na area de cliente Via Verde.</p>
+                    </div>
+                </article>
+
+                <article class="article-block">
+                    <header class="question">
+                        <h3>Perguntas Frequentes</h3>
+                    </header>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso ir a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                    <h4>Posso posteriormente alterar o plano de adesão?</h4>
+                    <div class="article-block-text">
+                        <p>Sim, bastara para isso a A minha conta e alterar as opções pretendidas</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="wizardStep wizard-step-4">
+                <table class="article-block-table">
+                    <caption>Resumo</caption>
+                    <tbody>
+                        <tr>
+                            <th>Id. compra online</th>
+                            <td>€20.00</td>
+                        </tr>
+                        <tr>
+                            <th>Id. compra online</th>
+                            <td>€20.00</td>
+                        </tr>
+                        <tr>
+                            <th>Id. compra online</th>
+                            <td>€20.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td>€60.00</td>
+                        </tr>
+                            
+                    </tfoot>
+                </table>
+                
+            </div>
+        </aside>
+
+        <div class="loading"><span>A carregar...</span></div>
+    </div>
+</section>
+
+<!-- module-adesao.html END -->

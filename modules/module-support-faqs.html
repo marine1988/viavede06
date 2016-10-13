@@ -1,0 +1,242 @@
+<script type="text/javascript">
+$(function () {
+
+    /* Centro de Apoio FAQs accordion */
+	$("#accordion-faqs").accordion({
+        active: 3,
+        header: "h3",
+        heightStyle: "content"
+	});
+	
+	//// Scroll to Header on Open Faq
+	var _windowWidth = window.innerWidth;
+
+	if (_windowWidth < 1024) {
+		$("#accordion-faqs").bind('accordionactivate', function (event, ui) {
+			/* In here, ui.newHeader = the newly active header as a jQ object
+						ui.newContent = the newly active content area */
+			$('html, body').animate({
+				scrollTop: $(ui.newHeader).offset().top - 100
+			}, 250);
+		});
+	}
+	
+	/* FAQS - encontrei a resposta ao meu problema */
+	$('#encontrei-resposta').click(function (e) {
+	    $('.obrigado-feedback').fadeIn('fast');
+	    return false;
+	});
+	
+	/* Menu FAQs Mobile */
+    $('#menu-faqs-mobile').select2({
+	    minimumResultsForSearch: Infinity,
+	    dropdownParent: '.menu-faqs-mobile .form-select-wrapper'
+    }).on('change', function () {
+	    var valueLang = $(this).attr('value');
+	});
+	
+})
+</script>
+
+<section class="column-section centro-apoio wrapper">
+    <header class="column-header">
+        <h1>Perguntas Frequentes</h1>
+        <p>Encontre aqui as respostas às suas dúvidas ou problemas</p>
+    </header>
+
+    <section class="column-body faqs-content">
+
+        <!-- pesquisa -->
+        <div class="form form-theme-default">
+            <div class="form-input-wrapper">
+                <label for="pesquisar-faqs">
+                    <span class="form-input custom-tooltip">
+                        <input id="pesquisar-faqs" class="Validator" type="text" placeholder="Escreva uma palavra chave">
+                        <span class="tooltip-icon"></span>
+                        <span class="tooltip-message">Campo obrigatório!</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-button clearFloats">
+                <button id="Button2" class="button btNext" type="submit">
+                    <span class="button-txt">Procurar</span>
+                </button>
+            </div>
+
+        </div>
+        <!-- fim pesquisa -->
+
+        <!-- Menu de FAQs -->
+        <nav>
+            <h2>Temas</h2>
+
+            <ul>
+                <li><a href="#1">Adesão</a></li>
+                <li class="faq-active"><a href="#1">Assistência Rodoviária</a></li>
+                <li><a href="#1">Áreas de  Serviço</a></li>
+                <li><a href="#1">Inspecção Automóvel</a></li>
+                <li><a href="#1">Extratos e Pagamentos</a></li>
+                <li><a href="#1">Luz Amarela</a></li>
+                <li><a href="#1">Emergência</a></li>
+                <li><a href="#1">Utilização de um identificador</a></li>
+                <li><a href="#1">Regime de modulação do valor de taxas de portagem</a></li>
+                <li><a href="#1">Traveller</a></li>
+                <li><a href="#1">McDrive</a></li>
+                <li><a href="#1">Facturação repartida</a></li>
+            </ul>
+        </nav>
+
+        <!-- Menu de FAQs Mobile -->
+        <div class="menu-faqs-mobile form-theme-default">
+            <div class="form-select-wrapper">
+                <select id="menu-faqs-mobile">
+                    <option value="0">Assistência Rodoviária</option>
+                    <option value="1">Áreas de  Serviço</option>
+                    <option value="2">Inspecção Automóvel</option>
+                    <option value="3">Extratos e Pagamentos</option>
+                    <option value="4">Luz Amarela</option>
+                    <option value="5">Emergência</option>
+                    <option value="6">Utilização de um identificador</option>
+                    <option value="7">Regime de modulação do valor de taxas de portagem</option>
+                    <option value="8">Traveller</option>
+                    <option value="9">McDrive</option>
+                    <option value="10">Facturação repartida</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- jQuery UI Accordion -->
+        <section class="mais-procurados">
+            <h2>Os tópicos mais procurados</h2>
+			
+            <div class="accordion" id="accordion-faqs">
+
+                <article>
+                    <h3>Maecenas aliquet nibh in ligula faucibus, convallis semper dui gravida?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p>
+                        </div>
+                        <p class="resposta-util">
+                            Esta resposta foi útil? <b><a href="#1">SIM</a> - <a href="#1">NÃO</a></b>
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Duis ut magna feugiat, scelerisque nibh id, cursus risus?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p>
+                        </div>
+                        <p class="resposta-util">
+                            Esta resposta foi útil? <b><a href="#1">SIM</a> - <a href="#1">NÃO</a></b>
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Sed eros mi, venenatis feugiat pellentesque iaculis, ornare at sapien?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p>
+                        </div>
+                        <p class="resposta-util">
+                            Esta resposta foi útil? <b><a href="#1">SIM</a> - <a href="#1">NÃO</a></b>
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Phasellus pretium varius venenatis?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p>
+                        </div>
+                        <p class="resposta-util">
+                            Esta resposta foi útil? <b><a href="#1">SIM</a> - <a href="#1">NÃO</a></b>
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Maecenas aliquet nibh in ligula faucibus, convallis semper dui gravida?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p>
+                        </div>
+                        <p class="resposta-util">
+                            Esta resposta foi útil? <b><a href="#1">SIM</a> - <a href="#1">NÃO</a></b>
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Duis ut magna feugiat, scelerisque nibh id, cursus risus?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p>
+                        </div>
+                        <p class="resposta-util">
+                            Esta resposta foi útil? <b><a href="#1">SIM</a> - <a href="#1">NÃO</a></b>
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Sed eros mi, venenatis feugiat pellentesque iaculis, ornare at sapien?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p>
+                        </div>
+                        <p class="resposta-util">
+                            Esta resposta foi útil? <b><a href="#1">SIM</a> - <a href="#1">NÃO</a></b>
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Sed eros mi, venenatis feugiat pellentesque iaculis, ornare at sapien?</h3>
+                    <div>
+                        <div class="accordion-content cleanStyle">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper. Praesent lobortis purus a sem pellentesque rhoncus. Quisque semper est in sapien pulvinar, eget vehicula arcu porta</p>
+                        </div>
+                        <p class="resposta-util">
+                            Esta resposta foi útil? <b><a href="#1">SIM</a> - <a href="#1">NÃO</a></b>
+                        </p>
+                    </div>
+                </article>
+
+            </div><!-- Fim #accordion-faqs -->
+
+            <!-- Botões "Encontrei a resposta" -->
+            <section class="faqs-encontrei-resposta form form-theme-default">
+
+                <div class="form-button clearFloats">
+                    <button id="encontrei-resposta" class="button btNext" type="submit">
+                        <span class="button-txt">ENCONTREI A RESPOSTA AO MEU PROBLEMA!</span>
+                    </button>
+                </div>
+
+                <div class="form-button clearFloats">
+                    <button id="Button3" class="button btPrev" type="submit">
+                        <span class="button-txt">CONTINUA COM DÚVIDA? CONTACTE-NOS!</span>
+                    </button>
+                </div>
+
+                <div class="obrigado-feedback">
+                    <p>Ainda bem, obrigado pelo seu feedback!</p>
+                    <a href="#1">Podemos ajudar em mais alguma coisa?</a>
+                </div>
+
+            </section>
+
+
+        </section>
+    </section>
+
+</section>

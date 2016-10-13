@@ -1,0 +1,196 @@
+<!-- MODULE-OFFER-DETAIL-HIGHLIGHT START -->
+<!-- DIV RESPONSABEL PELA SIDEBAR, A CLASS STICKY SERVE PARA SEGUIR O SCROLL -->
+
+<div class="offer-detail-highlight js-sticky">
+    <div class="container-detail">
+        <div class="offer-location"><span>Alto Alentejo</span></div>
+        <h1 class="offer-title">Fim de Semana Vinícola em Évora</h1>
+        <!-- desktop price -->
+        <div class="old-price">
+            <span>110<sup>€</sup></span>
+            <div class="custom-tooltip tooltip-info">
+                <span class="tooltip-icon tooltipstered"></span>
+                <span class="tooltip-message">Texto a colocar...</span>
+            </div>
+        </div>
+        <div class="new-price">
+            <span class="bold-price">274,<sup>50€</sup></span>
+            <span class="points"> + 1600 <sup>PTS</sup></span>
+        </div>
+        <!-- End desktop price -->
+        <div class="content-block">
+            <div class="module-title">Incluído:</div>
+            <ul>
+                <li class="ic-hotel">M'Ar de Ar Aqueduto: 2 noites para 2 pessoas</li>
+                <li class="ic-food">Jantar no Restaurante Degust'Ar</li>
+                <li class="ic-toll">30% Portagem</li>
+                <li class="ic-galp">10€ combustível</li>
+
+                <li class="ic-generic">30% desconto no aluguer de Kayaks</li>
+                <li class="ic-parking">Parque Gratuito</li>
+
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <div class="module-title">Incluído:</div>
+            <ul>
+                <li>
+                    <span class="amount">1x</span>
+                    <span class="description">Passeio a cavalo</span>
+                </li>
+                <li>
+                    <span class="amount">10x</span>
+                    <span class="description">noite extra</span>
+                </li>
+            </ul>
+        </div>
+        <button class="button button-white button-highlight">
+            <span class="button-txt">Comprar</span>
+        </button>
+        <div class="content-block cleanStyle">
+            <strong>Validade:</strong> 31 de maio de 2016 (exceto Páscoa - 25 e 26 de março e 7, 8 e 9 de abril)
+        </div>
+    </div>
+    <!-- small desktop and tablet price -->
+    <div class="tablet-price-container">
+        <div class="global-price">
+            <div class="old-price">
+                <span>110<sup>€</sup></span>
+                <div class="custom-tooltip tooltip-info">
+                    <span class="tooltip-icon tooltipstered"></span>
+                    <span class="tooltip-message">Texto a colocar...</span>
+                </div>
+            </div>
+            <div class="new-price">
+                <span class="bold-price">24,<sup>50€</sup></span>
+                <span class="points"> + 1600 <sup>PTS</sup></span>
+            </div>
+        </div>
+        <!--<span class="old-price">110<sup>€</sup></span>
+        <span class="price">
+            129,<sup>34€</sup>
+        </span>
+        <span class="points"> + 1600 <sup>pts</sup></span>-->
+        <button class="button button-white button-highlight">
+                <span class="button-txt">Comprar</span>
+            </button>
+    </div>
+    <!-- End small desktop and tablet price -->
+</div>
+
+<!-- ADICIONAR ESTE SCRIPT, RESPONSAVEL PELA STICKY SIDEBAR, AO MODULO -->
+<script type="text/javascript" src="script/jquery.sticky-kit.min.js"></script>
+<!--only for desktop CTA + price sticky -->
+<script type="text/javascript" src="script/custom.jquery.tooltipster.js"></script>
+<script type="text/javascript">
+    //functions
+    function isMobile() {
+        return (window.innerWidth <= 767);
+    }
+
+    function isTablet() {
+        return (window.innerWidth < 1024);
+    }
+
+    function isDesktop() {
+        return (window.innerWidth >= 1024);
+    }
+    //stick CTA + price - mobile only
+    function stickThis(el) {
+        var element = el,
+            topOfElement = element.offset().top,
+            bottomOfElement = element.offset().top + element.outerHeight(true),
+            scrollTopPosition = $(window).scrollTop() + $(window).height(),
+            windowScrollTop = $(window).scrollTop(),
+            windowSize = window.innerWidth;
+
+            var docViewTop = $(window).scrollTop(),
+                docViewBottom = docViewTop + $(window).height(),
+                elementTablet = $('.offer-detail-highlight'),
+                elemTabletTop = $(elementTablet).offset().top,
+                elemTabletBottom = elemTabletTop + $(elementTablet).height();
+
+
+        /*=== CONDICAO PARA A BARRA VERDE APARECER DEPOIS EM EM TABLET =====*/
+        if ((windowSize > '767') && (windowSize <= '1023')){
+
+            if((docViewTop + $('.header').outerHeight(true) >= elemTabletBottom)){
+                $('.mobile-price-container').css('display', 'block');
+                
+                if (windowScrollTop > bottomOfElement && windowScrollTop > topOfElement) {
+
+                    // Element is hidden (above viewable area)
+                    $('.js-sticky-mobile').removeClass('js-fixed');
+
+                } else if (scrollTopPosition < topOfElement && scrollTopPosition < bottomOfElement) {
+
+                    // Element is hidden (below viewable area)
+                    $('.js-sticky-mobile').addClass('js-fixed');
+
+                } else {
+
+                    // Element is completely visible
+                    $('.js-sticky-mobile').removeClass('js-fixed');
+                }
+            }
+            else{
+                $('.mobile-price-container').css('display', 'none');
+            }
+        }
+        else{
+
+            if (windowScrollTop > bottomOfElement && windowScrollTop > topOfElement) {
+
+                // Element is hidden (above viewable area)
+                $('.js-sticky-mobile').removeClass('js-fixed');
+
+            } else if (scrollTopPosition < topOfElement && scrollTopPosition < bottomOfElement) {
+
+                // Element is hidden (below viewable area)
+                $('.js-sticky-mobile').addClass('js-fixed');
+
+            } else {
+
+                // Element is completely visible
+                $('.js-sticky-mobile').removeClass('js-fixed');
+            }
+        }
+    }
+
+    //DOM READY
+    $(function() {
+        stickThis($('.js-sticky-anchor'));
+
+        if (isDesktop()) {
+            $(".js-sticky").stick_in_parent({
+                offset_top: 62,
+                parent: '.js-scroll-container'
+            });
+        } else if (isMobile()) {
+            $(window).bind('scroll', function() {
+                stickThis($('.js-sticky-anchor'));
+            });
+        } else {
+            $(".js-sticky").trigger("sticky_kit:detach");
+        }
+
+        /* Tooltipster */
+        /* 
+        Parametros:
+        - Selector
+        - É Modal = true
+        */
+        initTooltipster($('.custom-tooltip .tooltip-icon'), true);
+
+        /* Update Tooltipster Messages */
+        updateTooltipster($('.custom-tooltip .tooltip-icon'));
+
+        $(window).change(function() {
+            stickThis($('.js-sticky-anchor'));
+        });
+    });
+    //END DOM READY
+</script>
+
+<!-- MODULE-OFFER-DETAIL-HIGHLIGHT END -->

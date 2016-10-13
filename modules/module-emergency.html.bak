@@ -1,0 +1,254 @@
+<!-- module-emergency START -->
+
+<!-- Posição Topo -->
+<div id="dnn_TopPane" class="topContent">
+    <!-- Alert BANNER -->
+    <article class="gm-banner small-banner right-banner banner-blue">
+        <header class="gm-banner-header">
+            <h1 class="gm-banner-tit">Emergência</h1><span class="ic-attention"></span>
+        </header>
+        <div class="gm-banner-content">
+            <span class="gm-alert-tit">Número azul</span>
+            <strong class="gm-alert-numb">808 508 508</strong>
+            <span class="gm-alert-txt">Custo de uma chamada local</span>
+        </div>
+    </article>
+    <!-- END Alert BANNER -->
+</div>
+<!-- Fim Posição Topo -->
+
+
+<section class="emergencyTemplate-section">
+   <!-- Posição Content -->
+    <div id="dnn_ContentPane" class="mainContent">
+        <div class="emergency-detail">
+            <h2 class="emergency-detail-tit emergency-correct">O que fazer em situação de emergência?</h2>
+
+    <ol class="emergency-detail-list">
+        <li>
+            <div class="emergency-detail-img">
+                <img src="cms-images/emergency-01.png?w=181px&amp;h=181px" alt="" title="">
+            </div>
+            <div class="emergency-detail-txt">
+                Utilize a berma para imobilizar o veículo.
+            </div>
+        </li>
+        <li>
+            <div class="emergency-detail-img">
+                <img src="cms-images/emergency-02.png?w=181px&amp;h=181px" alt="" title="">
+            </div>
+            <div class="emergency-detail-txt">
+                Ligue de imediato as luzes de emergência.
+            </div>
+        </li>
+        <li>
+            <div class="emergency-detail-img">
+                <img src="cms-images/emergency-03.png?w=181px&amp;h=181px" alt="" title="">
+            </div>
+            <div class="emergency-detail-txt">
+                Quando sair da viatura vista sempre o colete.
+            </div>
+        </li>
+        <li>
+            <div class="emergency-detail-img">
+                <img src="cms-images/emergency-04.png?w=181px&amp;h=181px" alt="" title="">
+            </div>
+            <div class="emergency-detail-txt">
+                Coloque o triângulo de pré-sinalização a uma distância nunca inferior a 50 metros.
+            </div>
+        </li>
+        <li>
+            <div class="emergency-detail-img">
+                <img src="cms-images/emergency-05.png?w=181px&amp;h=181px" alt="" title="">
+            </div>
+            <div class="emergency-detail-txt">
+                Chame a assistência usando a APP ou ligando o Número Azul 808 508 508 ou, em alternativa, os postos SOS, existentes a cada 2 km, em ambos os sentidos.
+            </div>
+        </li>
+        <li>
+            <div class="emergency-detail-img">
+                <img src="cms-images/emergency-06.png?w=181px&amp;h=181px" alt="" title="">
+            </div>
+            <div class="emergency-detail-txt">
+                Espere pela chegada de uma patrulha de Assistência Rodoviária, colocando-se sempre protegido pelas guardas de segurança “rails” e virado de frente para o sentido da marcha das viaturas que circulam na auto-estrada.
+            </div>
+        </li>
+    </ol>
+
+    <h2 class="emergency-detail-tit emergency-wrong">O que não deve fazer</h2>
+
+    <div class="emergency-detail-elem">
+        <div class="emergency-detail-img">
+            <img src="cms-images/emergency-07.png?w=181px&amp;h=181px" alt="" title="">
+        </div>
+            <div class="emergency-detail-txt">
+            <ul>
+                <li>Atravessar a auto-estrada.</li>
+                <li>Tentar mandar parar os carros.</li>
+                <li>Contactar a sua assistência pessoal. Só uma assistência autorizada pode intervir.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </div>
+    <!-- Fim Posição Content -->
+
+    <!-- Posição Aside -->
+    <aside id="dnn_AsidePane" class="asideContent">
+        <!-- Modulo App Via Verde -->
+        <article class="emergency-aside service-tool bg-white">
+            <figure class="service-tool-figure">
+                <img src="images/services_apps_logo.png" alt="">
+            </figure>
+            <div class="service-tool-text cleanStyle">
+                <h4>App Via Verde</h4>
+                <p>Uma nova mobilidade que anda sempre consigo. Participe nos Desafios e ganhe novos horizontes!</p>
+            </div>
+            <div class="app_button">
+                <a href="https://itunes.apple.com/pt/app/via-verde/id674583" id="dnn_ctr1612_View_ctl00_lnkIOS" target="_blank"><span class="apps ios"><span class="txt hidden" hidden="" aria-hidden="false">App Store</span></span></a>
+                <a href="https://play.google.com/store/apps/details?id=pt.viaverde.clientes" id="dnn_ctr1612_View_ctl00_lnkAndroid" target="_blank"><span class="apps android"><span class="txt hidden" hidden="" aria-hidden="false">Google play</span></span></a>
+            </div>
+        </article>
+
+        <!-- Modulo Video do Guia Pratico -->
+        <article class="emergency-aside service-tool bg-green">
+            <figure class="service-tool-figure">
+                <img src="images/services_apps_logo_outline.png" alt="">
+            </figure>
+            <div class="service-tool-text cleanStyle">
+                <h4>Veja o nosso guia prático</h4>
+            </div>
+
+            <div class="emergency-video">
+                <img src="cms-images/emergency-video-dummy.png" alt="" title="">
+
+                <div class="emergency-video-content">
+                    <strong class="emergency-video-tit">Como actuar em caso de emergência.</strong>
+                    <time class="emergency-video-time">3:24min</time>
+                </div>
+            </div>
+
+            <div class="service-tool-text cleanStyle">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum arcu a egestas semper.</p>
+            </div>
+
+            <div class="see-button">
+                <a href="" class="link"><span class="link-txt">Ver todos</span></a>
+            </div>
+        </article>
+
+        <!-- Modulo Localizacao no Mapa -->
+        <article class="emergency-aside service-tool bg-blur-dark bg-black">
+            <figure class="service-tool-figure">
+                <img src="images/ic-sugestion_small.png" alt="">
+            </figure>
+            <div class="service-tool-text cleanStyle">
+                <h4>Conheça a sua posição</h4>
+                <p>Em caso de necessidade, pode obter a sua posição actual que poderá comunicar aos serviços de assistência.</p>
+            </div>
+
+            <div class="location-info">
+                <div id="gps-location" class="location-info-text"></div>
+                <div class="buttons">
+                    <a onclick="geoLocation()" class="button button-tool button-small"><span class="button-txt">Actualizar</span></a>
+                </div>
+            </div>
+
+            <div id="location-map" class="location-map"></div>
+
+            <div id="gps-location-error" class="location-error"></div>
+        </article>
+    </aside>
+    <!-- Fim Posição Aside -->
+
+</section>
+
+<script type="text/javascript">
+/* FUNCTION GEO LOCATION */
+var _locationMapImage = new Image();
+function geoLocation() {
+	var _gpsLocation = document.getElementById('gps-location');
+	var _gpsLocationError = document.getElementById('gps-location-error');
+	var _locationMap = document.getElementById('location-map');
+	var _locationMapWidth = _locationMap.offsetWidth;
+
+	if (navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(success, error);
+	}
+
+	function success(position) {
+		var latitude = position.coords.latitude;
+		latitude = latitude.toString();
+		latitude = latitude.slice(0,8);
+		var longitude = position.coords.longitude;
+		longitude = longitude.toString();
+		longitude = longitude.slice(0,8);
+
+		_gpsLocation.innerHTML = '<p><strong>Latitude:</strong> ' + latitude + '°<br><strong>Longitude:</strong> ' + longitude + '°</p>';
+
+		_locationMapImage.id = 'location-map-img';
+		_locationMapImage.src = 'https://maps.googleapis.com/maps/api/staticmap?center=' + latitude + ',' + longitude + '&zoom=15&markers=color:red|label:.|' + latitude + ',' + longitude + '&size=' + _locationMapWidth + 'x245&sensor=false';
+		_locationMapImage.alt = '';
+		_locationMapImage.title = '';
+
+		_locationMap.appendChild(_locationMapImage);
+	};
+
+	function error() {
+		switch(error.code) {
+			case error.PERMISSION_DENIED:
+				_gpsLocationError.innerHTML = '<p>Para poder usufruir desta funcionalidade, terá que permitir o acesso à localização do dispositivo (GPS).</p>'
+				break;
+			case error.POSITION_UNAVAILABLE:
+				_gpsLocationError.innerHTML = '<p>Neste momento é desconhecida a sua localização.</p>'
+				break;
+			case error.TIMEOUT:
+				_gpsLocationError.innerHTML = '<p>Parece haver problemas a disponibilizar a sua localização.</p>'
+				break;
+			case error.UNKNOWN_ERROR:
+				_gpsLocationError.innerHTML = '<p>Ocorreu um erro, tente mais tarde.<br>Obrigado.</p>'
+				break;
+			default :
+				_gpsLocationError.innerHTML = '<p>Sem dispositivo de localização (GPS) a sua localização poderá ser aproximativa).</p>'
+		}
+	};
+
+	/* HTML
+	<article class="emergency-aside service-tool bg-blur-dark bg-black">
+		<figure class="service-tool-figure">
+			<img src="images/ic-sugestion_small.png" alt="">
+		</figure>
+		<div class="service-tool-text cleanStyle">
+			<h4>Conheça a sua posição</h4>
+			<p>Em caso de necessidade, pode obter a sua posição actual que poderá comunicar aos serviços de assistência.</p>
+		</div>
+
+		<div class="location-info">
+			<div id="gps-location" class="location-info-text">
+				<p><strong>Latitude:</strong> 38.98912°<br>
+				<strong>Longitude:</strong> -9.3323°</p>
+			</div>
+			<div class="buttons">
+				<a onclick="geoLocation()" class="button button-tool button-small"><span class="button-txt">Actualizar</span></a>
+			</div>
+		</div>
+
+		<div id="location-map" class="location-map">
+			<img src="https://maps.googleapis.com/maps/api/staticmap?center=38.7533244120335,-9.14456499979007&zoom=16&markers=color:red|label:.|38.7533244120335,-9.14456499979007&size=300x300&sensor=false" alt="" title="">
+		</div>
+
+		<div id="gps-location-error" class="location-error">
+			<p>Sem dispositivo de localização (GPS) a sua localização poderá ser aproximativa).</p>
+		</div>
+	</article>
+	*/
+}
+
+/* DOM READY */
+$(function () {
+	/* ADD GEO LOCATION */
+	geoLocation();
+});
+</script>
+
+<!-- module-emergency END -->
